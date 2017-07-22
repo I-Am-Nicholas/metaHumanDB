@@ -73,9 +73,12 @@ footer{
   background-color: #21658c;
   border-radius: 6px;
   opacity: 0.7;
+  -webkit-transition: height all 250ms ease; /* Safari */
+  transition: all 250ms ease;
 }
 
 .dashBtns:hover{
+  transform: scaleY(1.1);
   color: white;
   opacity: 1;
 }
@@ -83,6 +86,7 @@ footer{
 .dashBtns:active{
   border: 3px solid #333;
 }
+
 #meta-name {
   height: 90px;
   padding: 20px;
