@@ -1,0 +1,19 @@
+<div id="metasWrap">
+  <ul class="metas background">
+    <li *ngFor= "let individualMeta of metaShown"
+         (click)="onSelect(individualMeta)"
+          [class.selectedMeta]="individualMeta === selectedMeta">
+
+         <!--When an item in the list is clicked, the component's onSelect function
+            is called with the value of the clicked item as an argument.
+
+          Where the value of individualMeta
+          is equal to the value of selectedMeta, individualMeta
+          is given the selectedMeta class.
+        -->
+
+      <span class="badge">{{individualMeta.id}}</span> {{individualMeta.name}}
+    </li>
+  </ul>
+  <meta-detail [valueFromMetasComponent]="selectedMeta"></meta-detail>
+</div>

@@ -1,0 +1,9 @@
+.detail {
+  position: relative;
+  float: right;
+  color: #21658c;
+  border: 1px solid white;
+  text-align: center;
+  width: 300px;
+  font-size: 1.25em;
+}
