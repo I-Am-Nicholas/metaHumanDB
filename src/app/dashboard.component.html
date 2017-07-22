@@ -13,7 +13,9 @@
   <footer>
     <div id="grid-wrap" class="background">
       <div class="grid grid-pad">
-        <div *ngFor="let meta of metas" class="row-of-5">
+        <div *ngFor="let meta of metas" class="row-of-5"
+          (click)="onSelect(info)">
+
           <div class="dashBtns hero">
             <div id="meta-name">{{meta.name | uppercase}}</div>
             <div id="meta-logo"><img src = '{{meta.logo}}' alt = 'Meta Symbol' ></div>
