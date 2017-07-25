@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { MetaService } from './meta-service';
+import { MetaService } from '../meta-service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', "sharedBG.css"],
+  templateUrl: '../templates/app.component.html',
+  styleUrls: ['../stylesheets/app.component.css', "../sharedBG.css"],
   providers: [MetaService]
 })
 

@@ -4,7 +4,7 @@ import { DebugElement } from '@angular/core';
 import { HttpModule, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from '../components/app.component';
 
 describe('AppComponent', () => {
 

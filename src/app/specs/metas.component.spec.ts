@@ -4,8 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { MetasComponent } from './metas.component';
-import { MetaService } from './meta-service';
+import { MetasComponent } from '../components/metas.component';
+import { MetaService } from '../meta-service';
 
 describe("MetasComponent", () => {
 
