@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Meta } from './meta';
-import { MetaService } from './meta-service';
+import { Meta } from '../meta';
+import { MetaService } from '../meta-service';
 
 @Component({
-  templateUrl: './metas.component.html',
-  styleUrls: ['./metas.component.css', './sharedBG.css']
+  templateUrl: '../templates/metas.component.html',
+  styleUrls: ['../stylesheets/metas.component.css', '../sharedBG.css']
 })
 
 export class MetasComponent implements OnInit {

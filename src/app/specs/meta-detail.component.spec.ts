@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 
-import { MetaDetailComponent } from './meta-detail.component'
-import { Meta } from './meta'
+import { MetaDetailComponent } from '../components/meta-detail.component'
+import { Meta } from '../meta'
 
 let fixture: ComponentFixture<MetaDetailComponent>;
 let comp: MetaDetailComponent;

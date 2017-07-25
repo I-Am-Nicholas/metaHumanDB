@@ -1,6 +1,7 @@
 import { async } from '@angular/core/testing';
-import { MetaService } from './meta-service';
 import { Headers, Http } from '@angular/http';
+
+import { MetaService } from '../meta-service';
 
 describe('MetaService', () => {
   let service: MetaService;

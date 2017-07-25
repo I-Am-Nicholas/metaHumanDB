@@ -40,8 +40,8 @@ conversion of the response into a json object of Meta type. */
   /*Same as above except that this will return the entire list then resolve the
    promise by returning an array of Meta type. */
   getMetas(): Promise<Meta[]> {
-    return this.http.get(this.metalistUrl)
-      .toPromise()
+    return this.http.get(this.metalistUrl)//returns Observable
+      .toPromise()//converts Observable to Promise
       .then(response => response.json().data as Meta[])
       .catch(this.handleError);
   }
