@@ -73,9 +73,7 @@ footer{
   background-color: #21658c;
   border-radius: 6px;
   opacity: 0.7;
-  -webkit-transition: height all 250ms ease; /* Safari */
-  transition: all 250ms ease;
-}
+  }
 
 .dashBtns:hover{
   transform: scaleY(1.1);

@@ -8,3 +8,8 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   padding: 20px;
 }
+
+.niceShift {
+  -webkit-transition: height all 250ms ease; /* Safari */
+  transition: all 250ms ease;
+}
