@@ -27,7 +27,7 @@ import { MetaService } from './meta-service';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true})
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [MetaService],
   bootstrap: [AppComponent]
