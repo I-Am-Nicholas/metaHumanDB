@@ -10,13 +10,15 @@ const fakeMetaData = () => [
     id:3,
     name:"Hulk",
     logo:"assets/200s/gamma.png",
-    alias:"Bruce Banner"
+    alias:"Bruce Banner",
+    profile: ""
   },
   {
     id:7,
     name:"Black Panther",
     logo:"assets/200s/pantera.jpg",
-    alias:"T'Challa, King of Wakanda"
+    alias:"T'Challa, King of Wakanda",
+    profile: ""
   }
 ];
 

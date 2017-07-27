@@ -38,7 +38,7 @@ describe("MetasComponent", () => {
   });
 
   it('selectedMeta should receive value of meta', () => {
-    let testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder"});
+    let testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: ""});
     comp.onSelect(testMeta);
     expect(comp.selectedMeta).toEqual(testMeta);
   });
