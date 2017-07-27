@@ -48,6 +48,13 @@ describe('DashboardComponent', () => {
   });
 
 
+  it("check that comp is an instance of DashboardComponent", () => {
+    expect(comp instanceof DashboardComponent).toBe(true);
+  });
+
+  it("should not have metas before ngOnInit", () => {
+    expect(spy).not.toHaveBeenCalled();
+  });
 
   it("should call the spy after ngOnInit", () => {
     comp.ngOnInit();
