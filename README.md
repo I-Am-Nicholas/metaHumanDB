@@ -1,7 +1,7 @@
 # META-HUMAN DATABASE
 
 
-![out](https://user-images.githubusercontent.com/24227633/28261574-bc3b0af0-6ad7-11e7-8763-7c349d46c37e.gif)
+![metas](https://user-images.githubusercontent.com/24227633/28503547-45f453fe-7001-11e7-887b-7a8be87b4776.gif)
 
 ## OVERVIEW
 
@@ -9,12 +9,22 @@
 
 - Written in Angular 4.
 
-- Tested using the Jasmine framework, with Protractor for end-to-end tests and Karma for unit tests.  
+- Tested using the Jasmine framework, with Protractor for end-to-end tests and Karma for unit tests.
 
-## UPCOMING FEATURES
+## TECHNOLOGIES
+
+- Angular 4
+- HTML
+- CSS
+- Typescript
+- jQuery
+
+## UPCOMING TECH
 
 - Node.js backend connecting to a Mongo database.
 
 ## ISSUES
 
 - Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
+
+- Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.  
