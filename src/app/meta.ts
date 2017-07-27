@@ -3,4 +3,5 @@ export class Meta {
   name: string;
   logo: string;
   alias: string;
+  profile: string;
 }

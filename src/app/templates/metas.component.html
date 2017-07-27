@@ -1,6 +1,6 @@
 <div id="metasWrap">
   <ul class="metas background">
-    <li *ngFor= "let individualMeta of metaShown"
+    <li niceShift *ngFor= "let individualMeta of metaShown"
          (click)="onSelect(individualMeta)"
           [class.selectedMeta]="individualMeta === selectedMeta">
 

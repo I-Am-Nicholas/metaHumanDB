@@ -33,7 +33,7 @@
    height: 1.6em;
    border-radius: 4px;
    -webkit-transition: height all 250ms ease; /* Safari */
-   transition: all 500ms ease;
+   transition: all 250ms ease;
  }
 
  .metas li.selectedMeta:hover {
