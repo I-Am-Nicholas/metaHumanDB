@@ -1,52 +1,72 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-// import { MockBackend } from '@angular/http/testing';
-import { ComponentFixtureAutoDetect } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, async} from "@angular/core/testing";
+import { HttpModule, XHRBackend } from "@angular/http";
+import { ComponentFixtureAutoDetect } from "@angular/core/testing";
+import { MockBackend } from "@angular/http/testing";
 
-
-import { DashboardComponent } from '../components/dashboard.component';
-import { MetaService } from '../meta-service';
-import { Meta } from '../meta';
-
-
-let fixture: ComponentFixture<DashboardComponent>;
-let HTMLnode: HTMLElement;
-let page: Page;
-let comp: DashboardComponent;
-let el: DebugElement;
-let metaService: MetaService;
-let serviceStub: Meta;
+import { DashboardComponent } from "../components/dashboard.component";
+import { MetaService } from "../meta-service";
+import { Meta } from "../meta";
 
 describe('DashboardComponent', () => {
+  let fixture: ComponentFixture<DashboardComponent>;
+  let HTMLnode: HTMLElement;
+  let comp: DashboardComponent;
+  let metaStub: any;
+  let metaService: MetaService;
+  let spy: jasmine.Spy;
 
   beforeEach(() => {
 
+    metaStub = [
+      {
+        id:3,
+        name:"Hulk",
+        logo:"assets/200s/gamma.png",
+        alias:"Bruce Banner"
+      }
+    ]
+
     TestBed.configureTestingModule({
-      imports: [ HttpModule ],
+      imports: [ HttpModule,],
       declarations: [ DashboardComponent ],
-      providers: [ MetaService,
-        { provide: ComponentFixtureAutoDetect, useValue: true }/*automatically
-         detecting DOM changes at root*/
+      providers: [
+        MetaService,
+        { provide: XHRBackend, useClass: MockBackend },
+        { provide: ComponentFixtureAutoDetect, useValue: true },
         ]
     });
-
-    metaService = fixture.debugElement.injector.get(MetaService);
-
 
     fixture = TestBed.createComponent( DashboardComponent );
     HTMLnode = fixture.nativeElement;
     comp = fixture.componentInstance;
-    el = fixture.debugElement;
-    page = new Page();
 
-    TestBed.compileComponents();
+    metaService = fixture.debugElement.injector.get(MetaService);
+
+    spy = spyOn(metaService, 'getMetas')
+      .and.returnValue(Promise.resolve(metaStub));
 
   });
 
-  fit("should render a video background", () => {
-    console.log(fixture.debugElement.queryAll(By.css('.dashBtns')));
+
+  it("check that comp is an instance of DashboardComponent", () => {
+    expect(comp instanceof DashboardComponent).toBe(true);
+  });
+
+  it("should not have metas before ngOnInit", () => {
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it("should call the spy after ngOnInit", () => {
+    comp.ngOnInit();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it("metaInfo should take on the value of info", () => {
+    comp.onSelect(metaStub);
+    expect(comp.metaInfo).toEqual(metaStub);
+  });
+
+  it("should render a video background", () => {
     expect(HTMLnode.querySelector('#my-video').childElementCount).toEqual(3);
   });
 
@@ -54,40 +74,4 @@ describe('DashboardComponent', () => {
     expect(HTMLnode.querySelector('#grid-wrap').childElementCount).toEqual(1);
   });
 
-  it("should render correct number of buttons elements", () => {
-    expect(page.dashButtons.length).toBeGreaterThan(0)
-  });
-
-  fit("should render correct number of image elements", async(() => {
-    fixture.whenStable().then(() => {
-      fixture.detectChanges();
-      expect(page.dashImages.length).toBeGreaterThan(0);
-    });
-  }));
-
-  it("should render same number of images as of buttons", () =>{
-    expect(page.dashImages.length).toBeGreaterThan(0);
-    expect(page.dashImages.length == page.dashButtons.length).toBe(true);
-  });
-
 });
-
-// var checkDOMWhenStable = async(()=> {
-//    fixture.whenStable().then(() => {
-//      page = new Page();
-//      })
-// });
-
-
-class Page {
-  dashButtons: HTMLElement[];
-  dashImages: HTMLElement[];
-
-  constructor() {
-    this.dashButtons = el.queryAll(By.css('.dashBtns'))
-      .map(debug => debug.nativeElement);
-    this.dashImages = el.queryAll(By.css('img'))
-      .map(debug => debug.nativeElement);
-  }
-
-}
