@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
  
-import { DashboardComponent } from './dashboard.component';
-import { MetasComponent } from './metas.component';
-import { MetaDetailComponent } from './meta-detail.component';
+import { DashboardComponent } from './components/dashboard.component';
+import { MetasComponent } from './components/metas.component';
+import { MetaDetailComponent } from './components/meta-detail.component';
  
 const routes: Routes = [
   { path: 'dashboard',  component: DashboardComponent },

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Meta } from './meta';
-import { MetaService } from './meta-service'
+import { Meta } from '../meta';
+import { MetaService } from '../meta-service'
 
 @Component({
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css', './sharedBG.css' ]
+  templateUrl: '../templates/dashboard.component.html',
+  styleUrls: [ '../stylesheets/dashboard.component.css', '../sharedBG.css' ]
 })
 
 export class DashboardComponent implements OnInit {

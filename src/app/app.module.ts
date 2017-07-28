@@ -8,10 +8,10 @@ import { HttpModule }    from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { MetasComponent } from './metas.component';
-import { MetaDetailComponent } from './meta-detail.component';
+import { AppComponent } from './components/app.component';
+import { DashboardComponent } from './components/dashboard.component';
+import { MetasComponent } from './components/metas.component';
+import { MetaDetailComponent } from './components/meta-detail.component';
 import { MetaService } from './meta-service';
 
 

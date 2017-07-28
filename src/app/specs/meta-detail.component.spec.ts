@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 
-import { MetaDetailComponent } from './meta-detail.component'
-import { Meta } from './meta'
+import { MetaDetailComponent } from '../components/meta-detail.component'
+import { Meta } from '../meta'
 
 let fixture: ComponentFixture<MetaDetailComponent>;
 let comp: MetaDetailComponent;
@@ -23,7 +23,7 @@ describe('MetaDetailComponent', () => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
-    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder"});
+    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: ""});
     comp = fixture.componentInstance;
     comp.valueFromMetasComponent = testMeta;
     fixture.detectChanges();

@@ -4,8 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { MetasComponent } from './metas.component';
-import { MetaService } from './meta-service';
+import { MetasComponent } from '../components/metas.component';
+import { MetaService } from '../meta-service';
 
 describe("MetasComponent", () => {
 
@@ -38,7 +38,7 @@ describe("MetasComponent", () => {
   });
 
   it('selectedMeta should receive value of meta', () => {
-    let testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder"});
+    let testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: ""});
     comp.onSelect(testMeta);
     expect(comp.selectedMeta).toEqual(testMeta);
   });

@@ -4,9 +4,9 @@
 
   <div id="body">
     <video id="my-video" class="video" autoplay="autoplay" width="300" height="150">
-      <source src="./assets/media/civil.mp4" type="video/mp4" />
-      <source src="./assets/media/avengers.ogv" type="video/ogg" />
-      <source src="./assets/media/avengers.webm" type="video/webm" />
+      <source src="../assets/media/civil.mp4" type="video/mp4" />
+      <source src="../assets/media/avengers.ogv" type="video/ogg" />
+      <source src="../assets/media/avengers.webm" type="video/webm" />
     </video>
   </div>
 
@@ -16,7 +16,7 @@
         <div *ngFor="let meta of metas" class="row-of-5"
           (click)="onSelect(info)">
 
-          <div class="dashBtns hero">
+          <div class="dashBtns hero niceShift">
             <div id="meta-name">{{meta.name | uppercase}}</div>
             <div id="meta-logo"><img src = '{{meta.logo}}' alt = 'Meta Symbol' ></div>
           </div>
