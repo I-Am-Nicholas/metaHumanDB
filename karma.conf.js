@@ -15,6 +15,9 @@ module.exports = function (config) {
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    files : [
+      { pattern: 'src/assets/media/civil.mp4', watched: false, included: false, served: true },
+    ],
     coverageIstanbulReporter: {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
