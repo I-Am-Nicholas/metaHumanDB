@@ -23,9 +23,9 @@ describe('MetaDetailComponent', () => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
-    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: ""});
+    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: "../assets/headshots/Thor.png"});
     comp = fixture.componentInstance;
-    comp.valueFromMetasComponent = testMeta;
+    comp.clickedInMetasComponent = testMeta;
     fixture.detectChanges();
   });
 
@@ -40,6 +40,14 @@ describe('MetaDetailComponent', () => {
   it("should not display logo details", () => {
     let unexpectedPipedLogo = testMeta.logo;
     expect(DOMElement[0].textContent).not.toContain(unexpectedPipedLogo);
+  });
+
+  it("should display the meta's profile", () => {
+    expect(DOMElement[0].querySelector('#profile')).toBeTruthy();
+  });
+
+  it("should display the meta's image", () => {
+    expect(DOMElement[0].querySelector('#headshot')).toBeTruthy();
   });
 
 

@@ -23,7 +23,8 @@ describe('DashboardComponent', () => {
         name:"Hulk",
         logo:"assets/200s/gamma.png",
         alias:"Bruce Banner",
-        profile: ""
+        profile: "",
+        headshot: ""
       }
     ]
 

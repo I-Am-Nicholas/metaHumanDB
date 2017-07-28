@@ -4,66 +4,77 @@
     "name":"Iron Man",
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
-    "profile": ""
+    "profile": "",
+    "headshot": ""
   },
     {
       "id":2,
       "name":"Captain America",
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":3,
       "name":"Hulk",
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":4,
       "name":"Spider-Man",
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.jpg",
       "alias":"God of Thunder",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
-      "id":8,"name":"Hawkeye",
+      "id":8,
+      "name":"Hawkeye",
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":9,
       "name":"Black Widow",
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     },
     {
       "id":10,
       "name":"Vision",
       "logo":"assets/gem.png",
       "alias":"Vision",
-      "profile": ""
+      "profile": "",
+      "headshot": ""
     }
   ]
 }
