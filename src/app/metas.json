@@ -5,7 +5,7 @@
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
     "profile": "",
-    "headshot": ""
+    "headshot": "assets/headshots/tony.jpg"
   },
     {
       "id":2,
@@ -13,7 +13,7 @@
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/steve.jpg"
     },
     {
       "id":3,
@@ -21,7 +21,7 @@
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/bruce.jpg"
     },
     {
       "id":4,
@@ -29,28 +29,28 @@
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/peter.jpg"
     },
     {
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.jpg",
       "alias":"God of Thunder",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/thor.jpg"
     },
     {
       "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/tchalla.jpg"
     },
     {
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/wanda.jpg"
     },
     {
       "id":8,
@@ -58,7 +58,7 @@
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/clint.jpg"
     },
     {
       "id":9,
@@ -66,7 +66,7 @@
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/natasha.jpg"
     },
     {
       "id":10,
@@ -74,7 +74,7 @@
       "logo":"assets/gem.png",
       "alias":"Vision",
       "profile": "",
-      "headshot": ""
+      "headshot": "assets/headshots/vision.jpg"
     }
   ]
 }
