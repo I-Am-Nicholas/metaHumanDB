@@ -6,6 +6,8 @@ describe('MetaHumanDB App', () => {
 
   let metas = element(by.className('metas'));
   let dashWrapper = element(by.id("grid-wrap"));
+  let anyMeta = element(by.className('badge'));
+  let mhList = element(by.id('metaList'));
 
 
   it('should have a title', () => {
@@ -26,16 +28,28 @@ describe('MetaHumanDB App', () => {
   });
 
   it('clicking Meta-List shows a list of all meta-humans', () => {
-    browser.findElement(by.id('metaList')).click();
+    mhList.click();
     expect(browser.isElementPresent(metas)).toBe(true);
   });
 
   it('clicking first name in Meta-List shows details of the selected Meta-Human.', () => {
-    browser.findElement(by.id('metaList')).click();
-    let anyMeta = browser.findElement(by.className('badge'));
+    mhList.click();
     anyMeta.click();
     let detail = element(by.className('detail'));
     expect(browser.isElementPresent(detail)).toBe(true);
+  });
+
+  it('detail should show name, alias and headshot', () => {
+    mhList.click();
+    anyMeta.click();
+    let name = element(by.id('name'));
+    let alias = element(by.id('alias'));
+    let profile = element(by.id('profile'));
+    let headshot = element(by.id('headshot'));
+    expect(browser.isElementPresent(name)).toBe(true);
+    expect(browser.isElementPresent(alias)).toBe(true);
+    expect(browser.isElementPresent(profile)).toBe(true);
+    expect(browser.isElementPresent(headshot)).toBe(true);
   });
 
 });
