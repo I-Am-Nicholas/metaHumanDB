@@ -24,8 +24,8 @@ nav a:hover {
   background-color: #333;
   opacity: 0.5;
   transform: scaleY(1.2);
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
 nav a:active {

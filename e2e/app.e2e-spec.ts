@@ -10,6 +10,8 @@ describe('MetaHumanDB App', () => {
   let mhList = element(by.id('metaList'));
 
 
+describe("Pre-Click", () => {
+
   it('should have a title', () => {
     expect(browser.getTitle()).toEqual('MetaHumanDB');
   });
@@ -18,38 +20,48 @@ describe('MetaHumanDB App', () => {
     expect(browser.isElementPresent(dashWrapper)).toBe(false);
   });
 
-  it('clicking Dashboard shows Dashboard', () => {
-    browser.findElement(by.id('dashboard')).click();
-    expect(browser.isElementPresent(dashWrapper)).toBe(true);
+});
+
+  describe("Dashboard", () => {
+
+    it('clicking Dashboard shows Dashboard', () => {
+      browser.findElement(by.id('dashboard')).click();
+      expect(browser.isElementPresent(dashWrapper)).toBe(true);
+    });
+
   });
 
-  it("should not show the list elements before Meta-List button is clicked", () => {
-    expect(browser.isElementPresent(metas)).toBe(false);
-  });
+  describe("Meta-Human List", () => {
 
-  it('clicking Meta-List shows a list of all meta-humans', () => {
-    mhList.click();
-    expect(browser.isElementPresent(metas)).toBe(true);
-  });
+    it("should not show the list elements before Meta-Human List button is clicked", () => {
+      expect(browser.isElementPresent(metas)).toBe(false);
+    });
 
-  it('clicking first name in Meta-List shows details of the selected Meta-Human.', () => {
-    mhList.click();
-    anyMeta.click();
-    let detail = element(by.className('detail'));
-    expect(browser.isElementPresent(detail)).toBe(true);
-  });
+    it('clicking Meta-Human List shows a list of all meta-humans', () => {
+      mhList.click();
+      expect(browser.isElementPresent(metas)).toBe(true);
+    });
 
-  it('detail should show name, alias and headshot', () => {
-    mhList.click();
-    anyMeta.click();
-    let name = element(by.id('name'));
-    let alias = element(by.id('alias'));
-    let profile = element(by.id('profile'));
-    let headshot = element(by.id('headshot'));
-    expect(browser.isElementPresent(name)).toBe(true);
-    expect(browser.isElementPresent(alias)).toBe(true);
-    expect(browser.isElementPresent(profile)).toBe(true);
-    expect(browser.isElementPresent(headshot)).toBe(true);
+    it('clicking first name in Meta-Human List shows details of the selected Meta-Human.', () => {
+      mhList.click();
+      anyMeta.click();
+      let detail = element(by.className('detail'));
+      expect(browser.isElementPresent(detail)).toBe(true);
+    });
+
+    it('detail should show name, alias and headshot', () => {
+      mhList.click();
+      anyMeta.click();
+      let name = element(by.id('name'));
+      let alias = element(by.id('alias'));
+      let profile = element(by.id('profile'));
+      let headshot = element(by.id('headshot'));
+      expect(browser.isElementPresent(name)).toBe(true);
+      expect(browser.isElementPresent(alias)).toBe(true);
+      expect(browser.isElementPresent(profile)).toBe(true);
+      expect(browser.isElementPresent(headshot)).toBe(true);
+    });
+
   });
 
 });
