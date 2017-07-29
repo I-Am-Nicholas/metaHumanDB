@@ -35,7 +35,7 @@ describe('DashboardComponent', () => {
         MetaService,
         { provide: XHRBackend, useClass: MockBackend },
         { provide: ComponentFixtureAutoDetect, useValue: true },
-        ]
+      ]
     });
 
     fixture = TestBed.createComponent( DashboardComponent );

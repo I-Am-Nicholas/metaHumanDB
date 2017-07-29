@@ -30,7 +30,6 @@ describe("MetasComponent", () => {
 
   });
 
-
   it('should invoke the getTheMetas() function', () => {
     let spy = spyOn(comp, 'getTheMetas');
     comp.ngOnInit();
@@ -38,8 +37,11 @@ describe("MetasComponent", () => {
   });
 
   it('selectedMeta should receive value of meta', () => {
-    let testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: ""
-});
+    let testMeta = (
+      {
+        id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: ""
+      }
+    );
     comp.onSelect(testMeta);
     expect(comp.selectedMeta).toEqual(testMeta);
   });
