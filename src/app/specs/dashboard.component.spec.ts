@@ -22,7 +22,9 @@ describe('DashboardComponent', () => {
         id:3,
         name:"Hulk",
         logo:"assets/200s/gamma.png",
-        alias:"Bruce Banner"
+        alias:"Bruce Banner",
+        profile: "",
+        headshot: ""
       }
     ]
 
@@ -33,7 +35,7 @@ describe('DashboardComponent', () => {
         MetaService,
         { provide: XHRBackend, useClass: MockBackend },
         { provide: ComponentFixtureAutoDetect, useValue: true },
-        ]
+      ]
     });
 
     fixture = TestBed.createComponent( DashboardComponent );

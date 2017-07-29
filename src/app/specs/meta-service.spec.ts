@@ -10,13 +10,17 @@ const fakeMetaData = () => [
     id:3,
     name:"Hulk",
     logo:"assets/200s/gamma.png",
-    alias:"Bruce Banner"
+    alias:"Bruce Banner",
+    profile: "",
+    headshot: ""
   },
   {
     id:7,
     name:"Black Panther",
     logo:"assets/200s/pantera.jpg",
-    alias:"T'Challa, King of Wakanda"
+    alias:"T'Challa, King of Wakanda",
+    profile: "",
+    headshot: ""
   }
 ];
 
@@ -52,7 +56,7 @@ describe("MetaService", () => {
       expect(backend).not.toBeNull();
   }));
 
-  describe("when getMetas", () => {
+  describe("When getMetas", () => {
       let backend: MockBackend;
       let service: MetaService;
       let fakeMetas: Meta[];
@@ -66,7 +70,7 @@ describe("MetaService", () => {
         response = new Response(options);
       }));
 
-      it("should expect fake heroes", async(inject([], () => {
+      it("should expect fake metas", async(inject([], () => {
         backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
         service.getMetas()
           .then(metas => {
@@ -74,7 +78,7 @@ describe("MetaService", () => {
           });
       })));
 
-      it("should expect a fake hero", async(inject([], () => {
+      it("should expect a fake meta", async(inject([], () => {
         backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
         let idArg = 7; let haveMeta;
         service.getMeta(idArg)
