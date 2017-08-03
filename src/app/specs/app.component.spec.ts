@@ -47,4 +47,8 @@ describe('AppComponent', () => {
     expect(HTMLnode.querySelector('#metaList').textContent).toMatch('Meta-Human List');
   });
 
+  it("should render a nav button titled 'anonymous'", () => {
+    expect(HTMLnode.querySelector('#back').textContent).toMatch('Back');
+  });
+
 });
