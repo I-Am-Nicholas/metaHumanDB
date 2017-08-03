@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
+
 import { Meta } from '../meta';
 import { MetaService } from '../meta-service'
 
@@ -11,17 +14,19 @@ import { MetaService } from '../meta-service'
 export class DashboardComponent implements OnInit {
 
   metas: Meta[] = [];
-  metaInfo: Meta;
 
-  constructor(private metaService: MetaService) {}
+  constructor(
+    private metaService: MetaService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.metaService.getMetas()
       .then(metas => this.metas = metas.slice(0, 5));
   }
 
-  onSelect(info: Meta): void {
-    this.metaInfo = info;
-  }
+  onSelect(clicked: Meta) {
+    this.router.navigate(['/detail', clicked.id ]);
+  };
 
 }

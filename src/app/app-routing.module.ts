@@ -8,7 +8,8 @@ import { MetaDetailComponent } from './components/meta-detail.component';
 const routes: Routes = [
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id',  component: MetaDetailComponent },
-  { path: 'Meta-Human List',  component: MetasComponent }
+  { path: 'Meta-Human List',  component: MetasComponent },
+  { path: 'metas', component: MetasComponent }
 ];
  
 @NgModule({

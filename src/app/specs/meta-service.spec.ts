@@ -44,7 +44,7 @@ describe("MetaService", () => {
   }));
 
   it("can instantiate the service with 'new'", inject([Http], (http: Http) => {
-    expect(http).not.toBeNull();//null would mean defined but with unassignd value.
+    expect(http).not.toBeNull();
     let service = new MetaService(http);
     expect(service instanceof MetaService).toBe(true);
   }));

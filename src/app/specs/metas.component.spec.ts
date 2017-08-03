@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 
 import { MetasComponent } from '../components/metas.component';
 import { MetaService } from '../meta-service';
@@ -18,7 +17,7 @@ describe("MetasComponent", () => {
 
     TestBed.configureTestingModule({
       declarations: [ MetasComponent ],
-      imports: [ RouterTestingModule, HttpModule ],
+      imports: [ RouterTestingModule ],
       schemas: [ NO_ERRORS_SCHEMA ],
       providers: [
       {provide: MetaService, useValue: serviceStub }
@@ -39,7 +38,12 @@ describe("MetasComponent", () => {
   it('selectedMeta should receive value of meta', () => {
     let testMeta = (
       {
-        id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: ""
+        id: 1,
+        name: "Thor",
+        logo: "Mjolnir",
+        alias: "God of Thunder",
+        profile: "",
+        headshot: ""
       }
     );
     comp.onSelect(testMeta);

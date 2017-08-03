@@ -1,15 +1,15 @@
-<div class="detail background" *ngIf = "clickedInMetasComponent">
+<div class="detail background" *ngIf = "clicked">
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view, then show the following...-->
-  <div id="headshot"><img src = '{{clickedInMetasComponent.headshot}}' alt = '{{clickedInMetasComponent.name}} Symbol' ></div>
+  <div id="headshot"><img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' ></div>
     <br><br>
     <div>
-      <div id="name">{{clickedInMetasComponent.name}}</div>
+      <div id="name">{{clicked.name}}</div>
       <br>
       <div class="simpleText">a.k.a</div>
       <br>
-      <div id="alias">{{clickedInMetasComponent.alias}}</div>
+      <div id="alias">{{clicked.alias}}</div>
       <br>
-      <div id="profile">{{clickedInMetasComponent.profile}}</div>
+      <div id="profile">{{clicked.profile}}</div>
     </div>
 </div>
