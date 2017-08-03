@@ -1,14 +1,21 @@
 h1 {
+  text-align: center;
   font-size: 4.3em;
+}
+
+.navParent {
+  height: 175px;
+  width: 300px;
 }
 
 nav a {
   font-size: 1.3em;
   color: lightgray;
-  width: auto;
+  width: 100%;
   height: 50px;
   padding: 5px 10px;
   text-decoration: none;
+  text-align: center;
   margin-top: 10px;
   display: inline-block;
   border-radius: 4px;
