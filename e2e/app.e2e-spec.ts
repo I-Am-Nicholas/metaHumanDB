@@ -11,17 +11,17 @@ describe('MetaHumanDB App', () => {
   let detail = element(by.className('detail'));
 
 
-describe("Pre-Click", () => {
+  describe("Pre-Click", () => {
 
-  it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('MetaHumanDB');
+    it('should have a title', () => {
+      expect(browser.getTitle()).toEqual('MetaHumanDB');
+    });
+
+    it("should not show the dashboard elements before dashboard button is clicked", () => {
+      expect(browser.isElementPresent(dashWrapper)).toBe(false);
+    });
+
   });
-
-  it("should not show the dashboard elements before dashboard button is clicked", () => {
-    expect(browser.isElementPresent(dashWrapper)).toBe(false);
-  });
-
-});
 
   describe("Dashboard", () => {
 
@@ -55,7 +55,11 @@ describe("Pre-Click", () => {
       expect(browser.isElementPresent(detail)).toBe(true);
     });
 
-    it('detail should show name, alias and headshot', () => {
+  });
+
+  describe("Meta-Human Detail", () => {
+
+    it('detail should show all details of meta', () => {
       mhList.click();
       anyMeta.click();
       let name = element(by.id('name'));
