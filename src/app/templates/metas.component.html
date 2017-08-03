@@ -3,8 +3,8 @@
     <!--'metaShown' is a property of MetasComponent created
   by the component's ngOnInit method.-->
     <li niceShift *ngFor= "let individualMeta of metaShown"
-          [class.selectedMeta]="individualMeta === selectedMeta"
-          (click)="onSelect(individualMeta)">
+        (click)="onSelect(individualMeta)"
+        [class.selectedMeta]="individualMeta === selectedMeta">
 
          <!--When an item in the list is clicked, the component's onSelect function
             is called with the value of the clicked item as an argument.

@@ -70,7 +70,7 @@ describe('DashboardComponent', () => {
   });
 
   it("should render a video background", () => {
-    expect(HTMLnode.querySelector('#my-video').childElementCount).toEqual(3);
+    expect(HTMLnode.querySelector('#my-video').childElementCount).toEqual(1);
   });
 
   it("should render a wrapper for the dashboard elements", () => {

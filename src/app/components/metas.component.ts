@@ -13,7 +13,7 @@ export class MetasComponent implements OnInit {
   metaShown: Meta[];//what will be returned by 'getTheMetas()' function.
   selectedMeta: Meta;
 
-  constructor(//injected dependencies
+  constructor(
     private metaService: MetaService,
   ) {}
 
