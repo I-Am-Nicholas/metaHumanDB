@@ -33,7 +33,7 @@
     },
     {
       "id":5,"name":"Thor",
-      "logo":"assets/200s/mjolnir.jpg",
+      "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
       "profile": "",
       "headshot": "assets/headshots/thor.jpg"

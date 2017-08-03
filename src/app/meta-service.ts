@@ -4,7 +4,6 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { Meta } from './meta';
 
-
 @Injectable()
 export class MetaService {
 
@@ -30,7 +29,7 @@ non-static asynchronous collection of flowing events not stored in memory.
 conversion of the response into a json object of Meta type. */
 
   getMeta(id: number): Promise<Meta> {
-    const url = '${this.metalistUrl}/${id}';
+    const url = `${this.metalistUrl}/${id}`;
     return this.http.get(url)
       .toPromise()
       .then(response => response.json().data as Meta)
@@ -48,7 +47,7 @@ conversion of the response into a json object of Meta type. */
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred, Nicholas:', error);
-    return Promise.reject(error.message || error);
+    return Promise.reject( error );
   }
 
 }

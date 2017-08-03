@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, async} from "@angular/core/testing";
-import { HttpModule, XHRBackend } from "@angular/http";
+import { HttpModule } from "@angular/http";
 import { ComponentFixtureAutoDetect } from "@angular/core/testing";
-import { MockBackend } from "@angular/http/testing";
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { DashboardComponent } from "../components/dashboard.component";
 import { MetaService } from "../meta-service";
@@ -14,12 +14,13 @@ describe('DashboardComponent', () => {
   let metaStub: any;
   let metaService: MetaService;
   let spy: jasmine.Spy;
+  let routerSpy: jasmine.Spy;
 
-  beforeEach(() => {
+  beforeEach(async(() => {
 
     metaStub = [
       {
-        id:3,
+        id: 3,
         name:"Hulk",
         logo:"assets/200s/gamma.png",
         alias:"Bruce Banner",
@@ -29,12 +30,11 @@ describe('DashboardComponent', () => {
     ]
 
     TestBed.configureTestingModule({
-      imports: [ HttpModule,],
+      imports: [ HttpModule, RouterTestingModule.withRoutes([])
+    ],
       declarations: [ DashboardComponent ],
       providers: [
-        MetaService,
-        { provide: XHRBackend, useClass: MockBackend },
-        { provide: ComponentFixtureAutoDetect, useValue: true },
+        MetaService
       ]
     });
 
@@ -47,7 +47,7 @@ describe('DashboardComponent', () => {
     spy = spyOn(metaService, 'getMetas')
       .and.returnValue(Promise.resolve(metaStub));
 
-  });
+  }));
 
 
   it("check that comp is an instance of DashboardComponent", () => {
@@ -63,13 +63,14 @@ describe('DashboardComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it("metaInfo should take on the value of info", () => {
-    comp.onSelect(metaStub);
-    expect(comp.metaInfo).toEqual(metaStub);
+  it("onSelect should route to meta-detail.component", () => {
+    let navigateSpy = spyOn((<any>comp).router, 'navigate');
+    comp.onSelect(metaStub[0]);
+    expect(navigateSpy).toHaveBeenCalledWith(['/detail', metaStub[0].id]);
   });
 
   it("should render a video background", () => {
-    expect(HTMLnode.querySelector('#my-video').childElementCount).toEqual(3);
+    expect(HTMLnode.querySelector('#my-video').childElementCount).toEqual(1);
   });
 
   it("should render a wrapper for the dashboard elements", () => {

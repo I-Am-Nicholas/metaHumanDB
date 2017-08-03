@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { Meta } from '../meta';
 import { MetaService } from '../meta-service';
@@ -11,12 +10,12 @@ import { MetaService } from '../meta-service';
 
 export class MetasComponent implements OnInit {
 
-  metaShown: Meta[];
+  metaShown: Meta[];//what will be returned by 'getTheMetas()' function.
+  selectedMeta: Meta;
 
   constructor(
-    private router: Router,
     private metaService: MetaService,
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getTheMetas();
@@ -26,10 +25,8 @@ export class MetasComponent implements OnInit {
     this.metaService.getMetas().then(metas => this.metaShown = metas);
   }
 
-  selectedMeta: Meta;
-
-  onSelect(meta: Meta): void {
-    this.selectedMeta = meta;
+  onSelect(individualMeta: Meta): void {
+    this.selectedMeta = individualMeta;
   }
 
 }

@@ -8,6 +8,7 @@ describe('MetaHumanDB App', () => {
   let dashWrapper = element(by.id("grid-wrap"));
   let anyMeta = element(by.className('badge'));
   let mhList = element(by.id('metaList'));
+  let detail = element(by.className('detail'));
 
 
 describe("Pre-Click", () => {
@@ -24,9 +25,15 @@ describe("Pre-Click", () => {
 
   describe("Dashboard", () => {
 
-    it('clicking Dashboard shows Dashboard', () => {
+    it('clicking Dashboard button shows Dashboard', () => {
       browser.findElement(by.id('dashboard')).click();
       expect(browser.isElementPresent(dashWrapper)).toBe(true);
+    });
+
+    it('clicking a Dashboard Meta shows that Metas details', () =>{
+      browser.findElement(by.id('dashboard')).click();
+      browser.findElement(by.className('dashBtns')).click();
+      expect(browser.isElementPresent(detail)).toBe(true);
     });
 
   });
@@ -45,7 +52,6 @@ describe("Pre-Click", () => {
     it('clicking first name in Meta-Human List shows details of the selected Meta-Human.', () => {
       mhList.click();
       anyMeta.click();
-      let detail = element(by.className('detail'));
       expect(browser.isElementPresent(detail)).toBe(true);
     });
 
