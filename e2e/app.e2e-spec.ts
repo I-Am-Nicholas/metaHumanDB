@@ -60,7 +60,6 @@ describe('MetaHumanDB App', () => {
 
   });
 
-
   describe("Meta-Human Detail", () => {
 
     it('detail should show all details of meta', () => {
@@ -85,6 +84,20 @@ describe('MetaHumanDB App', () => {
       mhList.click();
       back.click();
       expect(browser.isElementPresent(dashBtns)).toBe(true);
+    });
+
+    it("navigates back to previous Meta-Detail page", () => {
+      dash.click();
+      dashBtns.click();
+      back.click();
+      expect(browser.isElementPresent(dashBtns)).toBe(true);
+    });
+
+    it("navigates back to previous Meta-Human List page", () => {
+      mhList.click();
+      dash.click();
+      back.click();
+      expect(browser.isElementPresent(metas)).toBe(true);
     });
 
   });
