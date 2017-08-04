@@ -60,9 +60,10 @@ describe('MetaHumanDB App', () => {
 
   });
 
-  describe("Meta-Detail", () => {
 
-    it('detail should show name, alias and headshot', () => {
+  describe("Meta-Human Detail", () => {
+
+    it('detail should show all details of meta', () => {
       mhList.click();
       anyMeta.click();
       let name = element(by.id('name'));
