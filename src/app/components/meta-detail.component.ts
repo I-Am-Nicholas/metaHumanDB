@@ -21,19 +21,19 @@ export class MetaDetailComponent implements OnInit {
     private metaService: MetaService,
     private route: ActivatedRoute,
   ) {}
-  //
-  // ngOnInit(): void {
-  //   this.route.paramMap
-  //   .switchMap((params: ParamMap) =>
-  //   this.metaService.getMeta(+params.get('id')))
-  //   .subscribe(meta => this.clicked = meta);
-  // }
 
-  ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
-    this.metaService.getMeta(+id)
-      .then((meta: Meta) => this.clicked = meta);
+  ngOnInit(): void {
+    this.route.paramMap
+    .switchMap((params: ParamMap) =>
+    this.metaService.getMeta(+params.get('id')))
+    .subscribe(meta => this.clicked = meta);
   }
+
+  // ngOnInit() {
+  //   let id = this.route.snapshot.paramMap.get('id');
+  //   this.metaService.getMeta(+id)
+  //     .then((meta: Meta) => this.clicked = meta);
+  // }
 
 
 }
