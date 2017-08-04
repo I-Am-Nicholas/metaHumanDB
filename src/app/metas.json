@@ -1,6 +1,6 @@
 { "metalist":
   [
-    {"id":0,
+    {"id":1,
     "name":"Iron Man",
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
@@ -8,7 +8,7 @@
     "headshot": "assets/headshots/tony.jpg"
   },
     {
-      "id":1,
+      "id":2,
       "name":"Captain America",
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
@@ -16,7 +16,7 @@
       "headshot": "assets/headshots/steve.jpg"
     },
     {
-      "id":2,
+      "id":3,
       "name":"Hulk",
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
@@ -24,7 +24,7 @@
       "headshot": "assets/headshots/bruce.jpg"
     },
     {
-      "id":3,
+      "id":4,
       "name":"Spider-Man",
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
@@ -32,28 +32,28 @@
       "headshot": "assets/headshots/peter.jpg"
     },
     {
-      "id":4,"name":"Thor",
+      "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
       "profile": "",
       "headshot": "assets/headshots/thor.jpg"
     },
     {
-      "id":5,"name":"Black Panther",
+      "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
       "profile": "",
       "headshot": "assets/headshots/tchalla.jpg"
     },
     {
-      "id":6,"name":"Scarlet Witch",
+      "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
       "profile": "",
       "headshot": "assets/headshots/wanda.jpg"
     },
     {
-      "id":7,
+      "id":8,
       "name":"Hawkeye",
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
@@ -61,7 +61,7 @@
       "headshot": "assets/headshots/clint.jpg"
     },
     {
-      "id":8,
+      "id":9,
       "name":"Black Widow",
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
@@ -69,7 +69,7 @@
       "headshot": "assets/headshots/natasha.jpg"
     },
     {
-      "id":9,
+      "id":10,
       "name":"Vision",
       "logo":"assets/gem.png",
       "alias":"Vision",
