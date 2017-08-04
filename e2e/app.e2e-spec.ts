@@ -9,30 +9,33 @@ describe('MetaHumanDB App', () => {
   let anyMeta = element(by.tagName('li'));
   let mhList = element(by.id('metaList'));
   let detail = element(by.className('detail'));
+  let dash = element(by.id('dashboard'));
+  let dashBtns = element(by.className('dashBtns'));
+  let back = element(by.id('back'));
 
 
-describe("Pre-Click", () => {
+  describe("Pre-Click", () => {
 
-  it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('MetaHumanDB');
+    it('should have a title', () => {
+      expect(browser.getTitle()).toEqual('MetaHumanDB');
+    });
+
+    it("should not show the dashboard elements before dashboard button is clicked", () => {
+      expect(browser.isElementPresent(dashWrapper)).toBe(false);
+    });
+
   });
-
-  it("should not show the dashboard elements before dashboard button is clicked", () => {
-    expect(browser.isElementPresent(dashWrapper)).toBe(false);
-  });
-
-});
 
   describe("Dashboard", () => {
 
     it('clicking Dashboard button shows Dashboard', () => {
-      browser.findElement(by.id('dashboard')).click();
+      dash.click();
       expect(browser.isElementPresent(dashWrapper)).toBe(true);
     });
 
     it('clicking a Dashboard Meta shows that Metas details', () =>{
-      browser.findElement(by.id('dashboard')).click();
-      browser.findElement(by.className('dashBtns')).click();
+      dash.click();
+      dashBtns.click();
       expect(browser.isElementPresent(detail)).toBe(true);
     });
 
@@ -55,21 +58,32 @@ describe("Pre-Click", () => {
       expect(browser.isElementPresent(detail)).toBe(true);
     });
 
-    describe("Meta-Detail", () => {
+  });
 
-      it('detail should show name, alias and headshot', () => {
-        mhList.click();
-        anyMeta.click();
-        let name = element(by.id('name'));
-        let alias = element(by.id('alias'));
-        let profile = element(by.id('profile'));
-        let headshot = element(by.id('headshot'));
-        expect(browser.isElementPresent(name)).toBe(true);
-        expect(browser.isElementPresent(alias)).toBe(true);
-        expect(browser.isElementPresent(profile)).toBe(true);
-        expect(browser.isElementPresent(headshot)).toBe(true);
-      });
+  describe("Meta-Detail", () => {
 
+    it('detail should show name, alias and headshot', () => {
+      mhList.click();
+      anyMeta.click();
+      let name = element(by.id('name'));
+      let alias = element(by.id('alias'));
+      let profile = element(by.id('profile'));
+      let headshot = element(by.id('headshot'));
+      expect(browser.isElementPresent(name)).toBe(true);
+      expect(browser.isElementPresent(alias)).toBe(true);
+      expect(browser.isElementPresent(profile)).toBe(true);
+      expect(browser.isElementPresent(headshot)).toBe(true);
+    });
+
+  });
+
+  describe("Back button", () => {
+
+    it("navigates back to previous Dashboard page", () => {
+      dash.click();
+      mhList.click();
+      back.click();
+      expect(browser.isElementPresent(dashBtns)).toBe(true);
     });
 
   });

@@ -50,5 +50,6 @@ describe('AppComponent', () => {
   it("should render a nav button titled 'anonymous'", () => {
     expect(HTMLnode.querySelector('#back').textContent).toMatch('Back');
   });
+  
 
 });
