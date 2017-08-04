@@ -93,6 +93,13 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(dashBtns)).toBe(true);
     });
 
+    it("navigates back to previous Meta-Human List page", () => {
+      mhList.click();
+      dash.click();
+      back.click();
+      expect(browser.isElementPresent(metas)).toBe(true);
+    });
+
   });
 
 });
