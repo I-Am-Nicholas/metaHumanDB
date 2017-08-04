@@ -5,8 +5,8 @@ describe('MetaHumanDB App', () => {
   });
 
   let metas = element(by.className('metas'));
-  let dashWrapper = element(by.id("grid-wrap"));
-  let anyMeta = element(by.className('badge'));
+  let dashWrapper = element(by.id('grid-wrap'));
+  let anyMeta = element(by.tagName('li'));
   let mhList = element(by.id('metaList'));
   let detail = element(by.className('detail'));
 
@@ -55,17 +55,21 @@ describe("Pre-Click", () => {
       expect(browser.isElementPresent(detail)).toBe(true);
     });
 
-    it('detail should show name, alias and headshot', () => {
-      mhList.click();
-      anyMeta.click();
-      let name = element(by.id('name'));
-      let alias = element(by.id('alias'));
-      let profile = element(by.id('profile'));
-      let headshot = element(by.id('headshot'));
-      expect(browser.isElementPresent(name)).toBe(true);
-      expect(browser.isElementPresent(alias)).toBe(true);
-      expect(browser.isElementPresent(profile)).toBe(true);
-      expect(browser.isElementPresent(headshot)).toBe(true);
+    describe("Meta-Detail", () => {
+
+      it('detail should show name, alias and headshot', () => {
+        mhList.click();
+        anyMeta.click();
+        let name = element(by.id('name'));
+        let alias = element(by.id('alias'));
+        let profile = element(by.id('profile'));
+        let headshot = element(by.id('headshot'));
+        expect(browser.isElementPresent(name)).toBe(true);
+        expect(browser.isElementPresent(alias)).toBe(true);
+        expect(browser.isElementPresent(profile)).toBe(true);
+        expect(browser.isElementPresent(headshot)).toBe(true);
+      });
+
     });
 
   });
