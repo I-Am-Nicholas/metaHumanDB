@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { ActivatedRoute, ParamMap }   from '@angular/router';
@@ -17,7 +17,7 @@ let testMeta: Meta;
 
 describe('MetaDetailComponent', () => {
 
-  beforeEach( async(() => {
+  beforeEach(() => {
     activatedRoute = new ActivatedRouteStub();
 
     TestBed.configureTestingModule({
@@ -28,13 +28,13 @@ describe('MetaDetailComponent', () => {
       ]
     });
 
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
-    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: "../assets/headshots/Thor.png"});
+    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: ""});
     comp = fixture.componentInstance;
     comp.clicked = testMeta;
     fixture.detectChanges();
