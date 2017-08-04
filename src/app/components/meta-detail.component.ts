@@ -22,11 +22,10 @@ export class MetaDetailComponent implements OnInit {
     private route: ActivatedRoute,
   ) {}
 
-  ngOnInit(): any {
-    this.route.paramMap
-    .switchMap((params: ParamMap) =>
-    this.metaService.getMeta(+params.get('id')))
-    .subscribe(meta => this.clicked = meta);
+  ngOnInit() {
+    this.metaService.getMeta(this.clicked.id)
+      .then((meta: Meta) => this.clicked = meta);
   }
+
 
 }
