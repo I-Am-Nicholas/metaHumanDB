@@ -14,6 +14,7 @@ import { MetasComponent } from './components/metas.component';
 import { MetaDetailComponent } from './components/meta-detail.component';
 import { MetaService } from './meta-service';
 import { TickerComponent } from './components/ticker.component';
+import { MetaRatingComponent } from './components/meta-rating.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TickerComponent } from './components/ticker.component';
     DashboardComponent,
     MetaDetailComponent,
     MetasComponent,
-    TickerComponent
+    TickerComponent,
+    MetaRatingComponent
   ],
   imports: [
     BrowserModule,

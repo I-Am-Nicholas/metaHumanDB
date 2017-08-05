@@ -1,10 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
+import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { ActivatedRoute, ParamMap }   from '@angular/router';
 
 import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from '../components/meta-detail.component'
+import { MetaRatingComponent } from '../components/meta-rating.component';
 import { MetaService } from "../meta-service";
 import { Meta } from '../meta'
 
@@ -22,6 +23,7 @@ describe('MetaDetailComponent', () => {
 
     TestBed.configureTestingModule({
       imports: [ HttpModule ],
+      schemas: [ NO_ERRORS_SCHEMA ],
       declarations: [ MetaDetailComponent ],
       providers: [ MetaService,
         { provide: ActivatedRoute, useValue: activatedRoute },
