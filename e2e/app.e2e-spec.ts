@@ -12,6 +12,7 @@ describe('MetaHumanDB App', () => {
   let dash = element(by.id('dashboard'));
   let dashBtns = element(by.className('dashBtns'));
   let back = element(by.id('back'));
+  let ticker = element(by.id('ticker'));
 
 
   describe("Pre-Click", () => {
