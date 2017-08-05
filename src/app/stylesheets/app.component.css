@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
   font-size: 4.3em;
+  color: #999;
 }
 
 .navParent {
@@ -10,7 +11,8 @@ h1 {
 
 nav a {
   font-size: 1.3em;
-  color: lightgray;
+  /*color: lightgray;*/
+  color: #21658c;
   width: 100%;
   height: 50px;
   padding: 5px 10px;
@@ -22,14 +24,14 @@ nav a {
   line-height: 50px;
 }
 
-nav a:visited {
+/*nav a:visited {
   color: lightgray;
-}
+}*/
 
 nav a:hover {
-  color: #039be5;
-  background-color: #333;
-  opacity: 0.5;
+  color: #fff;
+  /*background-color: #333;*/
+  /*opacity: 0.5;*/
   transform: scaleY(1.2);
   -webkit-transition: 250ms ease;
   transition: 250ms ease;
