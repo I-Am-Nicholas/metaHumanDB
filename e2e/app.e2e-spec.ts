@@ -103,4 +103,13 @@ describe('MetaHumanDB App', () => {
 
   });
 
+  describe('Ticker', () => {
+
+    it("ticker should be present", () => {
+      mhList.click();
+      expect(browser.isElementPresent(ticker)).toBe(true);
+    });
+
+  });
+
 });
