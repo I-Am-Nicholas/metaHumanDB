@@ -1,10 +1,11 @@
 <div id="metasWrap">
-  <ul class="metas background">
+  <ul class="metas">
     <!--'metaShown' is a property of MetasComponent created
   by the component's ngOnInit method.-->
-    <li niceShift *ngFor= "let individualMeta of metaShown"
+    <li *ngFor= "let individualMeta of metaShown"
         (click)="onSelect(individualMeta)"
-        [class.selectedMeta]="individualMeta === selectedMeta">
+        [class.selectedMeta]="individualMeta === selectedMeta"
+        [class.background]="individualMeta">
 
          <!--When an item in the list is clicked, the component's onSelect function
             is called with the value of the clicked item as an argument.
@@ -14,9 +15,11 @@
           is given the selectedMeta class.
         -->
 
-      <span class="badge">{{individualMeta.id}}</span> {{individualMeta.name}}
+      {{individualMeta.name}}
     </li>
   </ul>
+
   <!--The 'clicked' property is created here, with the value of 'selectedMeta'-->
   <meta-detail [clicked]="selectedMeta"></meta-detail>
 </div>
+<div id=ticker class="background"></div>

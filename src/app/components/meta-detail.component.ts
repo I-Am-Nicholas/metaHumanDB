@@ -29,11 +29,4 @@ export class MetaDetailComponent implements OnInit {
     .subscribe(meta => this.clicked = meta);
   }
 
-  // ngOnInit() {
-  //   let id = this.route.snapshot.paramMap.get('id');
-  //   this.metaService.getMeta(+id)
-  //     .then((meta: Meta) => this.clicked = meta);
-  // }
-
-
 }

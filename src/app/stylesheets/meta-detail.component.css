@@ -4,9 +4,13 @@
   flex-direction: column;
   justify-content: center;
   float: left;
-  color: #21658c;
+  color: #999;
   font-size: 1.25em;
   height: 450px;
   border-radius: 6px;
-  padding: 16px;
+  padding-top: 30px;
+}
+
+#headshot img {
+  border: 1px solid #21658c;
 }
