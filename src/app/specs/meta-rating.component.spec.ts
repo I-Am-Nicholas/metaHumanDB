@@ -15,11 +15,11 @@ describe('MetaRatingComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaRatingComponent);
-    component = fixture.componentInstance;
+    comp = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    expect(comp).toBeTruthy();
   });
 });

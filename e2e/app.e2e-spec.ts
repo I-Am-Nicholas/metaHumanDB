@@ -77,6 +77,10 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(headshot)).toBe(true);
     });
 
+    it("div should not be present on landing page", () => {
+      expect(browser.isElementPresent(detail)).toBe(false);
+    });
+
   });
 
   describe("Back button", () => {
@@ -111,14 +115,22 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(ticker)).toBe(true);
     });
 
+    it("div should not be present on landing page", () => {
+      expect(browser.isElementPresent(ticker)).toBe(false);
+    });
+
   });
 
   describe("Rating", () => {
 
-    it("should be present", () => {
+    it("div should be present", () => {
       mhList.click();
       anyMeta.click();
       expect(browser.isElementPresent(rating)).toBe(true);
+    });
+
+    it("div should not be present on landing page", () => {
+      expect(browser.isElementPresent(rating)).toBe(false);
     });
 
   });
