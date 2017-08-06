@@ -115,10 +115,14 @@ describe('MetaHumanDB App', () => {
 
   describe("Rating", () => {
 
-    it("should be present", () => {
+    it("div should be present", () => {
       mhList.click();
       anyMeta.click();
       expect(browser.isElementPresent(rating)).toBe(true);
+    });
+
+    it("div should not be present until a meta is selected", () => {
+      expect(browser.isElementPresent(rating)).toBe(false);
     });
 
   });
