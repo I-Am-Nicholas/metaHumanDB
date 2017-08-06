@@ -23,7 +23,6 @@
    cursor: pointer;
    position: relative;
    left: 0;
-   /*background-color: #21658c;*/
    color: #21658c;
    margin: .5em;
    padding: .3em 0;
@@ -34,14 +33,11 @@
  }
 
  .selectedMeta {
-    /*background-color: #CFD8DC !important;*/
     opacity: 1;
     color: #999;
-    /*transform: translateX(15px);*/
   }
 
  .metas li.selectedMeta:hover {
-   /*background-color: #BBD8DC !important;*/
    color: #999;
   }
 
