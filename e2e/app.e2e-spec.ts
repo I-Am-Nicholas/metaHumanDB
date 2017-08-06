@@ -13,6 +13,7 @@ describe('MetaHumanDB App', () => {
   let dashBtns = element(by.className('dashBtns'));
   let back = element(by.id('back'));
   let ticker = element(by.id('ticker'));
+  let rating = element(by.id('rating'));
 
 
   describe("Pre-Click", () => {
@@ -105,9 +106,19 @@ describe('MetaHumanDB App', () => {
 
   describe('Ticker', () => {
 
-    it("ticker should be present", () => {
+    it("should be present", () => {
       mhList.click();
       expect(browser.isElementPresent(ticker)).toBe(true);
+    });
+
+  });
+
+  describe("Rating", () => {
+
+    it("should be present", () => {
+      mhList.click();
+      anyMeta.click();
+      expect(browser.isElementPresent(rating)).toBe(true);
     });
 
   });

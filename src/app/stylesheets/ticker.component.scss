@@ -1,4 +1,4 @@
-$duration: 30s;
+$duration: 50s;
 
 @-webkit-keyframes ticker {
   0% {
@@ -33,10 +33,7 @@ $duration: 30s;
   width: 100%;
   overflow: hidden;
   height: 2rem;
-  // background-color: rgba(#000, 0.9);
   padding-left: 100%;
-  /*offset items to begin*/
-
 }
 
 .ticker {
@@ -61,11 +58,10 @@ $duration: 30s;
     display: inline-block;
     padding: 0 2rem;
     font-size: 1.25rem;
-    color: #999; //#21658c;
+    color: #21658c;
 
   }
 
 }
 
 body { padding-bottom: 5rem; }
-h1,h2,p {padding: 0 5%;}
