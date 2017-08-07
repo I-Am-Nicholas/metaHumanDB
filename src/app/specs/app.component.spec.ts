@@ -39,17 +39,4 @@ describe('AppComponent', () => {
     expect(HTMLnode.querySelector('h1').textContent).toContain('META-HUMAN DATABASE');
   });
 
-  it("should render a nav button titled 'Dashboard'", () => {
-    expect(HTMLnode.querySelector('#dashboard').textContent).toMatch('Dashboard');
-  });
-
-  it("should render a nav button titled 'Meta-Human List'", () => {
-    expect(HTMLnode.querySelector('#metaList').textContent).toMatch('Meta-Human List');
-  });
-
-  it("should render a nav button titled 'anonymous'", () => {
-    expect(HTMLnode.querySelector('#back').textContent).toMatch('Back');
-  });
-  
-
 });
