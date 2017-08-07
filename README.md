@@ -1,7 +1,6 @@
 # META-HUMAN DATABASE
 
-
-![metas](https://user-images.githubusercontent.com/24227633/28503547-45f453fe-7001-11e7-887b-7a8be87b4776.gif)
+![screen shot 1](https://user-images.githubusercontent.com/24227633/29023987-f2d207f8-7b67-11e7-8428-27ac4a6f9717.png)
 
 ## OVERVIEW
 
@@ -13,9 +12,10 @@
 
 ## TECHNOLOGIES
 
-- Angular 4
+- Angular 4.3.3
 - HTML
 - CSS
+- Sass
 - Typescript
 - jQuery
 
