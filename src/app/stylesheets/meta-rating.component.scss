@@ -74,20 +74,9 @@ $graph-width: 300px;
   @include stat-bar(#CC0000, #CC0000, to right, left);
 }
 
-body {
-  background-color: #3b4150;
-  font-family: arial, sans-serif;
-  color: #cdcdcd;
-}
 #bar-chart {
-  width: 70%;
-  position: relative;
   * {
    box-sizing: border-box;
-  }
-  .graph {
-    height: 100%;
-    position: relative;
   }
   .bars {
     height: $graph-height;
@@ -100,15 +89,14 @@ body {
   .bar-group {
     display: block;
     opacity: 0.4;
-    float: left;
     height: 100%;
     position: relative;
     width: 100%;
     margin-bottom: 20px;
-    font-size: .5em;
+    font-size: .6em;
     .bar {
       @include bar-animation($default-delay, height);
-      border: 1px solid #2d2d2d;
+      border: 1px solid #000;
       border-radius: 3px 3px 0 0;
       bottom: 0;
       cursor: pointer;
@@ -127,15 +115,14 @@ body {
        font-size: 1.75em;
        margin-top: 10px;
        color: #000;
-       opacity: 1;
       }
     }
-    @for $i from 1 through 3 {
-      .bar-#{$i} {
-        animation-delay: $default-delay+.1*$i;
-        -webkit-animation-delay: $default-delay+.1*$i;
-      }
-    }
+    // @for $i from 1 through 3 {
+    //   .bar-#{$i} {
+    //     animation-delay: $default-delay+.1*$i;
+    //     -webkit-animation-delay: $default-delay+.1*$i;
+    //   }
+    // }
   }
   ul {
     list-style: none;
@@ -171,19 +158,6 @@ body {
     }
   }
 
-  #rating-labels {
-    div {
-      width: 220px;
-      position: relative;
-      margin: 0 0 20px;
-      span {
-        position: relative;
-        float: left;
-        height: 15px;
-        width: 15px;
-        opacity: 0.4;
-      }
-    }
-  }
+
 
 }

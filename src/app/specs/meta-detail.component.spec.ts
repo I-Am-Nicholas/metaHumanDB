@@ -5,7 +5,6 @@ import { ActivatedRoute, ParamMap }   from '@angular/router';
 
 import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from '../components/meta-detail.component'
-import { MetaRatingComponent } from '../components/meta-rating.component';
 import { MetaService } from "../meta-service";
 import { Meta } from '../meta'
 

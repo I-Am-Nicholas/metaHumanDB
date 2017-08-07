@@ -19,7 +19,7 @@ export class MetaDetailComponent implements OnInit {
 
   constructor(
     private metaService: MetaService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {

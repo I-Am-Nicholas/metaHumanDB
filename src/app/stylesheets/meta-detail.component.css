@@ -1,16 +1,20 @@
 
 .detail {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
+  justify-content: left;
   color: #999;
   font-size: 1.25em;
   height: 450px;
+  width: auto;
   border-radius: 6px;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 #headshot img {
   border: 1px solid #21658c;
+}
+
+#headshot {
+  flex-direction: column;
+  margin-right: 70px;
 }
