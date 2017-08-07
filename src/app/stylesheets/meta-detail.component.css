@@ -1,7 +1,7 @@
 
 .detail {
+  position: relative;
   display: flex;
-  justify-content: left;
   color: #999;
   font-size: 1.25em;
   height: 450px;
@@ -10,11 +10,19 @@
   padding-top: 40px;
 }
 
-#headshot img {
-  border: 1px solid #21658c;
-}
-
 #headshot {
   flex-direction: column;
-  margin-right: 70px;
+  width: 600px;
+}
+
+#headshot img {
+  border: 1px solid #21658c;
+  margin: 0 auto;
+  display: -webkit-box;
+}
+
+#info {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
 }

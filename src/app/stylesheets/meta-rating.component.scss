@@ -74,13 +74,17 @@ $graph-width: 300px;
   @include stat-bar(#CC0000, #CC0000, to right, left);
 }
 
+#rating {
+  position: absolute;
+  right: 0;
+}
+
 #bar-chart {
   * {
    box-sizing: border-box;
   }
   .bars {
     height: $graph-height;
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: $graph-width;
@@ -158,6 +162,19 @@ $graph-width: 300px;
     }
   }
 
-
+  #rating-labels {
+    div {
+      width: 220px;
+      position: relative;
+      margin: 0 0 20px;
+      span {
+        position: relative;
+        float: left;
+        height: 15px;
+        width: 15px;
+        opacity: 0.4;
+      }
+    }
+  }
 
 }
