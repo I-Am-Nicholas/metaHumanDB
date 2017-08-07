@@ -1,0 +1,189 @@
+
+// VARIABLES
+$default-delay: 1s;
+$bars: 3;
+$graph-height: 430px;
+$graph-width: 300px;
+
+// MIXINS
+
+//Horizontal Bar Color Mixin
+@mixin stat-bar($color-dark, $color-light, $direction, $dir-webkit) {
+  background-image: -webkit-linear-gradient($dir-webkit, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
+  background-image: linear-gradient($direction, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
+}
+// Animation Mixin
+@mixin bar-animation($time, $dimension) {
+  visibility: hidden;
+  @if $dimension == width {
+    width: 0;
+    -webkit-animation: animate-width;
+    -moz-animation: animate-width;
+    animation: animate-width;
+  }
+  @if $dimension == height {
+    height: 0;
+    -webkit-animation: animate-height;
+    -moz-animation: animate-height;
+    animation: animate-height;
+  }
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: $time*1;
+  -webkit-animation-duration: $time*1;
+  -moz-animation-duration: $time*1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate-height {
+  0% {
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@-moz-keyframes animate-height {
+  0% {
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes animate-height {
+  0% {
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+//STYLES
+
+.stat-1 {
+  @include stat-bar(#178cba, #178cba, to right, left);
+}
+.stat-2 {
+  @include stat-bar(#f6b037, #f6b037, to right, left);
+}
+.stat-3 {
+  @include stat-bar(#CC0000, #CC0000, to right, left);
+}
+
+body {
+  background-color: #3b4150;
+  font-family: arial, sans-serif;
+  color: #cdcdcd;
+}
+#bar-chart {
+  width: 70%;
+  position: relative;
+  * {
+   box-sizing: border-box;
+  }
+  .graph {
+    height: 100%;
+    position: relative;
+  }
+  .bars {
+    height: $graph-height;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: $graph-width;
+    z-index: 10;
+  }
+  .bar-group {
+    display: block;
+    opacity: 0.4;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: .5em;
+    .bar {
+      @include bar-animation($default-delay, height);
+      border: 1px solid #2d2d2d;
+      border-radius: 3px 3px 0 0;
+      bottom: 0;
+      cursor: pointer;
+      height: 0;
+      position: absolute;
+      text-align: center;
+      width: 35%;
+      &:nth-child(2) {
+        left: 35%;
+      }
+      &:nth-child(3) {
+        left: 70%;
+      }
+      span {
+       display: block;
+       font-size: 1.75em;
+       margin-top: 10px;
+       color: #000;
+       opacity: 1;
+      }
+    }
+    @for $i from 1 through 3 {
+      .bar-#{$i} {
+        animation-delay: $default-delay+.1*$i;
+        -webkit-animation-delay: $default-delay+.1*$i;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .x-axis {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    li {
+      float: left;
+      margin-right: 10.5%;
+      font-size: 11px;
+      &:last-child {
+       margin-right: 0;
+      }
+    }
+  }
+  .y-axis {
+    position: absolute;
+    width: 100%;
+    li {
+      display: block;
+      height: $graph-height;
+      width: 99%;
+      span {
+        display: block;
+        font-size: 1em;
+        width: 40px;
+      }
+    }
+  }
+
+  #rating-labels {
+    div {
+      width: 220px;
+      position: relative;
+      margin: 0 0 20px;
+      span {
+        position: relative;
+        float: left;
+        height: 15px;
+        width: 15px;
+        opacity: 0.4;
+      }
+    }
+  }
+
+}
