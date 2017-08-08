@@ -9,6 +9,7 @@ describe('MetaHumanDB App', () => {
   let detail = element(by.className('detail'));
   let ticker = element(by.id('ticker'));
   let rating = element(by.id('rating'));
+  let ratinglabels = element(by.id('rating-labels'));
 
 
   describe("Pre-Click", () => {
@@ -43,8 +44,10 @@ describe('MetaHumanDB App', () => {
       let headshot = element(by.id('headshot'));
       expect(browser.isElementPresent(name)).toBe(true);
       expect(browser.isElementPresent(alias)).toBe(true);
+      expect(browser.isElementPresent(rating)).toBe(true);
       expect(browser.isElementPresent(profile)).toBe(true);
       expect(browser.isElementPresent(headshot)).toBe(true);
+      expect(browser.isElementPresent(ratinglabels)).toBe(true);
     });
 
     it("div should not be present on landing page", () => {
@@ -64,14 +67,21 @@ describe('MetaHumanDB App', () => {
 
   describe("Rating", () => {
 
+    it("div should not be present on landing page", () => {
+      expect(browser.isElementPresent(rating)).toBe(false);
+    });
+
     it("div should be present", () => {
       anyMeta.click();
       expect(browser.isElementPresent(rating)).toBe(true);
     });
 
-    it("div should not be present on landing page", () => {
-      expect(browser.isElementPresent(rating)).toBe(false);
+
+    fit("rating bars should be at greater than 0 height", () => {
+      anyMeta.click();
+      expect(element(by.className('bar')).isDisplayed()).toBeTruthy();
     });
+
 
   });
 

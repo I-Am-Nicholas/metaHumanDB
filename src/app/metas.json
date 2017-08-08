@@ -5,7 +5,8 @@
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
     "profile": "",
-    "headshot": "assets/headshots/tony.jpg"
+    "headshot": "assets/headshots/tony.jpg",
+    "level": ["100", "90", "70"]
   },
     {
       "id":2,
@@ -13,7 +14,8 @@
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
       "profile": "",
-      "headshot": "assets/headshots/steve.jpg"
+      "headshot": "assets/headshots/steve.jpg",
+      "level": ["50", "100", "70"]
     },
     {
       "id":3,
@@ -21,7 +23,8 @@
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
       "profile": "",
-      "headshot": "assets/headshots/bruce.jpg"
+      "headshot": "assets/headshots/bruce.jpg",
+      "level": ["100", "60", "100"]
     },
     {
       "id":4,
