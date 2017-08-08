@@ -1,10 +1,11 @@
 # META-HUMAN DATABASE
 
-![screen shot 10](https://user-images.githubusercontent.com/24227633/29026663-db5c9c34-7b74-11e7-9fa8-f4e317442f36.png)
+![screen shot 1](https://user-images.githubusercontent.com/24227633/29097282-ddc67518-7c90-11e7-9755-ab47f5c48df5.png)
+
 
 ## OVERVIEW
 
-- an application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers, power levels and teams.
+- an application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers, power levels.
 
 - Written in Angular 4.
 
@@ -14,8 +15,7 @@
 
 - Angular 4.3.3
 - HTML
-- CSS
-- Sass
+- CSS(with Sass)
 - Typescript
 - jQuery
 
