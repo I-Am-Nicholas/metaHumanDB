@@ -1,9 +1,11 @@
 <div class="detail" *ngIf = "clicked">
   <!--i.e, if a meta has been clicked in the list displayed in the
-  MetasComponent template view, then show the following...-->
-  <div id="headshot"><img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' ></div>
+  MetasComponent template view (and therefore a meta has been retrieved), then
+   show the following...-->
+<div id="headshot">
+    <img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' >
     <br><br>
-    <div>
+    <div id="info">
       <div id="name">{{clicked.name}}</div>
       <br>
       <div class="simpleText">a.k.a</div>
@@ -12,5 +14,6 @@
       <br>
       <div id="profile">{{clicked.profile}}</div>
     </div>
+  </div>
+  <meta-rating [showRating]="clicked"></meta-rating>
 </div>
-<meta-rating></meta-rating>

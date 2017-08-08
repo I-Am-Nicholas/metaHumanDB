@@ -69,6 +69,10 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(rating)).toBe(true);
     });
 
+    it("div should not be present on landing page", () => {
+      expect(browser.isElementPresent(rating)).toBe(false);
+    });
+
   });
 
 });

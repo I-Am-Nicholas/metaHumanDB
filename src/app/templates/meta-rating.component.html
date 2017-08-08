@@ -1,2 +1,22 @@
-<div id="rating">
+<div *ngIf = "showRating" id="rating">
+  <div id="bar-chart">
+    <div class="bars">
+      <div class="bar-group">
+        <div class="bar stat-1" style="height: 100%;">
+          <span>100%</span>
+        </div>
+        <div class="bar stat-2" style="height: 80%;">
+          <span>80%</span>
+        </div>
+        <div class="bar stat-3" style="height: 70%;">
+          <span>70%</span>
+        </div>
+      </div>
+      <div id="rating-labels">
+        <div><span class="stat-1"></span>&nbsp;IQ</div>
+        <div><span class="stat-2"></span>&nbsp;FIGHT SKILLS</div>
+        <div><span class="stat-3"></span>&nbsp;STRENGTH</div>
+      </div>
+    </div>
+  </div>
 </div>

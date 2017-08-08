@@ -1,3 +1,8 @@
+#center-enabler {
+  height: 660px;
+  width: auto;
+}
+
 h1 {
   text-align: center;
   font-size: 4.3em;
@@ -6,7 +11,6 @@ h1 {
 
 .navParent {
   height: 50px;
-  width: 300px;
 }
 
 nav a {

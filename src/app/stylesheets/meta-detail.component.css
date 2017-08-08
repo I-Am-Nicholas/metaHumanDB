@@ -1,16 +1,28 @@
 
 .detail {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
   color: #999;
   font-size: 1.25em;
   height: 450px;
+  width: auto;
   border-radius: 6px;
-  padding-top: 30px;
+  padding-top: 40px;
+}
+
+#headshot {
+  flex-direction: column;
+  width: 600px;
 }
 
 #headshot img {
   border: 1px solid #21658c;
+  margin: 0 auto;
+  display: -webkit-box;
+}
+
+#info {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
 }
