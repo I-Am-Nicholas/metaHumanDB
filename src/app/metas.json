@@ -32,28 +32,32 @@
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
       "profile": "",
-      "headshot": "assets/headshots/peter.jpg"
+      "headshot": "assets/headshots/peter.jpg",
+      "level": ["80", "80", "80"]
     },
     {
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
       "profile": "",
-      "headshot": "assets/headshots/thor.jpg"
+      "headshot": "assets/headshots/thor.jpg",
+      "level": ["50", "100", "100"]
     },
     {
       "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
       "profile": "",
-      "headshot": "assets/headshots/tchalla.jpg"
+      "headshot": "assets/headshots/tchalla.jpg",
+      "level": ["50", "100", "60"]
     },
     {
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
       "profile": "",
-      "headshot": "assets/headshots/wanda.jpg"
+      "headshot": "assets/headshots/wanda.jpg",
+      "level": ["50", "80", "50"]
     },
     {
       "id":8,
@@ -61,7 +65,8 @@
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
       "profile": "",
-      "headshot": "assets/headshots/clint.jpg"
+      "headshot": "assets/headshots/clint.jpg",
+      "level": ["50", "100", "50"]
     },
     {
       "id":9,
@@ -69,7 +74,8 @@
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile": "",
-      "headshot": "assets/headshots/natasha.jpg"
+      "headshot": "assets/headshots/natasha.jpg",
+      "level": ["50", "100", "50"]
     },
     {
       "id":10,
@@ -77,7 +83,8 @@
       "logo":"assets/gem.png",
       "alias":"Vision",
       "profile": "",
-      "headshot": "assets/headshots/vision.jpg"
+      "headshot": "assets/headshots/vision.jpg",
+      "level": ["100", "60", "75"]
     }
   ]
 }
