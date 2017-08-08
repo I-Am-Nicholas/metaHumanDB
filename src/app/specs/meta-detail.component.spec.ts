@@ -35,7 +35,7 @@ describe('MetaDetailComponent', () => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
-    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: ""});
+    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: "", level: []});
     comp = fixture.componentInstance;
     comp.clicked = testMeta;
     fixture.detectChanges();
