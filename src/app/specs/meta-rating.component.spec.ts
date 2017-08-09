@@ -19,21 +19,8 @@ describe('MetaRatingComponent', () => {
 
   beforeEach(() => {
 
-    testMeta = ({
-      id: 1,
-      name: "Thor",
-      logo: "Mjolnir",
-      alias: "God of Thunder",
-      profile: "",
-      headshot: "",
-      level: ["50", "100", "100"]
-    });
-
-    let testIQLevel = testMeta.level[0]
-
     fixture = TestBed.createComponent(MetaRatingComponent);
     comp = fixture.componentInstance;
-    comp.security(testIQLevel)
     DOMElement = fixture.nativeElement.children;
     fixture.detectChanges();
 
@@ -44,7 +31,9 @@ describe('MetaRatingComponent', () => {
   });
 
   it('calling security method should set IQ height bar to 50%', () => {
+    comp.security(50)
     expect(comp.untrusted).toEqual('height: 50%');
   });
+
 
 });
