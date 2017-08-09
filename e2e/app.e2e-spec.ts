@@ -77,7 +77,7 @@ describe('MetaHumanDB App', () => {
     });
 
 
-    fit("rating bars should be at greater than 0 height", () => {
+    it("rating bars should be at greater than 0 height", () => {
       anyMeta.click();
       expect(element(by.className('bar')).isDisplayed()).toBeTruthy();
     });
