@@ -12,20 +12,16 @@ $graph-width: 300px;
   background-image: -webkit-linear-gradient($dir-webkit, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
   background-image: linear-gradient($direction, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
 }
-// Animation Mixin
-@mixin bar-animation($time, $dimension) {
-  visibility: hidden;
-  @if $dimension == width {
-    width: 0;
-    -webkit-animation: animate-width;
-    -moz-animation: animate-width;
-    animation: animate-width;
-  }
+
+
+@mixin bar-animation-zero-height($time, $dimension) {
+  visibility: visible;
+
   @if $dimension == height {
-    height: 0;
-    -webkit-animation: animate-height;
-    -moz-animation: animate-height;
-    animation: animate-height;
+    height: 100%;
+    -webkit-animation: animate-zero-height;
+    -moz-animation: animate-zero-height;
+    animation: animate-zero-height;
   }
   animation-timing-function: cubic-bezier(.35,.95,.67,.99);
   -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
@@ -33,35 +29,36 @@ $graph-width: 300px;
   animation-duration: $time*1;
   -webkit-animation-duration: $time*1;
   -moz-animation-duration: $time*1;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
 }
 
-@-webkit-keyframes animate-height {
+@keyframes animate-zero-height {
+  100% {
+    visibility: hidden;
+  }
   0% {
     height: 0;
   }
+}
+
+@-webkit-keyframes animate-zero-height {
   100% {
-    visibility: visible;
+    visibility: hidden;
+  }
+  0% {
+    height: 0;
   }
 }
+
 @-moz-keyframes animate-height {
+  100% {
+    visibility: hidden;
+  }
   0% {
     height: 0;
   }
-  100% {
-    visibility: visible;
-  }
 }
-@keyframes animate-height {
-  0% {
-    height: 0;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-
 //STYLES
 
 .stat-1 {
@@ -72,15 +69,6 @@ $graph-width: 300px;
 }
 .stat-3 {
   @include stat-bar(#CC0000, #CC0000, to right, left);
-}
-
-#rating {
-  position: absolute;
-  right: 0;
-}
-
-.zeroHeight {
-  height: 0;
 }
 
 #bar-chart {
@@ -104,7 +92,7 @@ $graph-width: 300px;
     margin-bottom: 20px;
     font-size: .6em;
     .bar {
-      // @include bar-animation($default-delay, height);
+      @include bar-animation-zero-height($default-delay, height);
       border: 1px solid #000;
       border-radius: 3px 3px 0 0;
       bottom: 0;
@@ -125,12 +113,7 @@ $graph-width: 300px;
        color: #000;
       }
     }
-    // @for $i from 1 through 3 {
-    //   .bar-#{$i} {
-    //     animation-delay: $default-delay+.1*$i;
-    //     -webkit-animation-delay: $default-delay+.1*$i;
-    //   }
-    // }
+
   }
   ul {
     list-style: none;
