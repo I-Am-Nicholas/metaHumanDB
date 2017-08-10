@@ -82,7 +82,6 @@ describe('MetaHumanDB App', () => {
       expect(element(by.className('bar')).isDisplayed()).toBeTruthy();
     });
 
-
   });
 
 });
