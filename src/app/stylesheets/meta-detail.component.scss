@@ -1,0 +1,50 @@
+$default-duration: 2s;
+$graph-width: 650px;
+
+@mixin img-animation($time, $dimension) {
+  visibility: hidden;
+  @if $dimension == width {
+    width: 0;
+    -webkit-animation: animate-width;
+    -moz-animation: animate-width;
+    animation: animate-width;
+  }
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: $time*1;
+  -webkit-animation-duration: $time*1;
+  -moz-animation-duration: $time*1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@-moz-keyframes animate-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes animate-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+#headshot {
+  @include img-animation($default-duration, width);
+  width: $graph-width;
+}

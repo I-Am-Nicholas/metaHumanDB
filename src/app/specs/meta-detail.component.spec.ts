@@ -59,7 +59,7 @@ describe('MetaDetailComponent', () => {
   });
 
   it("should display the meta's image", () => {
-    expect(DOMElement[0].querySelector('#headshot')).toBeTruthy();
+    expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();
   });
 
 
