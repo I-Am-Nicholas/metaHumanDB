@@ -30,10 +30,4 @@ describe('MetaRatingComponent', () => {
     expect(comp).toBeTruthy();
   });
 
-  it('calling security method should set IQ height bar to 50%', () => {
-    comp.security(50)
-    expect(comp.untrusted).toEqual('height: 50%');
-  });
-
-
 });

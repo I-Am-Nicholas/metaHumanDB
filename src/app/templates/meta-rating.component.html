@@ -1,16 +1,16 @@
-<div *ngIf = "showRating" id="rating">
+<div *ngIf = "barHeights" id="rating">
   <div id="bar-chart">
     <div class="bars">
 
       <div class="bar-group">
-        <div class="bar stat-1" [style]= "security(showRating.level[0])">
-          <span [innerHtml] = "showRating.level[0] + '%'"></span>
+        <div class="bar stat-1" [style.height.%]= "barHeights[0]">
+          <span>{{barHeights[0]+'%'}}</span>
         </div>
-        <div class="bar stat-2" [style]= "security(showRating.level[1])">
-          <span [innerHtml] = "showRating.level[1] + '%'"></span>
+        <div class="bar stat-2" [style.height.%]= "barHeights[1]">
+          <span>{{barHeights[1]+'%'}}</span>
         </div>
-        <div class="bar stat-3" [style]= "security(showRating.level[2])">
-          <span [innerHtml] = "showRating.level[2] + '%'"></span>
+        <div class="bar stat-3" [style.height.%]= "barHeights[2]">
+          <span>{{barHeights[2]+'%'}}</span>
         </div>
       </div>
 

@@ -8,7 +8,8 @@ import { Meta } from "../meta";
   templateUrl: '../templates/meta-rating.component.html',
   styleUrls: [
     '../stylesheets/meta-rating.component.scss',
-   '../sharedBG.css']
+   '../sharedBG.css'],
+
 })
 
 export class MetaRatingComponent {
@@ -18,16 +19,6 @@ export class MetaRatingComponent {
 
   Without @Input, Angular refuses to bind to the property.*/
 
-  @Input() showRating: any;
-  trusted: any;
-  untrusted: string;
-
-  constructor(private sanitizer: DomSanitizer) {
-  }
-
-  security(level: number){
-    this.untrusted = "height: " + level + "%";
-    return this.trusted = this.sanitizer.bypassSecurityTrustStyle(this.untrusted);
-  }
+  @Input() barHeights: number[];
 
 }
