@@ -2,17 +2,20 @@
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
-  <div id="headshot" class="flip-container"
-    ontouchstart="this.classList.toggle('hover');">
+  <div id="headshot" >
 
-    <div class="flipper">
-      <img class="front" src = '{{clicked.headshotMeta}}' alt = '{{clicked.name}} Symbol' >
-      <br><br>
-      <div id="back-div" class="back alias">
-        <img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' >
+    <div class="flip-container"
+      ontouchstart="this.classList.toggle('hover');">
+
+      <div class="flipper">
+        <img class="front" src = '{{clicked.headshotAlias}}' alt = '{{clicked.name}} Symbol' >
+        <br><br>
+        <div id="back-div" class="back alias">
+          <img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' >
+        </div>
       </div>
-    </div>
 
+    </div>
 
       <div id="info">
         <div id="name">{{clicked.name}}</div>
@@ -26,5 +29,7 @@
 
 
   </div>
+
   <meta-rating [barHeights]="clicked.level" ></meta-rating>
+
 </div>
