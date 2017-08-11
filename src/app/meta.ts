@@ -5,5 +5,6 @@ export class Meta {
   alias: string;
   profile: string;
   headshot: string;
+  headshotMeta?: string;
   level?: Array<any>;
 }

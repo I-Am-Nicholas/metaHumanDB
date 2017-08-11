@@ -1,44 +1,44 @@
 $duration: 75s;
 
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
+// @-webkit-keyframes ticker {
+//   0% {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   100% {
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//   }
+// }
+//
+// @keyframes ticker {
+//   0% {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   100% {
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//   }
+// }
 
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
+.ticker-wrap-parent {
+  margin-top: 20px;
 }
 
 .ticker-wrap {
-
   border: 1px solid #21658c;
-  position: relative;
-  // bottom: 0;
-  width: 925px;
+  margin: 0 auto;
+  width: 1200px;
   overflow: hidden;
   height: 2rem;
-  // padding-left: 100%;
 }
 
 .ticker {
-
   display: inline-block;
   height: 2rem;
   line-height: 2rem;
@@ -55,12 +55,10 @@ $duration: 75s;
           animation-duration: $duration;
 
   &__item {
-
     display: inline-block;
     padding: 0 2rem;
     font-size: 1.25rem;
     color: #21658c;
-
   }
 
 }

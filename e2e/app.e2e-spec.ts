@@ -9,6 +9,7 @@ describe('MetaHumanDB App', () => {
   let detail = element(by.className('detail'));
   let ticker = element(by.id('ticker'));
   let rating = element(by.id('rating'));
+  let image = element(by.id('headshot'));
   let ratinglabels = element(by.id('rating-labels'));
 
 
@@ -80,6 +81,18 @@ describe('MetaHumanDB App', () => {
     it("rating bars should be at greater than 0 height", () => {
       anyMeta.click();
       expect(element(by.className('bar')).isDisplayed()).toBeTruthy();
+    });
+
+  });
+
+  describe("Image", () => {
+
+    it("flips and shows meta alias", () => {
+      anyMeta.click();
+      browser.actions().
+        mouseMove(image).
+        perform();
+      expect(element(by.className('alias')).isDisplayed()).toBeTruthy();
     });
 
   });
