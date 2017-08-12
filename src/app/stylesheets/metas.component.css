@@ -8,7 +8,6 @@
   margin: 0 auto;
   width: 1200px;
   height: 480px;
-  padding-right: 22px;
  }
 
  .metas {
@@ -22,53 +21,34 @@
  }
 
  li {
-   text-align: center;
-   line-height: 25px;
-   cursor: pointer;
-   position: relative;
-   left: 0;
-   color: #21658c;
-   margin: .5em;
-   padding: .3em 0;
-   height: 1.6em;
-   border-radius: 4px;
-   -webkit-transition: height all 250ms ease;
-   transition: all 250ms ease;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  color: #21658c;
+  margin-top: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  -webkit-transition: height all 250ms ease;
+  transition: all 250ms ease;
  }
 
  .selectedMeta {
-    opacity: 1;
     color: #999;
   }
 
  .metas li.selectedMeta:hover {
-   color: #999;
+    color: #999;
   }
 
   .metas li:hover {
     transform: translateX(10px);
+    color: white;
   }
 
- .metas li:hover {
-   color: white;
- }
-
  .metas .text {
-   position: relative;
-   top: -3px;
- }
-
- .metas .badge {
-   display: inline-block;
-   font-size: small;
-   color: white;
-   padding: 0.8em 0.7em 0 0.7em;
-   background-color: #607D8B;
-   line-height: 1em;
-   position: relative;
-   left: -1px;
-   top: -4px;
-   height: 1.8em;
-   margin-right: .8em;
-   border-radius: 4px 0 0 4px;
+    position: relative;
+    top: -3px;
  }

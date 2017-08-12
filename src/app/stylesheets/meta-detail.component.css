@@ -5,14 +5,14 @@
   color: #21658c;
   font-size: 1.25em;
   height: 450px;
-  width: auto;
   border-radius: 6px;
   padding-top: 40px;
+  float: right;
 }
 
 #headshot {
   flex-direction: column;
-  width: 590px;
+  width: 600px;
 }
 
 #headshot img {
@@ -24,5 +24,4 @@
 #info {
   text-align: center;
   margin: 0 auto;
-  width: 400px;
 }
