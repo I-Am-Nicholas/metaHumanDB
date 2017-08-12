@@ -5,8 +5,8 @@
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
     "profile": "",
-    "headshotAlias": "assets/headshotAliases/tony.jpg",
-    "headshot": "assets/headshots/tony.jpg",
+    "headshotsBack": "assets/headshotsBack/tony.jpg",
+    "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": ["100", "90", "70"]
   },
     {
@@ -15,8 +15,8 @@
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
       "profile": "",
-      "headshot": "assets/headshots/steve.jpg",
-      "headshotAlias": "assets/headshotAliases/steve.jpg",
+      "headshotsBack": "assets/headshotsBack/steve.jpg",
+      "headshotsFront": "assets/headshotsFront/steve.jpg",
       "level": ["50", "100", "70"]
     },
     {
@@ -25,8 +25,8 @@
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
       "profile": "",
-      "headshot": "assets/headshots/bruce.jpg",
-      "headshotAlias": "assets/headshotAliases/bruce.jpg",
+      "headshotsBack": "assets/headshotsBack/bruce.jpg",
+      "headshotsFront": "assets/headshotsFront/bruce.jpg",
       "level": ["10", "60", "100"]
     },
     {
@@ -35,8 +35,8 @@
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
       "profile": "",
-      "headshot": "assets/headshots/peter.jpg",
-      "headshotAlias": "assets/headshotAliases/peter.jpg",
+      "headshotsBack": "assets/headshotsBack/peter.jpg",
+      "headshotsFront": "assets/headshotsFront/peter.jpg",
       "level": ["80", "80", "80"]
     },
     {
@@ -44,8 +44,8 @@
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
       "profile": "",
-      "headshot": "assets/headshots/thor.jpg",
-      "headshotAlias": "assets/headshotAliases/thor.jpg",
+      "headshotsBack": "assets/headshotsBack/thor.jpg",
+      "headshotsFront": "assets/headshotsFront/thor.jpg",
       "level": ["50", "100", "100"]
     },
     {
@@ -53,8 +53,8 @@
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
       "profile": "",
-      "headshot": "assets/headshots/tchalla.jpg",
-      "headshotAlias": "assets/headshotAliases/tchalla.jpg",
+      "headshotsBack": "assets/headshotsBack/tchalla.jpg",
+      "headshotsFront": "assets/headshotsFront/tchalla.jpg",
       "level": ["50", "100", "70"]
     },
     {
@@ -62,8 +62,8 @@
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
       "profile": "",
-      "headshot": "assets/headshots/wanda.jpg",
-      "headshotAlias": "assets/headshotAliases/wanda.jpg",
+      "headshotsBack": "assets/headshotsBack/wanda.jpg",
+      "headshotsFront": "assets/headshotsFront/wanda.jpg",
       "level": ["50", "80", "50"]
     },
     {
@@ -72,8 +72,8 @@
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
       "profile": "",
-      "headshot": "assets/headshots/clint.jpg",
-      "headshotAlias": "assets/headshotAliases/clint.jpg",
+      "headshotsBack": "assets/headshotsBack/clint.jpg",
+      "headshotsFront": "assets/headshotsFront/clint.jpg",
       "level": ["50", "100", "50"]
     },
     {
@@ -82,8 +82,8 @@
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile": "",
-      "headshot": "assets/headshots/natasha.jpg",
-      "headshotAlias": "assets/headshotAliases/natasha.jpg",
+      "headshotsBack": "assets/headshotsBack/natasha.jpg",
+      "headshotsFront": "assets/headshotsFront/natasha.jpg",
       "level": ["50", "100", "50"]
     },
     {
@@ -92,8 +92,8 @@
       "logo":"assets/gem.png",
       "alias":"Vision",
       "profile": "",
-      "headshot": "assets/headshots/vision.jpg",
-      "headshotAlias": "assets/headshotAliases/vision.jpg",
+      "headshotsBack": "assets/headshotsBack/vision.jpg",
+      "headshotsFront": "assets/headshotsFront/vision.jpg",
       "level": ["100", "60", "75"]
     }
   ]
