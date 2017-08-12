@@ -8,25 +8,23 @@
       ontouchstart="this.classList.toggle('hover');">
 
       <div class="flipper">
-        <img class="front" src = '{{clicked.headshotAlias}}' alt = '{{clicked.name}} Symbol' >
+
+        <img class="front" src = '{{clicked.headshotsFront}}' alt = '{{clicked.name}} Symbol' >
         <br><br>
         <div id="back-div" class="back alias">
-          <img src = '{{clicked.headshot}}' alt = '{{clicked.name}} Symbol' >
+          <img src = '{{clicked.headshotsBack}}' alt = '{{clicked.name}} Symbol' >
         </div>
+
+        <div id="info">
+          <div class="front" id="name">{{clicked.name}}</div>
+          <div id="alias" class="back">{{clicked.alias}}</div>
+          <br>
+          <div id="profile">{{clicked.profile}}</div>
+        </div>
+
       </div>
 
     </div>
-
-      <div id="info">
-        <div id="name">{{clicked.name}}</div>
-        <br>
-        <div class="simpleText">a.k.a</div>
-        <br>
-        <div id="alias">{{clicked.alias}}</div>
-        <br>
-        <div id="profile">{{clicked.profile}}</div>
-      </div>
-
 
   </div>
 

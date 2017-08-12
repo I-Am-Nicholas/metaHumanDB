@@ -78,9 +78,10 @@ describe('MetaHumanDB App', () => {
     });
 
 
-    it("rating bars should be at greater than 0 height", () => {
+    it(" bars should be at greater than 0 height", () => {
       anyMeta.click();
-      expect(element(by.className('bar')).isDisplayed()).toBeTruthy();
+      waiter = browser.wait(element(by.className('bar')).isDisplayed());
+      expect(waiter).toBeTruthy();
     });
 
   });

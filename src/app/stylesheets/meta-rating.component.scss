@@ -1,5 +1,5 @@
 // VARIABLES
-$default-delay: 1s;
+$default-delay: 0.5s;
 $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
@@ -93,7 +93,6 @@ $graph-width: 300px;
     font-size: .6em;
     .bar {
       @include bar-animation-zero-height($default-delay, height);
-      border: 1px solid #333;
       border-radius: 3px 3px 0 0;
       bottom: 0;
       cursor: pointer;
