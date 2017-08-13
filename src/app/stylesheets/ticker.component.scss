@@ -1,66 +1,66 @@
-$duration: 75s;
+// $duration: 75s;
 
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
+// @-webkit-keyframes ticker {
+//   0% {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   100% {
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//   }
+// }
+//
+// @keyframes ticker {
+//   0% {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   100% {
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//   }
+// }
+//
 .ticker-wrap-parent {
   margin-top: 20px;
 }
 
 .ticker-wrap {
-  border: 1px solid #21658c;
+  border-top: 1px solid #21658c;
   margin: 0 auto;
   width: 1200px;
   overflow: hidden;
   height: 2rem;
 }
 
-.ticker {
-  display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
-  white-space: nowrap; /* display items in a line*/
-  // padding-right: 100%; /* ensure items go before animations repeat (taken from parent due to inline-block)*/
-
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
- -webkit-animation-name: ticker;
-         animation-name: ticker;
-  -webkit-animation-duration: $duration;
-          animation-duration: $duration;
-
-  &__item {
-    display: inline-block;
-    padding: 0 2rem;
-    font-size: 1.25rem;
-    color: #21658c;
-  }
-
-}
+// .ticker {
+//   display: inline-block;
+//   height: 2rem;
+//   line-height: 2rem;
+//   white-space: nowrap; /* display items in a line*/
+//   // padding-right: 100%; /* ensure items go before animations repeat (taken from parent due to inline-block)*/
+//
+//   -webkit-animation-iteration-count: infinite;
+//           animation-iteration-count: infinite;
+//   -webkit-animation-timing-function: linear;
+//           animation-timing-function: linear;
+//  -webkit-animation-name: ticker;
+//          animation-name: ticker;
+//   -webkit-animation-duration: $duration;
+//           animation-duration: $duration;
+//
+//   &__item {
+//     display: inline-block;
+//     padding: 0 2rem;
+//     font-size: 1.25rem;
+//     color: #21658c;
+//   }
+//
+// }
 
 body { padding-bottom: 5rem; }
