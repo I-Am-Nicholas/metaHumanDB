@@ -57,15 +57,6 @@ describe('MetaHumanDB App', () => {
 
   });
 
-
-  describe('Ticker', () => {
-
-    it("should be present", () => {
-      expect(browser.isElementPresent(ticker)).toBe(true);
-    });
-
-  });
-
   describe("Rating", () => {
 
     it("div should not be present on landing page", () => {
