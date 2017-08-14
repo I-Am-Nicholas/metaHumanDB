@@ -13,6 +13,8 @@ import { Meta } from "../meta";
 })
 
 export class MetaRatingComponent {
+  @Input() showTransPanel = false;
+
 
 /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
@@ -20,5 +22,9 @@ export class MetaRatingComponent {
   Without @Input, Angular refuses to bind to the property.*/
 
   @Input() barHeights: number[];
+
+  onSelect() {
+    return this.showTransPanel = true;
+  }
 
 }

@@ -30,4 +30,9 @@ describe('MetaRatingComponent', () => {
     expect(comp).toBeTruthy();
   });
 
+  it('should prime the trans-panel for visibility on the DOM', () => {
+    comp.onSelect();
+    expect(comp.showTransPanel).toBe(true);
+  });
+
 });
