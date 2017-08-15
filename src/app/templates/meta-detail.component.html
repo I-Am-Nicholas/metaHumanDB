@@ -18,8 +18,7 @@
         <div id="info">
           <div id="name" class="front">{{clicked.name}}</div>
           <div id="alias" class="back">{{clicked.alias}}</div>
-          <br>
-          <div id="profile">{{clicked.profile}}</div>
+
         </div>
 
       </div>
@@ -28,6 +27,6 @@
 
   </div>
 
-  <meta-rating [barHeights]="clicked.level" ></meta-rating>
+  <meta-rating [barHeights]="clicked.level" [showProfile]="clicked.profile"  ></meta-rating>
 
 </div>

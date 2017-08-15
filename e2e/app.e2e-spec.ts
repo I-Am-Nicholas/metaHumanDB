@@ -45,7 +45,6 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(name)).toBe(true);
       expect(browser.isElementPresent(alias)).toBe(true);
       expect(browser.isElementPresent(rating)).toBe(true);
-      expect(browser.isElementPresent(profile)).toBe(true);
       expect(browser.isElementPresent(headshot)).toBe(true);
       expect(browser.isElementPresent(ratinglabels)).toBe(true);
     });
@@ -77,7 +76,7 @@ describe('MetaHumanDB App', () => {
     it("should make the trans-panel visible when clicked", () => {
       anyMeta.click();
       bargroup.click();
-      expect(element(by.className('trans-panel')).isDisplayed()).toBeTruthy();
+      expect(element(by.id('trans-panel')).isDisplayed()).toBeTruthy();
     });
 
   });

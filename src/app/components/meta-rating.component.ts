@@ -8,23 +8,15 @@ import { Meta } from "../meta";
   templateUrl: '../templates/meta-rating.component.html',
   styleUrls: [
     '../stylesheets/meta-rating.component.scss',
-   '../sharedBG.css'],
-
+   '../stylesheets/shared/translucentBG.css']
 })
 
 export class MetaRatingComponent {
-  @Input() showTransPanel = false;
-
 
 /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
-
   Without @Input, Angular refuses to bind to the property.*/
-
+  @Input() showProfile: string;
   @Input() barHeights: number[];
-
-  onSelect() {
-    return this.showTransPanel = true;
-  }
 
 }

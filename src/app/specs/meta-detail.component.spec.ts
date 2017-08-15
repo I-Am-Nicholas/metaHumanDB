@@ -54,9 +54,6 @@ describe('MetaDetailComponent', () => {
     expect(DOMElement[0].textContent).not.toContain(unexpectedPipedLogo);
   });
 
-  it("should display the meta's profile", () => {
-    expect(DOMElement[0].querySelector('#profile')).toBeTruthy();
-  });
 
   it("should display the meta's image", () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();

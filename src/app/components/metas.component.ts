@@ -5,7 +5,8 @@ import { MetaService } from '../meta-service';
 
 @Component({
   templateUrl: '../templates/metas.component.html',
-  styleUrls: ['../stylesheets/metas.component.css', '../sharedBG.css']
+  styleUrls: ['../stylesheets/metas.component.css',
+  '../stylesheets/shared/translucentBG.css']
 })
 
 export class MetasComponent implements OnInit {

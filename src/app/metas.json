@@ -4,7 +4,7 @@
     "name":"Iron Man",
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
-    "profile": "",
+    "profile": "—Billionaire entrepreneur and one of the smartest beings on the planet.",
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": ["100", "90", "70"]
