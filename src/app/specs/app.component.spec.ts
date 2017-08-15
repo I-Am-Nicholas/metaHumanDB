@@ -22,7 +22,6 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     comp = fixture.componentInstance;
     HTMLnode = fixture.nativeElement;
-
   });
 
 

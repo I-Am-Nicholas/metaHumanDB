@@ -7,8 +7,8 @@ describe('MetaHumanDB App', () => {
   let metas = element(by.className('metas'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
-  let ticker = element(by.id('ticker'));
   let rating = element(by.id('rating'));
+  let bargroup = element(by.className('bar-group'));
   let image = element(by.id('headshot'));
   let ratinglabels = element(by.id('rating-labels'));
 
@@ -20,7 +20,6 @@ describe('MetaHumanDB App', () => {
     });
 
   });
-
 
   describe("Meta-Human List", () => {
 
@@ -46,7 +45,6 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(name)).toBe(true);
       expect(browser.isElementPresent(alias)).toBe(true);
       expect(browser.isElementPresent(rating)).toBe(true);
-      expect(browser.isElementPresent(profile)).toBe(true);
       expect(browser.isElementPresent(headshot)).toBe(true);
       expect(browser.isElementPresent(ratinglabels)).toBe(true);
     });
@@ -69,10 +67,16 @@ describe('MetaHumanDB App', () => {
     });
 
 
-    it(" bars should be at greater than 0 height", () => {
+    it("bars should be at greater than 0 height", () => {
       anyMeta.click();
       waiter = browser.wait(element(by.className('bar')).isDisplayed());
       expect(waiter).toBeTruthy();
+    });
+
+    it("should make the trans-panel visible when clicked", () => {
+      anyMeta.click();
+      bargroup.click();
+      expect(element(by.id('trans-panel')).isDisplayed()).toBeTruthy();
     });
 
   });

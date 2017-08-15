@@ -136,3 +136,21 @@ $graph-width: 300px;
   }
 
 }
+
+.shown {
+  visibility: hidden;
+}
+
+.trans-panel {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  border: 1px solid #000;
+  border-top: none;
+  border-bottom: none;
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  opacity: 0.9;
+  padding: 50px;
+}
