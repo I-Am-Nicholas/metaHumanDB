@@ -86,9 +86,8 @@ $graph-width: 300px;
     overflow: hidden;
     position: relative;
     display: block;
-    // opacity: 0.4;
     height: 70%;//keep for Safari!
-    width: 100%;
+    width: $graph-width;
     margin-bottom: 20px;
     font-size: .6em;
     .bar {
@@ -130,7 +129,6 @@ $graph-width: 300px;
         float: left;
         height: 15px;
         width: 15px;
-        // opacity: 0.4;
       }
     }
   }
@@ -138,7 +136,7 @@ $graph-width: 300px;
 }
 
 .shown {
-  visibility: hidden;
+  display: none;
 }
 
 .trans-panel {
