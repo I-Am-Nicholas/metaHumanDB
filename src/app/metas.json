@@ -7,7 +7,7 @@
     "profile": "—Billionaire entrepreneur and one of the smartest beings on the planet.",
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
-    "level": ["100", "90", "70"]
+    "level": [100, 90, 70]
   },
     {
       "id":2,
@@ -17,7 +17,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
-      "level": ["50", "100", "70"]
+      "level": [50, 100, 70]
     },
     {
       "id":3,
@@ -27,7 +27,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
-      "level": ["10", "60", "100"]
+      "level": [10, 60, 100]
     },
     {
       "id":4,
@@ -37,7 +37,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
-      "level": ["80", "80", "80"]
+      "level": [80, 80, 80]
     },
     {
       "id":5,"name":"Thor",
@@ -46,7 +46,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
-      "level": ["50", "100", "100"]
+      "level": [50, 100, 100]
     },
     {
       "id":6,"name":"Black Panther",
@@ -55,7 +55,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
-      "level": ["50", "100", "70"]
+      "level": [50, 100, 70]
     },
     {
       "id":7,"name":"Scarlet Witch",
@@ -64,7 +64,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
       "headshotsFront": "assets/headshotsFront/wanda.jpg",
-      "level": ["50", "80", "50"]
+      "level": [50, 80, 50]
     },
     {
       "id":8,
@@ -74,7 +74,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
-      "level": ["50", "100", "50"]
+      "level": [50, 100, 50]
     },
     {
       "id":9,
@@ -84,7 +84,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
-      "level": ["50", "100", "50"]
+      "level": [50, 100, 50]
     },
     {
       "id":10,
@@ -94,7 +94,7 @@
       "profile": "",
       "headshotsBack": "assets/headshotsBack/vision.jpg",
       "headshotsFront": "assets/headshotsFront/vision.jpg",
-      "level": ["100", "60", "75"]
+      "level": [100, 60, 75]
     }
   ]
 }

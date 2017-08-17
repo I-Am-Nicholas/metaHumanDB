@@ -3,6 +3,7 @@ $default-delay: 1s;
 $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
+$time: 13s;
 
 // MIXINS
 
@@ -98,12 +99,15 @@ $graph-width: 300px;
       position: absolute;
       text-align: center;
       width: $graph-width/3;
+
       &:nth-child(2) {
         left: ($graph-width/3);
       }
+
       &:nth-child(3) {
         left: ($graph-width/3)*2;
       }
+
       span {
        display: block;
        font-size: 1.75em;
@@ -111,6 +115,7 @@ $graph-width: 300px;
        color: #000;
       }
     }
+
     @for $i from 1 through 3 {
       .stat-#{$i} {
         animation-delay: $default-delay+.2*$i;
@@ -132,7 +137,6 @@ $graph-width: 300px;
       }
     }
   }
-
 }
 
 .hidden {
@@ -147,7 +151,7 @@ $graph-width: 300px;
   border: 1px solid #000;
   border-top: none;
   border-bottom: none;
-  width: 800px;
+  width: 799px;
   height: 400px;
   background-color: white;
   opacity: 0.9;
