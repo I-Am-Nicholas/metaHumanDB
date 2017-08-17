@@ -9,7 +9,6 @@ import { MetaService } from "../meta-service";
 import { Meta } from '../meta'
 
 let fixture: ComponentFixture<MetaDetailComponent>;
-
 let activatedRoute: ActivatedRouteStub;
 let comp: MetaDetailComponent;
 let DOMElement: DebugElement;
@@ -35,7 +34,17 @@ describe('MetaDetailComponent', () => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
-    testMeta = ({id: 1, name: "Thor", logo: "Mjolnir", alias: "God of Thunder", profile: "", headshot: "", level: []});
+    testMeta = (
+      {
+      id: 1,
+        name: "Thor",
+         logo: "Mjolnir",
+          alias: "God of Thunder",
+           profile: "",
+            headshot: "",
+             level: []
+           });
+
     comp = fixture.componentInstance;
     comp.clicked = testMeta;
     fixture.detectChanges();
@@ -53,7 +62,6 @@ describe('MetaDetailComponent', () => {
     let unexpectedPipedLogo = testMeta.logo;
     expect(DOMElement[0].textContent).not.toContain(unexpectedPipedLogo);
   });
-
 
   it("should display the meta's image", () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();

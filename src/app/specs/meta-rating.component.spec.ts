@@ -39,6 +39,14 @@ describe('MetaRatingComponent', () => {
     expect(findStringInNode(profile, 'hidden')).toBe(false);
   });
 
+  it("Profile panel should not be visible in DOM after ratings clicked twice", () => {
+    debugProfile.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    debugProfile.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    expect(findStringInNode(profile, 'hidden')).toBe(true);
+  });
+
   it("Profile panel should contain a string", () => {
     expect(profile.textContent).toContain(comp.showProfile);
   });
