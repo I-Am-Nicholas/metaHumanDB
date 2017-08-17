@@ -1,7 +1,6 @@
-<div *ngIf = "barHeights" id="rating">
+<div id="rating">
   <div id="bar-chart">
     <div class="bars">
-
       <div class="bar-group" (click)="toggle = !toggle;" >
         <div class="bar stat-1" [style.height.%]= "barHeights[0]">
           <span>{{barHeights[0]+'%'}}</span>
@@ -15,7 +14,6 @@
       </div>
 
       <div id="rating-labels">
-
         <div><span class="stat-1"></span>&nbsp;IQ</div>
         <div><span class="stat-2"></span>&nbsp;FIGHT SKILLS</div>
         <div><span class="stat-3"></span>&nbsp;STRENGTH</div>
@@ -23,8 +21,10 @@
 
     </div>
   </div>
-  <div id="trans-panel"
-   [class.shown] = "!toggle">
-   <span>{{showProfile}}</span>
+
+  <div id="profile-panel"
+   [class.hidden] = "!toggle">
+   {{showProfile}}
   </div>
+
 </div>

@@ -7,6 +7,7 @@ describe('MetaHumanDB App', () => {
   let metas = element(by.className('metas'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
+  let profile = element(by.id('profile-panel'));
   let rating = element(by.id('rating'));
   let bargroup = element(by.className('bar-group'));
   let image = element(by.id('headshot'));
@@ -61,7 +62,7 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(rating)).toBe(false);
     });
 
-    it("div should be present", () => {
+    it("div should be present once a meta is clicked", () => {
       anyMeta.click();
       expect(browser.isElementPresent(rating)).toBe(true);
     });
@@ -73,10 +74,10 @@ describe('MetaHumanDB App', () => {
       expect(waiter).toBeTruthy();
     });
 
-    it("should make the trans-panel visible when clicked", () => {
+    it("profile-panel should be present but not visible", () => {
       anyMeta.click();
-      bargroup.click();
-      expect(element(by.id('trans-panel')).isDisplayed()).toBeTruthy();
+      expect(browser.isElementPresent(profile)).toBe(true);
+      expect((profile).isDisplayed()).toBe(false);
     });
 
   });

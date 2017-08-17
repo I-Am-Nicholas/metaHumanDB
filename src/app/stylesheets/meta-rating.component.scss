@@ -1,5 +1,5 @@
 // VARIABLES
-$default-delay: 0.5s;
+$default-delay: 1s;
 $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
@@ -135,11 +135,12 @@ $graph-width: 300px;
 
 }
 
-.shown {
+.hidden {
   display: none;
 }
 
-.trans-panel {
+#profile-panel {
+  @include bar-animation-zero-height($default-delay, height);
   position: absolute;
   top: 0;
   left: -300px;
