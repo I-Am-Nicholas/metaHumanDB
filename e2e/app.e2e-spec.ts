@@ -67,7 +67,6 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(rating)).toBe(true);
     });
 
-
     it("bars should be at greater than 0 height", () => {
       anyMeta.click();
       waiter = browser.wait(element(by.className('bar')).isDisplayed());
@@ -78,6 +77,12 @@ describe('MetaHumanDB App', () => {
       anyMeta.click();
       expect(browser.isElementPresent(profile)).toBe(true);
       expect((profile).isDisplayed()).toBe(false);
+    });
+
+    it("should make the profile-panel visible when clicked", () => {
+      anyMeta.click();
+      bargroup.click();
+      expect(element(by.id('profile-panel')).isDisplayed()).toBe(true);
     });
 
   });
