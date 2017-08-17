@@ -1,5 +1,5 @@
 // VARIABLES
-$default-delay: 0.5s;
+$default-delay: 1s;
 $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
@@ -86,9 +86,8 @@ $graph-width: 300px;
     overflow: hidden;
     position: relative;
     display: block;
-    // opacity: 0.4;
     height: 70%;//keep for Safari!
-    width: 100%;
+    width: $graph-width;
     margin-bottom: 20px;
     font-size: .6em;
     .bar {
@@ -130,18 +129,18 @@ $graph-width: 300px;
         float: left;
         height: 15px;
         width: 15px;
-        // opacity: 0.4;
       }
     }
   }
 
 }
 
-.shown {
-  visibility: hidden;
+.hidden {
+  display: none;
 }
 
-.trans-panel {
+#profile-panel {
+  @include bar-animation-zero-height($default-delay, height);
   position: absolute;
   top: 0;
   left: -300px;
