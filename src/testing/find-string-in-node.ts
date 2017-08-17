@@ -6,12 +6,12 @@ export let findStringInNode = (HTMLnode, subString) => {
     tmpNode.appendChild( HTMLnode.cloneNode( true ) );
     var strng = tmpNode.innerHTML;
     return strng;
-  }
+  };
 
   return (() => {
     let convertToRegx = new RegExp(subString);
-    let check = (convertToRegx.test(nodeToString(HTMLnode)))
+    let check = (convertToRegx.test(nodeToString(HTMLnode)));
     return check;
   })();
 
-}
+};

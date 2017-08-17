@@ -15,7 +15,6 @@ import { MetaService } from './meta-service';
 import { MetaRatingComponent } from './components/meta-rating.component';
 import { findStringInNode } from '../testing/find-string-in-node';
 
-
 @NgModule({
   declarations: [
     AppComponent,
