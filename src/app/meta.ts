@@ -3,7 +3,7 @@ export class Meta {
   name: string;
   logo: string;
   alias: string;
-  profile: string;
+  profile?: Array<any>;
   headshot: string;
   headshotMeta?: string;
   level?: Array<any>;

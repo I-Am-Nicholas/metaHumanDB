@@ -46,8 +46,11 @@
   }
 
   .metas li:hover {
-    transform: translateX(10px);
     color: white;
+  }
+
+  .metas li:active {
+    transform: translateY(5px);
   }
 
  .metas .text {

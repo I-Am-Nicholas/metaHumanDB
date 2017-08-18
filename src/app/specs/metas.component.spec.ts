@@ -42,7 +42,7 @@ describe("MetasComponent", () => {
         name: "Thor",
         logo: "Mjolnir",
         alias: "God of Thunder",
-        profile: "",
+        profile: [],
         headshot: ""
       }
     );
