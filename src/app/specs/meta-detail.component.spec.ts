@@ -40,7 +40,7 @@ describe('MetaDetailComponent', () => {
         name: "Thor",
          logo: "Mjolnir",
           alias: "God of Thunder",
-           profile: "",
+           profile: [],
             headshot: "",
              level: []
            });
@@ -67,5 +67,8 @@ describe('MetaDetailComponent', () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();
   });
 
+  it("should display the meta's alias", () => {
+    console.log(DOMElement)
+  });
 
 });

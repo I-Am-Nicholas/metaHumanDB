@@ -4,7 +4,11 @@
     "name":"Iron Man",
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
-    "profile": "—Billionaire entrepreneur and one of the smartest beings on the planet.",
+    "profile": [
+      "—Billionaire entrepreneur and one of the smartest beings on the planet.",
+      "— The most ingenious on the list. His intellect is the benchmark by which the others are measured.",
+      "—Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high skill rating."
+    ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": [100, 90, 70]
@@ -14,7 +18,7 @@
       "name":"Captain America",
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
       "level": [50, 100, 70]
@@ -24,7 +28,7 @@
       "name":"Hulk",
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
       "level": [10, 60, 100]
@@ -34,7 +38,7 @@
       "name":"Spider-Man",
       "logo":"assets/200s/spidey.png",
       "alias":"Peter Parker",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
       "level": [80, 80, 80]
@@ -43,7 +47,7 @@
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
       "level": [50, 100, 100]
@@ -52,7 +56,7 @@
       "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
       "level": [50, 100, 70]
@@ -61,7 +65,7 @@
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
       "alias":"Wanda Maximoff",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
       "headshotsFront": "assets/headshotsFront/wanda.jpg",
       "level": [50, 80, 50]
@@ -71,7 +75,7 @@
       "name":"Hawkeye",
       "logo":"assets/hawk.png",
       "alias":"Clint Barton",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
       "level": [50, 100, 50]
@@ -81,7 +85,7 @@
       "name":"Black Widow",
       "logo":"assets/spider-bw.png",
       "alias":"Natasha Romanoff",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
       "level": [50, 100, 50]
@@ -91,7 +95,7 @@
       "name":"Vision",
       "logo":"assets/gem.png",
       "alias":"No Alias",
-      "profile": "",
+      "profile":[],
       "headshotsBack": "assets/headshotsBack/vision.jpg",
       "headshotsFront": "assets/headshotsFront/vision.jpg",
       "level": [100, 60, 75]
