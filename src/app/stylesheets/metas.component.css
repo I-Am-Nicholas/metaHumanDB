@@ -23,6 +23,7 @@
  }
 
  li {
+  z-index: 1000;
   text-align: center;
   line-height: 25px;
   cursor: pointer;

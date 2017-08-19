@@ -134,10 +134,12 @@ $end-position: 0px;
         }
 
         span {
-         display: block;
-         font-size: 1.75em;
-         margin-top: 10px;
-         color: #000;
+          font-family: font158023;
+          font-size: 1.75em;
+          font-weight: normal;
+          margin-top: 10px;
+          color: #333;
+          z-index: 1000;
         }
     }
 
@@ -165,15 +167,25 @@ $end-position: 0px;
 }
 
 .hidden {
+  // animation-delay: $default-delay;
+  // animation: 5s slideout;
+  // transition: cubic-bezier(4, 0.3, 0.3, 0.3);
+  // left: $start-position;
   display: none;
-  left: $start-position;
 }
 
 .not-hiddn {
+  display: block;
   animation: $default-delay slidein;
   transition: ease-in;
   left: $end-position;
 }
+
+@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+
+@-webkit-keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
+@keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
 
 #encloser {
   position: absolute;
@@ -199,13 +211,21 @@ $end-position: 0px;
   z-index: 1001;
 }
 
-#profile-panel ul{
+#profile-panel ul, span {
   font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
   margin: 0 auto;
   width: 700px;
   height: 250px;
   line-height: 3rem;
 }
 
-@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
-@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+#profile-panel span {
+  border-bottom: 1px solid #21658c;
+  padding-left: 10px;
+  height: auto;
+  width: 860px;
+  position: absolute;
+  top: 0;
+}
