@@ -4,7 +4,7 @@ export class Meta {
   logo: string;
   alias: string;
   profile?: Array<any>;
-  headshot: string;
-  headshotMeta?: string;
+  headshotsFront: string;
+  headshotsBack?: string;
   level?: Array<any>;
 }

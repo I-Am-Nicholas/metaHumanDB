@@ -2,14 +2,14 @@
   <div id="bar-chart">
     <div class="bars">
       <div class="bar-group" (click)="toggle = !toggle;" >
-        <div class="bar stat-1" [style.height.%]= "barHeights[0]">
-          <span>{{barHeights[0]+'%'}}</span>
+        <div class="bar stat-1" [style.height.%]= "chosenMeta.level[0]">
+          <span>{{chosenMeta.level[0]+'%'}}</span>
         </div>
-        <div class="bar stat-2" [style.height.%]= "barHeights[1]">
-          <span>{{barHeights[1]+'%'}}</span>
+        <div class="bar stat-2" [style.height.%]= "chosenMeta.level[1]">
+          <span>{{chosenMeta.level[1]+'%'}}</span>
         </div>
-        <div class="bar stat-3" [style.height.%]= "barHeights[2]">
-          <span>{{barHeights[2]+'%'}}</span>
+        <div class="bar stat-3" [style.height.%]= "chosenMeta.level[2]">
+          <span>{{chosenMeta.level[2]+'%'}}</span>
         </div>
       </div>
 
@@ -22,9 +22,15 @@
     </div>
   </div>
 
-  <div id="profile-panel"
-   [class.hidden] = "!toggle">
-   {{showProfile}}
+  <div id="encloser">
+    <div id="profile-panel" [class.hidden] = "!toggle"
+          [class.not-hiddn] = "toggle">
+      <ul>
+        <li *ngFor= "let eachLine of chosenMeta.profile">
+          {{eachLine}}
+        </li>
+      </ul>
+    </div>
   </div>
 
 </div>

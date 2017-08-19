@@ -12,7 +12,7 @@ const fakeMetaData = () => [
     logo:"assets/200s/gamma.png",
     alias:"Bruce Banner",
     profile: [],
-    headshot: ""
+    headshotsFront: ""
   },
   {
     id:7,
@@ -20,7 +20,7 @@ const fakeMetaData = () => [
     logo:"assets/200s/pantera.jpg",
     alias:"T'Challa, King of Wakanda",
     profile: [],
-    headshot: ""
+    headshotsFront: ""
   }
 ];
 

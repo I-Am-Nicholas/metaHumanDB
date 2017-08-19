@@ -15,6 +15,5 @@ export class MetaRatingComponent {
 /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
   Without @Input, Angular refuses to bind to the property.*/
-  @Input() showProfile: String = "";
-  @Input() barHeights: Number[] = [];
+  @Input() chosenMeta: Meta;
 }

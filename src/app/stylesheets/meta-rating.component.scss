@@ -1,12 +1,13 @@
 // VARIABLES
-$default-delay: 1s;
+$default-delay: 0.5s;
 $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
-$time: 13s;
+
+$start-position: -1000px;
+$end-position: 0px;
 
 // MIXINS
-
 //Horizontal Bar Color Mixin
 @mixin stat-bar($color-dark, $color-light, $direction, $dir-webkit) {
   background-image: -webkit-linear-gradient($dir-webkit, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
@@ -32,6 +33,27 @@ $time: 13s;
   animation-fill-mode: backwards;
   -webkit-animation-fill-mode: backwards;
 }
+
+
+@mixin bar-animation-zero-height2($time, $dimension) {
+  visibility: hidden;
+
+  @if $dimension == height {
+    height: 0%;
+    -webkit-animation: animate-zero-height;
+    -moz-animation: animate-zero-height;
+    animation: animate-zero-height;
+  }
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: $time*1;
+  -webkit-animation-duration: $time*1;
+  -moz-animation-duration: $time*1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
 
 @keyframes animate-zero-height {
   100% {
@@ -72,9 +94,11 @@ $time: 13s;
 }
 
 #bar-chart {
+
   * {
    box-sizing: border-box;
   }
+
   .bars {
     height: $graph-height;
     display: flex;
@@ -91,6 +115,7 @@ $time: 13s;
     width: $graph-width;
     margin-bottom: 20px;
     font-size: .6em;
+
     .bar {
       @include bar-animation-zero-height($default-delay, height);
       border-radius: 3px 3px 0 0;
@@ -100,20 +125,20 @@ $time: 13s;
       text-align: center;
       width: $graph-width/3;
 
-      &:nth-child(2) {
-        left: ($graph-width/3);
-      }
+        &:nth-child(2) {
+          left: ($graph-width/3);
+        }
 
-      &:nth-child(3) {
-        left: ($graph-width/3)*2;
-      }
+        &:nth-child(3) {
+          left: ($graph-width/3)*2;
+        }
 
-      span {
-       display: block;
-       font-size: 1.75em;
-       margin-top: 10px;
-       color: #000;
-      }
+        span {
+         display: block;
+         font-size: 1.75em;
+         margin-top: 10px;
+         color: #000;
+        }
     }
 
     @for $i from 1 through 3 {
@@ -141,20 +166,46 @@ $time: 13s;
 
 .hidden {
   display: none;
+  left: $start-position;
 }
 
-#profile-panel {
-  @include bar-animation-zero-height($default-delay, height);
+.not-hiddn {
+  animation: $default-delay slidein;
+  transition: ease-in;
+  left: $end-position;
+}
+
+#encloser {
   position: absolute;
   top: 0;
   left: -300px;
-  border: 1px solid #000;
-  border-top: none;
-  border-bottom: none;
-  width: 799px;
-  height: 400px;
-  line-height: 3rem;
-  background-color: white;
-  opacity: 0.9;
-  padding: 50px;
+  overflow: hidden;
+  width: 880px;
+  height: 505px;
 }
+
+#profile-panel {
+  background-image: url('../../assets/circuitboardBG.jpg');
+  position: relative;
+  top: 0;
+  left: $end-position;
+  width: 870px;
+  height: auto;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: white;
+  margin: 25px 0 0 0;
+  padding: 100px 0;
+  z-index: 1001;
+}
+
+#profile-panel ul{
+  font-family: helvetica;
+  margin: 0 auto;
+  width: 700px;
+  height: 250px;
+  line-height: 3rem;
+}
+
+@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }

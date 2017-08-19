@@ -1,23 +1,22 @@
-<div class="detail" *ngIf = "clicked">
+<div class="detail" *ngIf = "clickedMeta">
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
   <div id="headshot" >
 
-    <div class="flip-container"
-      >
+    <div class="flip-container">
 
       <div class="flipper">
 
-        <img class="front" src = '{{clicked.headshotsFront}}' alt = '{{clicked.name}} Symbol' >
+        <img class="front" src = '{{clickedMeta.headshotsFront}}' alt = '{{clickedMeta.name}} Symbol' >
         <br><br>
         <div id="back-div" class="back alias">
-          <img src = '{{clicked.headshotsBack}}' alt = '{{clicked.name}} Symbol' >
+          <img src = '{{clickedMeta.headshotsBack}}' alt = '{{clickedMeta.name}} Symbol' >
         </div>
 
         <div id="info">
-          <div id="name" class="front">{{clicked.name}}</div>
-          <div id="alias" class="back">{{clicked.alias}}</div>
+          <div id="name" class="front">{{clickedMeta.name}}</div>
+          <div id="alias" class="back">{{clickedMeta.alias}}</div>
 
         </div>
 
@@ -27,6 +26,6 @@
 
   </div>
 
-  <meta-rating [barHeights]="clicked.level" [showProfile]="clicked.profile"  ></meta-rating>
+  <meta-rating [chosenMeta]="clickedMeta"  ></meta-rating>
 
 </div>

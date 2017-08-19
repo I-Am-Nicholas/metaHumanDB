@@ -5,9 +5,9 @@
     "logo":"assets/200s/faceplate.png",
     "alias":"Tony Stark",
     "profile": [
-      "—Billionaire entrepreneur and one of the smartest beings on the planet.",
-      "— The most ingenious on the list. His intellect is the benchmark by which the others are measured.",
-      "—Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high skill rating."
+      "Billionaire entrepreneur and one of the smartest beings on the planet.",
+      "Stark's intellect is the benchmark by which the others are measured.",
+      "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skill rating."
     ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",

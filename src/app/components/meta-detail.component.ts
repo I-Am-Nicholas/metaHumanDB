@@ -18,6 +18,6 @@ import { Meta } from '../meta'
 
 export class MetaDetailComponent {
 
-  @Input() clicked: Meta;
+  @Input() clickedMeta: Meta;
 
 }

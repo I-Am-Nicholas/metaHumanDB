@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { ActivatedRoute, ParamMap }   from '@angular/router';
+import { By } from '@angular/platform-browser';
 
 import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from '../components/meta-detail.component'
@@ -12,7 +13,10 @@ let fixture: ComponentFixture<MetaDetailComponent>;
 let activatedRoute: ActivatedRouteStub;
 let comp: MetaDetailComponent;
 let DOMElement: DebugElement;
+let DOMImage: DebugElement;
 let testMeta: Meta;
+let HTMLnode: HTMLElement;
+
 
 describe('MetaDetailComponent', () => {
 
@@ -32,6 +36,7 @@ describe('MetaDetailComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
+    HTMLnode = fixture.nativeElement;
     DOMElement = fixture.nativeElement.children;
 
     testMeta = (
@@ -41,12 +46,13 @@ describe('MetaDetailComponent', () => {
          logo: "Mjolnir",
           alias: "God of Thunder",
            profile: [],
-            headshot: "",
+           headshotsFront: "assets/headshotsFront/thor.jpg",
+            headshotsBack: "assets/headshotsBack/thor.jpg",
              level: []
            });
 
     comp = fixture.componentInstance;
-    comp.clicked = testMeta;
+    comp.clickedMeta = testMeta;
     fixture.detectChanges();
   });
 
@@ -65,10 +71,6 @@ describe('MetaDetailComponent', () => {
 
   it("should display the meta's image", () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();
-  });
-
-  it("should display the meta's alias", () => {
-    console.log(DOMElement)
   });
 
 });
