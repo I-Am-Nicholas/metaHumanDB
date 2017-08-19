@@ -7,7 +7,7 @@ import { MetaRatingComponent } from '../components/meta-rating.component';
 
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
-let debugProfile: DebugElement;
+let debugBarGroup: DebugElement;
 let HTMLnode: HTMLElement;
 let profile: Element;
 
@@ -21,8 +21,21 @@ describe('MetaRatingComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaRatingComponent);
+    let testMeta = (
+      {
+      id: 1,
+        name: "Thor",
+         logo: "Mjolnir",
+          alias: "God of Thunder",
+           profile: ["Meta Profile Text"],
+           headshotsFront: "assets/headshotsFront/thor.jpg",
+            headshotsBack: "assets/headshotsBack/thor.jpg",
+             level: []
+    });
+
     comp = fixture.componentInstance;
-    debugProfile = fixture.debugElement.query(By.css(".bar-group"));
+    comp.chosenMeta = testMeta;
+    debugBarGroup = fixture.debugElement.query(By.css(".bar-group"));
     HTMLnode = fixture.nativeElement;
     profile = HTMLnode.querySelector('#profile-panel');
     fixture.detectChanges();
@@ -34,21 +47,23 @@ describe('MetaRatingComponent', () => {
   });
 
   it("Profile panel should be visible in DOM after ratings clicked", () => {
-    debugProfile.triggerEventHandler('click', null);
+    debugBarGroup.triggerEventHandler('click', null);
     fixture.detectChanges();
     expect(findStringInNode(profile, 'hidden')).toBe(false);
   });
 
   it("Profile panel should not be visible in DOM after ratings clicked twice", () => {
-    debugProfile.triggerEventHandler('click', null);
+    debugBarGroup.triggerEventHandler('click', null);
     fixture.detectChanges();
-    debugProfile.triggerEventHandler('click', null);
+    debugBarGroup.triggerEventHandler('click', null);
     fixture.detectChanges();
     expect(findStringInNode(profile, 'hidden')).toBe(true);
   });
 
   it("Profile panel should contain a string", () => {
-    expect(profile.textContent).toContain(comp.showProfile);
+    debugBarGroup.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    expect(profile.textContent).toContain(comp.chosenMeta.profile);
   });
 
 

@@ -7,20 +7,22 @@
           (click)="onSelect(individualMeta)"
           [class.selectedMeta]="individualMeta === selectedMeta"
           [class.background]="individualMeta">
+          <!--if individualMeta is exactly equivalent to selectedMeta, then
+        individualMeta gets the selectedMeta class applied-->
 
            <!--When an item in the list is clicked, the component's onSelect function
               is called with the value of the clicked item as an argument.
 
             Where the value of individualMeta
             is equal to the value of selectedMeta, individualMeta
-            is given the selectedMeta class.
+            is given the selectedMeta and background classes.
           -->
 
         {{individualMeta.name}}
       </li>
     </ul>
 
-    <!--The 'clicked' property is created here, with the value of 'selectedMeta'-->
-    <meta-detail [clicked]="selectedMeta"></meta-detail>
+    <!--The 'clickedMeta' property is created here, with the value of 'selectedMeta'-->
+    <meta-detail [clickedMeta]="selectedMeta"></meta-detail>
   </div>
 </div>

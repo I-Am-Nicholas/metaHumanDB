@@ -43,7 +43,7 @@ describe("MetasComponent", () => {
         logo: "Mjolnir",
         alias: "God of Thunder",
         profile: [],
-        headshot: ""
+        headshotsFront: ""
       }
     );
     comp.onSelect(testMeta);
