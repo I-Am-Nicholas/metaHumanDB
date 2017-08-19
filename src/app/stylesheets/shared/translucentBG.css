@@ -1,7 +1,7 @@
 
 .background {
   background-color: rgb(255, 255, 255);
-  background-color: rgba(100, 100, 100, 0.2);
+  background-color: rgba(100, 100, 100, 0.3);
   /* For IE 5.5 - 7*/
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   /* For IE 8*/

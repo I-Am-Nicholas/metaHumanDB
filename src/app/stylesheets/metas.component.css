@@ -12,6 +12,39 @@
   height: 485px;
  }
 
+.angled {
+  -webkit-transform:
+      translateX(275px)
+      translateY(215px)
+      rotate(26deg);
+  position: absolute;
+  top: 20px;
+}
+
+.flight {
+  border-bottom: 1px solid #999;
+  -webkit-animation: increase 3s;
+  -moz-animation:    increase 3s;
+  -o-animation:      increase 3s;
+  animation:         increase 10s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: 10;
+  -webkit-animation-duration: 5;
+  -moz-animation-duration: 5;
+
+}
+
+@keyframes increase {
+  100% {
+    width: 970px;
+  }
+}
+
+
+
  .metas {
    color: lightgray;
    margin: 20px 0 2em 0;
@@ -39,11 +72,11 @@
  }
 
  .selectedMeta {
-    color: #999;
+    color: #fff;
   }
 
  .metas li.selectedMeta:hover {
-    color: #999;
+    color: #fff;
   }
 
   .metas li:hover {

@@ -41,7 +41,6 @@ describe('MetaHumanDB App', () => {
       anyMeta.click();
       let name = element(by.id('name'));
       let alias = element(by.id('alias'));
-      let profile = element(by.id('profile'));
       let headshot = element(by.id('headshot'));
       expect(browser.isElementPresent(name)).toBe(true);
       expect(browser.isElementPresent(alias)).toBe(true);
