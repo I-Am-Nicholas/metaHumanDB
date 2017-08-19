@@ -7,7 +7,7 @@
     "profile": [
       "Billionaire entrepreneur and one of the smartest beings on the planet.",
       "Stark's intellect is the benchmark by which the others are measured.",
-      "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skill rating."
+      "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
@@ -47,7 +47,8 @@
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
-      "profile":["God of Thunder...though we've only ever seen him manipulate lightning.",
+      "profile":[
+              "God of Thunder...though we've only ever seen him manipulate lightning.",
               "As far as we know no-one has ever pulled him up on that.",
               "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
               "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk."

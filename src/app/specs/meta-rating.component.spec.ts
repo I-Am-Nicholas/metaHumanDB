@@ -66,5 +66,9 @@ describe('MetaRatingComponent', () => {
     expect(profile.textContent).toContain(comp.chosenMeta.profile);
   });
 
+  it("Profile panel should show name and alias", () => {
+    expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
+    expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
+  });
 
 });
