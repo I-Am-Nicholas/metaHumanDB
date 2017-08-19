@@ -4,6 +4,9 @@ $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
 
+$start-position: -1000px;
+$end-position: 0px;
+
 // MIXINS
 //Horizontal Bar Color Mixin
 @mixin stat-bar($color-dark, $color-light, $direction, $dir-webkit) {
@@ -163,13 +166,29 @@ $graph-width: 300px;
 
 .hidden {
   display: none;
+  left: $start-position;
+}
+
+.not-hiddn {
+  animation: $default-delay slidein;
+  transition: ease-in;
+  left: $end-position;
+}
+
+#encloser {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  overflow: hidden;
+  width: 880px;
+  height: 505px;
 }
 
 #profile-panel {
   background-image: url('../../assets/circuitboardBG.jpg');
-  position: absolute;
+  position: relative;
   top: 0;
-  left: -300px;
+  left: $end-position;
   width: 870px;
   height: auto;
   border: 1px solid #000;
@@ -177,6 +196,7 @@ $graph-width: 300px;
   background-color: white;
   margin: 25px 0 0 0;
   padding: 100px 0;
+  z-index: 1001;
 }
 
 #profile-panel ul{
@@ -186,3 +206,6 @@ $graph-width: 300px;
   height: 250px;
   line-height: 3rem;
 }
+
+@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }

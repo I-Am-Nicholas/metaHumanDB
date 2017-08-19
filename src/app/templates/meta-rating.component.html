@@ -22,11 +22,15 @@
     </div>
   </div>
 
-  <div id="profile-panel" [class.hidden] = "!toggle">
-    <ul>
-      <li *ngFor= "let eachLine of chosenMeta.profile">
-        {{eachLine}}
-      </li>
-    </ul>
+  <div id="encloser">
+    <div id="profile-panel" [class.hidden] = "!toggle"
+          [class.not-hiddn] = "toggle">
+      <ul>
+        <li *ngFor= "let eachLine of chosenMeta.profile">
+          {{eachLine}}
+        </li>
+      </ul>
+    </div>
   </div>
+
 </div>

@@ -12,12 +12,14 @@
 #headshot {
   flex-direction: column;
   width: 600px;
+  z-index: 1000;
 }
 
 #headshot img {
   border: 1px solid #21658c;
   margin: 0 auto;
   display: block;
+  z-index: 1000;
 }
 
 #info {
