@@ -47,10 +47,14 @@
       "id":5,"name":"Thor",
       "logo":"assets/200s/mjolnir.png",
       "alias":"God of Thunder",
-      "profile":[],
+      "profile":["God of Thunder...though we've only ever seen him manipulate lightning.",
+              "As far as we know no-one has ever pulled him up on that.",
+              "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
+              "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk."
+            ],
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
-      "level": [50, 100, 100]
+      "level": [50, 100, 95]
     },
     {
       "id":6,"name":"Black Panther",

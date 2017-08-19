@@ -166,7 +166,6 @@ $end-position: 0px;
 
 .hidden {
   display: none;
-  left: $start-position;
 }
 
 .not-hiddn {
@@ -174,6 +173,9 @@ $end-position: 0px;
   transition: ease-in;
   left: $end-position;
 }
+
+@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
 
 #encloser {
   position: absolute;
@@ -201,11 +203,10 @@ $end-position: 0px;
 
 #profile-panel ul{
   font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
   margin: 0 auto;
   width: 700px;
   height: 250px;
   line-height: 3rem;
 }
-
-@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
-@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }

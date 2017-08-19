@@ -49,7 +49,6 @@ describe('MetaRatingComponent', () => {
   it("Profile panel should be visible in DOM after ratings clicked", () => {
     debugBarGroup.triggerEventHandler('click', null);
     fixture.detectChanges();
-    console.log(findStringInNode(profile, 'hidden'))
     expect(findStringInNode(profile, 'hidden')).toBe(false);
   });
 
