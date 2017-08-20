@@ -7,7 +7,9 @@ import { Meta } from "../meta";
   templateUrl: '../templates/meta-rating.component.html',
   styleUrls: [
     '../stylesheets/meta-rating.component.scss',
-   '../stylesheets/shared/translucentBG.css']
+   '../stylesheets/shared/translucentBG.css',
+   '../stylesheets/profile-panel.scss'
+ ]
 })
 
 export class MetaRatingComponent {

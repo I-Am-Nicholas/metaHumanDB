@@ -1,6 +1,5 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, Input } from '@angular/core';
-// import { ActivatedRoute, ParamMap }   from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { MetaService } from '../meta-service';

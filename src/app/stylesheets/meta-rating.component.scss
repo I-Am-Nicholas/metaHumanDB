@@ -4,9 +4,6 @@ $bars: 3;
 $graph-height: 430px;
 $graph-width: 300px;
 
-$start-position: -1000px;
-$end-position: 0px;
-
 // MIXINS
 //Horizontal Bar Color Mixin
 @mixin stat-bar($color-dark, $color-light, $direction, $dir-webkit) {
@@ -135,8 +132,9 @@ $end-position: 0px;
 
         span {
           font-family: font158023;
-          font-size: 1.75em;
+          font-size: 1.85em;
           font-weight: normal;
+          font-style: normal;
           margin-top: 10px;
           color: #333;
           z-index: 1000;
@@ -145,8 +143,8 @@ $end-position: 0px;
 
     @for $i from 1 through 3 {
       .stat-#{$i} {
-        animation-delay: $default-delay+.2*$i;
-        -webkit-animation-delay: $default-delay+.2*$i;
+        animation-delay: $default-delay+.4*$i;
+        -webkit-animation-delay: $default-delay+.4*$i;
       }
     }
   }
@@ -164,68 +162,4 @@ $end-position: 0px;
       }
     }
   }
-}
-
-.hidden {
-  // animation-delay: $default-delay;
-  // animation: 5s slideout;
-  // transition: cubic-bezier(4, 0.3, 0.3, 0.3);
-  // left: $start-position;
-  display: none;
-}
-
-.not-hiddn {
-  display: block;
-  animation: $default-delay slidein;
-  transition: ease-in;
-  left: $end-position;
-}
-
-@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
-@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
-
-@-webkit-keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
-@keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
-
-#encloser {
-  position: absolute;
-  top: 0;
-  left: -300px;
-  overflow: hidden;
-  width: 880px;
-  height: 505px;
-}
-
-#profile-panel {
-  background-image: url('../../assets/circuitboardBG.jpg');
-  position: relative;
-  top: 0;
-  left: $end-position;
-  width: 870px;
-  height: auto;
-  border: 1px solid #000;
-  border-radius: 6px;
-  background-color: white;
-  margin: 25px 0 0 0;
-  padding: 100px 0;
-  z-index: 1001;
-}
-
-#profile-panel ul, span {
-  font-family: helvetica;
-  font-style: italic;
-  font-weight: bold;
-  margin: 0 auto;
-  width: 700px;
-  height: 250px;
-  line-height: 3rem;
-}
-
-#profile-panel span {
-  border-bottom: 1px solid #21658c;
-  padding-left: 10px;
-  height: auto;
-  width: 860px;
-  position: absolute;
-  top: 0;
 }
