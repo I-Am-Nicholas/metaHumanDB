@@ -1,7 +1,7 @@
 // VARIABLES
 $default-delay: 0.5s;
 $bars: 3;
-$graph-height: 430px;
+$graph-height: 455px;
 $graph-width: 300px;
 
 // MIXINS
@@ -113,6 +113,15 @@ $graph-width: 300px;
     margin-bottom: 20px;
     font-size: .6em;
 
+    span {
+      font-family: font158023;
+      font-size: 1.85em;
+      font-weight: normal;
+      font-style: normal;
+      color: #333;
+      z-index: 1000;
+    }
+
     .bar {
       @include bar-animation-zero-height($default-delay, height);
       border-radius: 3px 3px 0 0;
@@ -130,15 +139,6 @@ $graph-width: 300px;
           left: ($graph-width/3)*2;
         }
 
-        span {
-          font-family: font158023;
-          font-size: 1.85em;
-          font-weight: normal;
-          font-style: normal;
-          margin-top: 10px;
-          color: #333;
-          z-index: 1000;
-        }
     }
 
     @for $i from 1 through 3 {
