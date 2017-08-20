@@ -1,6 +1,6 @@
 $default-delay: 0.5s;
 $start-position: -1000px;
-$end-position: 0px;
+$end-position: 0;
 
 .hidden {
   display: none;
@@ -15,9 +15,6 @@ $end-position: 0px;
 
 @-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
 @keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
-
-@-webkit-keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
-@keyframes slideout { from { left: $end-position; } to { margin-left: 250%; }  }
 
 #encloser {
   position: absolute;

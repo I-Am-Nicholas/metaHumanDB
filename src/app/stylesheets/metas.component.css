@@ -12,7 +12,7 @@
   height: 485px;
  }
 
-.angled {
+/*.angled {
   -webkit-transform:
       translateX(275px)
       translateY(215px)
@@ -43,7 +43,7 @@
   }
 }
 
-
+*/
 
  .metas {
    color: lightgray;

@@ -28,10 +28,14 @@
       "name":"Hulk",
       "logo":"assets/200s/gamma.png",
       "alias":"Bruce Banner",
-      "profile":[],
+      "profile":[
+        "Like Tony Stark with his intellect, all other meta strengths are gauged against Hulk's.",
+        "'Fight skills' suggest training and tactical application of combat techniques. Creating sonic waves by clapping your hands or earthquakes by stomping real hard don't really fall under those categories. Hulk simply relies on unlimited power.",
+        "Regarding the low IQ rating...in his own words 'Who needs it?'"
+      ],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
-      "level": [10, 60, 100]
+      "level": [10, 50, 100]
     },
     {
       "id":4,
