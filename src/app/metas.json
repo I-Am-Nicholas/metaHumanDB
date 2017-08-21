@@ -18,7 +18,11 @@
       "name":"Captain America",
       "logo":"assets/200s/shield.png",
       "alias":"Steve Rogers",
-      "profile":[],
+      "profile":[
+        "Cap's fighting ability is as good as it gets. If asked he'll tell you he is a born soldier. The super-soldier serum only enhances the sentiment.",
+        "Strengthwise he's about equal with Iron Man, and impressively doesn't need armour to be so."
+        "Due to accidental suspended animation, Cap is around a hundred years old."
+      ],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
       "level": [50, 100, 70]
