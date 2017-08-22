@@ -1,7 +1,7 @@
 // VARIABLES
 $default-delay: 0.5s;
 $bars: 3;
-$graph-height: 455px;
+$graph-height: 440px;
 $graph-width: 300px;
 
 // MIXINS
@@ -114,7 +114,7 @@ $graph-width: 300px;
     font-size: .6em;
 
     span {
-      font-size: 1.85em;
+      font-size: 1.75em;
       font-weight: normal;
       color: #333;
       z-index: 1000;
@@ -152,6 +152,8 @@ $graph-width: 300px;
       width: 220px;
       position: relative;
       margin: 0 0 20px;
+      font-size: .8em;
+
       span {
         position: relative;
         float: left;
