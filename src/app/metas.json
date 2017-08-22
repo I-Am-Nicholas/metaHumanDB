@@ -20,7 +20,7 @@
       "alias":"Steve Rogers",
       "profile":[
         "Cap's fighting ability is as good as it gets. If asked he'll tell you he is a born soldier. The super-soldier serum only enhances the sentiment.",
-        "Strengthwise he's about equal with Iron Man, and impressively doesn't need armour to be so."
+        "Strength-wise he's about equal with Iron Man, and impressively doesn't need armour to be so.",
         "Due to accidental suspended animation, Cap is around a hundred years old."
       ],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
@@ -39,7 +39,7 @@
       ],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
-      "level": [10, 50, 100]
+      "level": [15, 50, 100]
     },
     {
       "id":4,
@@ -72,7 +72,7 @@
       "profile":[],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
-      "level": [50, 100, 70]
+      "level": [65, 100, 70]
     },
     {
       "id":7,"name":"Scarlet Witch",

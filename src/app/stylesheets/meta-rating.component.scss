@@ -114,10 +114,8 @@ $graph-width: 300px;
     font-size: .6em;
 
     span {
-      font-family: font158023;
       font-size: 1.85em;
       font-weight: normal;
-      font-style: normal;
       color: #333;
       z-index: 1000;
     }
@@ -159,6 +157,7 @@ $graph-width: 300px;
         float: left;
         height: 15px;
         width: 15px;
+        padding-bottom: 20px;
       }
     }
   }
