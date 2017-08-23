@@ -14,6 +14,7 @@ import { MetaDetailComponent } from './components/meta-detail.component';
 import { MetaService } from './meta-service';
 import { MetaRatingComponent } from './components/meta-rating.component';
 import { findStringInNode } from '../testing/find-string-in-node';
+import { click } from '../testing/clicker-left';
 
 @NgModule({
   declarations: [
