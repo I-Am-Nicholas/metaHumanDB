@@ -58,8 +58,8 @@ describe('MetaDetailComponent', () => {
 
 
   it("should display the correct meta's name and alias", () => {
-    let expectedPipedName = testMeta.name;
-    let expectedPipedAlias = testMeta.alias;
+    let expectedPipedName = testMeta.name.toUpperCase();
+    let expectedPipedAlias = testMeta.alias.toUpperCase();
     expect(DOMElement[0].textContent).toContain(expectedPipedName);
     expect(DOMElement[0].textContent).toContain(expectedPipedAlias);
   });
@@ -72,5 +72,9 @@ describe('MetaDetailComponent', () => {
   it("should display the meta's image", () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();
   });
+
+  it("should display the Alias button", () => {
+    expect(DOMElement[0].querySelector('#alias-btn')).toBeTruthy();
+  })
 
 });

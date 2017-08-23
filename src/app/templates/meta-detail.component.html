@@ -2,6 +2,7 @@
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
+  <div id="alias-btn" class="background">ALIAS</div>
   <div id="headshot" >
 
     <div class="flip-container">
@@ -15,8 +16,8 @@
         </div>
 
         <div id="info">
-          <div id="name" class="front">{{clickedMeta.name}}</div>
-          <div id="alias" class="back">{{clickedMeta.alias}}</div>
+          <div id="name" class="front">{{clickedMeta.name | uppercase}}</div>
+          <div id="alias" class="back">{{clickedMeta.alias | uppercase}}</div>
 
         </div>
 

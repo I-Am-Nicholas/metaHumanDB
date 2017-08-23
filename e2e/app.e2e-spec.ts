@@ -4,6 +4,7 @@ describe('MetaHumanDB App', () => {
     browser.get('http://localhost:4200/');
   });
 
+  let aliasBtn = element(by.id('alias-btn'));
   let metas = element(by.className('metas'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
@@ -53,6 +54,12 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(detail)).toBe(false);
     });
 
+    it("pressing Alias button should flip image(make back visible, front invisible)", () => {
+      anyMeta.click();
+      aliasBtn.click();
+      expect(element(by.className('back')).isDisplayed()).toBe(true);
+    });
+
   });
 
   describe("Rating", () => {
@@ -81,19 +88,9 @@ describe('MetaHumanDB App', () => {
     it("should make the profile-panel visible when clicked", () => {
       anyMeta.click();
       bargroup.click();
-      expect(element(by.id('profile-panel')).isDisplayed()).toBe(true);
-    });
-
-  });
-
-  describe("Image", () => {
-
-    it("flips and shows meta alias", () => {
-      anyMeta.click();
-      browser.actions().
-        mouseMove(image).
-        perform();
-      expect(element(by.className('alias')).isDisplayed()).toBeTruthy();
+      //'wait' method added due to promise-returning .isDisplyed()
+      waiter = browser.wait((profile).isDisplayed());
+      expect(waiter).toBeTruthy();
     });
 
   });
