@@ -73,4 +73,8 @@ describe('MetaDetailComponent', () => {
     expect(DOMElement[0].querySelector('#headshot img')).toBeTruthy();
   });
 
+  it("should display the Alias button", () => {
+    expect(DOMElement[0].querySelector('#alias-btn')).toBeTruthy();
+  })
+
 });

@@ -4,6 +4,7 @@ describe('MetaHumanDB App', () => {
     browser.get('http://localhost:4200/');
   });
 
+  let aliasBtn = element(by.id('alias-btn'));
   let metas = element(by.className('metas'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
@@ -53,6 +54,12 @@ describe('MetaHumanDB App', () => {
       expect(browser.isElementPresent(detail)).toBe(false);
     });
 
+    fit("pressing Alias button should flip image", () => {
+      anyMeta.click();
+      aliasBtn.click();
+      expect(element(by.className('alias')).isDisplayed()).toBe(true);
+    });
+
   });
 
   describe("Rating", () => {
@@ -88,12 +95,12 @@ describe('MetaHumanDB App', () => {
 
   describe("Image", () => {
 
-    it("flips and shows meta alias", () => {
+    xit("flips and shows meta alias", () => {
       anyMeta.click();
       browser.actions().
         mouseMove(image).
         perform();
-      expect(element(by.className('alias')).isDisplayed()).toBeTruthy();
+      expect(element(by.className('alias')).isDisplayed()).toBe(true);
     });
 
   });
