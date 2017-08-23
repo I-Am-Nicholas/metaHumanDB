@@ -9,6 +9,15 @@
   float: right;
 }
 
+#alias-btn {
+  width: 140px;
+  position: absolute;
+  top: -80px;
+  left: -300px;
+  padding: 10px 0;
+  text-align: center;
+}
+
 #headshot {
   flex-direction: column;
   width: 600px;
