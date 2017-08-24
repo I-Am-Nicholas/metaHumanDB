@@ -63,7 +63,7 @@ describe('MetaRatingComponent', () => {
   it("Profile panel should contain a string", () => {
     debugBarGroup.triggerEventHandler('click', null);
     fixture.detectChanges();
-    expect(profile.textContent).toContain(comp.chosenMeta.profile);
+    expect(profile.textContent).toContain(comp.chosenMeta.profile[0]);
   });
 
   it("Profile panel should show name and alias", () => {

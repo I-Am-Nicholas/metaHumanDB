@@ -1,0 +1,40 @@
+#center-enabler {
+  height: 660px;
+  width: auto;
+  margin-top: 35px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.3em;
+  color: #21658c;
+}
+
+.navParent {
+  height: 50px;
+}
+
+nav a {
+  font-size: 1.3em;
+  color: #21658c;
+  width: 100%;
+  height: 50px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  line-height: 50px;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scaleY(1.2);
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+}
+
+nav a:active {
+  border: 1px solid #039be5;
+}
