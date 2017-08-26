@@ -3,11 +3,11 @@ $start-position: -1000px;
 $end-position: 0;
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .not-hiddn {
-  display: block;
+  visibility: visible;
   animation: $default-delay slidein;
   transition: ease-in;
   left: $end-position;

@@ -5,14 +5,6 @@
   perspective: 1000;
 }
 
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
-
 .flipper {
 	-webkit-transition: 0.6s;
 	-webkit-transform-style: preserve-3d;
@@ -26,6 +18,13 @@
 	transition: 0.6s;
 	transform-style: preserve-3d;
 
+}
+
+.showAlias {
+  -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .front, .back {

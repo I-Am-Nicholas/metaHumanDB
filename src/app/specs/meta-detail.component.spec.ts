@@ -8,6 +8,8 @@ import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from '../components/meta-detail.component'
 import { MetaService } from "../meta-service";
 import { Meta } from '../meta'
+import { click } from '../../testing/clicker-left'
+import { findStringInNode } from '../../testing/find-string-in-node';
 
 let fixture: ComponentFixture<MetaDetailComponent>;
 let activatedRoute: ActivatedRouteStub;
@@ -75,6 +77,14 @@ describe('MetaDetailComponent', () => {
 
   it("should display the Alias button", () => {
     expect(DOMElement[0].querySelector('#alias-btn')).toBeTruthy();
-  })
+  });
+
+  it('should flip the image',() => {
+    let flipperClass = DOMElement[0].querySelectorAll('.flipper');
+    let testButton = DOMElement[0].querySelector('#alias-btn');
+    click(testButton);
+    fixture.detectChanges();
+    expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(true);
+  });
 
 });

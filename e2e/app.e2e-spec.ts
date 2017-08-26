@@ -6,6 +6,7 @@ describe('MetaHumanDB App', () => {
 
   let aliasBtn = element(by.id('alias-btn'));
   let metas = element(by.className('metas'));
+  let back = element(by.className('back'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
   let profile = element(by.id('profile-panel'));
@@ -57,7 +58,8 @@ describe('MetaHumanDB App', () => {
     it("pressing Alias button should flip image(make back visible, front invisible)", () => {
       anyMeta.click();
       aliasBtn.click();
-      expect(element(by.className('back')).isDisplayed()).toBe(true);
+      expect(back.isPresent()).toBe(true);
+      expect(back.isDisplayed()).toBe(true);
     });
 
   });
@@ -65,32 +67,34 @@ describe('MetaHumanDB App', () => {
   describe("Rating", () => {
 
     it("div should not be present on landing page", () => {
-      expect(browser.isElementPresent(rating)).toBe(false);
+      expect(browser.isElementPresent(bargroup)).toBe(false);
     });
 
-    it("div should be present once a meta is clicked", () => {
+    it("should display rating bars once a meta is clicked", () => {
       anyMeta.click();
-      expect(browser.isElementPresent(rating)).toBe(true);
+      expect(bargroup.isDisplayed()).toBe(true);
     });
 
-    it("bars should be at greater than 0 height", () => {
+  });
+
+  describe("Profile panel", () => {
+
+    it("should be present but not visible", () => {
       anyMeta.click();
-      waiter = browser.wait(element(by.className('bar')).isDisplayed());
-      expect(waiter).toBeTruthy();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(false);
     });
 
-    it("profile-panel should be present but not visible", () => {
+    it("should not be visible when bar-group not clicked", () => {
       anyMeta.click();
-      expect(browser.isElementPresent(profile)).toBe(true);
-      expect((profile).isDisplayed()).toBe(false);
+      expect(profile.isDisplayed()).toBe(false);
     });
 
-    it("should make the profile-panel visible when clicked", () => {
+    it("should be visible when bar-group clicked", () => {
       anyMeta.click();
       bargroup.click();
-      //'wait' method added due to promise-returning .isDisplyed()
-      waiter = browser.wait((profile).isDisplayed());
-      expect(waiter).toBeTruthy();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(true);
     });
 
   });
