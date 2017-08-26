@@ -8,14 +8,14 @@ import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from '../components/meta-detail.component'
 import { MetaService } from "../meta-service";
 import { Meta } from '../meta'
+import { click } from '../../testing/clicker-left'
+import { findStringInNode } from '../../testing/find-string-in-node';
 
 let fixture: ComponentFixture<MetaDetailComponent>;
 let activatedRoute: ActivatedRouteStub;
 let comp: MetaDetailComponent;
 let DOMElement: DebugElement;
-let DOMImage: DebugElement;
 let testMeta: Meta;
-let HTMLnode: HTMLElement;
 
 
 describe('MetaDetailComponent', () => {
@@ -32,11 +32,7 @@ describe('MetaDetailComponent', () => {
       ]
     });
 
-  });
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
-    HTMLnode = fixture.nativeElement;
     DOMElement = fixture.nativeElement.children;
 
     testMeta = (
@@ -49,7 +45,7 @@ describe('MetaDetailComponent', () => {
            headshotsFront: "assets/headshotsFront/thor.jpg",
             headshotsBack: "assets/headshotsBack/thor.jpg",
              level: []
-           });
+    });
 
     comp = fixture.componentInstance;
     comp.clickedMeta = testMeta;
@@ -75,6 +71,18 @@ describe('MetaDetailComponent', () => {
 
   it("should display the Alias button", () => {
     expect(DOMElement[0].querySelector('#alias-btn')).toBeTruthy();
-  })
+  });
+
+  it('back of image should not initially be visible', () => {
+    let flipperClass = DOMElement[0].querySelectorAll('.flipper');
+    expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(false);
+  });
+
+  it('should flip the image', () => {
+    let flipperClass = DOMElement[0].querySelectorAll('.flipper');
+    click(DOMElement[0].querySelector('#alias-btn'));
+    fixture.detectChanges();
+    expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(true);
+  });
 
 });
