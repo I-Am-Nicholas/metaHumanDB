@@ -9,30 +9,6 @@
   float: right;
 }
 
-.bttn {
-  font-size: 1rem;
-  width: 140px;
-  position: absolute;
-  top: -50px;
-  left: -300px;
-  padding: 10px 0;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.bttn:focus {
-  outline:0;
-}
-
-.bttn:active {
-  transform: translateY(5px);
-}
-
-.bttn:hover {
-  color: #fff;
-}
-
 #headshot {
   flex-direction: column;
   width: 600px;

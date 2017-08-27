@@ -10,7 +10,8 @@ import { Meta } from '../meta'
   selector: 'meta-detail',
   styleUrls: ['../stylesheets/meta-detail.component.css',
    '../stylesheets/shared/translucentBG.css',
-   '../stylesheets/flipper.css'
+   '../stylesheets/flipper.css',
+   '../stylesheets/shared/nav-bttns.css'
  ],
   templateUrl: '../templates/meta-detail.component.html'
 })
