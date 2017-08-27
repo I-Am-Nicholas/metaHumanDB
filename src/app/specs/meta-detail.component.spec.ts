@@ -54,15 +54,15 @@ describe('MetaDetailComponent', () => {
 
 
   it("should display the correct meta's name and alias", () => {
-    let expectedPipedName = testMeta.name.toUpperCase();
-    let expectedPipedAlias = testMeta.alias.toUpperCase();
-    expect(DOMElement[0].textContent).toContain(expectedPipedName);
-    expect(DOMElement[0].textContent).toContain(expectedPipedAlias);
+    let testName = testMeta.name.toUpperCase();
+    let testAlias = testMeta.alias.toUpperCase();
+    expect(DOMElement[0].textContent).toContain(testName);
+    expect(DOMElement[0].textContent).toContain(testAlias);
   });
 
   it("should not display logo details", () => {
-    let unexpectedPipedLogo = testMeta.logo;
-    expect(DOMElement[0].textContent).not.toContain(unexpectedPipedLogo);
+    let testLogo = testMeta.logo;
+    expect(DOMElement[0].textContent).not.toContain(testLogo);
   });
 
   it("should display the meta's image", () => {

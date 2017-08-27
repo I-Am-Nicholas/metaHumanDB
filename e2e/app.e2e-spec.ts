@@ -6,25 +6,27 @@ describe('MetaHumanDB App', () => {
 
   let aliasBtn = element(by.id('alias-btn'));
   let metas = element(by.className('metas'));
-  let back = element(by.className('back'));
   let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
   let profile = element(by.id('profile-panel'));
+  let profileButton = element(by.id('profile-btn'));
   let rating = element(by.id('rating'));
   let bargroup = element(by.className('bar-group'));
   let image = element(by.id('headshot'));
   let ratinglabels = element(by.id('rating-labels'));
+  let imageBack = element(by.className('showAlias'));
 
 
   /////PRE-CLICK////
 
   describe("MetasComponent", () => {
 
-    it("Should only show pre-click data", () => {
+    it("Should only show pre-click data/components", () => {
       expect(browser.getTitle()).toEqual('MetaHumanDB');//should show page title.
-      expect(browser.isElementPresent(metas)).toBe(true);//should show list of meta buttons
-      expect(browser.isElementPresent(detail)).toBe(false);//should not show any details
+      expect(metas.isPresent()).toBe(true);//should show list of meta buttons
+      expect(detail.isPresent()).toBe(false);//should not show any details
       expect(bargroup.isPresent()).toBe(false);//should not show any rating bars
+      expect(aliasBtn.isPresent()).toBe(false);
     });
 
   });
@@ -38,12 +40,12 @@ describe('MetaHumanDB App', () => {
       let alias = element(by.id('alias'));
 
       anyMeta.click();
-      expect(browser.isElementPresent(detail)).toBe(true);//should show details, including...
-      expect(browser.isElementPresent(name)).toBe(true);//should show name...
-      expect(browser.isElementPresent(alias)).toBe(true);//should show alias...
-      expect(browser.isElementPresent(rating)).toBe(true);//should show rating...
-      expect(browser.isElementPresent(image)).toBe(true);//should show image...
-      expect(browser.isElementPresent(ratinglabels)).toBe(true);//should show rating info...
+      expect(detail.isPresent()).toBe(true);//should show details, including...
+      expect(name.isPresent()).toBe(true);//should show name...
+      expect(aliasBtn.isPresent()).toBe(true);//should show alias button...
+      expect(rating.isPresent()).toBe(true);//should show rating...
+      expect(image.isPresent()).toBe(true);//should show image...
+      expect(ratinglabels.isPresent()).toBe(true);//should show rating info...
       expect(bargroup.isDisplayed()).toBe(true);//should show rating bars.
     });
 
@@ -54,9 +56,10 @@ describe('MetaHumanDB App', () => {
 
     it("clicking Alias button should flip image (make back visible, make front invisible)", () => {
       anyMeta.click();
+      expect(imageBack.isPresent()).toBe(false);
       aliasBtn.click();
-      expect(back.isPresent()).toBe(true);
-      expect(back.isDisplayed()).toBe(true);
+      expect(imageBack.isPresent()).toBe(true);
+      expect(imageBack.isDisplayed()).toBe(true)
     });
 
   });
@@ -66,9 +69,18 @@ describe('MetaHumanDB App', () => {
 
     it("should only be visible when bargroup clicked", () => {
       anyMeta.click();
-      expect(browser.isElementPresent(profile)).toBe(true);
+      expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
       bargroup.click();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(true);
+    });
+
+    it("clicking profile button should display profile", () => {
+      anyMeta.click();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(false);
+      profileButton.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
     });

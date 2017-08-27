@@ -8,6 +8,7 @@ import { MetaRatingComponent } from '../components/meta-rating.component';
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
 let debugBarGroup: DebugElement;
+let debugProfileButton: DebugElement;
 let HTMLnode: HTMLElement;
 let profile: Element;
 
@@ -36,6 +37,7 @@ describe('MetaRatingComponent', () => {
     comp = fixture.componentInstance;
     comp.chosenMeta = testMeta;
     debugBarGroup = fixture.debugElement.query(By.css(".bar-group"));
+    debugProfileButton = fixture.debugElement.query(By.css("#profile-btn"));
     HTMLnode = fixture.nativeElement;
     profile = HTMLnode.querySelector('#profile-panel');
     fixture.detectChanges();
@@ -69,6 +71,12 @@ describe('MetaRatingComponent', () => {
   it("Profile panel should show name and alias", () => {
     expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
     expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
+  });
+
+  it("Clicking Profile button should reveal Profile panel", () => {
+    debugProfileButton.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    expect(findStringInNode(profile, 'hidden')).toBe(false);
   });
 
 });
