@@ -16,46 +16,43 @@ describe('MetaHumanDB App', () => {
   let ratinglabels = element(by.id('rating-labels'));
 
 
-  describe("Pre-Click", () => {
+  /////PRE-CLICK////
 
-    it('should have a title', () => {
-      expect(browser.getTitle()).toEqual('MetaHumanDB');
+  describe("MetasComponent", () => {
+
+    it("Should only show pre-click data", () => {
+      expect(browser.getTitle()).toEqual('MetaHumanDB');//should show page title.
+      expect(browser.isElementPresent(metas)).toBe(true);//should show list of meta buttons
+      expect(browser.isElementPresent(detail)).toBe(false);//should not show any details
+      expect(bargroup.isPresent()).toBe(false);//should not show any rating bars
     });
 
   });
 
-  describe("Meta-Human List", () => {
-
-    it("should show the list elements immediately", () => {
-      expect(browser.isElementPresent(metas)).toBe(true);
-    });
-
-    it('clicking first name in Meta-Human List shows details of the selected Meta-Human.', () => {
-      anyMeta.click();
-      expect(browser.isElementPresent(detail)).toBe(true);
-    });
-
-  });
+  /////POST-CLICK////
 
   describe("Meta-Human Detail", () => {
 
-    it('detail should show all details of meta', () => {
-      anyMeta.click();
+    it('should show all details of selected meta post-click', () => {
       let name = element(by.id('name'));
       let alias = element(by.id('alias'));
-      let headshot = element(by.id('headshot'));
-      expect(browser.isElementPresent(name)).toBe(true);
-      expect(browser.isElementPresent(alias)).toBe(true);
-      expect(browser.isElementPresent(rating)).toBe(true);
-      expect(browser.isElementPresent(headshot)).toBe(true);
-      expect(browser.isElementPresent(ratinglabels)).toBe(true);
+
+      anyMeta.click();
+      expect(browser.isElementPresent(detail)).toBe(true);//should show details, including...
+      expect(browser.isElementPresent(name)).toBe(true);//should show name...
+      expect(browser.isElementPresent(alias)).toBe(true);//should show alias...
+      expect(browser.isElementPresent(rating)).toBe(true);//should show rating...
+      expect(browser.isElementPresent(image)).toBe(true);//should show image...
+      expect(browser.isElementPresent(ratinglabels)).toBe(true);//should show rating info...
+      expect(bargroup.isDisplayed()).toBe(true);//should show rating bars.
     });
 
-    it("div should not be present on landing page", () => {
-      expect(browser.isElementPresent(detail)).toBe(false);
-    });
+  });
 
-    it("pressing Alias button should flip image(make back visible, front invisible)", () => {
+
+  describe("Deep Info", () => {
+
+    it("clicking Alias button should flip image (make back visible, make front invisible)", () => {
       anyMeta.click();
       aliasBtn.click();
       expect(back.isPresent()).toBe(true);
@@ -64,34 +61,13 @@ describe('MetaHumanDB App', () => {
 
   });
 
-  describe("Rating", () => {
-
-    it("div should not be present on landing page", () => {
-      expect(browser.isElementPresent(bargroup)).toBe(false);
-    });
-
-    it("should display rating bars once a meta is clicked", () => {
-      anyMeta.click();
-      expect(bargroup.isDisplayed()).toBe(true);
-    });
-
-  });
 
   describe("Profile panel", () => {
 
-    it("should be present but not visible", () => {
+    it("should only be visible when bargroup clicked", () => {
       anyMeta.click();
-      expect(profile.isPresent()).toBe(true);
+      expect(browser.isElementPresent(profile)).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
-    });
-
-    it("should not be visible when bar-group not clicked", () => {
-      anyMeta.click();
-      expect(profile.isDisplayed()).toBe(false);
-    });
-
-    it("should be visible when bar-group clicked", () => {
-      anyMeta.click();
       bargroup.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
