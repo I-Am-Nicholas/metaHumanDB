@@ -4,10 +4,10 @@
   <div id="profile-btn" class="bttn background"
   (click)="toggle = !toggle;"
   >PROFILE</div>
-  
+
   <div id="bar-chart">
     <div class="bars">
-      <div class="bar-group" (click)="toggle = !toggle;" >
+      <div class="bar-group">
         <div class="bar stat-1" [style.height.%]= "chosenMeta.level[0]">
           <span>{{chosenMeta.level[0]+'%'}}</span>
         </div>
