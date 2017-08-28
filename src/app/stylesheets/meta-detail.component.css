@@ -5,32 +5,8 @@
   font-size: 1.25em;
   height: 450px;
   border-radius: 6px;
-  padding-top: 40px;
+  padding-top: 30px;
   float: right;
-}
-
-.bttn {
-  font-size: 1rem;
-  width: 140px;
-  position: absolute;
-  top: -80px;
-  left: -300px;
-  padding: 10px 0;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.bttn:focus {
-  outline:0;
-}
-
-.bttn:active {
-  transform: translateY(5px);
-}
-
-.bttn:hover {
-  color: #fff;
 }
 
 #headshot {
@@ -46,18 +22,17 @@
 }
 
 #info {
-  text-align: center;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 2.5em;
 }
 
 #name, #alias {
   position: relative;
-  max-width: 475px;
-  top: -10px;
+  top: -20px;
   margin: 0 auto;
+  padding-left: 30px;
 }
 
 #alias {
-  top: -60px;
+  top: -75px;
 }

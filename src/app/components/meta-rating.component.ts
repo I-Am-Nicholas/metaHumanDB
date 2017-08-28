@@ -8,7 +8,8 @@ import { Meta } from "../meta";
   styleUrls: [
     '../stylesheets/meta-rating.component.scss',
    '../stylesheets/shared/translucentBG.css',
-   '../stylesheets/profile-panel.scss'
+   '../stylesheets/profile-panel.scss',
+   '../stylesheets/shared/nav-bttns.css'
  ]
 })
 
