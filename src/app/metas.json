@@ -2,7 +2,7 @@
   [
     {"id":1,
     "name":"Iron Man",
-    "logo":"assets/200s/faceplate.png",
+    "logo":"assets/logos/faceplate.png",
     "alias":"Tony Stark",
     "profile": [
       "Billionaire entrepreneur and one of the smartest beings on the planet.",
@@ -16,7 +16,7 @@
     {
       "id":2,
       "name":"Captain America",
-      "logo":"assets/200s/shield.png",
+      "logo":"assets/logos/shield.png",
       "alias":"Steve Rogers",
       "profile":[
         "Cap's fighting ability is as good as it gets. If asked he'll tell you he is a born soldier. The super-soldier serum only enhances the sentiment.",
@@ -30,7 +30,7 @@
     {
       "id":3,
       "name":"Hulk",
-      "logo":"assets/200s/gamma.png",
+      "logo":"assets/logos/gamma.png",
       "alias":"Bruce Banner",
       "profile":[
         "Like Tony Stark with his intellect, all other meta strengths are gauged against Hulk's.",
@@ -44,7 +44,7 @@
     {
       "id":4,
       "name":"Spider-Man",
-      "logo":"assets/200s/spidey.png",
+      "logo":"assets/logos/spidey.gif",
       "alias":"Peter Parker",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
@@ -53,7 +53,7 @@
     },
     {
       "id":5,"name":"Thor",
-      "logo":"assets/200s/mjolnir.png",
+      "logo":"assets/logos/mjolnir.png",
       "alias":"God of Thunder",
       "profile":[
               "God of Thunder...though we've only ever seen him manipulate lightning.",
@@ -67,7 +67,7 @@
     },
     {
       "id":6,"name":"Black Panther",
-      "logo":"assets/pantera.jpg",
+      "logo":"assets/logos/pantera.jpg",
       "alias":"T'Challa, King of Wakanda",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
@@ -76,7 +76,7 @@
     },
     {
       "id":7,"name":"Scarlet Witch",
-      "logo":"assets/scarlet.png",
+      "logo":"assets/logos/scarlet.png",
       "alias":"Wanda Maximoff",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
@@ -86,7 +86,7 @@
     {
       "id":8,
       "name":"Hawkeye",
-      "logo":"assets/hawk.png",
+      "logo":"assets/logos/hawk.png",
       "alias":"Clint Barton",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
@@ -96,7 +96,7 @@
     {
       "id":9,
       "name":"Black Widow",
-      "logo":"assets/spider-bw.png",
+      "logo":"assets/logos/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
@@ -106,8 +106,8 @@
     {
       "id":10,
       "name":"Vision",
-      "logo":"assets/gem.png",
-      "alias":"No Alias",
+      "logo":"assets/logos/gem.png",
+      "alias":"Vision (No Alias)",
       "profile":[],
       "headshotsBack": "assets/headshotsBack/vision.jpg",
       "headshotsFront": "assets/headshotsFront/vision.jpg",
