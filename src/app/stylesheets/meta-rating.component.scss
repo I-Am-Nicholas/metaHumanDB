@@ -110,8 +110,8 @@ $graph-width: 300px;
     display: block;
     height: 70%;//keep for Safari!
     width: $graph-width;
-    margin-bottom: 20px;
     font-size: .6em;
+    margin-bottom: 5px;
 
     span {
       font-size: 1.75em;
@@ -125,7 +125,6 @@ $graph-width: 300px;
       @include bar-animation-zero-height($default-delay, height);
       border-radius: 3px 3px 0 0;
       bottom: 0;
-      cursor: pointer;
       position: absolute;
       text-align: center;
       width: $graph-width/3;
@@ -152,15 +151,15 @@ $graph-width: 300px;
     div {
       width: 220px;
       position: relative;
-      margin: 0 0 20px;
-      font-size: .8em;
+      margin: 20px 0 0;
+      font-size: 1em;
 
       span {
         position: relative;
         float: left;
         height: 15px;
         width: 15px;
-        padding-bottom: 20px;
+        margin-top: 5px;
       }
     }
   }

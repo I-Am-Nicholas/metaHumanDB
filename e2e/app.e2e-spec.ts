@@ -67,15 +67,6 @@ describe('MetaHumanDB App', () => {
 
   describe("Profile panel", () => {
 
-    it("should only be visible when bargroup clicked", () => {
-      anyMeta.click();
-      expect(profile.isPresent()).toBe(true);
-      expect(profile.isDisplayed()).toBe(false);
-      bargroup.click();
-      expect(profile.isPresent()).toBe(true);
-      expect(profile.isDisplayed()).toBe(true);
-    });
-
     it("clicking profile button should display profile", () => {
       anyMeta.click();
       expect(profile.isPresent()).toBe(true);

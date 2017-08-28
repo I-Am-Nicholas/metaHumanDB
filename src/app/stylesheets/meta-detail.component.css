@@ -5,7 +5,7 @@
   font-size: 1.25em;
   height: 450px;
   border-radius: 6px;
-  padding-top: 40px;
+  padding-top: 30px;
   float: right;
 }
 
@@ -22,18 +22,17 @@
 }
 
 #info {
-  text-align: center;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 2.5em;
 }
 
 #name, #alias {
   position: relative;
-  max-width: 475px;
-  top: -10px;
+  top: -20px;
   margin: 0 auto;
+  padding-left: 30px;
 }
 
 #alias {
-  top: -60px;
+  top: -75px;
 }

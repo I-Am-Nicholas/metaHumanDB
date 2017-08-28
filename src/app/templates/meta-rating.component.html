@@ -2,7 +2,7 @@
 
 
   <div id="profile-btn" class="bttn background"
-  (click)="toggle = !toggle;"
+  (click)="toggle = !toggle;" [class.red] = "toggle"
   >PROFILE</div>
 
   <div id="bar-chart">
@@ -30,14 +30,15 @@
 
   <div id="encloser">
     <div id="profile-panel" [class.hidden] = "!toggle"
-          [class.not-hiddn] = "toggle">
-          <span>{{chosenMeta.name | uppercase}}&nbsp;&nbsp;&nbsp;a.k.a
-          &nbsp;&nbsp;{{chosenMeta.alias | uppercase}}</span>
+        [class.not-hiddn] = "toggle">
+        <span>{{chosenMeta.name | uppercase}}&nbsp;&nbsp;&nbsp;a.k.a
+        &nbsp;&nbsp;{{chosenMeta.alias | uppercase}}</span>
       <ul>
         <li *ngFor= "let eachLine of chosenMeta.profile">
           {{eachLine}}
         </li>
       </ul>
+      <img class="logo" src = "{{chosenMeta.logo}}">
     </div>
   </div>
 
