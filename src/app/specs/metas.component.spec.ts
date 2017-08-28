@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
+import {  DebugElement } from '@angular/core';
+
 
 import { MetasComponent } from '../components/metas.component';
 import { MetaService } from '../meta-service';
@@ -10,6 +12,7 @@ describe("MetasComponent", () => {
 
   let comp: MetasComponent;
   let fixture: ComponentFixture<MetasComponent>;
+  let DOMElement: DebugElement;
 
   beforeEach( () => {
 
@@ -25,9 +28,11 @@ describe("MetasComponent", () => {
     });
 
     fixture = TestBed.createComponent(MetasComponent);
+    DOMElement = fixture.nativeElement.children;
     comp = fixture.componentInstance;
 
   });
+
 
   it('should invoke the getTheMetas() function', () => {
     let spy = spyOn(comp, 'getTheMetas');
@@ -53,6 +58,11 @@ describe("MetasComponent", () => {
   it('should prepare to display the list of metas', () => {
     let metaList = fixture.debugElement.queryAll(By.css('ul'));
     expect(metaList.length).toBeGreaterThan(0);
+  });
+
+  it('should show a little iron man flying across the screen', () => {
+    console.log(DOMElement[0])
+    expect(DOMElement[0].querySelector('#mini-iron-man')).toBeTruthy();
   });
 
 });

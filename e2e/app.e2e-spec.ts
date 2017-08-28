@@ -15,6 +15,7 @@ describe('MetaHumanDB App', () => {
   let image = element(by.id('headshot'));
   let ratinglabels = element(by.id('rating-labels'));
   let imageBack = element(by.className('showAlias'));
+  let miniIronMan = element(by.id('mini-iron-man'));
 
 
   /////PRE-CLICK////
@@ -23,6 +24,7 @@ describe('MetaHumanDB App', () => {
 
     it("Should only show pre-click data/components", () => {
       expect(browser.getTitle()).toEqual('MetaHumanDB');//should show page title.
+      expect(miniIronMan.isPresent()).toBe(true);
       expect(metas.isPresent()).toBe(true);//should show list of meta buttons
       expect(detail.isPresent()).toBe(false);//should not show any details
       expect(bargroup.isPresent()).toBe(false);//should not show any rating bars
