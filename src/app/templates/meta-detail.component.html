@@ -3,6 +3,7 @@
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
   <div id="alias-btn" class="bttn background"
+  [class.red] = "toggle"
   (click)="toggle = !toggle;"
   >ALIAS</div>
   <div id="headshot">

@@ -21,3 +21,7 @@
 .bttn:hover {
   color: #fff;
 }
+
+.red, .bttn:hover {
+  color: #8e0b0b;
+}

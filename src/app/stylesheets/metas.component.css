@@ -72,16 +72,12 @@
   transition: all 250ms ease;
  }
 
- .selectedMeta {
-    color: #fff;
-  }
-
- .metas li.selectedMeta:hover {
-    color: #fff;
+  .selectedMeta, .metas li.selectedMeta:hover {
+    color: #8e0b0b;
   }
 
   .metas li:hover {
-    color: white;
+    color: #999;
   }
 
   .metas li:active {
