@@ -1,9 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
-import {  DebugElement } from '@angular/core';
-
 
 import { MetasComponent } from '../components/metas.component';
 import { MetaService } from '../meta-service';
@@ -60,8 +58,7 @@ describe("MetasComponent", () => {
     expect(metaList.length).toBeGreaterThan(0);
   });
 
-  it('should show a little iron man flying across the screen', () => {
-    console.log(DOMElement[0])
+  xit('should show a little iron man flying across the screen', () => {
     expect(DOMElement[0].querySelector('#mini-iron-man')).toBeTruthy();
   });
 

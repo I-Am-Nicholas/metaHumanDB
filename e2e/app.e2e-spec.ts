@@ -16,6 +16,7 @@ describe('MetaHumanDB App', () => {
   let ratinglabels = element(by.id('rating-labels'));
   let imageBack = element(by.className('showAlias'));
   let miniIronMan = element(by.id('mini-iron-man'));
+  let welcomeMessage = element(by.id('welcome-message'));
 
 
   /////PRE-CLICK////
@@ -29,6 +30,15 @@ describe('MetaHumanDB App', () => {
       expect(detail.isPresent()).toBe(false);//should not show any details
       expect(bargroup.isPresent()).toBe(false);//should not show any rating bars
       expect(aliasBtn.isPresent()).toBe(false);
+    });
+
+  });
+
+  describe("WelcomeMessageComponent", () => {
+
+    it("should be present and visible", () => {
+      expect(welcomeMessage.isPresent()).toBe(true);
+      expect(welcomeMessage.isDisplayed()).toBe(true);
     });
 
   });

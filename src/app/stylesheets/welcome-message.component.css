@@ -1,0 +1,6 @@
+#welcome-message {
+  border: 1px dashed red;
+  position: absolute;
+  right: 300px;
+  top: 200px;
+}

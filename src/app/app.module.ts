@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
@@ -15,13 +15,15 @@ import { MetaService } from './meta-service';
 import { MetaRatingComponent } from './components/meta-rating.component';
 import { findStringInNode } from '../testing/find-string-in-node';
 import { click } from '../testing/clicker-left';
+import { WelcomeMessageComponent } from './components/welcome-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetaDetailComponent,
     MetasComponent,
-    MetaRatingComponent
+    MetaRatingComponent,
+    WelcomeMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,9 @@ import { click } from '../testing/clicker-left';
     AppRoutingModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [MetaService],
   bootstrap: [AppComponent]
