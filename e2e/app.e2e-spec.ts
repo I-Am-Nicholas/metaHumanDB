@@ -36,10 +36,8 @@ describe('MetaHumanDB App', () => {
 
   describe("WelcomeMessageComponent", () => {
 
-    it("should be present but not visible", () => {
+    it("should be present and visible", () => {
       expect(welcomeMessage.isPresent()).toBe(true);
-      /*while welcomeMessage exists in the template but has no height
-      isDisplayed is false and isPresent is true.*/
       expect(welcomeMessage.isDisplayed()).toBe(true);
     });
 
