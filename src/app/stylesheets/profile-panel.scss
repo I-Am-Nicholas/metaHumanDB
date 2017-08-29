@@ -17,16 +17,17 @@ $end-position: 0;
   left: $end-position;
 }
 
-.red {
-  color: #f00;
-}
-
 .logo {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 50px;
-  opacity: 0.3;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+li {
+  z-index: 1000;
 }
 
 @-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }

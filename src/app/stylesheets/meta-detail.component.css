@@ -23,16 +23,16 @@
 
 #info {
   margin: 0 auto;
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 
 #name, #alias {
   position: relative;
-  top: -20px;
+  top: -30px;
   margin: 0 auto;
   padding-left: 30px;
 }
 
 #alias {
-  top: -75px;
+  top: -85px;
 }
