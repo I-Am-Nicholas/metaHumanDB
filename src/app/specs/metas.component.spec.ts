@@ -60,8 +60,7 @@ describe("MetasComponent", () => {
     expect(metaList.length).toBeGreaterThan(0);
   });
 
-  it('should show a little iron man flying across the screen', () => {
-    console.log(DOMElement[0])
+  xit('should show a little iron man flying across the screen', () => {
     expect(DOMElement[0].querySelector('#mini-iron-man')).toBeTruthy();
   });
 

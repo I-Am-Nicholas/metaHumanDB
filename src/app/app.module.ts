@@ -15,13 +15,15 @@ import { MetaService } from './meta-service';
 import { MetaRatingComponent } from './components/meta-rating.component';
 import { findStringInNode } from '../testing/find-string-in-node';
 import { click } from '../testing/clicker-left';
+import { WelcomeMessageComponent } from './components/welcome-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetaDetailComponent,
     MetasComponent,
-    MetaRatingComponent
+    MetaRatingComponent,
+    WelcomeMessageComponent
   ],
   imports: [
     BrowserModule,
