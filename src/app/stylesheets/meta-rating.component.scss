@@ -92,6 +92,23 @@ $graph-width: 300px;
 
 #bar-chart {
 
+  #rating-labels {
+    div {
+      width: 220px;
+      position: relative;
+      margin: 23px 0 0;
+      font-size: 1.1rem;
+
+      span {
+        position: relative;
+        float: left;
+        height: 15px;
+        width: 15px;
+        margin-top: 2px;
+      }
+    }
+  }
+
   * {
    box-sizing: border-box;
   }
@@ -114,8 +131,9 @@ $graph-width: 300px;
     margin-bottom: 5px;
 
     span {
+      font-family: helvetica;
       font-size: 1.75em;
-      font-weight: normal;
+      font-weight: bold;
       font-style: normal;
       color: #333;
       z-index: 1000;
@@ -147,20 +165,5 @@ $graph-width: 300px;
     }
   }
 
-  #rating-labels {
-    div {
-      width: 220px;
-      position: relative;
-      margin: 20px 0 0;
-      font-size: 1em;
 
-      span {
-        position: relative;
-        float: left;
-        height: 15px;
-        width: 15px;
-        margin-top: 5px;
-      }
-    }
-  }
 }

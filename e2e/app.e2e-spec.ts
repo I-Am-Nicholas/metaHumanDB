@@ -39,6 +39,10 @@ describe('MetaHumanDB App', () => {
     it("should be present and visible", () => {
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
+      welcomeMessage.getText().then( (result) => {
+        expect(result).not.toBe('');
+      });
+
     });
 
   });

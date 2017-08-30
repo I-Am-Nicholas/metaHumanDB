@@ -14,6 +14,4 @@ export class AppComponent {
   constructor(
   ) {}
 
-  title = '-HUMAN DATABASE';
-
 }
