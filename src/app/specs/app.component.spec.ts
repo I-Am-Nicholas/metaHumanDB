@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { DebugElement } from '@angular/core';
 import { HttpModule, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
+import { findStringInNode } from '../../testing/find-string-in-node';
 
 import { AppComponent } from '../components/app.component';
 
@@ -10,7 +11,7 @@ describe('AppComponent', () => {
 
   let comp: AppComponent
   let fixture: ComponentFixture<AppComponent>;
-  let HTMLnode: HTMLElement;
+  let DOMElement:  DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -21,7 +22,7 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     comp = fixture.componentInstance;
-    HTMLnode = fixture.nativeElement;
+    DOMElement = fixture.nativeElement.children;
   });
 
 
@@ -29,13 +30,9 @@ describe('AppComponent', () => {
     expect(comp).toBeTruthy();
   });
 
-  it(`should have the given text as title`, () => {
-    expect(comp.title).toEqual('-HUMAN DATABASE');
-  });
-
   it('should render title in a h1 tag', () => {
-    fixture.detectChanges();
-    expect(HTMLnode.querySelector('h1').textContent).toContain('META-HUMAN DATABASE');
+    let nodeTxt = DOMElement[0].querySelectorAll('h1');
+    expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
   });
 
 });
