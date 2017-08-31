@@ -17,6 +17,7 @@ describe('MetaHumanDB App', () => {
   let imageBack = element(by.className('showAlias'));
   let miniIronMan = element(by.id('mini-iron-man'));
   let welcomeMessage = element(by.id('welcome-message'));
+  let metadata = element(by.id('metadata'));
 
 
   /////PRE-CLICK////
@@ -39,7 +40,7 @@ describe('MetaHumanDB App', () => {
     it("should be present and visible", () => {
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
-      welcomeMessage.getText().then( (result) => {
+      welcomeMessage.getText().then((result) => {
         expect(result).not.toBe('');
       });
 
@@ -62,7 +63,8 @@ describe('MetaHumanDB App', () => {
       expect(rating.isPresent()).toBe(true);//should show rating...
       expect(image.isPresent()).toBe(true);//should show image...
       expect(ratinglabels.isPresent()).toBe(true);//should show rating info...
-      expect(bargroup.isDisplayed()).toBe(true);//should show rating bars.
+      expect(bargroup.isDisplayed()).toBe(true);//should show rating bars...
+      expect(metadata.isPresent()).toBe(true);//should show metadata.
     });
 
   });

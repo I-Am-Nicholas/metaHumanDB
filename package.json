@@ -1,6 +1,9 @@
 {
   "name": "meta-human-db",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.1.4"
+  },
   "license": "MIT",
   "scripts": {
     "api-server": "./node_modules/.bin/ts-node",

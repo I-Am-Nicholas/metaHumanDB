@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { ActivatedRoute, ParamMap }   from '@angular/router';
@@ -20,7 +20,7 @@ let testMeta: Meta;
 
 describe('MetaDetailComponent', () => {
 
-  beforeEach(() => {
+  beforeEach(async(() => {
     activatedRoute = new ActivatedRouteStub();
 
     TestBed.configureTestingModule({
@@ -30,8 +30,10 @@ describe('MetaDetailComponent', () => {
       providers: [ MetaService,
         { provide: ActivatedRoute, useValue: activatedRoute },
       ]
-    });
+    }).compileComponents();
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     DOMElement = fixture.nativeElement.children;
 
@@ -42,6 +44,9 @@ describe('MetaDetailComponent', () => {
          logo: "Mjolnir",
           alias: "God of Thunder",
            profile: [],
+           metadata: [
+             "Fake Metadata."
+           ],
            headshotsFront: "assets/headshotsFront/thor.jpg",
             headshotsBack: "assets/headshotsBack/thor.jpg",
              level: []
@@ -83,6 +88,20 @@ describe('MetaDetailComponent', () => {
     click(DOMElement[0].querySelector('#alias-btn'));
     fixture.detectChanges();
     expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(true);
+  });
+
+  describe('Metadata', () => {
+
+    it("should show metadata div", () => {
+      expect(DOMElement[0].querySelector('#metadata')).toBeTruthy();
+    });
+
+    it('the DOM should display the mocked metadata', () => {
+      let debug = fixture.debugElement.query(By.css('#metadata'));
+      let el = debug.nativeElement;
+      expect(testMeta.metadata).toContain(el.textContent);
+    });
+
   });
 
 });
