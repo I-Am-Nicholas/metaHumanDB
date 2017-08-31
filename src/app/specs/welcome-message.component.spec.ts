@@ -30,10 +30,10 @@ describe('WelcomeMessageComponent', () => {
     expect(DOMElement[0].querySelectorAll('#welcome-message')).toBeTruthy();
   });
 
-  it('should display mocked text', () => {
+  it('should display text', () => {
     let message = DOMElement[0].querySelectorAll('#welcome-message')
     expect(message.textContent).not.toBe('');
   });
 
-  
+
 });

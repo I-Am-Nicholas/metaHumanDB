@@ -23,17 +23,31 @@
 }
 
 #info {
-  margin: 0 auto;
+  position: relative;
+  padding-top: 20px;
   font-size: 2rem;
+  height: 120px;
+  top: -50px;
+  display: flex;
 }
 
 #name, #alias {
-  position: relative;
-  top: -30px;
-  margin: 0 auto;
   padding-left: 35px;
+  width: auto;
 }
 
 #alias {
-  top: -70px;
+  position: absolute;
+  flex-basis: 250px;
+  left: 375px;
+  margin-left: -40px;
+}
+
+#metadata {
+  border: 1px solid #21658c;
+  font-size: 1rem;
+  margin: 0 35px;
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
 }

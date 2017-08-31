@@ -85,4 +85,8 @@ describe('MetaDetailComponent', () => {
     expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(true);
   });
 
+  it("should show metadata", () => {
+    expect(DOMElement[0].querySelector('#metadata')).toBeTruthy();
+  });
+
 });
