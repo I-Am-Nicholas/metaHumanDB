@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "engines": {
     "node": "8.1.4",
-    "npm" : "5.3.0"
+    "npm": "5.3.0"
   },
   "license": "MIT",
   "scripts": {
-    "start": "ng serve",
     "api-server": "ts-node",
-    "test": "ng test"
+    "test": "ng test",
+    "start": "ng serve"
   },
   "private": true,
   "dependencies": {
