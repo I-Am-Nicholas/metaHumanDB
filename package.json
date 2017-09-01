@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node main.ts",
+    "start": "ng serve",
     "api-server": "ts-node",
     "test": "ng test"
   },
