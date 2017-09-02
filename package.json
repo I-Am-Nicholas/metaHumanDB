@@ -10,8 +10,7 @@
     "start": "ng serve",
     "api-server": "ts-node",
     "test": "ng test",
-    "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv dist/* ."
+    "preinstall": "npm install -g angular-cli"
   },
   "private": true,
   "dependencies": {
