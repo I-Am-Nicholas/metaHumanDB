@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "npm install -g angular-cli",
-    "start": "ng serve",
+    "start": "concurrently 'npm run tsc:w' 'ng serve' ",
     "api-server": "./node_modules/.bin/ts-node",
     "test": "ng test"
   },
