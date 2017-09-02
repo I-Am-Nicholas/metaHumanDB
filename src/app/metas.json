@@ -13,7 +13,7 @@
       "Uni-beam",
       "Repulsors (Hands and feet)",
       "Shoulder-mounted missile launchers"
-  
+
     ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
@@ -52,7 +52,11 @@
       "name":"Spider-Man",
       "logo":"assets/logos/spidey.gif",
       "alias":"Peter Parker",
-      "profile":[],
+      "profile":[
+        "Queens teenager Peter Parker has a phenomenal super-hero skillset.",
+        "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
+        "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
+      ],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
       "level": [80, 80, 80]
