@@ -9,6 +9,12 @@
       "Stark's intellect is the benchmark by which the others are measured.",
       "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
+    "metadata": [
+      "Uni-beam",
+      "Repulsors (Hands and feet)",
+      "Shoulder-mounted missile launchers"
+  
+    ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": [100, 90, 70]
