@@ -7,10 +7,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "preinstall": "npm install -g angular-cli",
-    "start": "concurrently 'ng serve' ",
-    "api-server": "./node_modules/.bin/ts-node",
-    "test": "ng test"
+    "start": "ng serve",
+    "api-server": "ts-node",
+    "test": "ng test",
+    "preinstall": "npm install -g angular-cli"
   },
   "private": true,
   "dependencies": {
@@ -55,5 +55,21 @@
     "ts-node": "^3.1.0",
     "tslint": "~5.3.2",
     "typescript": "^2.4.1"
-  }
+  },
+  "description": "![untitled_2](https://user-images.githubusercontent.com/24227633/29877167-c7682606-8d96-11e7-8543-e5a3382d3b9c.gif)",
+  "main": "conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marudine/superheroes.git"
+  },
+  "keywords": [
+    "superheroes",
+    "heroes",
+    "database"
+  ],
+  "author": "Nicholas Leacock",
+  "bugs": {
+    "url": "https://github.com/marudine/superheroes/issues"
+  },
+  "homepage": "https://github.com/marudine/superheroes#readme"
 }

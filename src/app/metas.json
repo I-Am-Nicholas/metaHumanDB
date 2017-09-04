@@ -9,12 +9,7 @@
       "Stark's intellect is the benchmark by which the others are measured.",
       "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
-    "metadata": [
-      "Uni-beam",
-      "Repulsors (Hands and feet)",
-      "Shoulder-mounted missile launchers"
-  
-    ],
+    "metadata": [],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": [100, 90, 70]
@@ -52,7 +47,11 @@
       "name":"Spider-Man",
       "logo":"assets/logos/spidey.gif",
       "alias":"Peter Parker",
-      "profile":[],
+      "profile":[
+        "Queens teenager Peter Parker has a phenomenal super-hero skillset.",
+        "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
+        "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
+      ],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
       "level": [80, 80, 80]
@@ -75,7 +74,11 @@
       "id":6,"name":"Black Panther",
       "logo":"assets/logos/panther.png",
       "alias":"T'Challa, King of Wakanda",
-      "profile":[],
+      "profile":[
+        "Crown protector and regent of Wakanda.",
+        "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
+        "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
+      ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
       "level": [65, 100, 70]
