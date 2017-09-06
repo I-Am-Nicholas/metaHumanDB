@@ -9,8 +9,7 @@
       "Stark's intellect is the benchmark by which the others are measured.",
       "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
-    "metadata": [
-        ],
+    "metadata": [],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": [100, 90, 70]
@@ -75,7 +74,11 @@
       "id":6,"name":"Black Panther",
       "logo":"assets/logos/panther.png",
       "alias":"T'Challa, King of Wakanda",
-      "profile":[],
+      "profile":[
+        "Crown protector and regent of Wakanda.",
+        "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
+        "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
+      ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
       "level": [65, 100, 70]
