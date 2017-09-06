@@ -5,7 +5,8 @@
   "scripts": {
     "start": "ng serve",
     "api-server": "ts-node",
-    "test": "ng test"
+    "test": "ng test",
+    "preinstall": "npm install -g angular/cli"
     },
   "private": true,
   "dependencies": {
