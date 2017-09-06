@@ -25,6 +25,7 @@
     "@angular/router": "^4.3.6",
     "angular-in-memory-web-api": "^0.3.2",
     "ansi-regex": "^3.0.0",
+    "concurrently": "^3.5.0",
     "core-js": "^2.5.1",
     "es6-shim": "^0.35.3",
     "node-jsx": "^0.13.3",
