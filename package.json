@@ -1,16 +1,12 @@
 {
   "name": "meta-human-db",
   "version": "1.0.0",
-  "engines": {
-    "node": "8.4.0",
-    "npm": "5.3.0"
-  },
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
     "api-server": "ts-node",
     "test": "ng test",
-    "preinstall": "npm install -g angular-cli"
+    "preinstall": "npm install -g @angular/cli@latest"
   },
   "private": true,
   "dependencies": {
