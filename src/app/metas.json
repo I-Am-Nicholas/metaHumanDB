@@ -9,7 +9,12 @@
       "Stark's intellect is the benchmark by which the others are measured.",
       "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
-    "metadata": [],
+    "metadata": [
+      "Uni-Beam",
+      "Smart Bombs",
+      "Repulsor Beams",
+      "Shoulder Missiles"
+    ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
     "level": [100, 90, 70]
@@ -24,6 +29,9 @@
         "Strength-wise he's about equal with Iron Man, and impressively doesn't need armour to be so.",
         "Due to accidental suspended animation, Cap is around a hundred years old."
       ],
+      "metadata": [
+        "Shield"
+      ],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
       "level": [50, 100, 70]
@@ -37,6 +45,9 @@
         "Like Tony Stark with his intellect, all other meta strengths are gauged against Hulk's.",
         "'Fight skills' suggest training and tactical application of combat techniques. Creating sonic waves by clapping your hands or earthquakes by stomping real hard don't really fall under those categories. Hulk simply relies on unlimited power.",
         "Regarding the low IQ rating...in his own words 'Who needs it?'"
+      ],
+      "metadata": [
+        "Self"
       ],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
@@ -81,7 +92,7 @@
       ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
-      "level": [65, 100, 70]
+      "level": [70, 100, 70]
     },
     {
       "id":7,"name":"Scarlet Witch",
