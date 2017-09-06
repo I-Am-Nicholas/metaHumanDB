@@ -7,7 +7,7 @@
     "api-server": "ts-node",
     "test": "ng test",
     "preinstall": "npm install -g @angular/cli@latest"
-    },
+  },
   "private": true,
   "dependencies": {
     "@angular/cli": "^1.3.2",
