@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
@@ -10,6 +10,7 @@ describe("MetasComponent", () => {
 
   let comp: MetasComponent;
   let fixture: ComponentFixture<MetasComponent>;
+  let DOMElement: DebugElement;
 
   beforeEach( () => {
 
@@ -25,9 +26,11 @@ describe("MetasComponent", () => {
     });
 
     fixture = TestBed.createComponent(MetasComponent);
+    DOMElement = fixture.nativeElement.children;
     comp = fixture.componentInstance;
 
   });
+
 
   it('should invoke the getTheMetas() function', () => {
     let spy = spyOn(comp, 'getTheMetas');
@@ -42,8 +45,8 @@ describe("MetasComponent", () => {
         name: "Thor",
         logo: "Mjolnir",
         alias: "God of Thunder",
-        profile: "",
-        headshot: ""
+        profile: [],
+        headshotsFront: ""
       }
     );
     comp.onSelect(testMeta);

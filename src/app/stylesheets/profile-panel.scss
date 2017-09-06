@@ -1,0 +1,76 @@
+$default-delay: 0.5s;
+$start-position: -1000px;
+$end-position: 0;
+
+#profile-btn {
+  left: -145px;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-hiddn {
+  display: block;
+  animation: $default-delay slidein;
+  transition: ease-in;
+  left: $end-position;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 50px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+li {
+  z-index: 1000;
+}
+
+@-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+@keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
+
+#encloser {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  overflow: hidden;
+  width: 880px;
+  height: 505px;
+}
+
+#profile-panel {
+  background-image: url('../../assets/circuitboardBG.jpg');
+  position: relative;
+  top: 0;
+  left: $end-position;
+  width: 870px;
+  height: 290px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: white;
+  margin: 25px 0 0 0;
+  padding: 80px 0;
+  z-index: 1001;
+  font-family: helvetica;
+  font-weight: 600;
+}
+
+#profile-panel ul, span {
+  margin: 0 auto;
+  width: 700px;
+  height: 250px;
+  line-height: 3rem;
+}
+
+#profile-panel span {
+  border-bottom: 1px solid #21658c;
+  padding-left: 10px;
+  height: auto;
+  width: 860px;
+  position: absolute;
+  top: 0;
+}

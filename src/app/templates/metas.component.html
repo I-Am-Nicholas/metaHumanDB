@@ -1,22 +1,30 @@
-<div id="metasWrap">
-  <ul class="metas background">
-    <!--'metaShown' is a property of MetasComponent created
-  by the component's ngOnInit method.-->
-    <li niceShift *ngFor= "let individualMeta of metaShown"
+<div id="metasWrap-parent">
+  <div id="metasWrap">
+    <div id="mini-iron-man"></div>
+    <ul class="metas">
+      <!--'metaShown' is a property of MetasComponent created
+    by the component's ngOnInit method.-->
+      <li *ngFor= "let individualMeta of metaShown"
+          (click)="onSelect(individualMeta)"
           [class.selectedMeta]="individualMeta === selectedMeta"
-          (click)="onSelect(individualMeta)">
+          [class.background]="individualMeta">
+          <!--if individualMeta is exactly equivalent to selectedMeta, then
+        individualMeta gets the selectedMeta class applied-->
 
-         <!--When an item in the list is clicked, the component's onSelect function
-            is called with the value of the clicked item as an argument.
+           <!--When an item in the list is clicked, the component's onSelect function
+              is called with the value of the clicked item as an argument.
 
-          Where the value of individualMeta
-          is equal to the value of selectedMeta, individualMeta
-          is given the selectedMeta class.
-        -->
+            Where the value of individualMeta
+            is equal to the value of selectedMeta, individualMeta
+            is given the selectedMeta and background classes.
+          -->
 
-      <span class="badge">{{individualMeta.id}}</span> {{individualMeta.name}}
-    </li>
-  </ul>
-  <!--The 'clicked' property is created here, with the value of 'selectedMeta'-->
-  <meta-detail [clicked]="selectedMeta"></meta-detail>
+        {{individualMeta.name | uppercase}}
+      </li>
+    </ul>
+
+    <!--The 'clickedMeta' property is created here, with the value of 'selectedMeta'-->
+    <welcome-message></welcome-message>
+    <meta-detail [clickedMeta]="selectedMeta"></meta-detail>
+  </div>
 </div>

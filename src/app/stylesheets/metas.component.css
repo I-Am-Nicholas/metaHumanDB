@@ -1,78 +1,90 @@
-.selectedMeta {
-   background-color: #CFD8DC !important;
-   color: #333;
-   transform: translateX(15px);
- }
+#metasWrap-parent {
+  width: auto;
+}
 
  #metasWrap {
+  border-top: 1px solid #21658c;
+  border-bottom: 1px solid #21658c;
   position: relative;
-  margin: 30px 0 0 0;
-  width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 1200px;
   height: 480px;
-  padding-right: 22px;
  }
 
+/*.angled {
+  -webkit-transform:
+      translateX(275px)
+      translateY(215px)
+      rotate(26deg);
+  position: absolute;
+  top: 20px;
+}
+
+.flight {
+  border-bottom: 1px solid #999;
+  -webkit-animation: increase 3s;
+  -moz-animation:    increase 3s;
+  -o-animation:      increase 3s;
+  animation:         increase 10s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: 10;
+  -webkit-animation-duration: 5;
+  -moz-animation-duration: 5;
+
+}
+
+@keyframes increase {
+  100% {
+    width: 970px;
+  }
+}
+
+*/
+
  .metas {
-   border: 1px solid white;
    color: lightgray;
-   margin: 0 0 2em 0;
+   margin: 10px 0 2em 0;
    list-style-type: none;
-   padding: 10px;
+   padding: 10px 0;
    width: 300px;
    float: left;
    border-radius: 6px;
  }
 
- button, .metas li {
-   border: 1px solid #fff;
-   cursor: pointer;
-   position: relative;
-   left: 0;
-   background-color: #21658c;
-   margin: .5em;
-   padding: .3em 0;
-   height: 1.6em;
-   border-radius: 4px;
-   -webkit-transition: height all 250ms ease;
-   transition: all 250ms ease;
+ li {
+  font-size: 1rem;
+  z-index: 1000;
+  text-align: center;
+  line-height: 33px;
+  height: 33px;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  color: #21658c;
+  margin-top: 6px;
+  padding: 3px 0;
+  border-radius: 4px;
+  -webkit-transition: height all 250ms ease;
+  transition: all 250ms ease;
  }
 
- .metas li.selectedMeta:hover {
-   background-color: #BBD8DC !important;
-   color: #333;
+  .selectedMeta, .metas li.selectedMeta:hover {
+    color: #8e0b0b;
   }
 
   .metas li:hover {
-    transform: translateX(15px);
+    color: #999;
   }
 
- button:hover, .metas li:hover {
-   color: white;
- }
+  .metas li:active {
+    transform: translateY(5px);
+  }
 
  .metas .text {
-   position: relative;
-   top: -3px;
- }
-
- .metas .badge {
-   display: inline-block;
-   font-size: small;
-   color: white;
-   padding: 0.8em 0.7em 0 0.7em;
-   background-color: #607D8B;
-   line-height: 1em;
-   position: relative;
-   left: -1px;
-   top: -4px;
-   height: 1.8em;
-   margin-right: .8em;
-   border-radius: 4px 0 0 4px;
- }
-
- button {
-   font-family: Arial, Helvetica, sans-serif;
-   height: 50px;
-   width: 130px;
-   font-size: 1em;
+    position: relative;
+    top: -3px;
  }

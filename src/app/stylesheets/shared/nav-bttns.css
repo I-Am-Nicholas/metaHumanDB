@@ -1,0 +1,27 @@
+.bttn {
+  font-size: .8em;
+  width: 145px;
+  position: absolute;
+  top: -50px;
+  left: -300px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bttn:focus {
+  outline:0;
+}
+
+.bttn:active {
+  transform: translateY(5px);
+}
+
+.bttn:hover {
+  color: #fff;
+}
+
+.red, .bttn:hover {
+  color: #8e0b0b;
+}

@@ -4,72 +4,94 @@ describe('MetaHumanDB App', () => {
     browser.get('http://localhost:4200/');
   });
 
+  let aliasBtn = element(by.id('alias-btn'));
   let metas = element(by.className('metas'));
-  let dashWrapper = element(by.id("grid-wrap"));
-  let anyMeta = element(by.className('badge'));
-  let mhList = element(by.id('metaList'));
+  let anyMeta = element(by.tagName('li'));
   let detail = element(by.className('detail'));
+  let profile = element(by.id('profile-panel'));
+  let profileButton = element(by.id('profile-btn'));
+  let rating = element(by.id('rating'));
+  let bargroup = element(by.className('bar-group'));
+  let image = element(by.id('headshot'));
+  let ratinglabels = element(by.id('rating-labels'));
+  let imageBack = element(by.className('showAlias'));
+  let miniIronMan = element(by.id('mini-iron-man'));
+  let welcomeMessage = element(by.id('welcome-message'));
+  let metadata = element(by.id('metadata'));
 
 
-  describe("Pre-Click", () => {
+  /////PRE-CLICK////
 
-    it('should have a title', () => {
-      expect(browser.getTitle()).toEqual('MetaHumanDB');
+  describe("MetasComponent", () => {
+
+    it("Should only show pre-click data/components", () => {
+      expect(browser.getTitle()).toEqual('MetaHumanDB');//should show page title.
+      expect(miniIronMan.isPresent()).toBe(true);
+      expect(metas.isPresent()).toBe(true);//should show list of meta buttons
+      expect(detail.isPresent()).toBe(false);//should not show any details
+      expect(bargroup.isPresent()).toBe(false);//should not show any rating bars
+      expect(aliasBtn.isPresent()).toBe(false);
     });
 
-    it("should not show the dashboard elements before dashboard button is clicked", () => {
-      expect(browser.isElementPresent(dashWrapper)).toBe(false);
+  });
+
+  describe("WelcomeMessageComponent", () => {
+
+    it("should be present and visible", () => {
+      expect(welcomeMessage.isPresent()).toBe(true);
+      expect(welcomeMessage.isDisplayed()).toBe(true);
+      welcomeMessage.getText().then((result) => {
+        expect(result).not.toBe('');
+      });
+
     });
 
   });
 
-  describe("Dashboard", () => {
-
-    it('clicking Dashboard button shows Dashboard', () => {
-      browser.findElement(by.id('dashboard')).click();
-      expect(browser.isElementPresent(dashWrapper)).toBe(true);
-    });
-
-    it('clicking a Dashboard Meta shows that Metas details', () =>{
-      browser.findElement(by.id('dashboard')).click();
-      browser.findElement(by.className('dashBtns')).click();
-      expect(browser.isElementPresent(detail)).toBe(true);
-    });
-
-  });
-
-  describe("Meta-Human List", () => {
-
-    it("should not show the list elements before Meta-Human List button is clicked", () => {
-      expect(browser.isElementPresent(metas)).toBe(false);
-    });
-
-    it('clicking Meta-Human List shows a list of all meta-humans', () => {
-      mhList.click();
-      expect(browser.isElementPresent(metas)).toBe(true);
-    });
-
-    it('clicking first name in Meta-Human List shows details of the selected Meta-Human.', () => {
-      mhList.click();
-      anyMeta.click();
-      expect(browser.isElementPresent(detail)).toBe(true);
-    });
-
-  });
+  /////POST-CLICK////
 
   describe("Meta-Human Detail", () => {
 
-    it('detail should show all details of meta', () => {
-      mhList.click();
-      anyMeta.click();
+    it('should show all details of selected meta post-click', () => {
       let name = element(by.id('name'));
       let alias = element(by.id('alias'));
-      let profile = element(by.id('profile'));
-      let headshot = element(by.id('headshot'));
-      expect(browser.isElementPresent(name)).toBe(true);
-      expect(browser.isElementPresent(alias)).toBe(true);
-      expect(browser.isElementPresent(profile)).toBe(true);
-      expect(browser.isElementPresent(headshot)).toBe(true);
+
+      anyMeta.click();
+      expect(detail.isPresent()).toBe(true);//should show details, including...
+      expect(name.isPresent()).toBe(true);//should show name...
+      expect(aliasBtn.isPresent()).toBe(true);//should show alias button...
+      expect(rating.isPresent()).toBe(true);//should show rating...
+      expect(image.isPresent()).toBe(true);//should show image...
+      expect(ratinglabels.isPresent()).toBe(true);//should show rating info...
+      expect(bargroup.isDisplayed()).toBe(true);//should show rating bars...
+      expect(metadata.isPresent()).toBe(true);//should show metadata.
+    });
+
+  });
+
+
+  describe("Deep Info", () => {
+
+    it("clicking Alias button should flip image (make back visible, make front invisible)", () => {
+      anyMeta.click();
+      expect(imageBack.isPresent()).toBe(false);
+      aliasBtn.click();
+      expect(imageBack.isPresent()).toBe(true);
+      expect(imageBack.isDisplayed()).toBe(true)
+    });
+
+  });
+
+
+  describe("Profile panel", () => {
+
+    it("clicking profile button should display profile", () => {
+      anyMeta.click();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(false);
+      profileButton.click();
+      expect(profile.isPresent()).toBe(true);
+      expect(profile.isDisplayed()).toBe(true);
     });
 
   });

@@ -1,6 +1,5 @@
 import 'rxjs/add/operator/switchMap';
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, ParamMap }   from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { MetaService } from '../meta-service';
@@ -9,24 +8,16 @@ import { Meta } from '../meta'
 
 @Component({
   selector: 'meta-detail',
-  styleUrls: ['../stylesheets/meta-detail.component.css', '../sharedBG.css'],
+  styleUrls: ['../stylesheets/meta-detail.component.css',
+   '../stylesheets/shared/translucentBG.css',
+   '../stylesheets/flipper.css',
+   '../stylesheets/shared/nav-bttns.css'
+ ],
   templateUrl: '../templates/meta-detail.component.html'
 })
 
-export class MetaDetailComponent implements OnInit {
+export class MetaDetailComponent {
 
-  @Input() clicked: Meta;
-
-  constructor(
-    private metaService: MetaService,
-    private route: ActivatedRoute,
-  ) {}
-
-  ngOnInit(): any {
-    this.route.paramMap
-    .switchMap((params: ParamMap) =>
-    this.metaService.getMeta(+params.get('id')))
-    .subscribe(meta => this.clicked = meta);
-  }
+  @Input() clickedMeta: Meta;
 
 }

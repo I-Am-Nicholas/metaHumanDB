@@ -1,12 +1,53 @@
-
 .detail {
+  position: relative;
+  background-image: url('../../assets/circuitboardBG.jpg');
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
   color: #21658c;
   font-size: 1.25em;
-  height: 463px;
+  height: 450px;
   border-radius: 6px;
-  margin-left: 10px;
+  padding-top: 30px;
+  float: right;
+}
+
+#headshot {
+  flex-direction: column;
+  width: 600px;
+  z-index: 1000;
+}
+
+#headshot img {
+  border: 1px solid #21658c;
+  margin: 0 auto;
+  display: block;
+}
+
+#info {
+  position: relative;
+  padding-top: 20px;
+  font-size: 2rem;
+  height: 120px;
+  top: -50px;
+  display: flex;
+}
+
+#name, #alias {
+  padding-left: 35px;
+  width: auto;
+}
+
+#alias {
+  position: absolute;
+  flex-basis: 250px;
+  left: 375px;
+  margin-left: -40px;
+}
+
+#metadata {
+  border: 1px solid #21658c;
+  font-size: 1rem;
+  margin: 0 35px;
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
 }

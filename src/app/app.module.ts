@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
@@ -9,18 +9,21 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
-import { DashboardComponent } from './components/dashboard.component';
 import { MetasComponent } from './components/metas.component';
 import { MetaDetailComponent } from './components/meta-detail.component';
 import { MetaService } from './meta-service';
-
+import { MetaRatingComponent } from './components/meta-rating.component';
+import { findStringInNode } from '../testing/find-string-in-node';
+import { click } from '../testing/clicker-left';
+import { WelcomeMessageComponent } from './components/welcome-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     MetaDetailComponent,
-    MetasComponent
+    MetasComponent,
+    MetaRatingComponent,
+    WelcomeMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,9 @@ import { MetaService } from './meta-service';
     AppRoutingModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [MetaService],
   bootstrap: [AppComponent]

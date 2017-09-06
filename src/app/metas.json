@@ -2,79 +2,125 @@
   [
     {"id":1,
     "name":"Iron Man",
-    "logo":"assets/200s/faceplate.png",
+    "logo":"assets/logos/faceplate.png",
     "alias":"Tony Stark",
-    "profile": "",
-    "headshot": "assets/headshots/tony.jpg"
+    "profile": [
+      "Billionaire entrepreneur and one of the smartest beings on the planet.",
+      "Stark's intellect is the benchmark by which the others are measured.",
+      "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
+    ],
+    "metadata": [],
+    "headshotsBack": "assets/headshotsBack/tony.jpg",
+    "headshotsFront": "assets/headshotsFront/tony.jpg",
+    "level": [100, 90, 70]
   },
     {
       "id":2,
       "name":"Captain America",
-      "logo":"assets/200s/shield.png",
+      "logo":"assets/logos/shield.png",
       "alias":"Steve Rogers",
-      "profile": "",
-      "headshot": "assets/headshots/steve.jpg"
+      "profile":[
+        "Cap's fighting ability is as good as it gets. If asked he'll tell you he is a born soldier. The super-soldier serum only enhances the sentiment.",
+        "Strength-wise he's about equal with Iron Man, and impressively doesn't need armour to be so.",
+        "Due to accidental suspended animation, Cap is around a hundred years old."
+      ],
+      "headshotsBack": "assets/headshotsBack/steve.jpg",
+      "headshotsFront": "assets/headshotsFront/steve.jpg",
+      "level": [50, 100, 70]
     },
     {
       "id":3,
       "name":"Hulk",
-      "logo":"assets/200s/gamma.png",
+      "logo":"assets/logos/gamma.png",
       "alias":"Bruce Banner",
-      "profile": "",
-      "headshot": "assets/headshots/bruce.jpg"
+      "profile":[
+        "Like Tony Stark with his intellect, all other meta strengths are gauged against Hulk's.",
+        "'Fight skills' suggest training and tactical application of combat techniques. Creating sonic waves by clapping your hands or earthquakes by stomping real hard don't really fall under those categories. Hulk simply relies on unlimited power.",
+        "Regarding the low IQ rating...in his own words 'Who needs it?'"
+      ],
+      "headshotsBack": "assets/headshotsBack/bruce.jpg",
+      "headshotsFront": "assets/headshotsFront/bruce.jpg",
+      "level": [15, 50, 100]
     },
     {
       "id":4,
       "name":"Spider-Man",
-      "logo":"assets/200s/spidey.png",
+      "logo":"assets/logos/spidey.gif",
       "alias":"Peter Parker",
-      "profile": "",
-      "headshot": "assets/headshots/peter.jpg"
+      "profile":[
+        "Queens teenager Peter Parker has a phenomenal super-hero skillset.",
+        "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
+        "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
+      ],
+      "headshotsBack": "assets/headshotsBack/peter.jpg",
+      "headshotsFront": "assets/headshotsFront/peter.jpg",
+      "level": [80, 80, 80]
     },
     {
       "id":5,"name":"Thor",
-      "logo":"assets/200s/mjolnir.png",
+      "logo":"assets/logos/mjolnir.png",
       "alias":"God of Thunder",
-      "profile": "",
-      "headshot": "assets/headshots/thor.jpg"
+      "profile":[
+              "God of Thunder...though we've only ever seen him manipulate lightning.",
+              "As far as we know no-one has ever pulled him up on that.",
+              "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
+              "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk to boot."
+            ],
+      "headshotsBack": "assets/headshotsBack/thor.jpg",
+      "headshotsFront": "assets/headshotsFront/thor.jpg",
+      "level": [50, 100, 95]
     },
     {
       "id":6,"name":"Black Panther",
-      "logo":"assets/pantera.jpg",
+      "logo":"assets/logos/panther.png",
       "alias":"T'Challa, King of Wakanda",
-      "profile": "",
-      "headshot": "assets/headshots/tchalla.jpg"
+      "profile":[
+        "Crown protector and regent of Wakanda.",
+        "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
+        "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
+      ],
+      "headshotsBack": "assets/headshotsBack/tchalla.jpg",
+      "headshotsFront": "assets/headshotsFront/tchalla.jpg",
+      "level": [65, 100, 70]
     },
     {
       "id":7,"name":"Scarlet Witch",
-      "logo":"assets/scarlet.png",
+      "logo":"assets/logos/scarlet.png",
       "alias":"Wanda Maximoff",
-      "profile": "",
-      "headshot": "assets/headshots/wanda.jpg"
+      "profile":[],
+      "headshotsBack": "assets/headshotsBack/wanda.jpg",
+      "headshotsFront": "assets/headshotsFront/wanda.jpg",
+      "level": [50, 80, 50]
     },
     {
       "id":8,
       "name":"Hawkeye",
-      "logo":"assets/hawk.png",
+      "logo":"assets/logos/hawk.png",
       "alias":"Clint Barton",
-      "profile": "",
-      "headshot": "assets/headshots/clint.jpg"
+      "profile":[],
+      "headshotsBack": "assets/headshotsBack/clint.jpg",
+      "headshotsFront": "assets/headshotsFront/clint.jpg",
+      "level": [50, 100, 50]
     },
     {
       "id":9,
       "name":"Black Widow",
-      "logo":"assets/spider-bw.png",
+      "logo":"assets/logos/spider-bw.png",
       "alias":"Natasha Romanoff",
-      "profile": "",
-      "headshot": "assets/headshots/natasha.jpg"
+      "profile":[],
+      "headshotsBack": "assets/headshotsBack/natasha.jpg",
+      "headshotsFront": "assets/headshotsFront/natasha.jpg",
+      "level": [50, 100, 50]
     },
     {
       "id":10,
       "name":"Vision",
-      "logo":"assets/gem.png",
-      "alias":"Vision",
-      "profile": "",
-      "headshot": "assets/headshots/vision.jpg"
+      "logo":"assets/logos/gem.png",
+      "alias":"Vision (No Alias)",
+      "profile":[],
+      "headshotsBack": "assets/headshotsBack/vision.jpg",
+      "headshotsFront": "assets/headshotsFront/vision.jpg",
+      "level": [100, 60, 75]
     }
   ]
 }

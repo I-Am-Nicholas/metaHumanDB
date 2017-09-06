@@ -3,57 +3,88 @@
     {"id":1,
     "name":"Iron Man",
     "logo":"assets/200s/faceplate.png",
-    "alias":"Tony Stark"
+    "alias":"Tony Stark",
+    "profile": "",
+    "headshot": "assets/headshots/tony.jpg",
+    "level": ["100", "90", "70"]
   },
     {
       "id":2,
       "name":"Captain America",
       "logo":"assets/200s/shield.png",
-      "alias":"Steve Rogers"
+      "alias":"Steve Rogers",
+      "profile": "",
+      "headshot": "assets/headshots/steve.jpg",
+      "level": ["50", "100", "70"]
     },
     {
       "id":3,
       "name":"Hulk",
       "logo":"assets/200s/gamma.png",
-      "alias":"Bruce Banner"
+      "alias":"Bruce Banner",
+      "profile": "",
+      "headshot": "assets/headshots/bruce.jpg",
+      "level": ["100", "60", "100"]
     },
     {
       "id":4,
       "name":"Spider-Man",
       "logo":"assets/200s/spidey.png",
-      "alias":"Peter Parker"
+      "alias":"Peter Parker",
+      "profile": "",
+      "headshot": "assets/headshots/peter.jpg",
+      "level": ["80", "80", "80"]
     },
     {
       "id":5,"name":"Thor",
-      "logo":"assets/200s/mjolnir.jpg",
-      "alias":"God of Thunder"
+      "logo":"assets/200s/mjolnir.png",
+      "alias":"God of Thunder",
+      "profile": "",
+      "headshot": "assets/headshots/thor.jpg",
+      "level": ["50", "100", "100"]
     },
     {
       "id":6,"name":"Black Panther",
       "logo":"assets/pantera.jpg",
-      "alias":"T'Challa, King of Wakanda"
+      "alias":"T'Challa, King of Wakanda",
+      "profile": "",
+      "headshot": "assets/headshots/tchalla.jpg",
+      "level": ["50", "100", "60"]
     },
     {
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/scarlet.png",
-      "alias":"Wanda Maximoff"
+      "alias":"Wanda Maximoff",
+      "profile": "",
+      "headshot": "assets/headshots/wanda.jpg",
+      "level": ["50", "80", "50"]
     },
     {
-      "id":8,"name":"Hawkeye",
+      "id":8,
+      "name":"Hawkeye",
       "logo":"assets/hawk.png",
-      "alias":"Clint Barton"
+      "alias":"Clint Barton",
+      "profile": "",
+      "headshot": "assets/headshots/clint.jpg",
+      "level": ["50", "90", "50"]
     },
     {
       "id":9,
       "name":"Black Widow",
       "logo":"assets/spider-bw.png",
-      "alias":"Natasha Romanoff"
+      "alias":"Natasha Romanoff",
+      "profile": "",
+      "headshot": "assets/headshots/natasha.jpg",
+      "level": ["50", "100", "50"]
     },
     {
       "id":10,
       "name":"Vision",
       "logo":"assets/gem.png",
-      "alias":"Vision"
+      "alias":"Vision",
+      "profile": "",
+      "headshot": "assets/headshots/vision.jpg",
+      "level": ["100", "60", "75"]
     }
   ]
 }

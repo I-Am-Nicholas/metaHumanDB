@@ -5,7 +5,8 @@ import { MetaService } from '../meta-service';
 
 @Component({
   templateUrl: '../templates/metas.component.html',
-  styleUrls: ['../stylesheets/metas.component.css', '../sharedBG.css']
+  styleUrls: ['../stylesheets/metas.component.css',
+  '../stylesheets/shared/translucentBG.css']
 })
 
 export class MetasComponent implements OnInit {
@@ -13,7 +14,7 @@ export class MetasComponent implements OnInit {
   metaShown: Meta[];//what will be returned by 'getTheMetas()' function.
   selectedMeta: Meta;
 
-  constructor(//injected dependencies
+  constructor(
     private metaService: MetaService,
   ) {}
 
