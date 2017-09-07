@@ -28,7 +28,6 @@
   font-size: 2rem;
   height: 120px;
   top: -50px;
-  display: flex;
 }
 
 #name, #alias {
@@ -45,11 +44,14 @@
 
 #metadata {
   border: 1px solid #21658c;
-  font-size: 0.9rem;
-  font-family: Helvetica;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 175px;
+  height: 125px;
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
   margin: 0 35px;
-  flex-grow: 1;
-  height: 100%;
   border-radius: 6px;
-  padding: 0 20px 0 0;
+  padding: 0 10px 10px 0;
 }
