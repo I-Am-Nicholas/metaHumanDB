@@ -27,12 +27,9 @@
 	transform: rotateY(180deg);
 }
 
-/*.unhide {
-	display: block;
-}
  .hide {
 	 display: none;
- }*/
+ }
 
 .front, .back {
 	-webkit-backface-visibility: hidden;

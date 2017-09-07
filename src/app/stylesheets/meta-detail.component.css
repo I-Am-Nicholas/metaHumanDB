@@ -31,19 +31,18 @@
 }
 
 #name, #alias {
-  padding-left: 35px;
+  padding: 40px 0 0 35px;
   width: auto;
 }
 
 #alias {
   position: absolute;
-  flex-basis: 250px;
-  left: 375px;
-  margin-left: -40px;
+  top: 95px;
+  width: 100%;
+  margin: -75px 0 0 -40px;
 }
 
 #metadata {
-  border: 1px solid #21658c;
   position: absolute;
   right: 0;
   top: 20px;
