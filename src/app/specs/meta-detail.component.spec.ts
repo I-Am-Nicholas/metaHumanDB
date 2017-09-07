@@ -97,9 +97,8 @@ describe('MetaDetailComponent', () => {
     });
 
     it('the DOM should display the mocked metadata', () => {
-      let debug = fixture.debugElement.query(By.css('#metadata'));
-      let el = debug.nativeElement;
-      expect(testMeta.metadata).toContain(el.textContent);
+      let debug = DOMElement[0].querySelectorAll('#metadata li');
+      expect(findStringInNode(debug[0], testMeta.metadata)).toBe(true);
     });
 
   });
