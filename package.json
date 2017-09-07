@@ -8,7 +8,7 @@
   },
   "scripts": {
     "preinstall": "npm install --save @angular/cli@latest",
-    "postinstall": "ng build --prod --build-optimizer",
+    "postinstall": "ng build --aot -prod",
     "start": "node server.js",
     "api-server": "ts-node",
     "test": "ng test"
