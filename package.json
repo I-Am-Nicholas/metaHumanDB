@@ -7,7 +7,6 @@
     "npm": "5.3.0"
   },
   "scripts": {
-    "preinstall": "npm install -g @angular/cli@latest",
     "postinstall": "ng build --aot -prod",
     "start": "node server.js",
     "api-server": "ts-node",
