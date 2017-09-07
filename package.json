@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ng serve",
+    "start": "node server.js",
     "api-server": "ts-node",
     "test": "ng test",
-    "preinstall": "npm install -g @angular/cli@latest"
+    "preinstall": "npm install -g @angular/cli@latest",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
