@@ -21,7 +21,14 @@
         <div id="info">
           <div id="name" class="front">{{clickedMeta.name | uppercase}}</div>
           <div id="alias" class="back">{{clickedMeta.alias | uppercase}}</div>
-          <div id="metadata" class="front">{{clickedMeta.metadata}}</div>
+          <div id="metadata" class="front background">
+            <ul>
+              <p>MAIN WEAPONRY:</p>
+              <li *ngFor= "let eachLine of clickedMeta.metadata">
+                {{eachLine}}
+              </li>
+            </ul>
+          </div>
         </div>
 
       </div>

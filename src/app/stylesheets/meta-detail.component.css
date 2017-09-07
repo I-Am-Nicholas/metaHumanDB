@@ -45,9 +45,11 @@
 
 #metadata {
   border: 1px solid #21658c;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: Helvetica;
   margin: 0 35px;
   flex-grow: 1;
   height: 100%;
-  text-align: center;
+  border-radius: 6px;
+  padding: 0 20px 0 0;
 }
