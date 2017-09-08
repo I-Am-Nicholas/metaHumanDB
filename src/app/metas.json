@@ -118,7 +118,19 @@
       "id":7,"name":"Scarlet Witch",
       "logo":"assets/logos/scarlet.png",
       "alias":"Wanda Maximoff",
-      "profile":[],
+      "profile":[
+        "Wanda is a sorceress of seemingly limitless power.",
+        "She is capable of more than this profile has space to list.",
+        "To give you an idea, in one incarnation, she warped the reality of the entire planet.",
+        "Wanda is easily one of the top three most powerful beings on the planet.",
+        "Having a specific power in a league of its own, her ability is not displayed on the bar chart. If it were it would be at 100%."
+      ],
+      "metadata": [
+        "Hex Power",
+        "Chaos Magic",
+        "Sorcery",
+        "Telekinesis"
+      ],
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
       "headshotsFront": "assets/headshotsFront/wanda.jpg",
       "level": [50, 80, 50]
