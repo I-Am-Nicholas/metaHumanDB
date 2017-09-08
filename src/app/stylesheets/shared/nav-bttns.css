@@ -8,6 +8,7 @@
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
+  height: 20px;
 }
 
 .bttn:focus {
@@ -15,6 +16,7 @@
 }
 
 .bttn:active {
+  -webkit-transform: translateY(5px);
   transform: translateY(5px);
 }
 
@@ -24,4 +26,10 @@
 
 .red, .bttn:hover {
   color: #8e0b0b;
+}
+
+.bttn span {
+  pointer-events: none;
+  position: relative;
+  line-height: 1rem;
 }
