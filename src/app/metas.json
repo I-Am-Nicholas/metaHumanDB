@@ -30,7 +30,9 @@
         "Due to accidental suspended animation, Cap is around a hundred years old."
       ],
       "metadata": [
-        "Shield"
+        "Shield",
+        "Outstanding Agility",
+        "Combat Skills"
       ],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
@@ -63,6 +65,11 @@
         "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
         "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
       ],
+      "metadata": [
+        "Web Shooters",
+        "Outstanding Agility, Reflexes",
+        "High strength-to-weight ratio"
+      ],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
       "level": [80, 80, 80]
@@ -77,6 +84,13 @@
               "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
               "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk to boot."
             ],
+            "metadata": [
+              "Mjolnir, a mystic hammer",
+              "Lightning Control",
+              "Hulk-like Strength",
+              "Mostly Invulnerable"
+            ],
+
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
       "level": [50, 100, 95]
@@ -89,6 +103,11 @@
         "Crown protector and regent of Wakanda.",
         "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
         "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
+      ],
+      "metadata": [
+        "Vibranium Claws",
+        "Outstanding Agility",
+        "Combat Skills"
       ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",

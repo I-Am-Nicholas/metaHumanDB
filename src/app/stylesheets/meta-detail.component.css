@@ -25,7 +25,7 @@
 #info {
   position: relative;
   padding-top: 20px;
-  font-size: 2rem;
+  font-size: 1.9rem;
   height: 120px;
   top: -50px;
 }
@@ -43,14 +43,16 @@
 }
 
 #metadata {
+  border-left: 1px solid #21658c;
   position: absolute;
   right: 0;
-  top: 20px;
-  width: 195px;
-  height: 110px;
+  top: 30px;
+  width: auto;
+  height: 100px;
+  overflow: scroll;
   font-size: 0.8rem;
   letter-spacing: .1rem;
   margin: 0 35px;
-  border-radius: 6px;
-  padding: 0 5px 10px 0;
+  border-radius: 3px;
+  padding: 0 20px 10px 0;
 }
