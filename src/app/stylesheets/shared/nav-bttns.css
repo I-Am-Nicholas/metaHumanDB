@@ -28,7 +28,7 @@
   color: #8e0b0b;
 }
 
-span {
+.bttn span {
   pointer-events: none;
   position: relative;
   line-height: 1rem;
