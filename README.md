@@ -13,7 +13,7 @@
 
 ## TECHNOLOGIES
 
-- Angular 4.3.3
+- Angular 4
 - HTML
 - CSS(with Sass)
 - Typescript
