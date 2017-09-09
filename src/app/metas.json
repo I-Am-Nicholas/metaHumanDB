@@ -141,6 +141,10 @@
       "logo":"assets/logos/hawk.png",
       "alias":"Clint Barton",
       "profile":[],
+      "metadata": [
+        "Bow and Arrow",
+        "Combat Skills"
+      ],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
       "level": [50, 100, 50]
@@ -151,6 +155,11 @@
       "logo":"assets/logos/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile":[],
+      "metadata": [
+        "Stingers",
+        "Automatic Pistols",
+        "Outstanding Combat Skills"
+      ],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
       "level": [50, 100, 50]
@@ -161,6 +170,11 @@
       "logo":"assets/logos/gem.png",
       "alias":"Vision (No Alias)",
       "profile":[],
+      "metadata": [
+        "Infinity Stone Laser",
+        "Alternate Density Body"
+      ],
+
       "headshotsBack": "assets/headshotsBack/vision.jpg",
       "headshotsFront": "assets/headshotsFront/vision.jpg",
       "level": [100, 60, 75]

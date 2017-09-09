@@ -1,6 +1,6 @@
 # META-HUMAN DATABASE
 
-![untitled_2](https://user-images.githubusercontent.com/24227633/29877167-c7682606-8d96-11e7-8543-e5a3382d3b9c.gif)
+![latest_screenshot](https://user-images.githubusercontent.com/24227633/30244513-f945569e-95b6-11e7-844e-63df378c4030.gif)
 
 
 ## OVERVIEW
@@ -17,7 +17,6 @@
 - HTML
 - CSS(with Sass)
 - Typescript
-- jQuery
 
 ## UPCOMING TECH
 
@@ -27,4 +26,6 @@
 
 - Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
 
-- Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.  
+- Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.
+
+- Heroku required even more specific configuration than normal. There were a number of small pre-requisites that needed fulfilling before the platform accepted my deployment...even though the app worked perfectly locally.
