@@ -78,6 +78,10 @@ describe('MetaDetailComponent', () => {
     expect(DOMElement[0].querySelector('#alias-btn')).toBeTruthy();
   });
 
+  it("should mask the Alias button", () => {
+    expect(DOMElement[0].querySelector('.bttn-mask')).toBeTruthy();
+  });
+
   it('back of image should not initially be visible', () => {
     let flipperClass = DOMElement[0].querySelectorAll('.flipper');
     expect(findStringInNode(flipperClass[0], 'showAlias')).toBe(false);

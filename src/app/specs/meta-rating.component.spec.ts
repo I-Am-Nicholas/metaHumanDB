@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
+import { DisableAliasBttnService } from '../disable-alias-bttn.service'
 import { findStringInNode } from '../../testing/find-string-in-node';
 import { MetaRatingComponent } from '../components/meta-rating.component';
 
@@ -10,17 +11,28 @@ let fixture: ComponentFixture<MetaRatingComponent>;
 let debugProfileButton: DebugElement;
 let HTMLnode: HTMLElement;
 let profile: Element;
+let dabService: DisableAliasBttnService;
+let spy: jasmine.Spy;
+
+const fakeMethod = "fakeMethod";
 
 describe('MetaRatingComponent', () => {
+  let serviceStub = {};
 
   beforeEach(async() => {
     TestBed.configureTestingModule({
-      declarations: [ MetaRatingComponent ]
+      declarations: [ MetaRatingComponent ],
+      providers: [ DisableAliasBttnService
+    ]
     });
+    spy = spyOn(dabService, 'relayMessage')
+      .and.returnValue(Promise.resolve(fakeMethod));
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaRatingComponent);
+    dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
+
     let testMeta = (
       {
       id: 1,
@@ -32,6 +44,7 @@ describe('MetaRatingComponent', () => {
             headshotsBack: "assets/headshotsBack/thor.jpg",
              level: []
     });
+
 
     comp = fixture.componentInstance;
     comp.chosenMeta = testMeta;
@@ -70,5 +83,15 @@ describe('MetaRatingComponent', () => {
     expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
     expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
   });
+
+describe("Alias Button de-activation", () => {
+  it("Counter should increment on each click", () => {
+    comp.messageIn();
+    fixture.detectChanges();
+    comp.messageIn();
+    fixture.detectChanges();
+    expect(comp.counter).toEqual(3)
+  });
+});
 
 });

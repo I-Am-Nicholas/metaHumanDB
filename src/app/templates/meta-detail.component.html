@@ -2,10 +2,15 @@
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
+
   <div id="alias-btn" class="bttn background"
+  [class.bttn-mask] = "message"
   [class.red] = "toggle"
   (click)="toggle = !toggle;"
-  ><span>ALIAS</span></div>
+  ><span *ngIf = "message; else elseBlock">ALIAS</span>
+  <ng-template #elseBlock>ALIAS</ng-template>
+  </div>
+
   <div id="headshot">
 
     <div class="flip-container">
