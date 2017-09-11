@@ -25,13 +25,12 @@ describe('MetaRatingComponent', () => {
       providers: [ DisableAliasBttnService
     ]
     });
-    spy = spyOn(dabService, 'relayMessage')
-      .and.returnValue(Promise.resolve(fakeMethod));
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
+    spy = spyOn(dabService, 'relayMessage').and.returnValue(Promise.resolve(fakeMethod));
 
     let testMeta = (
       {
