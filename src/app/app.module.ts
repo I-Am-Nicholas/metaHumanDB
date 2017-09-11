@@ -9,6 +9,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 //Services
 import { MetaService } from './meta-service';
+import { DisableAliasBttnService } from './disable-alias-bttn.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
@@ -37,7 +38,7 @@ import { WelcomeMessageComponent } from './components/welcome-message.component'
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [MetaService],
+  providers: [MetaService, DisableAliasBttnService],
   bootstrap: [AppComponent]
 })
 
