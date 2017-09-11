@@ -18,6 +18,7 @@ describe('MetaHumanDB App', () => {
   let miniIronMan = element(by.id('mini-iron-man'));
   let welcomeMessage = element(by.id('welcome-message'));
   let metadata = element(by.id('metadata'));
+  let bttnmask = element(by.className("bttn-mask"));
 
 
   /////PRE-CLICK////
@@ -85,13 +86,15 @@ describe('MetaHumanDB App', () => {
 
   describe("Profile panel", () => {
 
-    it("clicking profile button should display profile", () => {
+    it("clicking profile button should display profile and de-activate the alias button", () => {
       anyMeta.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
+      expect(bttnmask.isPresent()).toBe(false);
       profileButton.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
+      expect(bttnmask.isPresent()).toBe(true);
     });
 
   });

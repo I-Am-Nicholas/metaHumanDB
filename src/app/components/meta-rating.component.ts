@@ -15,9 +15,8 @@ import { Meta } from "../meta";
 
 export class MetaRatingComponent {
 
-    toggle: boolean;
 
-/* The @Input decorator tells Angular that the following property is public and
+  /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
   Without @Input, Angular refuses to bind to the property.*/
   @Input() chosenMeta: Meta;
