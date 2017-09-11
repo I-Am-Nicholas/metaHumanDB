@@ -12,7 +12,7 @@ let debugProfileButton: DebugElement;
 let HTMLnode: HTMLElement;
 let profile: Element;
 let dabService: DisableAliasBttnService;
-let spy: jasmine.Spy;
+let serviceSpy: jasmine.Spy;
 
 const fakeMethod = "fakeMethod";
 
@@ -25,13 +25,12 @@ describe('MetaRatingComponent', () => {
       providers: [ DisableAliasBttnService
     ]
     });
-    spy = spyOn(dabService, 'relayMessage')
-      .and.returnValue(Promise.resolve(fakeMethod));
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
+    serviceSpy = spyOn(dabService, 'relayMessage').and.returnValue(Promise.resolve(fakeMethod));
 
     let testMeta = (
       {
@@ -84,14 +83,28 @@ describe('MetaRatingComponent', () => {
     expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
   });
 
-describe("Alias Button de-activation", () => {
-  it("Counter should increment on each click", () => {
-    comp.messageIn();
-    fixture.detectChanges();
-    comp.messageIn();
-    fixture.detectChanges();
-    expect(comp.counter).toEqual(3)
+  describe("Alias Button de-activation", () => {
+
+    it("Counter should increment on each click", () => {
+      comp.messageIn();
+      fixture.detectChanges();
+      comp.messageIn();
+      fixture.detectChanges();
+      expect(comp.counter).toEqual(3)
+    });
+
+    it("service method call should follow Component method call", () => {
+      comp.messageIn();
+      expect(serviceSpy).toHaveBeenCalled();
+    });
+
+    it("Profile button click should trigger a call to the component's method", () => {
+      let messageInSpy = spyOn(comp, 'messageIn').and.callThrough();
+      debugProfileButton.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      expect(messageInSpy).toHaveBeenCalled();
+    });
+
   });
-});
 
 });
