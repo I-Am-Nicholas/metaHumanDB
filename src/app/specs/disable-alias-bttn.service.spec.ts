@@ -40,5 +40,9 @@ describe("DisableAliasBttnService", () => {
     service.messageOut().subscribe(result => expect(result).toEqual({ text: false }));
   });
 
+  it("should return the correct raw boolean value", () => {
+    service.relayMessage(true);
+    expect(service.getState()).toBe(true);
+  });
 
 });
