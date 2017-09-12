@@ -17,17 +17,19 @@ let serviceSpy: jasmine.Spy;
 const fakeMethod = "fakeMethod";
 
 describe('MetaRatingComponent', () => {
-  let serviceStub = {};
 
   beforeEach(async() => {
+
     TestBed.configureTestingModule({
       declarations: [ MetaRatingComponent ],
       providers: [ DisableAliasBttnService
     ]
     });
+
   });
 
   beforeEach(() => {
+
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
     serviceSpy = spyOn(dabService, 'relayMessage').and.returnValue(Promise.resolve(fakeMethod));
@@ -51,41 +53,47 @@ describe('MetaRatingComponent', () => {
     HTMLnode = fixture.nativeElement;
     profile = HTMLnode.querySelector('#profile-panel');
     fixture.detectChanges();
+
   });
 
 
-  it("Profile panel should not be visible in DOM", () => {
-    expect(findStringInNode(profile, 'hidden')).toBe(true);
+  describe("Profile Panel", () => {
+
+    it("should not be visible in DOM", () => {
+      expect(findStringInNode(profile, 'hidden')).toBe(true);
+    });
+
+    it("should be visible in DOM after Profile button clicked", () => {
+      debugProfileButton.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      expect(findStringInNode(profile, 'hidden')).toBe(false);
+    });
+
+    it("should not be visible in DOM after Profile button clicked twice", () => {
+      debugProfileButton.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      debugProfileButton.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      expect(findStringInNode(profile, 'hidden')).toBe(true);
+    });
+
+    it("should contain a string", () => {
+      debugProfileButton.triggerEventHandler('click', null);
+      fixture.detectChanges();
+      expect(profile.textContent).toContain(comp.chosenMeta.profile[0]);
+    });
+
+    it("should show name and alias", () => {
+      expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
+      expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
+    });
+
   });
 
-  it("Profile panel should be visible in DOM after ratings clicked", () => {
-    debugProfileButton.triggerEventHandler('click', null);
-    fixture.detectChanges();
-    expect(findStringInNode(profile, 'hidden')).toBe(false);
-  });
-
-  it("Profile panel should not be visible in DOM after ratings clicked twice", () => {
-    debugProfileButton.triggerEventHandler('click', null);
-    fixture.detectChanges();
-    debugProfileButton.triggerEventHandler('click', null);
-    fixture.detectChanges();
-    expect(findStringInNode(profile, 'hidden')).toBe(true);
-  });
-
-  it("Profile panel should contain a string", () => {
-    debugProfileButton.triggerEventHandler('click', null);
-    fixture.detectChanges();
-    expect(profile.textContent).toContain(comp.chosenMeta.profile[0]);
-  });
-
-  it("Profile panel should show name and alias", () => {
-    expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
-    expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
-  });
 
   describe("Alias Button de-activation", () => {
 
-    it("Counter should increment on each click", () => {
+    it("counter should increment on each click", () => {
       comp.messageIn();
       fixture.detectChanges();
       comp.messageIn();
@@ -93,12 +101,12 @@ describe('MetaRatingComponent', () => {
       expect(comp.counter).toEqual(3)
     });
 
-    it("service method call should follow Component method call", () => {
+    it("Service method call should follow Component method call", () => {
       comp.messageIn();
       expect(serviceSpy).toHaveBeenCalled();
     });
 
-    it("Profile button click should trigger a call to the component's method", () => {
+    it("Profile button click should trigger a call to the Component's method", () => {
       let messageInSpy = spyOn(comp, 'messageIn').and.callThrough();
       debugProfileButton.triggerEventHandler('click', null);
       fixture.detectChanges();
