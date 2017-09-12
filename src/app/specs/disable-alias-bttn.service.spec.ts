@@ -30,4 +30,15 @@ describe("DisableAliasBttnService", () => {
     expect(service.subject.value.text).toBe(false);
   });
 
+  it("should return true boolean from the Observable stream", () => {
+    service.relayMessage(true);
+    service.messageOut().subscribe(result => expect(result).toEqual({ text: true }));
+  });
+
+  it("should return false boolean from the Observable stream", () => {
+    service.relayMessage(false);
+    service.messageOut().subscribe(result => expect(result).toEqual({ text: false }));
+  });
+
+
 });

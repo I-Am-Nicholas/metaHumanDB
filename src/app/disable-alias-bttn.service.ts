@@ -14,4 +14,8 @@ export class DisableAliasBttnService {
     this.subject.next({ text: message });
   }
 
+  messageOut(): Observable<any> {
+    return this.subject.asObservable();
+  }
+
 }
