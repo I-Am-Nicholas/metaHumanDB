@@ -9,7 +9,7 @@
       "Stark's intellect is the benchmark by which the others are measured.",
       "Although not a born fighter, Stark created his armour and has worn the Iron Man suit long enough to be an expert in its use, hence the high fight skills rating."
     ],
-    "metadata": [
+    "weaponry": [
       "Uni-Beam",
       "Smart Bombs",
       "Repulsor Beams",
@@ -29,7 +29,7 @@
         "Strength-wise he's about equal with Iron Man, and impressively doesn't need armour to be so.",
         "Due to accidental suspended animation, Cap is around a hundred years old."
       ],
-      "metadata": [
+      "weaponry": [
         "Shield",
         "Outstanding Agility",
         "Combat Skills"
@@ -48,7 +48,7 @@
         "'Fight skills' suggest training and tactical application of combat techniques. Creating sonic waves by clapping your hands or earthquakes by stomping real hard don't really fall under those categories. Hulk simply relies on unlimited power.",
         "Regarding the low IQ rating...in his own words 'Who needs it?'"
       ],
-      "metadata": [
+      "weaponry": [
         "Self"
       ],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
@@ -65,7 +65,7 @@
         "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
         "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
       ],
-      "metadata": [
+      "weaponry": [
         "Web Shooters",
         "Outstanding Agility, Reflexes",
         "High strength-to-weight ratio"
@@ -79,17 +79,17 @@
       "logo":"assets/logos/mjolnir.png",
       "alias":"God of Thunder",
       "profile":[
-              "God of Thunder...though we've only ever seen him manipulate lightning.",
-              "As far as we know no-one has ever pulled him up on that.",
-              "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
-              "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk to boot."
-            ],
-            "metadata": [
-              "Mjolnir, a mystic hammer",
-              "Lightning Control",
-              "Hulk-like Strength",
-              "Mostly Invulnerable"
-            ],
+        "God of Thunder...though we've only ever seen him manipulate lightning.",
+        "As far as we know no-one has ever pulled him up on that.",
+        "Neither about the possibility of him just being an alien who can control the weather, rather than a fully-fledged deity.",
+        "It is indisputable, however, that Thor is a born warrior, and almost as powerful as The Hulk to boot."
+      ],
+      "weaponry": [
+        "Mjolnir, a mystic hammer",
+        "Lightning Control",
+        "Hulk-like Strength",
+        "Mostly Invulnerable"
+      ],
 
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
@@ -105,7 +105,7 @@
         "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
         "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
       ],
-      "metadata": [
+      "weaponry": [
         "Vibranium Claws",
         "Outstanding Agility",
         "Combat Skills"
@@ -125,7 +125,7 @@
         "Wanda is easily one of the top three most powerful beings on the planet.",
         "Having a specific power in a league of its own, her ability is not displayed on the bar chart. If it were it would be at 100%."
       ],
-      "metadata": [
+      "weaponry": [
         "Hex Power",
         "Chaos Magic",
         "Sorcery",
@@ -141,7 +141,7 @@
       "logo":"assets/logos/hawk.png",
       "alias":"Clint Barton",
       "profile":[],
-      "metadata": [
+      "weaponry": [
         "Bow and Arrow",
         "Combat Skills"
       ],
@@ -155,7 +155,7 @@
       "logo":"assets/logos/spider-bw.png",
       "alias":"Natasha Romanoff",
       "profile":[],
-      "metadata": [
+      "weaponry": [
         "Stingers",
         "Automatic Pistols",
         "Outstanding Combat Skills"
@@ -170,7 +170,7 @@
       "logo":"assets/logos/gem.png",
       "alias":"Vision (No Alias)",
       "profile":[],
-      "metadata": [
+      "weaponry": [
         "Infinity Stone Laser",
         "Alternate Density Body"
       ],

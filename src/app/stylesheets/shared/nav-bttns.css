@@ -1,4 +1,4 @@
-.bttn {
+.bttn, .bttn-mask {
   font-size: .8em;
   width: 145px;
   position: absolute;
@@ -9,6 +9,12 @@
   border-radius: 6px;
   cursor: pointer;
   height: 20px;
+}
+
+.bttn-mask {
+  color: #bbb;
+  z-index: -1;
+  cursor: default;
 }
 
 .bttn:focus {

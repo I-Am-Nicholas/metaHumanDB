@@ -91,10 +91,20 @@ describe('MetaHumanDB App', () => {
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
       expect(bttnmask.isPresent()).toBe(false);
+      expect(aliasBtn.isDisplayed()).toBe(true);
       profileButton.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
-      expect(bttnmask.isPresent()).toBe(true);
+//Fails when clickable, passes when not
+      aliasBtn.click()
+      .then(
+        function() {
+          throw ("This Element is clickable.");
+        },
+        function() {
+          console.log("This Element is not clickable.")
+        }
+      )
     });
 
   });
