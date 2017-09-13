@@ -2,10 +2,9 @@
 export let findStringInNode = (HTMLnode, subString) => {
 
   let nodeToString = (HTMLnode) => {
-    let tmpNode = document.createElement( "div" );
-    tmpNode.appendChild( HTMLnode.cloneNode( true ) );
-    var strng = tmpNode.innerHTML;
-    return strng;
+    let makeDivNode = document.createElement("div");
+    makeDivNode.appendChild( HTMLnode.cloneNode(true));
+    return makeDivNode.innerHTML;
   };
 
   return (() => {

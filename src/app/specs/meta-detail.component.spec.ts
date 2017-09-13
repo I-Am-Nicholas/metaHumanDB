@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 import { NO_ERRORS_SCHEMA, DebugElement } from "@angular/core";
-import { HttpModule } from "@angular/http";
-import { ActivatedRoute, ParamMap }   from "@angular/router";
+import { ActivatedRoute }   from "@angular/router";
 import { By } from "@angular/platform-browser";
+
+import { MetaService } from "../meta-service";
+import { DisableAliasBttnService } from "../disable-alias-bttn.service"
 
 import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from "../components/meta-detail.component"
-import { MetaService } from "../meta-service";
-import { DisableAliasBttnService } from "../disable-alias-bttn.service"
 import { Meta } from "../meta"
 import { click } from "../../testing/clicker-left"
 import { findStringInNode } from "../../testing/find-string-in-node";
@@ -18,6 +18,7 @@ let comp: MetaDetailComponent;
 let DOMElement: DebugElement;
 let testMeta: Meta;
 let debugAliasButton: DebugElement;
+let flipperClass: {};
 
 
 describe("MetaDetailComponent", () => {
@@ -26,7 +27,6 @@ describe("MetaDetailComponent", () => {
     activatedRoute = new ActivatedRouteStub();
 
     TestBed.configureTestingModule({
-      imports: [ HttpModule ],
       schemas: [ NO_ERRORS_SCHEMA ],
       declarations: [ MetaDetailComponent ],
       providers: [ MetaService, DisableAliasBttnService,
@@ -57,18 +57,17 @@ describe("MetaDetailComponent", () => {
     comp = fixture.componentInstance;
     comp.clickedMeta = testMeta;
     fixture.detectChanges();
+    flipperClass = DOMElement[0].querySelectorAll(".flipper");
   });
 
 
   describe("Image", () => {
 
     it("back should not be visible", () => {
-      let flipperClass = DOMElement[0].querySelectorAll(".flipper");
       expect(findStringInNode(flipperClass[0], "showAlias")).toBe(false);
     });
 
     it("back should be visible", () => {
-      let flipperClass = DOMElement[0].querySelectorAll(".flipper");
       click(DOMElement[0].querySelector("#alias-btn"));
       fixture.detectChanges();
       expect(findStringInNode(flipperClass[0], "showAlias")).toBe(true);
@@ -105,8 +104,8 @@ describe("MetaDetailComponent", () => {
     });
 
     it("the DOM should display the mocked weaponry", () => {
-      let debug = DOMElement[0].querySelectorAll("#weaponry li");
-      expect(findStringInNode(debug[0], testMeta.weaponry)).toBe(true);
+      let HTMLnode = DOMElement[0].querySelectorAll("#weaponry li");
+      expect(findStringInNode(HTMLnode[0], testMeta.weaponry)).toBe(true);
     });
 
   });
@@ -124,8 +123,13 @@ describe("MetaDetailComponent", () => {
       expect(DOMElement[0].querySelector(".bttn-mask")).toBeNull();
     });
 
-  });
+    it("should be masked", () => {
+      comp.message = true;
+      fixture.detectChanges();
+      expect(DOMElement[0].querySelector(".bttn-mask")).toBeTruthy();
+    });
 
+  });
 
 
 });
