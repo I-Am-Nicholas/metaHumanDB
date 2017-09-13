@@ -5,10 +5,12 @@ import { AppComponent } from "./components/app.component";
 import { MetasComponent } from "./components/metas.component";
 import { MetaDetailComponent } from "./components/meta-detail.component";
 import { MetaRatingComponent } from "./components/meta-rating.component";
+import { WelcomeMessageComponent } from "./components/welcome-message.component";
  
 const routes: Routes = [
-  { path: "", redirectTo: "/welcome", pathMatch: "full" },
-  { path: "welcome",  component: MetasComponent },
+  { path: "", redirectTo: "/", pathMatch: "full" },
+  // { path: "",  component: WelcomeMessageComponent },
+  { path: "",  component: MetasComponent },
   { path: "detail",  component: MetaDetailComponent },
   { path: "rating",  component: MetaRatingComponent },
   { path: "**", redirectTo: "/welcome", pathMatch: "full" }
