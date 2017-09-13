@@ -17,7 +17,7 @@ describe('MetaHumanDB App', () => {
   let imageBack = element(by.className('showAlias'));
   let miniIronMan = element(by.id('mini-iron-man'));
   let welcomeMessage = element(by.id('welcome-message'));
-  let metadata = element(by.id('metadata'));
+  let weaponry = element(by.id('weaponry'));
   let bttnmask = element(by.className("bttn-mask"));
 
 
@@ -65,7 +65,7 @@ describe('MetaHumanDB App', () => {
       expect(image.isPresent()).toBe(true);//should show image...
       expect(ratinglabels.isPresent()).toBe(true);//should show rating info...
       expect(bargroup.isDisplayed()).toBe(true);//should show rating bars...
-      expect(metadata.isPresent()).toBe(true);//should show metadata.
+      expect(weaponry.isPresent()).toBe(true);//should show metadata.
     });
 
   });
@@ -91,10 +91,20 @@ describe('MetaHumanDB App', () => {
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
       expect(bttnmask.isPresent()).toBe(false);
+      expect(aliasBtn.isDisplayed()).toBe(true);
       profileButton.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
-      expect(bttnmask.isPresent()).toBe(true);
+      //Fails when clickable, passes when not
+      aliasBtn.click()
+      .then(
+        function() {
+          throw ("This Element is clickable.");
+        },
+        function() {
+          console.log("This Element is not clickable.")
+        }
+      )
     });
 
   });

@@ -3,9 +3,12 @@
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
   <div id="alias-btn" class="bttn background"
-  [class.red] = "toggle"
-  (click)="toggle = !toggle;"
-  ><span>ALIAS</span></div>
+    [class.red] = "toggle"
+    [class.bttn-mask] = "message"
+    (click)="toggle = !toggle;"
+    ><span>ALIAS</span>
+    <span *ngIf = "message"></span>
+  </div>
   <div id="headshot">
 
     <div class="flip-container">
@@ -22,10 +25,10 @@
         <div id="info">
           <div id="name" class="front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
           <div id="alias" class="back">{{clickedMeta.alias | uppercase}}</div>
-          <div id="metadata" class="front">
+          <div id="weaponry" class="front">
             <ul>
               <p>WEAPONRY</p>
-              <li *ngFor= "let eachLine of clickedMeta.metadata">
+              <li *ngFor= "let eachLine of clickedMeta.weaponry">
                 {{eachLine}}
               </li>
             </ul>

@@ -1,6 +1,6 @@
-import 'rxjs/add/operator/switchMap';
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
+import { DisableAliasBttnService } from '../disable-alias-bttn.service'
 
 import { MetaService } from '../meta-service';
 import { Meta } from '../meta'
@@ -19,5 +19,18 @@ import { Meta } from '../meta'
 export class MetaDetailComponent {
 
   @Input() clickedMeta: Meta;
+  message: Boolean;
+  subscription: Subscription;
+
+  constructor(private messageService: DisableAliasBttnService) {
+    this.subscription = this.messageService.messageOut().subscribe(message => {
+      if (messageService.getState() == true){
+        this.message = message;
+      }
+      else {
+        this.message = null;
+      }
+    });
+  }
 
 }
