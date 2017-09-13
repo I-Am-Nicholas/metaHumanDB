@@ -57,12 +57,13 @@ li {
   z-index: 1001;
   font-family: helvetica;
   font-weight: 600;
+  overflow-y: scroll;
 }
 
 #profile-panel ul, span {
   margin: 0 auto;
   width: 700px;
-  height: 250px;
+  height: 400px;
   line-height: 3rem;
 }
 
