@@ -49,8 +49,8 @@ describe("MetaDetailComponent", () => {
            weaponry: [
              "Fake Weaponry."
            ],
-           headshotsFront: "assets/headshotsFront/thor.jpg",
-            headshotsBack: "assets/headshotsBack/thor.jpg",
+           headshotsFront: "",
+            headshotsBack: "",
              level: []
     });
 
