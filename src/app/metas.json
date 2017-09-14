@@ -149,7 +149,8 @@
       ],
       "weaponry": [
         "Bow and Arrow",
-        "Combat Skills"
+        "Combat Skills",
+        "Acrobatic Skills"
       ],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
@@ -164,7 +165,8 @@
       "weaponry": [
         "Stingers",
         "Automatic Pistols",
-        "Outstanding Combat Skills"
+        "Outstanding Combat Skills",
+        "Outstnding Agility"
       ],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
