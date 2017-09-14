@@ -1,6 +1,7 @@
-.bttn, .bttn-mask {
+.bttn {
   font-size: .8em;
   width: 145px;
+  height: 20px;
   position: absolute;
   top: -50px;
   left: -300px;
@@ -8,7 +9,6 @@
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
-  height: 20px;
 }
 
 .bttn-mask {
@@ -17,25 +17,10 @@
   cursor: default;
 }
 
-.bttn:focus {
-  outline: 0;
-}
-
 .bttn:active {
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
-}
-
-.bttn:hover {
-  color: #fff;
+  top: -48px;
 }
 
 .red, .bttn:hover {
   color: #8e0b0b;
-}
-
-.bttn span {
-  pointer-events: none;
-  position: relative;
-  line-height: 1rem;
 }
