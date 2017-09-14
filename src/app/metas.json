@@ -140,14 +140,20 @@
       "name":"Hawkeye",
       "logo":"assets/logos/hawk.png",
       "alias":"Clint Barton",
-      "profile":[],
+      "profile":[
+        "Clint Barton is the world's best marksman...though some in a similar universe may disagree.",
+        "He has no powers or enhanced suits, just a skill so honed that it easily counts as a superpower.",
+        "Having grown up in the circus Clint is also a master acrobat.",
+        "With years fighting alongside Captain America he is also well-trained in hand-to-hand combat.",
+        "Died once, when the Scarlet Witch went crazy and turned the world on its head."
+      ],
       "weaponry": [
         "Bow and Arrow",
         "Combat Skills"
       ],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
-      "level": [50, 100, 50]
+      "level": [50, 85, 50]
     },
     {
       "id":9,
@@ -162,7 +168,7 @@
       ],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
-      "level": [50, 100, 50]
+      "level": [50, 90, 50]
     },
     {
       "id":10,
