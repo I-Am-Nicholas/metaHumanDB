@@ -72,6 +72,10 @@
   transition: all 250ms ease;
  }
 
+ li:focus {
+   outline:0;
+ }
+
   .selectedMeta, .metas li.selectedMeta:hover {
     color: #8e0b0b;
   }
@@ -86,6 +90,7 @@
     -moz-transform: translateY(5px);
     -o-transform: translateY(5px);
     transform: translateY(5px);
+    text-decoration: none;
   }
 
  .metas .text {
