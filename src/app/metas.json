@@ -149,7 +149,8 @@
       ],
       "weaponry": [
         "Bow and Arrow",
-        "Combat Skills"
+        "Combat Skills",
+        "Acrobatic Skills"
       ],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
@@ -160,11 +161,18 @@
       "name":"Black Widow",
       "logo":"assets/logos/spider-bw.png",
       "alias":"Natasha Romanoff",
-      "profile":[],
+      "profile":[
+        "Ex-KGB agent, known to have been one of their most deadly assassins.",
+        "Trained from a very young age in Russian spycraft, now an expert in all aspects of espionage. Stealth, disguise, hand-to-hand combat, demolition, infiltration and very comfortable with firearms.",
+        "Natasha left the KGB for S.H.I.E.L.D and later The Avengers.",
+        "Has a close bond with team-mate Hawkeye.",
+        "Her highly physical and acrobatic fighting style means she keeps weapons to a minimum. Her wrist-mounted stingers are almost always with her, but she uses a range of other weapons according to the needs of the mission."
+      ],
       "weaponry": [
         "Stingers",
         "Automatic Pistols",
-        "Outstanding Combat Skills"
+        "Outstanding Combat Skills",
+        "Outstnding Agility"
       ],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
