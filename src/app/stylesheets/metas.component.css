@@ -72,6 +72,8 @@
   transition: all 250ms ease;
  }
 
+ li:focus {outline:0;}
+
   .selectedMeta, .metas li.selectedMeta:hover {
     color: #8e0b0b;
   }
