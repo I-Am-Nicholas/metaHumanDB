@@ -1,23 +1,23 @@
-import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Injectable } from "@angular/core";
+import { Headers, Http } from "@angular/http";
 
-import 'rxjs/add/operator/toPromise';
-import { Meta } from './meta';
+import "rxjs/add/operator/toPromise";
+import { Meta } from "./meta";
 
 @Injectable()
 export class MetaService {
 
-  private metalistUrl = 'api/metalism';
+  private metalistUrl = "api/metalism";
 
 /*the metalistUrl variable is assigned the value returned by the web url. At present,
 this particular value is being instructed to look in the InMemoryDataService class for a
-variable named 'metalism'*/
+variable named "metalism"*/
 
 /*injected Http client from an Angular library, giving access to http methods.*/
   constructor(private http: Http) { }
 
 
-/*The 'getMeta' method expects an id as a parameter in the form of a number.
+/*The "getMeta" method expects an id as a parameter in the form of a number.
 - It then sets up an instruction to search for that id within the
 array-like value of metalistUrl and to return the single value associated with
  that id, which is then assigned to a const url.
@@ -46,7 +46,7 @@ conversion of the response into a json object of Meta type. */
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred, Nicholas:', error);
+    console.error("An error occurred, Nicholas:", error);
     return Promise.reject( error );
   }
 

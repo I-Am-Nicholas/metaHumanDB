@@ -1,23 +1,23 @@
-describe('MetaHumanDB App', () => {
+describe("MetaHumanDB App", () => {
 
   beforeEach( () => {
-    browser.get('http://localhost:4200/');
+    browser.get("http://localhost:4200/");
   });
 
-  let aliasBtn = element(by.id('alias-btn'));
-  let metas = element(by.className('metas'));
-  let anyMeta = element(by.tagName('li'));
-  let detail = element(by.className('detail'));
-  let profile = element(by.id('profile-panel'));
-  let profileButton = element(by.id('profile-btn'));
-  let rating = element(by.id('rating'));
-  let bargroup = element(by.className('bar-group'));
-  let image = element(by.id('headshot'));
-  let ratinglabels = element(by.id('rating-labels'));
-  let imageBack = element(by.className('showAlias'));
-  let miniIronMan = element(by.id('mini-iron-man'));
-  let welcomeMessage = element(by.id('welcome-message'));
-  let weaponry = element(by.id('weaponry'));
+  let aliasBtn = element(by.id("alias-btn"));
+  let metas = element(by.className("metas"));
+  let anyMeta = element(by.tagName("li"));
+  let detail = element(by.className("detail"));
+  let profile = element(by.id("profile-panel"));
+  let profileButton = element(by.id("profile-btn"));
+  let rating = element(by.id("rating"));
+  let bargroup = element(by.className("bar-group"));
+  let image = element(by.id("headshot"));
+  let ratinglabels = element(by.id("rating-labels"));
+  let imageBack = element(by.className("showAlias"));
+  let miniIronMan = element(by.id("mini-iron-man"));
+  let welcomeMessage = element(by.id("welcome-message"));
+  let weaponry = element(by.id("weaponry"));
   let bttnmask = element(by.className("bttn-mask"));
 
 
@@ -26,7 +26,7 @@ describe('MetaHumanDB App', () => {
   describe("MetasComponent", () => {
 
     it("Should only show pre-click data/components", () => {
-      expect(browser.getTitle()).toEqual('MetaHumanDB');//should show page title.
+      expect(browser.getTitle()).toEqual("MetaHumanDB");//should show page title.
       expect(miniIronMan.isPresent()).toBe(true);
       expect(metas.isPresent()).toBe(true);//should show list of meta buttons
       expect(detail.isPresent()).toBe(false);//should not show any details
@@ -42,7 +42,7 @@ describe('MetaHumanDB App', () => {
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
       welcomeMessage.getText().then((result) => {
-        expect(result).not.toBe('');
+        expect(result).not.toBe("");
       });
 
     });
@@ -53,9 +53,9 @@ describe('MetaHumanDB App', () => {
 
   describe("Meta-Human Detail", () => {
 
-    it('should show all details of selected meta post-click', () => {
-      let name = element(by.id('name'));
-      let alias = element(by.id('alias'));
+    it("should show all details of selected meta post-click", () => {
+      let name = element(by.id("name"));
+      let alias = element(by.id("alias"));
 
       anyMeta.click();
       expect(detail.isPresent()).toBe(true);//should show details, including...
