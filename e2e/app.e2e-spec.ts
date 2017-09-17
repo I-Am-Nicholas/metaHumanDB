@@ -6,7 +6,8 @@ describe("MetaHumanDB App", () => {
 
   let aliasBtn = element(by.id("alias-btn"));
   let metas = element(by.className("metas"));
-  let anyMeta = element(by.tagName("li"));
+  let meta1 = element(by.id('the-list')).all(by.tagName('li')).get(0);
+  let meta2 = element(by.id('the-list')).all(by.tagName('li')).get(1);
   let detail = element(by.className("detail"));
   let profile = element(by.id("profile-panel"));
   let profileButton = element(by.id("profile-btn"));
@@ -57,7 +58,7 @@ describe("MetaHumanDB App", () => {
       let name = element(by.id("name"));
       let alias = element(by.id("alias"));
 
-      anyMeta.click();
+      meta1.click();
       expect(detail.isPresent()).toBe(true);//should show details, including...
       expect(name.isPresent()).toBe(true);//should show name...
       expect(aliasBtn.isPresent()).toBe(true);//should show alias button...
@@ -74,7 +75,7 @@ describe("MetaHumanDB App", () => {
   describe("Deep Info", () => {
 
     it("clicking Alias button should flip image (make back visible, make front invisible)", () => {
-      anyMeta.click();
+      meta1.click();
       expect(imageBack.isPresent()).toBe(false);
       aliasBtn.click();
       expect(imageBack.isPresent()).toBe(true);
@@ -87,7 +88,7 @@ describe("MetaHumanDB App", () => {
   describe("Profile panel", () => {
 
     it("clicking profile button should display profile and de-activate the alias button", () => {
-      anyMeta.click();
+      meta1.click();
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(false);
       expect(bttnmask.isPresent()).toBe(false);
@@ -108,5 +109,6 @@ describe("MetaHumanDB App", () => {
     });
 
   });
+
 
 });
