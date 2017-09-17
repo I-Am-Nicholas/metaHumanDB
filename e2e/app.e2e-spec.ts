@@ -10,6 +10,7 @@ describe("MetaHumanDB App", () => {
   let meta2 = element(by.id('the-list')).all(by.tagName('li')).get(1);
   let detail = element(by.className("detail"));
   let profile = element(by.id("profile-panel"));
+  let name = element(by.id("name"));
   let profileButton = element(by.id("profile-btn"));
   let rating = element(by.id("rating"));
   let bargroup = element(by.className("bar-group"));
@@ -55,7 +56,6 @@ describe("MetaHumanDB App", () => {
   describe("Meta-Human Detail", () => {
 
     it("should show all details of selected meta post-click", () => {
-      let name = element(by.id("name"));
       let alias = element(by.id("alias"));
 
       meta1.click();
@@ -108,7 +108,19 @@ describe("MetaHumanDB App", () => {
       )
     });
 
-  });
+    describe("Browser Nav Buttons", () => {
 
+      it("navigates to previous meta", () => {
+        meta1.click();
+        meta2.click();
+        browser.navigate().back();
+        expect(name.getText()).toEqual("IRON MAN");
+        browser.navigate().forward();
+        expect(name.getText()).toEqual("CAPTAIN AMERICA");
+      });
+
+    });
+
+  });
 
 });
