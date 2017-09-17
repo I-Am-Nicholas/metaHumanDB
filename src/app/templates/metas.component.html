@@ -1,12 +1,13 @@
 <div id="metasWrap-parent">
   <div id="metasWrap">
     <div id="mini-iron-man"></div>
-    <ul class="metas">
+    <ul id="the-list" class="metas">
       <!--'metaShown' is a property of MetasComponent created
     by the component's ngOnInit method.-->
       <li *ngFor= "let individualMeta of metaShown"
           (click)="onSelect(individualMeta)"
-          [class.selectedMeta]="individualMeta === selectedMeta"
+          [routerLink]="['/detail', individualMeta.id]"
+          routerLinkActive="red"
           [class.background]="individualMeta">
           <!--if individualMeta is exactly equivalent to selectedMeta, then
         individualMeta gets the selectedMeta class applied-->
@@ -22,9 +23,8 @@
         {{individualMeta.name | uppercase}}
       </li>
     </ul>
-
     <!--The 'clickedMeta' property is created here, with the value of 'selectedMeta'-->
     <welcome-message></welcome-message>
-    <meta-detail [clickedMeta]="selectedMeta"></meta-detail>
+    <router-outlet></router-outlet>
   </div>
 </div>
