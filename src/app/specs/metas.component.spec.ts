@@ -1,41 +1,46 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
-import { RouterTestingModule } from '@angular/router/testing';
+import { HttpModule } from '@angular/http';
+
 import { By } from '@angular/platform-browser';
 
 import { MetasComponent } from '../components/metas.component';
 import { MetaService } from '../meta-service';
 
+let comp: MetasComponent;
+let fixture: ComponentFixture<MetasComponent>;
+let DOMElement: DebugElement;
+let serviceSpy: jasmine.Spy;
+let metaService: MetaService;
+
+const fakeMethod = "fakeMethod";
+
 describe("MetasComponent", () => {
+  let serviceStub = {};
 
-  let comp: MetasComponent;
-  let fixture: ComponentFixture<MetasComponent>;
-  let DOMElement: DebugElement;
-
-  beforeEach( () => {
-
-    let serviceStub = {};
+  beforeEach(async() => {
 
     TestBed.configureTestingModule({
       declarations: [ MetasComponent ],
-      imports: [ RouterTestingModule ],
+      imports: [ HttpModule ],
       schemas: [ NO_ERRORS_SCHEMA ],
-      providers: [
-      {provide: MetaService, useValue: serviceStub }
-      ]
+      providers: [ MetaService]
     });
-
-    fixture = TestBed.createComponent(MetasComponent);
-    DOMElement = fixture.nativeElement.children;
-    comp = fixture.componentInstance;
 
   });
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MetasComponent);
+    metaService = fixture.debugElement.injector.get(MetaService);
+    DOMElement = fixture.nativeElement.children;
+    serviceSpy = spyOn(metaService, 'getMetas').and.returnValue(Promise.resolve(0));
+    comp = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  it('should invoke the getTheMetas() function', () => {
-    let spy = spyOn(comp, 'getTheMetas');
-    comp.ngOnInit();
-    expect(spy).toHaveBeenCalled();
+
+  it('ngOnInit() should call the sevice method function', () => {
+    expect(serviceSpy).toHaveBeenCalled();
   });
 
   it('selectedMeta should receive value of meta', () => {

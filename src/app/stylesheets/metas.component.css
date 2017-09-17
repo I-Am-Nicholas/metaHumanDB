@@ -76,7 +76,7 @@
    outline:0;
  }
 
-  .selectedMeta, .metas li.selectedMeta:hover {
+  .red, .metas li.red:hover {
     color: #8e0b0b;
   }
 
