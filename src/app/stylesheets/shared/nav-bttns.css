@@ -20,6 +20,10 @@
   top: -48px;
 }
 
-.red, .bttn:hover {
+ .bttn:hover {
+  color: #999;
+}
+
+.red, .red:hover {
   color: #8e0b0b;
 }
