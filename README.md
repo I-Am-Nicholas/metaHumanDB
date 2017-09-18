@@ -1,6 +1,6 @@
 # META-HUMAN DATABASE
 
-![latest_screenshot](https://user-images.githubusercontent.com/24227633/30244513-f945569e-95b6-11e7-844e-63df378c4030.gif)
+![untitled](https://user-images.githubusercontent.com/24227633/30567428-392aa67a-9cc8-11e7-9c50-ee9bef4ce8b9.gif)
 
 
 ## OVERVIEW
