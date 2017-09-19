@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { DebugElement } from '@angular/core';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpModule, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { findStringInNode } from '../../testing/find-string-in-node';
@@ -17,7 +17,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [ HttpModule, RouterTestingModule ],
       declarations: [ AppComponent ],
-      providers: [{ provide: XHRBackend, useClass: MockBackend }]
+      providers: [{ provide: XHRBackend, useClass: MockBackend }],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
 
     fixture = TestBed.createComponent(AppComponent);

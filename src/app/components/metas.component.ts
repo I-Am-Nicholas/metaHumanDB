@@ -4,6 +4,7 @@ import { Meta } from '../meta';
 import { MetaService } from '../meta-service';
 
 @Component({
+  selector: "metas",
   templateUrl: '../templates/metas.component.html',
   styleUrls: ['../stylesheets/metas.component.css',
   '../stylesheets/shared/translucentBG.css']
@@ -11,7 +12,7 @@ import { MetaService } from '../meta-service';
 
 export class MetasComponent implements OnInit {
 
-  metaShown: Meta[];//what will be returned by 'getTheMetas()' function.
+  metaShown: Meta[];//what will be returned by 'ngOnInit()' function.
   selectedMeta: Meta;
 
   constructor(
@@ -19,10 +20,6 @@ export class MetasComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getTheMetas();
-  }
-
-  getTheMetas(): void {
     this.metaService.getMetas().then(metas => this.metaShown = metas);
   }
 
