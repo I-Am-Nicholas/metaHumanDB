@@ -1,42 +1,49 @@
-import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 import { NO_ERRORS_SCHEMA, DebugElement } from "@angular/core";
-import { ActivatedRoute }   from "@angular/router";
-import { By } from "@angular/platform-browser";
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
+import { HttpModule, XHRBackend } from "@angular/http";
 
+//ROUTER LIBRARIES
+import { RouterTestingModule } from "@angular/router/testing";
+
+import { Observable } from "rxjs/Rx";
+
+//SERVICES
 import { MetaService } from "../meta-service";
 import { DisableAliasBttnService } from "../disable-alias-bttn.service"
 
-import { ActivatedRouteStub } from "../../testing/router-stubs";
 import { MetaDetailComponent } from "../components/meta-detail.component"
 import { Meta } from "../meta"
 import { click } from "../../testing/clicker-left"
 import { findStringInNode } from "../../testing/find-string-in-node";
 
-let fixture: ComponentFixture<MetaDetailComponent>;
-let activatedRoute: ActivatedRouteStub;
-let comp: MetaDetailComponent;
-let DOMElement: DebugElement;
-let testMeta: Meta;
-let debugAliasButton: DebugElement;
-let flipperClass: {};
-
 
 describe("MetaDetailComponent", () => {
 
-  beforeEach(async(() => {
-    activatedRoute = new ActivatedRouteStub();
+  let fixture: ComponentFixture<MetaDetailComponent>;
+  let comp: MetaDetailComponent;
+  let DOMElement: DebugElement;
+  let testMeta: Meta;
+  let debugAliasButton: DebugElement;
+  let flipperClass: {};
+  let metaService: MetaService;
+  let serviceSpy: jasmine.Spy;
 
+
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [ NO_ERRORS_SCHEMA ],
       declarations: [ MetaDetailComponent ],
-      providers: [ MetaService, DisableAliasBttnService,
-        { provide: ActivatedRoute, useValue: activatedRoute },
+      imports: [ HttpModule, RouterTestingModule ],
+      providers: [
+        MetaService, DisableAliasBttnService
       ]
-    }).compileComponents();
+    });
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
+    metaService = fixture.debugElement.injector.get(MetaService);
+    serviceSpy = spyOn(metaService, 'getMeta').and.returnValue(Promise.resolve(0));
     DOMElement = fixture.nativeElement.children;
 
     testMeta = (
@@ -58,6 +65,15 @@ describe("MetaDetailComponent", () => {
     comp.clickedMeta = testMeta;
     fixture.detectChanges();
     flipperClass = DOMElement[0].querySelectorAll(".flipper");
+  });
+
+
+  describe("ngOnInit", () => {
+
+    it("should call the Service's getMeta method", () => {
+      expect(serviceSpy).toHaveBeenCalled();
+    });
+
   });
 
 
@@ -130,6 +146,5 @@ describe("MetaDetailComponent", () => {
     });
 
   });
-
 
 });
