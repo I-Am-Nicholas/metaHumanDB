@@ -11,11 +11,6 @@
   cursor: pointer;
 }
 
-.bttn-mask {
-  color: #bbb;
-  z-index: -1;
-}
-
 .bttn:active {
   top: -48px;
 }
@@ -26,4 +21,9 @@
 
 .red, .red:hover {
   color: #8e0b0b;
+}
+
+.bttn-mask {
+  color: #bbb;
+  z-index: -1;
 }
