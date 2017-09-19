@@ -9,11 +9,8 @@ import { WelcomeMessageComponent } from "./components/welcome-message.component"
  
 const routes: Routes = [
   { path: "", redirectTo: "/", pathMatch: "full" },
-  // { path: "",  component: WelcomeMessageComponent },
-  { path: "",  component: MetasComponent },
-  { path: "detail",  component: MetaDetailComponent },
-  { path: "rating",  component: MetaRatingComponent },
-  { path: "**", redirectTo: "/welcome", pathMatch: "full" }
+  { path: "detail/:id",  component: MetaDetailComponent },
+  { path: "**", redirectTo: "metas", pathMatch: "full" }
 ];
  
 @NgModule({

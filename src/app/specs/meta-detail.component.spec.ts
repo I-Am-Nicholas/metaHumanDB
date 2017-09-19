@@ -49,12 +49,12 @@ describe("MetaDetailComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     metaService = fixture.debugElement.injector.get(MetaService);
-    serviceSpy = spyOn(metaService, 'getMeta').and.returnValue(Promise.resolve(0));
+    serviceSpy = spyOn(metaService, 'getMeta').and.returnValue(Promise.resolve());
     DOMElement = fixture.nativeElement.children;
 
     testMeta = (
       {
-      id: 1,
+      id: 9000,
         name: "Thor",
          logo: "Mjolnir",
           alias: "God of Thunder",
@@ -77,10 +77,8 @@ describe("MetaDetailComponent", () => {
   describe("ngOnInit", () => {
 
     it("should set the component route to that of the mocked route", () => {
-      activatedRouteStub.testParamMap = {id: "9000"};
-      comp.route.paramMap.subscribe(paramFromMock => {
-        expect(+paramFromMock.get("id")).toEqual(9000);
-      });
+      activatedRouteStub.testParamMap = {id: testMeta.id};
+      expect(serviceSpy).toHaveBeenCalledWith(testMeta.id);
     });
 
     it("should call the Service's getMeta method", () => {
