@@ -56,7 +56,8 @@
     "update-notifier": "^2.2.0",
     "zone.js": "^0.8.17"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "description": "![untitled_2](https://user-images.githubusercontent.com/24227633/29877167-c7682606-8d96-11e7-8543-e5a3382d3b9c.gif)",
   "main": "conf.js",
   "repository": {

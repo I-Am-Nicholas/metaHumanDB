@@ -4,6 +4,8 @@ import { HttpModule, XHRBackend } from "@angular/http";
 
 //ROUTER LIBRARIES
 import { RouterTestingModule } from "@angular/router/testing";
+import { ActivatedRouteStub } from "../../testing/router-stubs";
+import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from "rxjs/Rx";
 
@@ -27,6 +29,9 @@ describe("MetaDetailComponent", () => {
   let flipperClass: {};
   let metaService: MetaService;
   let serviceSpy: jasmine.Spy;
+  let route: ActivatedRoute;
+
+  var activatedRouteStub = new ActivatedRouteStub();
 
 
   beforeEach(async(() => {
@@ -35,7 +40,8 @@ describe("MetaDetailComponent", () => {
       declarations: [ MetaDetailComponent ],
       imports: [ HttpModule, RouterTestingModule ],
       providers: [
-        MetaService, DisableAliasBttnService
+        MetaService, DisableAliasBttnService,
+        { provide: ActivatedRoute, useValue: activatedRouteStub }
       ]
     });
   }));
@@ -69,6 +75,13 @@ describe("MetaDetailComponent", () => {
 
 
   describe("ngOnInit", () => {
+
+    it("should set the component route to that of the mocked route", () => {
+      activatedRouteStub.testParamMap = {id: "9000"};
+      comp.route.paramMap.subscribe(paramFromMock => {
+        expect(+paramFromMock.get("id")).toEqual(9000);
+      });
+    });
 
     it("should call the Service's getMeta method", () => {
       expect(serviceSpy).toHaveBeenCalled();
