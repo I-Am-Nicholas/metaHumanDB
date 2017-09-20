@@ -53,3 +53,9 @@
   margin: 0 35px;
   padding: 0 20px 10px 0;
 }
+
+#weaponry p {
+  border: 1px solid #21658c;
+  padding: 4px 2px 2px 4px;
+  width: auto;
+}

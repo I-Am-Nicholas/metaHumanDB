@@ -8,6 +8,11 @@ h1 {
   text-align: center;
   font-size: 3.75rem;
   color: #21658c;
+  cursor: pointer;
+}
+
+h1 span:focus {
+  outline: 0;
 }
 
 .navParent {
