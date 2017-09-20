@@ -9,7 +9,8 @@ import { InMemoryDataService }  from "./in-memory-data.service";
 
 //Services
 import { MetaService } from "./meta-service";
-import { DisableAliasBttnService } from "./disable-alias-bttn.service"
+import { NavResetService } from "./nav-reset.service";
+import { DisableAliasBttnService } from "./disable-alias-bttn.service";
 
 import { AppComponent } from "./components/app.component";
 import { MetasComponent } from "./components/metas.component";
@@ -45,7 +46,7 @@ import { AppRoutingModule } from "./app-routing.module";
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [MetaService, DisableAliasBttnService],
+  providers: [MetaService, DisableAliasBttnService, NavResetService],
   bootstrap: [AppComponent]
 })
 
