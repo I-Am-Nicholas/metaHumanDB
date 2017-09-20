@@ -18,6 +18,10 @@ export class NavResetService {
     this.subject.next({ text: navMessage });
   }
 
+  navMessageOut(): Observable<any> {
+    return this.subject.asObservable();
+  }
+
   getState() {
     return state.isActive;
   }

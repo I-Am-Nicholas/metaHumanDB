@@ -20,6 +20,16 @@ describe("NavResetService", () => {
     expect(service instanceof NavResetService).toBe(true);
   }));
 
+  it("should pass true argument boolean to the Observable object", () => {
+    service.relayNavMessage(true);
+    expect(service.subject.value.text).toBe(true);
+  });
+
+  it("should pass false argument boolean to the Observable object", () => {
+    service.relayNavMessage(false);
+    expect(service.subject.value.text).toBe(false);
+  });
+
   it("should return the correct raw true boolean value", () => {
     service.relayNavMessage(true);
     expect(service.getState()).toBe(true);
