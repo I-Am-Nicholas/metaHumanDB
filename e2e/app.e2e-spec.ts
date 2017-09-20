@@ -1,5 +1,17 @@
 describe("MetaHumanDB App", () => {
 
+let aliasClick = () => {//Fails when clickable, passes when not.
+  aliasBtn.click()
+  .then(
+    () => {
+      throw ("This Element is clickable.");
+    },
+    () => {
+      console.log("This Element is not clickable.")
+    }
+  )
+};
+
   beforeEach( () => {
     browser.get("http://localhost:4200/");
   });
@@ -63,6 +75,22 @@ describe("MetaHumanDB App", () => {
       expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/');
     });
 
+    it("should reset the alias button on Title click", () => {
+      meta1.click();
+      profileButton.click();
+      title.click();
+      meta1.click();
+      aliasBtn.click()//Fails when clickable, passes when not.
+      .then(
+        () => {
+          console.log("Alias Button is not clickable.")
+        },
+        () => {
+          throw ("Alias Button is clickable.");
+        }
+      )
+    });
+
   });
 
 
@@ -110,15 +138,7 @@ describe("MetaHumanDB App", () => {
       expect(profile.isPresent()).toBe(true);
       expect(profile.isDisplayed()).toBe(true);
       //Fails when clickable, passes when not
-      aliasBtn.click()
-      .then(
-        function() {
-          throw ("This Element is clickable.");
-        },
-        function() {
-          console.log("This Element is not clickable.")
-        }
-      )
+      aliasClick();
     });
 
     describe("Browser Nav Buttons", () => {

@@ -9,7 +9,8 @@ import { InMemoryDataService }  from "./in-memory-data.service";
 
 //Services
 import { MetaService } from "./meta-service";
-import { DisableAliasBttnService } from "./disable-alias-bttn.service"
+import { NavResetService } from "./nav-reset.service";
+import { DisableAliasBttnService } from "./disable-alias-bttn.service";
 
 import { AppComponent } from "./components/app.component";
 import { MetasComponent } from "./components/metas.component";
@@ -20,7 +21,9 @@ import { WelcomeMessageComponent } from "./components/welcome-message.component"
 import { findStringInNode } from "../testing/find-string-in-node";
 import { click } from "../testing/clicker-left";
 
-
+//ROUTER LIBRARIES
+import { RouterLinkStubDirective } from "../testing/router-stubs";
+import { RouterOutletStubComponent } from "../testing/router-stubs";
 import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
@@ -29,7 +32,9 @@ import { AppRoutingModule } from "./app-routing.module";
     MetaDetailComponent,
     MetasComponent,
     MetaRatingComponent,
-    WelcomeMessageComponent
+    WelcomeMessageComponent,
+    RouterLinkStubDirective,
+    RouterOutletStubComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { AppRoutingModule } from "./app-routing.module";
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [MetaService, DisableAliasBttnService],
+  providers: [MetaService, DisableAliasBttnService, NavResetService],
   bootstrap: [AppComponent]
 })
 

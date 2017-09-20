@@ -9,6 +9,11 @@
   padding-top: 30px;
 }
 
+#imageParent {
+  height: 300px;
+  margin-bottom: 40px;
+}
+
 #headshot {
   flex-direction: column;
   width: 600px;
@@ -55,7 +60,8 @@
 }
 
 #weaponry p {
-  border: 1px solid #21658c;
+  border: 1px solid #bbb;
   padding: 4px 2px 2px 4px;
   width: auto;
+  text-align: center;
 }
