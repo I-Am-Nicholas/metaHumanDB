@@ -9,6 +9,7 @@ import { RouterOutletStubComponent } from "../../testing/router-stubs";
 import { click } from "../../testing/clicker-left";
 
 import { AppComponent } from '../components/app.component';
+import { NavResetService } from '../nav-reset.service';
 
 describe('AppComponent', () => {
 
@@ -17,7 +18,7 @@ describe('AppComponent', () => {
   let DOMElement: DebugElement;
   let linkDes: DebugElement[];
   let links: RouterLinkStubDirective[];
-
+  let spy: jasmine.Spy;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,7 +27,9 @@ describe('AppComponent', () => {
         RouterLinkStubDirective,
         RouterOutletStubComponent
       ],
-      schemas: [ NO_ERRORS_SCHEMA ]
+      schemas: [ NO_ERRORS_SCHEMA ],
+      providers: [ NavResetService ]
+
     }).compileComponents()
     .then(() => {
       fixture = TestBed.createComponent(AppComponent);
@@ -42,6 +45,31 @@ describe('AppComponent', () => {
         .map(de => de.injector.get(RouterLinkStubDirective) as RouterLinkStubDirective);
       });
   }));
+
+  describe("Landing Page", () => {
+
+    it('should render title in a h1 tag', () => {
+      let nodeTxt = DOMElement[0].querySelectorAll('h1');
+      expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
+    });
+
+    it('should navigate to the Landing Page', () => {
+      expect(links.length).toBe(1, 'should have 1 link');
+      expect(links[0].linkParams).toEqual(['/'], 'link should go to Landing Page');
+    });
+
+  });
+
+    describe("", () => {
+
+      it("should call the spy", ()=> {
+        spy = spyOn(NavResetService.prototype, "relayNavMessage" );
+        comp.messageIn();
+        expect(spy).toHaveBeenCalled();
+      });
+
+    });
+
 
 
 });
