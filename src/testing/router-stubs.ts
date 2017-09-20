@@ -1,6 +1,7 @@
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { convertToParamMap, ParamMap } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, Directive, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Injectable()
 export class ActivatedRouteStub {
@@ -22,3 +23,22 @@ export class ActivatedRouteStub {
     return { paramMap: this.testParamMap };
   }
 }
+
+@Directive({
+  selector: '[routerLink]',
+  host: {
+    '(click)': 'onClick()'
+  }
+})
+
+export class RouterLinkStubDirective {
+  @Input('routerLink') linkParams: any;
+  navigatedTo: any = null;
+
+  onClick() {
+    this.navigatedTo = this.linkParams;
+  }
+}
+
+@Component({selector: 'router-outlet', template: ''})
+export class RouterOutletStubComponent { }

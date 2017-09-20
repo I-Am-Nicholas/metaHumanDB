@@ -1,9 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+
 import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
-import { HttpModule, XHRBackend } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
+import { By } from '@angular/platform-browser';
+
 import { findStringInNode } from '../../testing/find-string-in-node';
+import { RouterLinkStubDirective } from "../../testing/router-stubs";
+import { RouterOutletStubComponent } from "../../testing/router-stubs";
+import { click } from "../../testing/clicker-left";
 
 import { AppComponent } from '../components/app.component';
 
@@ -11,29 +14,47 @@ describe('AppComponent', () => {
 
   let comp: AppComponent
   let fixture: ComponentFixture<AppComponent>;
-  let DOMElement:  DebugElement;
+  let DOMElement: DebugElement;
+  let linkDes: DebugElement[];
+  let links: RouterLinkStubDirective[];
 
-  beforeEach(() => {
+
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpModule, RouterTestingModule ],
-      declarations: [ AppComponent ],
-      providers: [{ provide: XHRBackend, useClass: MockBackend }],
+      declarations: [
+        AppComponent,
+        RouterLinkStubDirective,
+        RouterOutletStubComponent
+      ],
       schemas: [ NO_ERRORS_SCHEMA ]
-    })
+    }).compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(AppComponent);
+      comp = fixture.componentInstance;
+      DOMElement = fixture.nativeElement.children;
+      fixture.detectChanges();
+      // find DebugElements with an attached RouterLinkStubDirective
+      linkDes = fixture.debugElement
+        .queryAll(By.directive(RouterLinkStubDirective));
 
-    fixture = TestBed.createComponent(AppComponent);
-    comp = fixture.componentInstance;
-    DOMElement = fixture.nativeElement.children;
-  });
+      // get the attached link directive instances using the DebugElement injectors
+      links = linkDes
+        .map(de => de.injector.get(RouterLinkStubDirective) as RouterLinkStubDirective);
+      });
+  }));
 
+  describe("Landing Page", () => {
 
-  it('should create the app', () => {
-    expect(comp).toBeTruthy();
-  });
+    it('should render title in a h1 tag', () => {
+      let nodeTxt = DOMElement[0].querySelectorAll('h1');
+      expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
+    });
 
-  it('should render title in a h1 tag', () => {
-    let nodeTxt = DOMElement[0].querySelectorAll('h1');
-    expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
+    it('should navigate to the Landing Page', () => {
+      expect(links.length).toBe(1, 'should have 1 link');
+      expect(links[0].linkParams).toEqual(['/'], 'link should go to Landing Page');
+    });
+
   });
 
 });
