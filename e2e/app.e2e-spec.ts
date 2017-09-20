@@ -4,24 +4,24 @@ describe("MetaHumanDB App", () => {
     browser.get("http://localhost:4200/");
   });
 
-  let aliasBtn = element(by.id("alias-btn"));
-  let metas = element(by.className("metas"));
-  let meta1 = element(by.id('the-list')).all(by.tagName('li')).get(0);
-  let meta2 = element(by.id('the-list')).all(by.tagName('li')).get(1);
-  let detail = element(by.className("detail"));
-  let profile = element(by.id("profile-panel"));
-  let name = element(by.id("name"));
-  let profileButton = element(by.id("profile-btn"));
-  let rating = element(by.id("rating"));
-  let bargroup = element(by.className("bar-group"));
-  let image = element(by.id("headshot"));
+  let meta1 = element(by.id("the-list")).all(by.tagName("li")).get(0);
+  let meta2 = element(by.id("the-list")).all(by.tagName("li")).get(1);
+  let welcomeMessage = element(by.id("welcome-message"));
   let ratinglabels = element(by.id("rating-labels"));
   let imageBack = element(by.className("showAlias"));
   let miniIronMan = element(by.id("mini-iron-man"));
-  let welcomeMessage = element(by.id("welcome-message"));
-  let weaponry = element(by.id("weaponry"));
+  let profileButton = element(by.id("profile-btn"));
+  let bargroup = element(by.className("bar-group"));
   let bttnmask = element(by.className("bttn-mask"));
-
+  let profile = element(by.id("profile-panel"));
+  let detail = element(by.className("detail"));
+  let title = element(by.tagName("h1 span"));
+  let aliasBtn = element(by.id("alias-btn"));
+  let metas = element(by.className("metas"));
+  let weaponry = element(by.id("weaponry"));
+  let image = element(by.id("headshot"));
+  let rating = element(by.id("rating"));
+  let name = element(by.id("name"));
 
   /////PRE-CLICK////
 
@@ -52,6 +52,19 @@ describe("MetaHumanDB App", () => {
   });
 
   /////POST-CLICK////
+
+
+  describe("AppComponent", () => {
+
+    it("should route to the home page on Title click", () => {
+      meta1.click();
+      expect(name.getText()).toEqual("IRON MAN");
+      title.click();
+      expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/');
+    });
+
+  });
+
 
   describe("Meta-Human Detail", () => {
 
