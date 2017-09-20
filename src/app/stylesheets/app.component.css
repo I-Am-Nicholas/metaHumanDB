@@ -11,7 +11,7 @@ h1 {
   cursor: pointer;
 }
 
-h1 span:focus {
+h1:focus {
   outline: 0;
 }
 
