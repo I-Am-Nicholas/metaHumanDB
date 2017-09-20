@@ -9,6 +9,11 @@
   padding-top: 30px;
 }
 
+#imageParent {
+  height: 300px;
+  margin-bottom: 40px;
+}
+
 #headshot {
   flex-direction: column;
   width: 600px;
