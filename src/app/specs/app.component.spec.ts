@@ -53,16 +53,16 @@ describe('AppComponent', () => {
       expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
     });
 
-    it('should navigate to the Landing Page', () => {
+    it('should have one link that routes Home', () => {
       expect(links.length).toBe(1, 'should have 1 link');
       expect(links[0].linkParams).toEqual(['/'], 'link should go to Landing Page');
     });
 
   });
 
-    describe("", () => {
+    describe("Service Spy", () => {
 
-      it("should call the spy", ()=> {
+      it("should be called", ()=> {
         spy = spyOn(NavResetService.prototype, "relayNavMessage" );
         comp.messageIn();
         expect(spy).toHaveBeenCalled();

@@ -66,6 +66,33 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   /////POST-CLICK////
 
 
+  describe("AppComponent", () => {
+
+    it("should route to the home page on Title click", () => {
+      meta1.click();
+      expect(name.getText()).toEqual("IRON MAN");
+      title.click();
+      expect(browser.getCurrentUrl()).toEqual('http://localhost:4200/');
+    });
+
+    it("should reset the alias button on Title click", () => {
+      meta1.click();
+      profileButton.click();
+      title.click();
+      meta1.click();
+      aliasBtn.click()//Fails when clickable, passes when not.
+      .then(
+        () => {
+          console.log("Alias Button is not clickable.")
+        },
+        () => {
+          throw ("Alias Button is clickable.");
+        }
+      )
+    });
+
+  });
+
 
   describe("Meta-Human Detail", () => {
 
