@@ -30,6 +30,16 @@ describe("NavResetService", () => {
     expect(service.subject.value.text).toBe(false);
   });
 
+  it("should return true boolean from the Observable stream", () => {
+    service.relayNavMessage(true);
+    service.navMessageOut().subscribe(result => expect(result).toEqual({ text: true }));
+  });
+
+  it("should return false boolean from the Observable stream", () => {
+    service.relayNavMessage(false);
+    service.navMessageOut().subscribe(result => expect(result).toEqual({ text: false }));
+  });
+
   it("should return the correct raw true boolean value", () => {
     service.relayNavMessage(true);
     expect(service.getState()).toBe(true);
