@@ -83,14 +83,14 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       aliasBtn.click()//Fails when clickable, passes when not.
       .then(
         () => {
-          console.log("This Element is not clickable.")
+          console.log("Alias Button is not clickable.")
         },
         () => {
-          throw ("This Element is clickable.");
+          throw ("Alias Button is clickable.");
         }
       )
     });
-    
+
   });
 
 

@@ -17,8 +17,17 @@ describe("NavResetService", () => {
 
   it("can use service as an instance of NavResetService",
     inject([NavResetService], (service: NavResetService) => {
-      console.log("NavResetService");
     expect(service instanceof NavResetService).toBe(true);
   }));
+
+  it("should return the correct raw true boolean value", () => {
+    service.relayNavMessage(true);
+    expect(service.getState()).toBe(true);
+  });
+
+  it("should return the correct raw false boolean value", () => {
+    service.relayNavMessage(false);
+    expect(service.getState()).toBe(false);
+  });
 
 });

@@ -9,6 +9,17 @@ const state = {
 @Injectable()
 export class NavResetService {
 
+   navMessage: boolean;
 
+   subject = new BehaviorSubject<any>(this.navMessage);
+
+  relayNavMessage(navMessage: boolean) {
+    state.isActive = navMessage;
+    this.subject.next({ text: navMessage });
+  }
+
+  getState() {
+    return state.isActive;
+  }
 
 }
