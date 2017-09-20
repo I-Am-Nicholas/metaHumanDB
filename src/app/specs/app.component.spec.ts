@@ -43,18 +43,5 @@ describe('AppComponent', () => {
       });
   }));
 
-  describe("Landing Page", () => {
-
-    it('should render title in a h1 tag', () => {
-      let nodeTxt = DOMElement[0].querySelectorAll('h1');
-      expect(findStringInNode(nodeTxt[0], 'META-HUMAN &nbsp; DATABASE')).toBe(true);
-    });
-
-    it('should navigate to the Landing Page', () => {
-      expect(links.length).toBe(1, 'should have 1 link');
-      expect(links[0].linkParams).toEqual(['/'], 'link should go to Landing Page');
-    });
-
-  });
 
 });
