@@ -3,19 +3,20 @@ import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 const state = {
-  isActive: false,
+  isActive: null,
 };
+
 
 @Injectable()
 export class NavResetService {
 
-   navMessage: boolean;
+  reset: string;
 
-   subject = new BehaviorSubject<any>(this.navMessage);
+  subject = new BehaviorSubject<any>(this.reset);
 
-  relayNavMessage(navMessage: boolean) {
-    state.isActive = navMessage;
-    this.subject.next({ text: navMessage });
+  relayNavMessage(reset) {
+    state.isActive = reset;
+    this.subject.next({ text: reset });
   }
 
   navMessageOut(): Observable<any> {
