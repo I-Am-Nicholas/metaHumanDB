@@ -20,7 +20,9 @@ import { WelcomeMessageComponent } from "./components/welcome-message.component"
 import { findStringInNode } from "../testing/find-string-in-node";
 import { click } from "../testing/clicker-left";
 
-
+//ROUTER LIBRARIES
+import { RouterLinkStubDirective } from "../testing/router-stubs";
+import { RouterOutletStubComponent } from "../testing/router-stubs";
 import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
@@ -29,7 +31,9 @@ import { AppRoutingModule } from "./app-routing.module";
     MetaDetailComponent,
     MetasComponent,
     MetaRatingComponent,
-    WelcomeMessageComponent
+    WelcomeMessageComponent,
+    RouterLinkStubDirective,
+    RouterOutletStubComponent
   ],
   imports: [
     BrowserModule,
