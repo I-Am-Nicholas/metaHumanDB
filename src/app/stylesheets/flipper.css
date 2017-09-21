@@ -38,6 +38,13 @@
 	transform: rotateY(180deg);
 }
 
+.show {
+	/*Only for FF bug*/
+	-moz-backface-visibility: unset;
+	-webkit-backface-visibility: unset;
+	backface-visibility: unset;
+}
+
 #back-div {
   position: absolute;
   top: 0;
