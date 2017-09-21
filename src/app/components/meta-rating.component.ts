@@ -1,7 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { MetaDetailComponent } from '../components/meta-detail.component'
-import { DisableAliasBttnService } from '../disable-alias-bttn.service'
 import { Meta } from "../meta";
+
+import { Subscription } from 'rxjs/Subscription';
+
+//SERVICES
+import { DisableAliasBttnService } from '../disable-alias-bttn.service'
+import { NavResetService } from '../nav-reset.service';
+
 
 @Component({
   selector: 'meta-rating',
@@ -11,15 +17,28 @@ import { Meta } from "../meta";
    '../stylesheets/shared/translucentBG.css',
    '../stylesheets/profile-panel.scss',
    '../stylesheets/shared/nav-bttns.css'
- ]
+ ],
+ providers: [ NavResetService ]
 })
 
-export class MetaRatingComponent {
-  constructor(private messageService: DisableAliasBttnService) {}
 
-  toggle: boolean;
-  message: boolean = true;
-  counter: number = 1;
+export class MetaRatingComponent {
+
+  private toggle: boolean;
+  public message: boolean = true;
+  public counter: number = 1;
+  private subscription: Subscription;
+
+  constructor(
+    private messageService: DisableAliasBttnService,
+    private navService: NavResetService
+  ){
+    this.subscription = this.navService.navMessageOut().subscribe(fromService => {
+      if (navService.getState()){
+       this.resetAlias();
+      }
+    });
+  }
 
   messageIn(): void {
     this.counter++;
@@ -33,9 +52,7 @@ export class MetaRatingComponent {
 
   resetAlias(): void {
     this.messageService.relayMessage(false);
-  }
-
-
+  };
 
   /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.

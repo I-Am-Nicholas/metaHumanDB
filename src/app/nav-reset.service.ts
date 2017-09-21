@@ -10,8 +10,7 @@ const state = {
 @Injectable()
 export class NavResetService {
 
-  reset: string;
-
+  private reset: string;
   subject = new BehaviorSubject<any>(this.reset);
 
   relayNavMessage(reset) {
