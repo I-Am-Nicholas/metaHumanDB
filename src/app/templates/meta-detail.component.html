@@ -2,32 +2,32 @@
   <!--i.e, if a meta has been clicked in the list displayed in the
   MetasComponent template view (and therefore a meta has been retrieved), then
    show the following...-->
-  <div id="alias-btn" class="bttn background"
+  <div id="alias-btn" class ="bttn background"
     [class.red] = "toggle"
     [class.bttn-mask] = "message"
-    (click)="toggle = !toggle;"
+    (click) = "toggle = !toggle;"
     ><span>ALIAS</span>
     <span *ngIf = "message"></span>
   </div>
-  <div id="headshot">
+  <div id = "headshot">
 
-    <div class="flip-container">
+    <div class = "flip-container">
 
-      <div class="flipper"[class.showAlias] = "toggle">
+      <div class = "flipper"[class.showAlias] = "toggle">
 
       <div id = "imageParent">
-        <img class="front" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} Symbol" >
+        <img class = "front" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} Symbol" >
         <br><br>
 
-        <div id="back-div" class="back">
+        <div id="back-div" class = "back">
           <img src = "{{clickedMeta.headshotsBack}}" alt = "{{clickedMeta.name}} Symbol" >
         </div>
       </div>
 
         <div id="info">
-          <div id="name" class="front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
-          <div id="alias" class="back">{{clickedMeta.alias | uppercase}}</div>
-          <div id="weaponry" class="front">
+          <div id = "name" class = "front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
+          <div id = "alias" class = "back">{{clickedMeta.alias | uppercase}}</div>
+          <div id = "weaponry" class = "front">
             <ul>
               <p>WEAPONRY</p>
               <li *ngFor= "let eachLine of clickedMeta.weaponry">
@@ -43,6 +43,6 @@
 
   </div>
 
-  <meta-rating [chosenMeta]="clickedMeta"></meta-rating>
+  <meta-rating [chosenMeta] = "clickedMeta"></meta-rating>
 
 </div>

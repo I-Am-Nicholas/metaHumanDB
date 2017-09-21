@@ -28,17 +28,17 @@ import { MetaService } from '../meta-service';
 export class MetaDetailComponent implements OnInit {
 
   @Input() clickedMeta: Meta;
-  message: Boolean;
-  subscription: Subscription;
+  public message: Boolean;
+  private subscription: Subscription;
 
   constructor(
     private messageService: DisableAliasBttnService,
     private metaService: MetaService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
   ) {
 
-    this.subscription = this.messageService.messageOut().subscribe(fromService => {
+   this.subscription = this.messageService.messageOut().subscribe(fromService => {
       if (messageService.getState() == true){
         this.message = fromService;
       }
@@ -46,6 +46,7 @@ export class MetaDetailComponent implements OnInit {
         this.message = null;
       }
     });
+    
   }
 
   ngOnInit(): void {

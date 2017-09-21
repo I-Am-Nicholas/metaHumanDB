@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MetaService } from '../meta-service';
+import { NavResetService } from '../nav-reset.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ import { MetaService } from '../meta-service';
 
 export class AppComponent {
 
-  constructor(
-  ) {}
+  constructor(private service: NavResetService) {}
+
+  messageIn(): void {
+    this.service.relayNavMessage("reset");
+  }
 
 }

@@ -1,11 +1,11 @@
 import { NO_ERRORS_SCHEMA, DebugElement } from "@angular/core";
 import { ComponentFixture, TestBed, async } from "@angular/core/testing";
-import { HttpModule, XHRBackend } from "@angular/http";
+import { HttpModule } from "@angular/http";
 
 //ROUTER LIBRARIES
 import { RouterTestingModule } from "@angular/router/testing";
 import { ActivatedRouteStub } from "../../testing/router-stubs";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from "@angular/router";
 
 import { Observable } from "rxjs/Rx";
 
@@ -29,7 +29,6 @@ describe("MetaDetailComponent", () => {
   let flipperClass: {};
   let metaService: MetaService;
   let serviceSpy: jasmine.Spy;
-  let route: ActivatedRoute;
 
   var activatedRouteStub = new ActivatedRouteStub();
 
@@ -49,7 +48,7 @@ describe("MetaDetailComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MetaDetailComponent);
     metaService = fixture.debugElement.injector.get(MetaService);
-    serviceSpy = spyOn(metaService, 'getMeta').and.returnValue(Promise.resolve());
+    serviceSpy = spyOn(metaService, "getMeta").and.returnValue(Promise.resolve());
     DOMElement = fixture.nativeElement.children;
 
     testMeta = (
@@ -144,7 +143,7 @@ describe("MetaDetailComponent", () => {
       expect(DOMElement[0].querySelector("#alias-btn")).toBeTruthy();
     });
 
-    it("should not be masked", () => {//Further.
+    it("should not be masked", () => {
       comp.message = false;
       fixture.detectChanges();
       expect(DOMElement[0].querySelector(".bttn-mask")).toBeNull();

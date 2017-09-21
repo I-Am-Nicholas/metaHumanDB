@@ -32,7 +32,7 @@ describe('MetaRatingComponent', () => {
 
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
-    serviceSpy = spyOn(dabService, 'relayMessage').and.returnValue(Promise.resolve(fakeMethod));
+    serviceSpy = spyOn(dabService, 'relayMessage')//.and.returnValue(Promise.resolve(fakeMethod));
 
     let testMeta = (
       {
@@ -102,16 +102,30 @@ describe('MetaRatingComponent', () => {
     });
 
     it("Service method call should follow Component method call", () => {
+      expect(serviceSpy).not.toHaveBeenCalled();
       comp.messageIn();
       expect(serviceSpy).toHaveBeenCalled();
     });
 
     it("Profile button click should trigger a call to the Component's method", () => {
-      let messageInSpy = spyOn(comp, 'messageIn').and.callThrough();
+      let spy = spyOn(comp, 'messageIn').and.callThrough();
       debugProfileButton.triggerEventHandler('click', null);
       fixture.detectChanges();
-      expect(messageInSpy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled();
     });
+
+    it("A true argument should call the resetAlias function", () => {
+      let spy = spyOn(comp, 'resetAlias');
+      comp.messageIn();
+      expect(spy).not.toHaveBeenCalled();
+      comp.messageIn();
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it("resetAlias should call service spy", () => {
+      comp.resetAlias();
+      expect(serviceSpy).toHaveBeenCalledWith(false);
+    })
 
   });
 
