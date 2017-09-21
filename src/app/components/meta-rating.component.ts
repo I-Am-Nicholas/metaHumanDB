@@ -24,7 +24,7 @@ import { NavResetService } from '../nav-reset.service';
 
 export class MetaRatingComponent {
 
-  private toggle: boolean;
+  public toggle: boolean;
   public message: boolean = true;
   public counter: number = 1;
   private subscription: Subscription;

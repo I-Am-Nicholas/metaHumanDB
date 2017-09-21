@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private service: NavResetService) {}
 
   messageIn(): void {
-    return this.service.relayNavMessage("reset");
+    this.service.relayNavMessage("reset");
   }
 
 }
