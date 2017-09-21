@@ -22,14 +22,20 @@ export class MetaRatingComponent {
   counter: number = 1;
 
   messageIn(): void {
-      this.counter++;
-      if (this.counter % 2 == 0) {
-        this.messageService.relayMessage(true);
-      }
-      else {
-        this.messageService.relayMessage(false);
-      }
+    this.counter++;
+    if (this.counter % 2 == 0) {
+      this.messageService.relayMessage(true);
+    }
+    else {
+      this.resetAlias();
+    }
   }
+
+  resetAlias(): void {
+    this.messageService.relayMessage(false);
+  }
+
+
 
   /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
