@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'welcome-message',
@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../stylesheets/welcome-message.component.css']
 })
 
-export class WelcomeMessageComponent implements OnInit {
+export class WelcomeMessageComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() showAnimation: Boolean;
 
 }

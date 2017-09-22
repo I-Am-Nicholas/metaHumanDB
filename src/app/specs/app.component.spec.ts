@@ -51,7 +51,7 @@ describe("AppComponent", () => {
 
     it("should render title in a h1 tag", () => {
       let nodeTxt = DOMElement[0].querySelectorAll("h1");
-      expect(findStringInNode(nodeTxt[0], "META-HUMAN &nbsp; DATABASE")).toBe(true);
+      expect(findStringInNode(nodeTxt[0], "META-HUMAN &nbsp;DATABASE")).toBe(true);
     });
 
     it("should have one link that routes Home", () => {

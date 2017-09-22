@@ -1,9 +1,14 @@
+#welcome-parent {
+  height: 500px;
+  overflow: hidden;
+}
+
 #message-surround {
   overflow: hidden;
   position: absolute;
   font-size: 1.5em;
   color: #21658c;
-  border-bottom: 2px dashed red;
+  /*border-bottom: 2px dashed red;*/
   padding-bottom: 10px;
   right: 220px;
   top: 200px;
@@ -12,6 +17,39 @@
   width: 560px;
   font-size: 1.2rem;
   word-spacing: 8px;
+}
+
+#mini-iron-man {
+  height: 30px;
+  width: 80px;
+  float: right;
+}
+
+.jet-stream {
+  border-bottom: 1px solid #999;
+  border-color: #bbb;
+  height: 20px;
+}
+
+.flight {
+  -webkit-animation: increase-tony 3s;
+  -moz-animation:    increase-tony 3s;
+  -o-animation:      increase-tony 3s;
+  animation:         increase-tony 9s;
+  animation-fill-mode: forwards;
+  margin-top: 210px;
+  margin-left: -80px;
+  width: 0;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes increase-tony {
+  100% {
+    width: 150%;
+  }
 }
 
 @keyframes increase {
@@ -36,8 +74,12 @@
   -moz-animation-timing-function: cubic-bezier(1, 1, 0.65, 0.35);
   animation-timing-function: cubic-bezier(1, 1, 0.65, 0.35);
 
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 2.5s;
+  -moz-animation-duration: 2.5s;
+  animation-duration: 2.5s;
 
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
 }
