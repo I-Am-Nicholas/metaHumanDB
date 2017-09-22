@@ -22,8 +22,7 @@
         {{individualMeta.name | uppercase}}
       </li>
     </ul>
-    <!--The 'clickedMeta' property is created here, with the value of 'selectedMeta'-->
-    <welcome-message></welcome-message>
+    <welcome-message [showAnimation]="!selectedMeta"></welcome-message>
     <router-outlet></router-outlet>
   </div>
 </div>
