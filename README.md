@@ -1,7 +1,6 @@
 # META-HUMAN DATABASE
 
-![untitled](https://user-images.githubusercontent.com/24227633/30567428-392aa67a-9cc8-11e7-9c50-ee9bef4ce8b9.gif)
-
+![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
 ##LINK
 
