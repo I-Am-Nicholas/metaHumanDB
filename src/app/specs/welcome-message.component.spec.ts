@@ -35,5 +35,8 @@ describe('WelcomeMessageComponent', () => {
     expect(message.textContent).not.toBe('');
   });
 
+  fit("should initialize with a false value", () => {
+    expect(component.showAnimation).toBeFalsy();
+  });
 
 });

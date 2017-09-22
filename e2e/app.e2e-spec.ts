@@ -53,12 +53,12 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   describe("WelcomeMessageComponent", () => {
 
     it("should be present and visible", () => {
+      expect(miniIronMan.isDisplayed()).toBe(true);
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
       welcomeMessage.getText().then((result) => {
-        expect(result).not.toBe("");
+      expect(result).not.toBe("");
       });
-
     });
 
   });
