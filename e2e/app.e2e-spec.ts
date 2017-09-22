@@ -21,7 +21,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   let welcomeMessage = element(by.id("welcome-message"));
   let ratinglabels = element(by.id("rating-labels"));
   let imageBack = element(by.className("showAlias"));
-  let miniIronMan = element(by.id("mini-iron-man"));
+  let miniIronMan = element(by.css("img"));
   let profileButton = element(by.id("profile-btn"));
   let bargroup = element(by.className("bar-group"));
   let bttnmask = element(by.className("bttn-mask"));
@@ -53,7 +53,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   describe("WelcomeMessageComponent", () => {
 
     it("should be present and visible", () => {
-      expect(miniIronMan.isDisplayed()).toBe(true);
+      expect(miniIronMan.isPresent()).toBe(true);
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
       welcomeMessage.getText().then((result) => {
