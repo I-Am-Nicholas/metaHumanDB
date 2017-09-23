@@ -56,7 +56,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       expect(miniIronMan.isPresent()).toBe(true);
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
-      welcomeMessage.getText().then((result) => {
+      welcomeMessage.getText().then((result) => {//returns a promise, needs .then to resolve.
       expect(result).not.toBe("");
       });
     });
@@ -88,7 +88,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       meta1.click();
       expect(name.getText()).toEqual("IRON MAN");
       title.click();
-      expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/");
+      expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/welcome");
     });
 
     it("should reset the alias button on Title click", () => {

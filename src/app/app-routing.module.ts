@@ -8,8 +8,9 @@ import { MetaRatingComponent } from "./components/meta-rating.component";
 import { WelcomeMessageComponent } from "./components/welcome-message.component";
  
 const routes: Routes = [
-  { path: "", redirectTo: "/", pathMatch: "full" },
+  { path: "", redirectTo: "welcome", pathMatch: "full" },
   { path: "detail/:id",  component: MetaDetailComponent },
+  { path: "welcome", component: WelcomeMessageComponent },
   { path: "**", redirectTo: "metas", pathMatch: "full" }
 ];
  

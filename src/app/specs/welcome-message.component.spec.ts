@@ -31,7 +31,6 @@ describe("WelcomeMessageComponent", () => {
 
   it("should change showAnimation value to true", () => {
     component.ngOnInit();
-    fixture.detectChanges();
     expect(component.showAnimation).toBe(true);
   });
 
