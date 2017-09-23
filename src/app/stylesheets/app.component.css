@@ -4,11 +4,19 @@
   margin-top: 50px;
 }
 
+#header-parent {
+  width: 100%;
+  margin-top: 50px;
+}
+
+
 h1 {
+  width: 900px;
+  margin: 0 auto;
   text-align: center;
   font-size: 3.75rem;
   color: #21658c;
-  cursor: pointer;
+  cursor: url(../../assets/face-plate.png), auto;
 }
 
 h1:focus {
