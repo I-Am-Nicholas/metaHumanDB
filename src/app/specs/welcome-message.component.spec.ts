@@ -29,6 +29,12 @@ describe("WelcomeMessageComponent", () => {
     expect(component.showAnimation).toBeFalsy();
   });
 
+  it("should change showAnimation value to true", () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.showAnimation).toBe(true);
+  });
+
   describe("DOM", () => {
 
     // querySelectorAll returns a NodeList object, whether it locates the argument in the DOM

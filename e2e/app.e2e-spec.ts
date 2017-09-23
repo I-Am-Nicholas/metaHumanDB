@@ -66,6 +66,22 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   /////POST-CLICK////
 
 
+  describe("Title", () => {
+
+    it("when clicked should launch Welcome Message with Mini Iron Man", () => {
+      meta2.click();
+      title.click();
+      expect(miniIronMan.isPresent()).toBe(true);
+      expect(welcomeMessage.isPresent()).toBe(true);
+      expect(welcomeMessage.isDisplayed()).toBe(true);
+      welcomeMessage.getText().then((result) => {
+        expect(result).not.toBe("");
+      });
+    });
+
+  });
+
+
   describe("AppComponent", () => {
 
     it("should route to the home page on Title click", () => {
