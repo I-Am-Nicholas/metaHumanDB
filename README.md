@@ -2,9 +2,9 @@
 
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
-##LINK TO DEPLOYED APPLICATION
+## LINK TO DEPLOYED APPLICATION
 
-https://metahuman-db.herokuapp.com
+  https://metahuman-db.herokuapp.com
 
 
 ## OVERVIEW
@@ -25,20 +25,20 @@ https://metahuman-db.herokuapp.com
 
 ## INSTALLATION INSTRUCTIONS
 
-# Dependency installation timeline:
+### Dependency installation timeline:
 
   Xcode —> Homebrew —> Node.js(with NPM (Node Package Manager)) —> Angular CLI
 
 
-# Dependency Installation/Set Up
+### Dependency Installation/Set Up
 
 1. Download Xcode via the Mac App Store.
 
-  https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
+    https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
 
 2. Type the code below into your Command Line and follow the instructions to install Homebrew.
 
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
 
 3. Next, type:
 
@@ -64,7 +64,7 @@ https://metahuman-db.herokuapp.com
 
   - git clone https://github.com/marudine/superheroes.git
 
-# Running the application:
+### Running the application:
 
   Start a server on your machine by typing:
 
@@ -77,7 +77,7 @@ https://metahuman-db.herokuapp.com
   - https://metahuman-db.herokuapp.com/
 
 
-# Running the unit tests:
+### Running the unit tests:
 
   In a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
 
@@ -86,7 +86,7 @@ https://metahuman-db.herokuapp.com
   These tests will also run in a specifically allocated browser window.
 
 
-# Running the End-to-End tests:
+### Installing the End-to-End Test tool, Protractor
 
   Again, in a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
 
@@ -96,7 +96,9 @@ https://metahuman-db.herokuapp.com
 
   web driver-manager is necessary to start up the server that Protractor uses to run its tests.
 
-  First, open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
+### Running the End-to-End tests:
+
+  Open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
   Type:
 
   - webdriver-manager start
