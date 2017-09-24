@@ -3,7 +3,7 @@
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
 
-##LINK TO DEPLOYED APPLICATION
+## LINK TO DEPLOYED APPLICATION
 
   https://metahuman-db.herokuapp.com
 
@@ -112,11 +112,6 @@
 
   These tests will also run in a dedicated window of your browser. Switch bck to the command line to see the rows of green passed test dots!
 
-
-
-## UPCOMING TECH
-
-  - Node.js backend connecting to a Mongo database.
 
 ## ISSUES
 
