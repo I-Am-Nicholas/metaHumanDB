@@ -2,7 +2,7 @@
 
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
-##LINK
+##LINK TO DEPLOYED APPLICATION
 
 https://metahuman-db.herokuapp.com
 
@@ -22,14 +22,103 @@ https://metahuman-db.herokuapp.com
 - CSS(with Sass)
 - Typescript
 
+
+## INSTALLATION INSTRUCTIONS
+
+# Dependency installation timeline:
+
+  Xcode —> Homebrew —> Node.js(with NPM (Node Package Manager)) —> Angular CLI
+
+
+# Dependency Installation/Set Up
+
+1. Download Xcode via the Mac App Store.
+
+  https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
+
+2. Type the code below into your Command Line and follow the instructions to install Homebrew.
+
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+
+3. Next, type:
+
+  - brew install node
+
+4. NPM is installed with Node. To test that Node is installed correctly type:
+
+  - node -v
+
+  You should see something resembling: v8.4.0
+
+5. To test that NPM is installed correctly type:
+
+  - npm -v
+
+  You should see something resembling: 5.4.0
+
+6. To install the Angular CLI tool, type:
+
+  - npm install -g @angular/cli
+
+7. Clone the (superheroes) repo:
+
+  - git clone https://github.com/marudine/superheroes.git
+
+# Running the application:
+
+  Start a server on your machine by typing:
+
+  - ng serve --open
+
+  A local version of Meta-Human Database will open in your browser at location http://localhost:4200/.
+
+  For the live/deployed version of the application:
+
+  - https://metahuman-db.herokuapp.com/
+
+
+# Running the unit tests:
+
+  In a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
+
+  - ng test
+
+  These tests will also run in a specifically allocated browser window.
+
+
+# Running the End-to-End tests:
+
+  Again, in a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
+
+  - npm install -g protractor
+
+  This will install two more command line tools, Protractor itself and Selenium’s webdriver-manager.
+
+  web driver-manager is necessary to start up the server that Protractor uses to run its tests.
+
+  First, open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
+  Type:
+
+  - webdriver-manager start
+
+  Let that action complete (it should inform you on the last emitted line of the stack trace that the “Selenium Server is up and running”)
+
+  Then:
+
+  - protractor conf.js
+
+  These tests will also run in a dedicated window of your browser. Switch bck to the command line to see the rows of green passed test dots!
+
+
+
 ## UPCOMING TECH
 
-- Node.js backend connecting to a Mongo database.
+  - Node.js backend connecting to a Mongo database.
 
 ## ISSUES
 
-- Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
+  - Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
 
-- Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.
+  - Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.
 
-- Heroku required even more specific configuration than normal. There were a number of small pre-requisites that needed fulfilling before the platform accepted my deployment...even though the app worked perfectly locally.
+  - Heroku required even more specific configuration than normal. There were a number of small pre-requisites that needed fulfilling before the platform accepted my deployment...even though the app worked perfectly locally.
