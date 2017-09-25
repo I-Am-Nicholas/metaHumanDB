@@ -2,24 +2,24 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!--**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*-->
 
-**META-HUMAN DATABASE TABLE OF CONTENTS**
+# META-HUMAN DATABASE — TABLE OF CONTENTS
 
-- [META-HUMAN DATABASE](#meta-human-database)
-  - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
-  - [OVERVIEW](#overview)
-  - [TECHNOLOGIES](#technologies)
-  - [INSTALLATION INSTRUCTIONS](#installation-instructions)
-    - [Dependency installation timeline:](#dependency-installation-timeline)
-    - [Dependency Installation/Set Up](#dependency-installationset-up)
-    - [Running the application:](#running-the-application)
-    - [Running the unit tests:](#running-the-unit-tests)
-    - [Installing the End-to-End Test tool, Protractor](#installing-the-end-to-end-test-tool-protractor)
-    - [Running the End-to-End tests:](#running-the-end-to-end-tests)
-  - [ISSUES](#issues)
+
+- [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
+- [OVERVIEW](#overview)
+- [TECHNOLOGIES](#technologies)
+- [INSTALLATION INSTRUCTIONS](#installation-instructions)
+  - [Dependency installation timeline:](#dependency-installation-timeline)
+  - [Dependency Installation/Set Up](#dependency-installationset-up)
+  - [Running the application:](#running-the-application)
+  - [Running the unit tests:](#running-the-unit-tests)
+  - [Installing the End-to-End Test tool, Protractor](#installing-the-end-to-end-test-tool-protractor)
+  - [Running the End-to-End tests:](#running-the-end-to-end-tests)
+- [ISSUES](#issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# META-HUMAN DATABASE
+
 
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
