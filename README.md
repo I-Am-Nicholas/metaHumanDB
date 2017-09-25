@@ -5,6 +5,7 @@
 
 ## TABLE OF CONTENTS
 
+- [DEMO](#demo)
 - [OVERVIEW](#overview)
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
 - [TECHNOLOGIES](#technologies)
@@ -20,7 +21,8 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 &nbsp;
-&nbsp;
+## DEMO
+
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
 
@@ -137,7 +139,7 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
-&nbsp; 
+&nbsp;
 ## ISSUES
 
   - Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
