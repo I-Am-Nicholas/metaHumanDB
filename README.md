@@ -18,10 +18,9 @@
   - [Running the End-to-End tests:](#running-the-end-to-end-tests)
 - [ISSUES](#issues)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->    
 
 
-   
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
 
