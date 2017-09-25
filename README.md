@@ -1,6 +1,9 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!--**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*-->
+# META-HUMAN DATABASE
+
+## TABLE OF CONTENTS
 
 - [OVERVIEW](#overview)
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
@@ -30,12 +33,12 @@
 
 - Tested using the Jasmine framework, with Protractor for end-to-end tests and Karma for unit tests.
 
-
+&nbsp;
 ## LINK TO DEPLOYED APPLICATION
 
   https://metahuman-db.herokuapp.com
 
-
+&nbsp;
 ## TECHNOLOGIES
 
 - Angular 4
@@ -45,7 +48,7 @@
 - Protractor
 - Karma
 
-
+&nbsp;
 ## INSTALLATION INSTRUCTIONS
 
 ### Dependency installation timeline:
@@ -134,7 +137,7 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
-
+&nbsp; 
 ## ISSUES
 
   - Angular 4 not being a mature iteration has hindered me quite a bit. Specific info is hard to find or there is very little of it once I find any. I expected this but was hoping the sparse amount of information wouldn't hold me back as much as it has.
