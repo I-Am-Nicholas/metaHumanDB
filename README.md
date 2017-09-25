@@ -2,8 +2,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!--**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*-->
 
-# META-HUMAN DATABASE — TABLE OF CONTENTS
+# META-HUMAN DATABASE
 
+## TABLE OF CONTENTS
 
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
 - [OVERVIEW](#overview)
@@ -20,7 +21,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-
+   
 ![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
 
 
