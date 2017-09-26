@@ -126,6 +126,8 @@
 
 ### Running the End-to-End tests:
 
+  **NB The Protractor tests require that the app server (via 'ng serve') is already running.**
+  
   Open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
   Type:
 
