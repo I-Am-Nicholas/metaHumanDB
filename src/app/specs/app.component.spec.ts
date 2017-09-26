@@ -37,7 +37,7 @@ describe("AppComponent", () => {
       DOMElement = fixture.nativeElement.children;
       fixture.detectChanges();
 
-      // find DebugElements with an attached RouterLinkStubDirective
+      // find DebugElements that have an attached RouterLinkStubDirective
       linkDes = fixture.debugElement
         .queryAll(By.directive(RouterLinkStubDirective));
 
@@ -66,7 +66,7 @@ describe("AppComponent", () => {
       it("should be called", ()=> {
         spy = spyOn(NavResetService.prototype, "relayNavMessage");
         expect(spy).not.toHaveBeenCalled();
-        comp.messageIn();
+        comp.messageToService();
         expect(spy).toHaveBeenCalled();
       });
 
