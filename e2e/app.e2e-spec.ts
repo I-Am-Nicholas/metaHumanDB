@@ -71,6 +71,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
     it("when clicked should launch Welcome Message with Mini Iron Man", () => {
       meta2.click();
       title.click();
+      expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/welcome");
       expect(miniIronMan.isPresent()).toBe(true);
       expect(welcomeMessage.isPresent()).toBe(true);
       expect(welcomeMessage.isDisplayed()).toBe(true);
