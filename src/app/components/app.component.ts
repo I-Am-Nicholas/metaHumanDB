@@ -1,20 +1,18 @@
-import { Component } from '@angular/core';
-import { MetaService } from '../meta-service';
-import { NavResetService } from '../nav-reset.service';
+import { Component } from "@angular/core";
+import { NavResetService } from "../nav-reset.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: '../templates/app.component.html',
-  styleUrls: ['../stylesheets/app.component.css',
-   '../stylesheets/shared/translucentBG.css'],
-  providers: [ MetaService ]
+  selector: "app-root",
+  templateUrl: "../templates/app.component.html",
+  styleUrls: ["../stylesheets/app.component.css",
+   "../stylesheets/shared/translucentBG.css"]
 })
 
 export class AppComponent {
 
   constructor(private service: NavResetService) {}
 
-  messageIn(): void {
+  messageToService(): void {
     this.service.relayNavMessage("reset");
   }
 
