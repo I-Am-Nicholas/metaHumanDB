@@ -33,11 +33,20 @@ describe("Router: App", () => {
     fixture = TestBed.createComponent(AppComponent);
   });
 
+  describe("navigating to ", () => {
 
-  it("navigating to '' should redirect you to /welcome", fakeAsync(() => {
-    router.navigate([""]);
-    tick(); //wait for promise to resolve.
-    expect(location.path()).toBe("/welcome");
-  }));
+    it("'' should redirect you to /welcome", fakeAsync(() => {
+      router.navigate([""]);
+      tick(); //wait for promise to resolve.
+      expect(location.path()).toBe("/welcome");
+    }));
+
+    it("a nonsensical route should redirect you to /welcome", fakeAsync(() => {
+      router.navigate(["Mrmxyzptlk"]);
+      tick();
+      expect(location.path()).toBe("/welcome");
+    }));
+
+  });
 
 });
