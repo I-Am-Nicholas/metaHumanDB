@@ -80,6 +80,8 @@
 
 ### Running the unit tests:
 
+![karma_unit_tests](https://user-images.githubusercontent.com/24227633/30978401-59955822-a472-11e7-834d-ab388435cf2e.gif)
+
   In a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
 
   - ng test
@@ -98,6 +100,8 @@
   web driver-manager is necessary to start up the server that Protractor uses to run its tests.
 
 ### Running the End-to-End tests:
+
+![protractor_end-to-end_tests](https://user-images.githubusercontent.com/24227633/30978571-db678ac8-a472-11e7-952f-5a106bb6e7ca.gif)
 
   Open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
   Type:
