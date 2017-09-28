@@ -24,11 +24,12 @@ $end-position: 0;
   right: 0;
   margin: 50px;
   opacity: 0.4;
-  z-index: 1;
+  z-index: 1000;
 }
 
 li {
-  z-index: 1000;
+  position: relative;
+  z-index: 10000;
 }
 
 @-webkit-keyframes slidein { from { left: $start-position; } to { margin-left: 0%; }  }
@@ -55,7 +56,7 @@ li {
   background-color: white;
   margin: 25px 0 0 0;
   padding: 80px 0;
-  z-index: 1001;
+  z-index: 1000;
   font-family: helvetica;
   font-weight: 600;
 }
