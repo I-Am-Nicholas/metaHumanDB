@@ -120,6 +120,11 @@ describe("MetaDetailComponent", () => {
       expect(DOMElement[0].querySelector("#headshot img")).toBeTruthy();
     });
 
+    it("should provide alt text for screenreaders", () => {
+      var x = DOMElement[0].querySelector("#back-div");
+      expect(x.innerHTML).toContain("Thor image");
+    });
+
   });
 
 
