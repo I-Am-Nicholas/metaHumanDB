@@ -20,6 +20,8 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   let meta2 = element(by.id("the-list")).all(by.tagName("li")).get(1);
   let welcomeMessage = element(by.id("welcome-message"));
   let ratinglabels = element(by.id("rating-labels"));
+  let imageParentFront = element(by.className("front"));
+  let imageParentBack = element(by.css(".back img"));
   let imageBack = element(by.className("showAlias"));
   let miniIronMan = element(by.css("img"));
   let profileButton = element(by.id("profile-btn"));
@@ -113,7 +115,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
 
   describe("Meta-Human Detail", () => {
 
-    it("should show all details of selected meta post-click", () => {
+    fit("should show all details of selected meta post-click", () => {
       let alias = element(by.id("alias"));
 
       meta1.click();
@@ -124,7 +126,9 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       expect(ratinglabels.isPresent()).toBe(true);//should show rating info...
       expect(bargroup.isDisplayed()).toBe(true);//should show rating bars...
       expect(weaponry.isPresent()).toBe(true);//should show metadata.
-    });
+      expect(imageParentFront.getAttribute("alt")).toEqual("Iron Man image");
+      expect(imageParentBack.getAttribute("alt")).toEqual("Tony Stark image");
+  });
 
   });
 
