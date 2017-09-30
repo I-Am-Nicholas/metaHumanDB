@@ -6,7 +6,7 @@
       <li *ngFor= "let individualMeta of metaShown"
           (click)="onSelect(individualMeta)"
           [routerLink]="['/detail', individualMeta.id]"
-          routerLinkActive="red"
+          routerLinkActive="red-highlight"
           [class.background]="individualMeta">
           <!--if individualMeta is exactly equivalent to selectedMeta, then
         individualMeta gets the selectedMeta class applied-->
