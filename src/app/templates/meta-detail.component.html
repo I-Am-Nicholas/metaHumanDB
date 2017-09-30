@@ -4,10 +4,9 @@
    show the following...-->
   <div id="alias-btn" class ="bttn background"
     [class.red] = "toggle"
-    [class.bttn-mask] = "message"
+    [class.bttn-mask] = "messageToService"
     (click) = "toggle = !toggle;"
     ><span>ALIAS</span>
-    <span *ngIf = "message"></span>
   </div>
   <div id = "headshot">
 
