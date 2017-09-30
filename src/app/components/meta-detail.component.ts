@@ -28,7 +28,7 @@ import { MetaService } from '../meta-service';
 export class MetaDetailComponent implements OnInit {
 
   @Input() clickedMeta: Meta;
-  public message: Boolean;
+  public messageToService: Boolean;
   private subscription: Subscription;
 
   constructor(
@@ -40,13 +40,13 @@ export class MetaDetailComponent implements OnInit {
 
    this.subscription = this.messageService.messageOut().subscribe(fromService => {
       if (messageService.getState() == true){
-        this.message = fromService;
+        this.messageToService = fromService;
       }
       else {
-        this.message = null;
+        this.messageToService = null;
       }
     });
-    
+
   }
 
   ngOnInit(): void {

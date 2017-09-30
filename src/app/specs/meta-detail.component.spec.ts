@@ -120,14 +120,14 @@ describe("MetaDetailComponent", () => {
       expect(DOMElement[0].querySelector("#headshot img")).toBeTruthy();
     });
 
-    it("back image should provide alt text for screenreaders", () => {
-      var x = DOMElement[0].querySelector("#back-div");
-      expect(x.innerHTML).toContain("God of Thunder image");
+    it("back image should have alt text for screenreaders", () => {
+      var backDiv = DOMElement[0].querySelector("#back-div");
+      expect(backDiv.innerHTML).toContain("God of Thunder image");
     });
 
-    it("front image should provide alt text for screenreaders", () => {
-      var x = DOMElement[0].querySelector("#imageParent");
-      expect(x.innerHTML).toContain("Thor image");
+    it("front image should have alt text for screenreaders", () => {
+      var imageParent = DOMElement[0].querySelector("#imageParent");
+      expect(imageParent.innerHTML).toContain("Thor image");
     });
 
   });
@@ -139,7 +139,7 @@ describe("MetaDetailComponent", () => {
       expect(DOMElement[0].querySelector("#weaponry")).toBeTruthy();
     });
 
-    it("the DOM should display the mocked weaponry", () => {
+    it("the DOM should display the weaponry", () => {
       let HTMLnode = DOMElement[0].querySelectorAll("#weaponry li");
       expect(findStringInNode(HTMLnode[0], testMeta.weaponry)).toBe(true);
     });
@@ -154,13 +154,13 @@ describe("MetaDetailComponent", () => {
     });
 
     it("should not be masked", () => {
-      comp.message = false;
+      comp.messageToService = false;
       fixture.detectChanges();
       expect(DOMElement[0].querySelector(".bttn-mask")).toBeNull();
     });
 
     it("should be masked", () => {
-      comp.message = true;
+      comp.messageToService = true;
       fixture.detectChanges();
       expect(DOMElement[0].querySelector(".bttn-mask")).toBeTruthy();
     });
