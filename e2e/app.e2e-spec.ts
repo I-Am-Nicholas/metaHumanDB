@@ -115,7 +115,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
 
   describe("Meta-Human Detail", () => {
 
-    fit("should show all details of selected meta post-click", () => {
+    it("should show all details of selected meta post-click", () => {
       let alias = element(by.id("alias"));
 
       meta1.click();
