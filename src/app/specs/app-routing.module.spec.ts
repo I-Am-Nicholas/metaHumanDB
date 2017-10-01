@@ -47,6 +47,13 @@ describe("Router: App", () => {
       expect(location.path()).toBe("/welcome");
     }));
 
+    it("a correct route should be accepted/not directed to welcome", fakeAsync(() => {
+      router.navigate(["detail/1"]);
+      tick();
+      expect(location.path()).not.toBe("/welcome");
+      expect(location.path()).toBe("/detail/1");
+    }));
+
   });
 
 });
