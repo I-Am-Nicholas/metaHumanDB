@@ -96,6 +96,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
 
     it("should reset the alias button on Title click", () => {
       meta1.click();
+      expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/detail/1");
       profileButton.click();
       title.click();
       meta1.click();
@@ -167,8 +168,10 @@ let aliasClick = () => {//Fails when clickable, passes when not.
         meta1.click();
         meta2.click();
         browser.navigate().back();
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/detail/1");
         expect(name.getText()).toEqual("IRON MAN");
         browser.navigate().forward();
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/detail/2");
         expect(name.getText()).toEqual("CAPTAIN AMERICA");
       });
 
