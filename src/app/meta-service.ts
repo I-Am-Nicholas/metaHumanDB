@@ -46,7 +46,7 @@ conversion of the response into a json object of Meta type. */
   }
 
   private handleError(error: any): Promise<any> {
-    console.error("An error occurred, Nicholas:", error);
+    console.error("An error occurred:", error);
     return Promise.reject( error );
   }
 

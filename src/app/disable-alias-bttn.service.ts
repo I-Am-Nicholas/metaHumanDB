@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 const state = {
   isActive: false,
@@ -11,7 +11,7 @@ export class DisableAliasBttnService {
 
   message: boolean;
 
-  subject = new BehaviorSubject<any>(this.message); //Private?
+  subject = new BehaviorSubject<any>(this.message);
 
   relayMessage(message: boolean) {
     state.isActive = message;
