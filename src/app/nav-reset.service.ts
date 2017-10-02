@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
 const state = {
   isActive: null,

@@ -1,10 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { DebugElement } from "@angular/core";
+import { By } from "@angular/platform-browser";
 
-import { DisableAliasBttnService } from '../disable-alias-bttn.service'
-import { findStringInNode } from '../../testing/find-string-in-node';
-import { MetaRatingComponent } from '../components/meta-rating.component';
+import { DisableAliasBttnService } from "../disable-alias-bttn.service"
+import { findStringInNode } from "../../testing/find-string-in-node";
+import { MetaRatingComponent } from "../components/meta-rating.component";
 
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
@@ -16,7 +16,7 @@ let serviceSpy: jasmine.Spy;
 
 const fakeMethod = "fakeMethod";
 
-describe('MetaRatingComponent', () => {
+describe("MetaRatingComponent", () => {
 
   beforeEach(async() => {
 
@@ -32,7 +32,7 @@ describe('MetaRatingComponent', () => {
 
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
-    serviceSpy = spyOn(dabService, 'relayMessage')//.and.returnValue(Promise.resolve(fakeMethod));
+    serviceSpy = spyOn(dabService, "relayMessage")//.and.returnValue(Promise.resolve(fakeMethod));
 
     let testMeta = (
       {
@@ -51,7 +51,7 @@ describe('MetaRatingComponent', () => {
     comp.chosenMeta = testMeta;
     debugProfileButton = fixture.debugElement.query(By.css("#profile-btn"));
     HTMLnode = fixture.nativeElement;
-    profile = HTMLnode.querySelector('#profile-panel');
+    profile = HTMLnode.querySelector("#profile-panel");
     fixture.detectChanges();
 
   });
@@ -60,25 +60,25 @@ describe('MetaRatingComponent', () => {
   describe("Profile Panel", () => {
 
     it("should not be visible in DOM", () => {
-      expect(findStringInNode(profile, 'hidden')).toBe(true);
+      expect(findStringInNode(profile, "hidden")).toBe(true);
     });
 
     it("should be visible in DOM after Profile button clicked", () => {
-      debugProfileButton.triggerEventHandler('click', null);
+      debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
-      expect(findStringInNode(profile, 'hidden')).toBe(false);
+      expect(findStringInNode(profile, "hidden")).toBe(false);
     });
 
     it("should not be visible in DOM after Profile button clicked twice", () => {
-      debugProfileButton.triggerEventHandler('click', null);
+      debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
-      debugProfileButton.triggerEventHandler('click', null);
+      debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
-      expect(findStringInNode(profile, 'hidden')).toBe(true);
+      expect(findStringInNode(profile, "hidden")).toBe(true);
     });
 
     it("should contain a string", () => {
-      debugProfileButton.triggerEventHandler('click', null);
+      debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
       expect(profile.textContent).toContain(comp.chosenMeta.profile[0]);
     });
@@ -98,7 +98,7 @@ describe('MetaRatingComponent', () => {
       fixture.detectChanges();
       comp.messageIn();
       fixture.detectChanges();
-      expect(comp.counter).toEqual(3)
+      expect(comp.toggler).toEqual(3)
     });
 
     it("Service method call should follow Component method call", () => {
@@ -108,14 +108,14 @@ describe('MetaRatingComponent', () => {
     });
 
     it("Profile button click should trigger a call to the Component's method", () => {
-      let spy = spyOn(comp, 'messageIn').and.callThrough();
-      debugProfileButton.triggerEventHandler('click', null);
+      let spy = spyOn(comp, "messageIn").and.callThrough();
+      debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
       expect(spy).toHaveBeenCalled();
     });
 
     it("A true argument should call the resetAlias function", () => {
-      let spy = spyOn(comp, 'resetAlias');
+      let spy = spyOn(comp, "resetAliasBtn");
       comp.messageIn();
       expect(spy).not.toHaveBeenCalled();
       comp.messageIn();
@@ -123,9 +123,9 @@ describe('MetaRatingComponent', () => {
     });
 
     it("resetAlias should call service spy", () => {
-      comp.resetAlias();
+      comp.resetAliasBtn();
       expect(serviceSpy).toHaveBeenCalledWith(false);
-    })
+    });
 
   });
 

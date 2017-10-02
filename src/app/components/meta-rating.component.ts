@@ -1,22 +1,21 @@
-import { Component, Input } from '@angular/core';
-import { MetaDetailComponent } from '../components/meta-detail.component'
+import { Component, Input } from "@angular/core";
 import { Meta } from "../meta";
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from "rxjs/Subscription";
 
 //SERVICES
-import { DisableAliasBttnService } from '../disable-alias-bttn.service'
-import { NavResetService } from '../nav-reset.service';
+import { DisableAliasBttnService } from "../disable-alias-bttn.service"
+import { NavResetService } from "../nav-reset.service";
 
 
 @Component({
-  selector: 'meta-rating',
-  templateUrl: '../templates/meta-rating.component.html',
+  selector: "meta-rating",
+  templateUrl: "../templates/meta-rating.component.html",
   styleUrls: [
-    '../stylesheets/meta-rating.component.scss',
-   '../stylesheets/shared/translucentBG.css',
-   '../stylesheets/profile-panel.scss',
-   '../stylesheets/shared/nav-bttns.css'
+    "../stylesheets/meta-rating.component.scss",
+   "../stylesheets/shared/translucentBG.css",
+   "../stylesheets/profile-panel.scss",
+   "../stylesheets/shared/nav-bttns.css"
  ],
  providers: [ NavResetService ]
 })
@@ -26,7 +25,7 @@ export class MetaRatingComponent {
 
   public toggle: boolean;
   public message: boolean = true;
-  public counter: number = 1;
+  public toggler: number = 1;
   private subscription: Subscription;
 
   constructor(
@@ -35,22 +34,22 @@ export class MetaRatingComponent {
   ){
     this.subscription = this.navService.navMessageOut().subscribe(fromService => {
       if (navService.getState()){
-       this.resetAlias();
+       this.resetAliasBtn();
       }
     });
   }
 
   messageIn(): void {
-    this.counter++;
-    if (this.counter % 2 == 0) {
+    this.toggler++;
+    if (this.toggler % 2 == 0) {
       this.messageService.relayMessage(true);
     }
     else {
-      this.resetAlias();
+      this.resetAliasBtn();
     }
   }
 
-  resetAlias(): void {
+  resetAliasBtn(): void {
     this.messageService.relayMessage(false);
   };
 
