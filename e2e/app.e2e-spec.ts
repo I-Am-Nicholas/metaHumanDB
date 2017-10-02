@@ -20,7 +20,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   let meta2 = element(by.id("the-list")).all(by.tagName("li")).get(1);
   let welcomeMessage = element(by.id("welcome-message"));
   let ratinglabels = element(by.id("rating-labels"));
-  let imageParentFront = element(by.className("front"));
+  let imageParentFront = element.all(by.className("front")).first();
   let imageParentBack = element(by.css(".back img"));
   let imageBack = element(by.className("showAlias"));
   let miniIronMan = element(by.css("img"));
@@ -99,6 +99,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/detail/1");
       profileButton.click();
       title.click();
+      expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/welcome");
       meta1.click();
       aliasBtn.click()//Passes when clickable, fails when not.
       .then(
@@ -129,7 +130,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       expect(weaponry.isPresent()).toBe(true);//should show metadata.
       expect(imageParentFront.getAttribute("alt")).toEqual("Iron Man image");
       expect(imageParentBack.getAttribute("alt")).toEqual("Tony Stark image");
-  });
+    });
 
   });
 
