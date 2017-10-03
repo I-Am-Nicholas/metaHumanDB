@@ -23,6 +23,7 @@ import { NavResetService } from "../nav-reset.service";
 
 export class MetaRatingComponent {
 
+  public hide: boolean = false;
   public toggle: boolean;
   public message: boolean = true;
   public toggler: number = 1;
