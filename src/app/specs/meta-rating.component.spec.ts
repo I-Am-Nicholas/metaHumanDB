@@ -88,6 +88,14 @@ describe("MetaRatingComponent", () => {
       expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
     });
 
+    describe("hidePanel", () => {
+
+      it("hide property should have false value as default", () => {
+        expect(comp.hide).toBe(false);
+      });
+
+    });
+
   });
 
 
