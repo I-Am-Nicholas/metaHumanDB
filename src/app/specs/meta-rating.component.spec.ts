@@ -94,6 +94,12 @@ describe("MetaRatingComponent", () => {
         expect(comp.hide).toBe(false);
       });
 
+      it("hide property should be true when toggle property is true", () => {
+        comp.toggle = true;
+        comp.hidePanel();
+        expect(comp.hide).toBe(true);
+      });
+
     });
 
   });
