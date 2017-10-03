@@ -50,6 +50,13 @@ export class MetaRatingComponent {
     }
   }
 
+  hidePanel(): void {
+    if (this.toggle == true) {
+      this.hide = true
+    }
+  }
+
+
   resetAliasBtn(): void {
     this.messageService.relayMessage(false);
   };
