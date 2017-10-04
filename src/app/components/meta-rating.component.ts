@@ -54,8 +54,12 @@ export class MetaRatingComponent {
     if (this.toggle == true) {
       this.hide = true
     }
+    else {
+      setTimeout(() => {
+        this.hide = false
+      }, 500);
+    }
   }
-
 
   resetAliasBtn(): void {
     this.messageService.relayMessage(false);
