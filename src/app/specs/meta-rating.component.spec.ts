@@ -1,18 +1,19 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed, tick, fakeAsync } from "@angular/core/testing";
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
 import { DisableAliasBttnService } from "../disable-alias-bttn.service"
 import { findStringInNode } from "../../testing/find-string-in-node";
 import { MetaRatingComponent } from "../components/meta-rating.component";
+import { click } from "../../testing/clicker-left";
 
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
 let debugProfileButton: DebugElement;
 let HTMLnode: HTMLElement;
-let profile: Element;
 let dabService: DisableAliasBttnService;
 let serviceSpy: jasmine.Spy;
+let profile: Array<Element>;
 
 const fakeMethod = "fakeMethod";
 
@@ -51,7 +52,7 @@ describe("MetaRatingComponent", () => {
     comp.chosenMeta = testMeta;
     debugProfileButton = fixture.debugElement.query(By.css("#profile-btn"));
     HTMLnode = fixture.nativeElement;
-    profile = HTMLnode.querySelector("#profile-panel");
+    profile = [].slice.call(HTMLnode.querySelectorAll("#profile-panel"));
     fixture.detectChanges();
 
   });
@@ -59,40 +60,47 @@ describe("MetaRatingComponent", () => {
 
   describe("Profile Panel", () => {
 
+    let testMeta = (
+      {
+      id: 1,
+        name: "Thor",
+         logo: "Mjolnir",
+          alias: "God of Thunder",
+           profile: ["Meta Profile Text"],
+           headshotsFront: "assets/headshotsFront/thor.jpg",
+            headshotsBack: "assets/headshotsBack/thor.jpg",
+             level: []
+    });
+
     it("should not be visible in DOM", () => {
-      expect(findStringInNode(profile, "hidden")).toBe(true);
+      let profile = HTMLnode.querySelectorAll("#encloser");
+      expect(findStringInNode(profile[0], "profile-panel")).toBe(false);
     });
 
     it("should be visible in DOM after Profile button clicked", () => {
+      let profile = HTMLnode.querySelectorAll("#encloser");
       debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
-      expect(findStringInNode(profile, "hidden")).toBe(false);
-    });
-
-    it("should not be visible in DOM after Profile button clicked twice", () => {
-      debugProfileButton.triggerEventHandler("click", null);
-      fixture.detectChanges();
-      debugProfileButton.triggerEventHandler("click", null);
-      fixture.detectChanges();
-      expect(findStringInNode(profile, "hidden")).toBe(true);
+      expect(profile.length).toEqual(1);
     });
 
     it("should contain a string", () => {
+      let profile = HTMLnode.querySelectorAll("#encloser");
       debugProfileButton.triggerEventHandler("click", null);
       fixture.detectChanges();
-      expect(profile.textContent).toContain(comp.chosenMeta.profile[0]);
+      expect(profile[0].textContent).toContain(comp.chosenMeta.profile[0]);
     });
 
     it("should show name and alias", () => {
-      expect(profile.textContent).toContain(comp.chosenMeta.name.toUpperCase());
-      expect(profile.textContent).toContain(comp.chosenMeta.alias.toUpperCase());
+      let profile = HTMLnode.querySelectorAll("#encloser");
+      comp.chosenMeta = testMeta;
+      debugProfileButton.triggerEventHandler("click", null);
+      fixture.detectChanges();
+      expect(profile[0].textContent).toContain(comp.chosenMeta.name.toUpperCase());
+      expect(profile[0].textContent).toContain(comp.chosenMeta.alias.toUpperCase());
     });
 
-    describe("hidePanel", () => {
-
-      it("should set the hide property to false as default", () => {
-        expect(comp.hide).toBe(false);
-      });
+    describe("hidePanel function", () => {
 
       it("should set the hide property to true when toggle property is true", () => {
         comp.toggle = true;
@@ -100,26 +108,24 @@ describe("MetaRatingComponent", () => {
         expect(comp.hide).toBe(true);
       });
 
-      it("should set the hide property to false", () => {
+      it("should set the hide property to false", fakeAsync(() => {
         comp.toggle = false;
         comp.hidePanel();
+        tick(5000);
         expect(comp.hide).toBe(false);
-      });
+      }));
 
+      it("should call the hidePanel function", () => {
+        let spy = spyOn(comp, "hidePanel")
+        debugProfileButton.triggerEventHandler("click", null);
+        expect(spy).toHaveBeenCalled();
+      });
     });
 
   });
 
 
   describe("Alias Button de-activation", () => {
-
-    it("counter should increment on each click", () => {
-      comp.messageIn();
-      fixture.detectChanges();
-      comp.messageIn();
-      fixture.detectChanges();
-      expect(comp.toggler).toEqual(3)
-    });
 
     it("Service method call should follow Component method call", () => {
       expect(serviceSpy).not.toHaveBeenCalled();
@@ -134,13 +140,19 @@ describe("MetaRatingComponent", () => {
       expect(spy).toHaveBeenCalled();
     });
 
-    it("A true argument should call the resetAlias function", () => {
+    it("A false argument should call the resetAliasBtn function", () => {
       let spy = spyOn(comp, "resetAliasBtn");
-      comp.messageIn();
-      expect(spy).not.toHaveBeenCalled();
       comp.messageIn();
       expect(spy).toHaveBeenCalled();
     });
+
+    it("A true argument should call the resetAliasBtn function", fakeAsync(() => {
+      let spy = spyOn(comp, "resetAliasBtn");
+      debugProfileButton.triggerEventHandler("click", null);
+      tick(5000);
+      comp.messageIn();
+      expect(spy).not.toHaveBeenCalled();
+    }));
 
     it("resetAlias should call service spy", () => {
       comp.resetAliasBtn();
