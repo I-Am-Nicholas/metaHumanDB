@@ -90,14 +90,20 @@ describe("MetaRatingComponent", () => {
 
     describe("hidePanel", () => {
 
-      it("hide property should have false value as default", () => {
+      it("should set the hide property to false as default", () => {
         expect(comp.hide).toBe(false);
       });
 
-      it("hide property should be true when toggle property is true", () => {
+      it("should set the hide property to true when toggle property is true", () => {
         comp.toggle = true;
         comp.hidePanel();
         expect(comp.hide).toBe(true);
+      });
+
+      it("should set the hide property to false", () => {
+        comp.toggle = false;
+        comp.hidePanel();
+        expect(comp.hide).toBe(false);
       });
 
     });
