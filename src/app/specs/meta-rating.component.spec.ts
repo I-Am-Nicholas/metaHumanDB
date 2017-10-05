@@ -9,115 +9,95 @@ import { click } from "../../testing/clicker-left";
 
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
-let debugProfileButton: DebugElement;
+let profileButton: DebugElement;
 let HTMLnode: HTMLElement;
 let dabService: DisableAliasBttnService;
 let serviceSpy: jasmine.Spy;
-let profile: Array<Element>;
+let rabSpy: jasmine.Spy;
+let profileParent: Array<Element>;
 
-const fakeMethod = "fakeMethod";
 
 describe("MetaRatingComponent", () => {
 
   beforeEach(async() => {
-
     TestBed.configureTestingModule({
       declarations: [ MetaRatingComponent ],
       providers: [ DisableAliasBttnService
     ]
     });
-
   });
 
   beforeEach(() => {
-
     fixture = TestBed.createComponent(MetaRatingComponent);
     dabService = fixture.debugElement.injector.get(DisableAliasBttnService);
-    serviceSpy = spyOn(dabService, "relayMessage")//.and.returnValue(Promise.resolve(fakeMethod));
+    serviceSpy = spyOn(dabService, "relayMessage");
 
     let testMeta = (
       {
-      id: 1,
+        id: 1,
         name: "Thor",
-         logo: "Mjolnir",
-          alias: "God of Thunder",
-           profile: ["Meta Profile Text"],
-           headshotsFront: "assets/headshotsFront/thor.jpg",
-            headshotsBack: "assets/headshotsBack/thor.jpg",
-             level: []
-    });
-
+        logo: "Mjolnir",
+        alias: "God of Thunder",
+        profile: ["Meta Profile Text"],
+        headshotsFront: "assets/headshotsFront/thor.jpg",
+        headshotsBack: "assets/headshotsBack/thor.jpg",
+        level: []
+      }
+    );
 
     comp = fixture.componentInstance;
     comp.chosenMeta = testMeta;
-    debugProfileButton = fixture.debugElement.query(By.css("#profile-btn"));
+    rabSpy = spyOn(comp, "resetAliasBtn").and.callThrough();
+    profileButton = fixture.debugElement.query(By.css("#profile-btn"));
     HTMLnode = fixture.nativeElement;
-    profile = [].slice.call(HTMLnode.querySelectorAll("#profile-panel"));
+    profileParent = [].slice.call(HTMLnode.querySelectorAll("#encloser"));
     fixture.detectChanges();
-
   });
 
 
   describe("Profile Panel", () => {
 
-    let testMeta = (
-      {
-      id: 1,
-        name: "Thor",
-         logo: "Mjolnir",
-          alias: "God of Thunder",
-           profile: ["Meta Profile Text"],
-           headshotsFront: "assets/headshotsFront/thor.jpg",
-            headshotsBack: "assets/headshotsBack/thor.jpg",
-             level: []
-    });
-
     it("should not be visible in DOM", () => {
-      let profile = HTMLnode.querySelectorAll("#encloser");
-      expect(findStringInNode(profile[0], "profile-panel")).toBe(false);
+      expect(findStringInNode(profileParent[0], "profile-panel")).toBe(false);
     });
 
     it("should be visible in DOM after Profile button clicked", () => {
-      let profile = HTMLnode.querySelectorAll("#encloser");
-      debugProfileButton.triggerEventHandler("click", null);
-      fixture.detectChanges();
-      expect(profile.length).toEqual(1);
+      click(profileButton);
+      expect(profileParent.length).toEqual(1);
     });
 
     it("should contain a string", () => {
-      let profile = HTMLnode.querySelectorAll("#encloser");
-      debugProfileButton.triggerEventHandler("click", null);
+      click(profileButton);
       fixture.detectChanges();
-      expect(profile[0].textContent).toContain(comp.chosenMeta.profile[0]);
+      expect(profileParent[0].textContent).toContain(comp.chosenMeta.profile[0]);
     });
 
     it("should show name and alias", () => {
-      let profile = HTMLnode.querySelectorAll("#encloser");
-      comp.chosenMeta = testMeta;
-      debugProfileButton.triggerEventHandler("click", null);
+      click(profileButton);
       fixture.detectChanges();
-      expect(profile[0].textContent).toContain(comp.chosenMeta.name.toUpperCase());
-      expect(profile[0].textContent).toContain(comp.chosenMeta.alias.toUpperCase());
+      expect(profileParent[0].textContent).toContain("THOR");
+      expect(profileParent[0].textContent).toContain("GOD OF THUNDER");
     });
 
     describe("hidePanel function", () => {
 
       it("should set the hide property to true when toggle property is true", () => {
-        comp.toggle = true;
+        click(profileButton);//the template toggles the component's toggle property to true
         comp.hidePanel();
         expect(comp.hide).toBe(true);
       });
 
       it("should set the hide property to false", fakeAsync(() => {
-        comp.toggle = false;
+        click(profileButton);//toggle == true
+        click(profileButton);//toggle == false
         comp.hidePanel();
-        tick(5000);
+        tick(500);//with fakeAsync tick simulates an asynchronous passing of time
         expect(comp.hide).toBe(false);
       }));
 
-      it("should call the hidePanel function", () => {
+      it("Profile button click should trigger a call to the Component's method", () => {
         let spy = spyOn(comp, "hidePanel")
-        debugProfileButton.triggerEventHandler("click", null);
+        click(profileButton);
         expect(spy).toHaveBeenCalled();
       });
     });
@@ -134,29 +114,23 @@ describe("MetaRatingComponent", () => {
     });
 
     it("Profile button click should trigger a call to the Component's method", () => {
-      let spy = spyOn(comp, "messageIn").and.callThrough();
-      debugProfileButton.triggerEventHandler("click", null);
+      let spy = spyOn(comp, "messageIn");
+      click(profileButton);
       fixture.detectChanges();
       expect(spy).toHaveBeenCalled();
     });
 
     it("A false argument should call the resetAliasBtn function", () => {
-      let spy = spyOn(comp, "resetAliasBtn");
+      click(profileButton);
+      click(profileButton);
       comp.messageIn();
-      expect(spy).toHaveBeenCalled();
+      expect(rabSpy).toHaveBeenCalled();
     });
 
-    it("A true argument should call the resetAliasBtn function", fakeAsync(() => {
-      let spy = spyOn(comp, "resetAliasBtn");
-      debugProfileButton.triggerEventHandler("click", null);
-      tick(5000);
+    it("A true argument should not call the resetAliasBtn function", () => {
+      click(profileButton);
       comp.messageIn();
-      expect(spy).not.toHaveBeenCalled();
-    }));
-
-    it("resetAlias should call service spy", () => {
-      comp.resetAliasBtn();
-      expect(serviceSpy).toHaveBeenCalledWith(false);
+      expect(rabSpy).not.toHaveBeenCalled();
     });
 
   });
