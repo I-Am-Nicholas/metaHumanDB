@@ -23,10 +23,8 @@ import { NavResetService } from "../nav-reset.service";
 
 export class MetaRatingComponent {
 
-  public hide: boolean = false;
+  public hide: boolean;
   public toggle: boolean;
-  public message: boolean = true;
-  public toggler: number = 1;
   private subscription: Subscription;
 
   constructor(
@@ -41,8 +39,7 @@ export class MetaRatingComponent {
   }
 
   messageIn(): void {
-    this.toggler++;
-    if (this.toggler % 2 == 0) {
+    if (this.toggle == true) {
       this.messageService.relayMessage(true);
     }
     else {

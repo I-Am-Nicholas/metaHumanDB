@@ -1,7 +1,7 @@
 <div id="rating">
 
   <div id="profile-btn" class="bttn background"
-  (click)="toggle = !toggle; messageIn()"
+  (click)="toggle = !toggle; messageIn(); hidePanel()"
   [class.red] = "toggle"
   >PROFILE</div>
 
@@ -29,8 +29,9 @@
   </div>
 
   <div id="encloser">
-    <div id="profile-panel" [class.hidden] = "!toggle"
+    <div id="profile-panel" *ngIf = "hide" class = "slide"
         [class.not-hiddn] = "toggle">
+
         <span>{{chosenMeta.name | uppercase}}&nbsp;&nbsp;&nbsp;a.k.a
         &nbsp;&nbsp;{{chosenMeta.alias | uppercase}}</span>
       <ul>

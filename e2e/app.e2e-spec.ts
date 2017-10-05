@@ -152,15 +152,21 @@ let aliasClick = () => {//Fails when clickable, passes when not.
 
     it("clicking profile button should display profile and de-activate the alias button", () => {
       meta1.click();
-      expect(profile.isPresent()).toBe(true);
-      expect(profile.isDisplayed()).toBe(false);
+      expect(profile.isPresent()).toBe(false);
       expect(bttnmask.isPresent()).toBe(false);
       expect(aliasBtn.isDisplayed()).toBe(true);
       profileButton.click();
+      expect(aliasBtn.isPresent()).toBe(true);
+      expect(aliasBtn.isDisplayed()).toBe(true);
       expect(profile.isPresent()).toBe(true);
-      expect(profile.isDisplayed()).toBe(true);
-      //Fails when clickable, passes when not
+      let b = browser.wait(() => {
+        return profile.isDisplayed().then((disp) => {
+        return disp;
+      });
+    }, 10000);
+      expect(b).toBe(true)
       aliasClick();
+      //Fails when clickable, passes when not
     });
 
     describe("Browser Nav Buttons", () => {
