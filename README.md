@@ -92,7 +92,7 @@
 
 ### Cloning the repo:
 
-  - git clone https://github.com/marudine/superheroes.git
+  - git clone https://github.com/marudine/metaHumanDB.git
 
   - To ensure that all of your dependencies are equivalent to those of the app, from the directory you cloned into, type:
 
