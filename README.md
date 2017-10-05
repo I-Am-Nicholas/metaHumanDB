@@ -12,6 +12,7 @@
 - [INSTALLATION INSTRUCTIONS](#installation-instructions)
   - [Dependency installation timeline:](#dependency-installation-timeline)
   - [Dependency Installation/Set Up](#dependency-installationset-up)
+  - [Cloning the repo:](#cloning-the-repo)
   - [Running the application:](#running-the-application)
   - [Running the unit tests:](#running-the-unit-tests)
   - [Installing the End-to-End Test tool, Protractor](#installing-the-end-to-end-test-tool-protractor)
@@ -70,9 +71,9 @@
 
 3. Type:
 
-  - brew install node
+  - brew install node@8.4.0
 
-4. NPM is installed with Node. To test that Node is installed correctly type:
+4. NPM is installed automatically alongside Node. To test that Node is installed correctly type:
 
   - node -v
 
@@ -86,11 +87,17 @@
 
 6. To install the Angular CLI tool, type:
 
-  - npm install -g @angular/cli
+  - npm install -g @angular/cli@1.4.0
 
-7. Clone the repo:
+
+### Cloning the repo:
 
   - git clone https://github.com/marudine/superheroes.git
+
+  - To ensure that all of your dependencies are equivalent to those of the app, from the directory you cloned into, type:
+
+  - npm update
+
 
 ### Running the application:
 
@@ -109,11 +116,11 @@
 
 ![karma_unit_tests](https://user-images.githubusercontent.com/24227633/30978401-59955822-a472-11e7-834d-ab388435cf2e.gif)
 
-  In a dedicated window of your command line tool (but from the same location as where you typed ng serve --open ), type:
+  In a dedicated window of your command line tool (but from the same directory as where you typed ng serve --open ), type:
 
   - ng test
 
-  These tests will also run in a specifically allocated browser window.
+  These tests will also run in a specifically allocated browser window. Any changes you make to your code will be reflected immediately in the tests.
 
 
 ### Installing the End-to-End Test tool, Protractor
@@ -126,13 +133,13 @@
 
   webdriver-manager is necessary to start up the server that Protractor uses to run its tests.
 
-### Running the End-to-End tests:
+### Running the Protractor End-to-End tests:
 
 
 ![protractor_end-to-end_tests](https://user-images.githubusercontent.com/24227633/30978571-db678ac8-a472-11e7-952f-5a106bb6e7ca.gif)
 
 
-  **NB The Protractor tests require that the app server (via 'ng serve') is already running.**
+  **NB The Protractor End-to-End tests require that the app server (which you started via 'ng serve') is already running.**
 
 
   Open another dedicated window in the same location as the previous commands, (I usually find it useful to have a split screen set up so I can see the web driver-manager and protractor outputs side-by-side).
@@ -148,7 +155,7 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
-  **NB The majority of problems you'll come across while running the End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window then 'webdriver-manager update'. Then 'protractor conf.js' again.**
+  **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window then 'webdriver-manager update'. Then 'protractor conf.js' again.**
 
 
 &nbsp;
@@ -158,4 +165,4 @@
 
   - Took a long time to (begin to) understand how to properly write tests around promises, http requests and asynchrony. In preparing the app to make http requests almost all of my passing tests broke due to the implementation of accessing external data and therefore dealing with asynchronous services.
 
-  - Heroku required even more specific configuration than normal. There were a number of small pre-requisites that needed fulfilling before the platform accepted my deployment...even though the app worked perfectly locally.
+  - Heroku required even more specific configuration than normal. There were a number of small pre-requisites that needed fulfilling before the platform accepted my initial deployment...even though the app worked perfectly locally.
