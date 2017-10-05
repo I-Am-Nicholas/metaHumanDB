@@ -96,7 +96,7 @@
 
   - To ensure that all of your dependencies are equivalent to those of the app, from the directory you cloned into, type:
 
-  - npm update
+  - npm install
 
 
 ### Running the application:
