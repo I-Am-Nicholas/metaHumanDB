@@ -87,7 +87,7 @@
 
 6. To install the Angular CLI tool, type:
 
-  - npm install -g @angular/cli@1.4.0
+  - npm install -g @angular/cli@1.4.5
 
 
 ### Cloning the repo:
