@@ -7,15 +7,6 @@ $end-position: 300px;
   left: -145px;
 }
 
-.logo {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 50px;
-  opacity: 0.4;
-  z-index: 1000;
-}
-
 li {
   position: relative;
   z-index: 10000;
@@ -58,29 +49,60 @@ li {
   left: 0;
   right: $start-position;
   width: 870px;
-  height: 290px;
+  height: 370px;
   border: 1px solid #000;
   border-radius: 6px;
   background-color: white;
-  padding: 80px 0;
+  padding: 40px 0;
   font-family: helvetica;
   font-weight: 600;
   z-index: 1000;
 }
 
 #profile-panel ul, span {
-  margin: 0 auto;
-  width: 700px;
+  margin-left: 25px;
+  width: 450px;
   height: 400px;
   font-size: 1.1rem;
   line-height: 2rem;
 }
 
 #profile-panel span {
+  margin: 0 auto;
   border-bottom: 1px solid #21658c;
   padding-left: 10px;
   height: auto;
   width: 860px;
   position: absolute;
   top: 0;
+}
+
+.logo {
+  position: relative;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+.aligner {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: auto;
+  height: 100%;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  max-width: 100%;
+}
+
+.aligner-item--top {
+  align-self: flex-start;
+}
+
+.aligner-item--bottom {
+  align-self: flex-end;
 }
