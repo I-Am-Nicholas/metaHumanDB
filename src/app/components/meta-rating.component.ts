@@ -4,7 +4,7 @@ import { Meta } from "../meta";
 import { Subscription } from "rxjs/Subscription";
 
 //SERVICES
-import { DisableAliasBttnService } from "../disable-alias-bttn.service"
+import { DisableAliasBttnService } from "../disable-alias-bttn.service";
 import { NavResetService } from "../nav-reset.service";
 
 
@@ -39,7 +39,7 @@ export class MetaRatingComponent {
   }
 
   messageIn(): void {
-    if (this.toggle == true) {
+    if (this.toggle) {
       this.messageService.relayMessage(true);
     }
     else {
@@ -48,7 +48,7 @@ export class MetaRatingComponent {
   }
 
   hidePanel(): void {
-    if (this.toggle == true) {
+    if (this.toggle) {
       this.hide = true
     }
     else {
@@ -60,7 +60,7 @@ export class MetaRatingComponent {
 
   resetAliasBtn(): void {
     this.messageService.relayMessage(false);
-  };
+  }
 
   /* The @Input decorator tells Angular that the following property is public and
   available for binding to a parent component.
