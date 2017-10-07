@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from "@angular/core/testin
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
-import { DisableAliasBttnService } from "../disable-alias-bttn.service"
+import { DisableAliasBttnService } from "../disable-alias-bttn.service";
 import { findStringInNode } from "../../testing/find-string-in-node";
 import { MetaRatingComponent } from "../components/meta-rating.component";
 import { click } from "../../testing/clicker-left";
@@ -91,11 +91,11 @@ describe("MetaRatingComponent", () => {
         click(profileButton);//toggle == true
         click(profileButton);//toggle == false
         comp.hidePanel();
-        tick(500);//with fakeAsync tick simulates an asynchronous passing of time
+        tick(500);//with fakeAsync, tick simulates an asynchronous passing of time
         expect(comp.hide).toBe(false);
       }));
 
-      it("Profile button click should trigger a call to the Component's method", () => {
+      it("Profile button click should trigger a call to the Component's hidePanel method", () => {
         let spy = spyOn(comp, "hidePanel")
         click(profileButton);
         expect(spy).toHaveBeenCalled();
@@ -113,10 +113,22 @@ describe("MetaRatingComponent", () => {
       expect(serviceSpy).toHaveBeenCalled();
     });
 
-    it("Profile button click should trigger a call to the Component's method", () => {
+    it("should trigger a call to service method with true value", () => {
+      click(profileButton);
+      comp.messageIn();
+      expect(serviceSpy).toHaveBeenCalledWith(true);
+    });
+
+    it("should trigger a call to service method with false value", () => {
+      click(profileButton);
+      click(profileButton);
+      comp.messageIn();
+      expect(serviceSpy).toHaveBeenCalledWith(false);
+    });
+
+    it("should trigger a call to the Component's method", () => {
       let spy = spyOn(comp, "messageIn");
       click(profileButton);
-      fixture.detectChanges();
       expect(spy).toHaveBeenCalled();
     });
 
