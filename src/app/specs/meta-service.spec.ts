@@ -2,8 +2,8 @@ import { async, inject, TestBed } from "@angular/core/testing";
 import { MockBackend, MockConnection } from "@angular/http/testing";
 import { HttpModule, Http, XHRBackend, Response, ResponseOptions } from '@angular/http';
 
-import { Meta } from "../meta";
 import { MetaService } from "../meta-service";
+import { Meta } from "../meta";
 
 const fakeMetaData = () => [
   {
@@ -12,15 +12,21 @@ const fakeMetaData = () => [
     logo:"assets/200s/gamma.png",
     alias:"Bruce Banner",
     profile: [],
-    headshotsFront: ""
-  },
+    headshotsFront: "",
+    headshotsBack: "",
+    weaponry: [""],
+    level: []
+    },
   {
     id:7,
     name:"Black Panther",
     logo:"assets/200s/pantera.jpg",
     alias:"T'Challa, King of Wakanda",
     profile: [],
-    headshotsFront: ""
+    headshotsFront: "",
+    headshotsBack: "",
+    weaponry: [""],
+    level: []
   }
 ];
 

@@ -51,7 +51,10 @@ describe("MetasComponent", () => {
         logo: "Mjolnir",
         alias: "God of Thunder",
         profile: [],
-        headshotsFront: ""
+        headshotsFront: "",
+        headshotsBack: "",
+        weaponry: [""],
+        level: []        
       }
     );
     comp.onSelect(testMeta);
