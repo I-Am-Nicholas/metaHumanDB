@@ -126,8 +126,8 @@ describe("MetaDetailComponent", () => {
     });
 
     it("front image should have alt text for screenreaders", () => {
-      var imageParent = DOMElement[0].querySelector("#imageParent");
-      expect(imageParent.innerHTML).toContain("Thor image");
+      var frontDiv = DOMElement[0].querySelector("#front-div");
+      expect(frontDiv.innerHTML).toContain("Thor image");
     });
 
   });
