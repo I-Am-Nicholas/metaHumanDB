@@ -41,6 +41,7 @@ describe("MetaRatingComponent", () => {
         profile: ["Meta Profile Text"],
         headshotsFront: "assets/headshotsFront/thor.jpg",
         headshotsBack: "assets/headshotsBack/thor.jpg",
+        weaponry: [""],
         level: []
       }
     );

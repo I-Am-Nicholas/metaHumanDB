@@ -183,6 +183,13 @@ describe("MetaDetailComponent", () => {
       expect(testMeta.level[0]).toEqual(999);
     });
 
+    it("when toggle is false, should call ngOnInit()", () => {
+      let spy = spyOn(comp, "ngOnInit")
+      click(aliasButton);
+      click(aliasButton);
+      expect(spy).toHaveBeenCalled();
+    });
+
   });
 
 });
