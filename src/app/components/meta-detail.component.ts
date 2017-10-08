@@ -61,6 +61,10 @@ export class MetaDetailComponent implements OnInit {
     if (this.toggle){
       this.clickedMeta.level = this.clickedMeta.alt.level;
     }
+    else {
+      this.ngOnInit()
+      this.clickedMeta.level;
+    }
   }
 
 }
