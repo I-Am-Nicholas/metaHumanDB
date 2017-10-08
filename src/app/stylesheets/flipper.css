@@ -45,6 +45,11 @@
 	backface-visibility: unset;
 }
 
+#front-image {
+	display: none;
+	border: 1px solid red;
+}
+
 #back-div {
   position: absolute;
   top: 0;

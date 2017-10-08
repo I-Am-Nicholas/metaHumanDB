@@ -14,14 +14,13 @@
 
       <div class = "flipper"[class.showAlias] = "toggle">
 
-      <div id = "imageParent">
-        <img class = "front" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} image" >
-        <br><br>
+      <div id = "front-div">
+        <img class = "front" [class.hide] = "toggle" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} image" >
+      </div>
 
         <div id="back-div" class = "back">
           <img src = "{{clickedMeta.headshotsBack}}" alt = "{{clickedMeta.alias}} image" >
         </div>
-      </div>
 
         <div id="info">
           <div id = "name" class = "front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
