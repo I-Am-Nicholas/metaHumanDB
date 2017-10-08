@@ -14,7 +14,6 @@ import { DisableAliasBttnService } from '../disable-alias-bttn.service'
 import { MetaService } from '../meta-service';
 
 
-
 @Component({
   selector: 'meta-detail',
   styleUrls: ['../stylesheets/meta-detail.component.css',
@@ -30,23 +29,23 @@ export class MetaDetailComponent implements OnInit {
   @Input() clickedMeta: Meta;
   public messageToService: Boolean;
   private subscription: Subscription;
+  public toggle: boolean;
 
   constructor(
     private messageService: DisableAliasBttnService,
     private metaService: MetaService,
     private route: ActivatedRoute,
-    private location: Location,
-  ) {
+    private location: Location
+    ) {
 
-   this.subscription = this.messageService.messageOut().subscribe(fromService => {
+    this.subscription = this.messageService.messageOut().subscribe(fromService => {
       if (messageService.getState() == true){
         this.messageToService = fromService;
       }
       else {
         this.messageToService = null;
       }
-    });
-
+    })
   }
 
   ngOnInit(): void {
@@ -56,6 +55,12 @@ export class MetaDetailComponent implements OnInit {
     this.route.paramMap
       .switchMap((param: ParamMap) => this.metaService.getMeta(+param.get('id')))
       .subscribe(hero => this.clickedMeta = hero);
+  }
+
+  showAltProperties(): void{
+    if (this.toggle){
+      this.clickedMeta.level = this.clickedMeta.alt.level;
+    }
   }
 
 }
