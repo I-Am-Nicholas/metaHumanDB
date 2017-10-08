@@ -53,7 +53,12 @@
       ],
       "headshotsBack": "assets/headshotsBack/bruce.jpg",
       "headshotsFront": "assets/headshotsFront/bruce.jpg",
-      "level": [15, 50, 100]
+      "level": [15, 50, 100],
+
+      "alt": {
+        "level": [85, 30, 15]
+      }
+
     },
     {
       "id":4,
@@ -63,7 +68,7 @@
       "profile":[
         "Queens teenager Peter Parker has a phenomenal super-hero skillset.",
         "Not only is he stronger than two of the Avengers' heavy-hitters—Iron Man and Captain America—but he also has a level of inventiveness pretty close to that of Tony Stark.",
-        "Even without being bitten by a radioactive spider, Peter could have become enough of a hero from designing his own web fluid and shooter."
+        "Even without being bitten by a radioactive spider, Peter could have become enough of a hero by having designed his own web fluid and shooter."
       ],
       "weaponry": [
         "Web Shooters",

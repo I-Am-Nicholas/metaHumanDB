@@ -27,6 +27,7 @@ describe("MetaDetailComponent", () => {
   let testMeta: Meta;
   let debugAliasButton: DebugElement;
   let flipperClass: {};
+  let aliasButton: DebugElement;
   let metaService: MetaService;
   let serviceSpy: jasmine.Spy;
 
@@ -54,21 +55,25 @@ describe("MetaDetailComponent", () => {
     testMeta = (
       {
       id: 9000,
-        name: "Thor",
-         logo: "Mjolnir",
-          alias: "God of Thunder",
-           profile: [],
-           weaponry: [
-             "Fake Weaponry."
-           ],
-           headshotsFront: "",
-            headshotsBack: "",
-             level: []
+      name: "Thor",
+      logo: "Mjolnir",
+      alias: "God of Thunder",
+      profile: [],
+      weaponry: [
+      "Fake Weaponry."
+      ],
+      headshotsFront: "",
+      headshotsBack: "",
+      level: [111],
+      alt: {
+        level: [999]
+      }
     });
 
     comp = fixture.componentInstance;
     comp.clickedMeta = testMeta;
     fixture.detectChanges();
+    aliasButton = DOMElement[0].querySelector("#alias-btn")
     flipperClass = DOMElement[0].querySelectorAll(".flipper");
   });
 
@@ -94,7 +99,7 @@ describe("MetaDetailComponent", () => {
     });
 
     it("back should be visible", () => {
-      click(DOMElement[0].querySelector("#alias-btn"));
+      click(aliasButton);
       fixture.detectChanges();
       expect(findStringInNode(flipperClass[0], "showAlias")).toBe(true);
     });
@@ -163,6 +168,19 @@ describe("MetaDetailComponent", () => {
       comp.messageToService = true;
       fixture.detectChanges();
       expect(DOMElement[0].querySelector(".bttn-mask")).toBeTruthy();
+    });
+
+  });
+
+  describe("showAltProperties()", () => {
+
+    it("level property should not receive the value of alt.level", () => {
+      expect(testMeta.level[0]).toEqual(111);
+    });
+
+    it("level property should receive the value of alt.level", () => {
+      click(aliasButton);
+      expect(testMeta.level[0]).toEqual(999);
     });
 
   });
