@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Meta } from '../meta';
-import { MetaService } from '../meta-service';
+import { MetaService } from '../services/meta-service';
 
 @Component({
   selector: "metas",

@@ -1,11 +1,12 @@
 import { Component, Input } from "@angular/core";
-import { Meta } from "../meta";
 
 import { Subscription } from "rxjs/Subscription";
 
+import { Meta } from "../meta";
+
 //SERVICES
-import { DisableAliasBttnService } from "../disable-alias-bttn.service";
-import { NavResetService } from "../nav-reset.service";
+import { DisableAliasBttnService } from "../services/disable-alias-bttn.service";
+import { NavResetService } from "../services/nav-reset.service";
 
 
 @Component({

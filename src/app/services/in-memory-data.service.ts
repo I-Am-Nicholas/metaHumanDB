@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import metas from './metas.json'
+import metas from '../metas.json'
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {/*a method of InMemoryDataService that creates

@@ -5,12 +5,12 @@ import { HttpModule }    from "@angular/http";
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from "angular-in-memory-web-api";
-import { InMemoryDataService }  from "./in-memory-data.service";
+import { InMemoryDataService }  from "./services/in-memory-data.service";
 
 //Services
-import { MetaService } from "./meta-service";
-import { NavResetService } from "./nav-reset.service";
-import { DisableAliasBttnService } from "./disable-alias-bttn.service";
+import { MetaService } from "./services/meta-service";
+import { NavResetService } from "./services/nav-reset.service";
+import { DisableAliasBttnService } from "./services/disable-alias-bttn.service";
 
 import { AppComponent } from "./components/app.component";
 import { MetasComponent } from "./components/metas.component";

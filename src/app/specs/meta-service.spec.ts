@@ -2,7 +2,7 @@ import { async, inject, TestBed } from "@angular/core/testing";
 import { MockBackend, MockConnection } from "@angular/http/testing";
 import { HttpModule, Http, XHRBackend, Response, ResponseOptions } from '@angular/http';
 
-import { MetaService } from "../meta-service";
+import { MetaService } from "../services/meta-service";
 import { Meta } from "../meta";
 
 const fakeMetaData = () => [

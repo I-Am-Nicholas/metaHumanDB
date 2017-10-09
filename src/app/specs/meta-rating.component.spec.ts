@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from "@angular/core/testin
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
-import { DisableAliasBttnService } from "../disable-alias-bttn.service";
+import { DisableAliasBttnService } from "../services/disable-alias-bttn.service";
 import { findStringInNode } from "../../testing/find-string-in-node";
 import { MetaRatingComponent } from "../components/meta-rating.component";
 import { click } from "../../testing/clicker-left";

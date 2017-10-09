@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { NavResetService } from "../nav-reset.service";
+
+import { NavResetService } from "../services/nav-reset.service";
 
 @Component({
   selector: "app-root",
