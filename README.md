@@ -5,7 +5,7 @@
 
 ## TABLE OF CONTENTS
 
-- [DEMO](#demo)
+- [SAMPLE](#sample)
 - [OVERVIEW](#overview)
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
 - [TECHNOLOGIES](#technologies)
@@ -22,9 +22,9 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 &nbsp;
-## DEMO
+## SAMPLE
 
-![untitled 1](https://user-images.githubusercontent.com/24227633/30761182-3ef1c128-9fd5-11e7-90e2-fcf59f3c192b.gif)
+![untitled 2](https://user-images.githubusercontent.com/24227633/31327221-bc913b16-acc5-11e7-906b-3cc0efa2ad94.gif)
 
 
 &nbsp;
