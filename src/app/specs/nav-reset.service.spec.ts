@@ -1,5 +1,5 @@
 import { async, inject, TestBed } from "@angular/core/testing";
-import { NavResetService } from "../nav-reset.service";
+import { NavResetService } from "../services/nav-reset.service";
 
 describe("NavResetService", () => {
   let service: NavResetService;

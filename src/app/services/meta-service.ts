@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Headers, Http } from "@angular/http";
 
 import "rxjs/add/operator/toPromise";
-import { Meta } from "./meta";
+import { Meta } from "../meta";
 
 @Injectable()
 export class MetaService {

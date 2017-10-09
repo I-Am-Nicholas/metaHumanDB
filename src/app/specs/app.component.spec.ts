@@ -9,7 +9,7 @@ import { RouterOutletStubComponent } from "../../testing/router-stubs";
 import { click } from "../../testing/clicker-left";
 
 import { AppComponent } from "../components/app.component";
-import { NavResetService } from "../nav-reset.service";
+import { NavResetService } from "../services/nav-reset.service";
 
 describe("AppComponent", () => {
 

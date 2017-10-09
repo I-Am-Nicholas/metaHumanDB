@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 import { AppComponent } from "../components/app.component";
 import { MetaDetailComponent } from "../components/meta-detail.component";
 import { WelcomeMessageComponent } from "../components/welcome-message.component";
-import { NavResetService } from "../nav-reset.service";
+import { NavResetService } from "../services/nav-reset.service";
 
 import { routes } from "../app-routing.module";
 

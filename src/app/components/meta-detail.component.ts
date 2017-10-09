@@ -1,17 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Meta } from '../meta'
-
-//for OBSERVABLES
-import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/switchMap';
 
 //ROUTING
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location }                 from '@angular/common';
 
+//for OBSERVABLES
+import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/operator/switchMap';
+
 //SERVICE
-import { DisableAliasBttnService } from '../disable-alias-bttn.service'
-import { MetaService } from '../meta-service';
+import { DisableAliasBttnService } from '../services/disable-alias-bttn.service'
+import { MetaService } from '../services/meta-service';
+
+import { Meta } from '../meta'
 
 
 @Component({
@@ -59,7 +60,7 @@ export class MetaDetailComponent implements OnInit {
 
   showAltProperties(): void{
     if (this.toggle){
-      this.clickedMeta.level = this.clickedMeta.alt.level;
+      this.clickedMeta.level = (this.clickedMeta.alt.level || this.clickedMeta.level);
     }
     else {
       this.ngOnInit()

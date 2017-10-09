@@ -10,8 +10,8 @@ import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs/Rx";
 
 //SERVICES
-import { MetaService } from "../meta-service";
-import { DisableAliasBttnService } from "../disable-alias-bttn.service"
+import { MetaService } from "../services/meta-service";
+import { DisableAliasBttnService } from "../services/disable-alias-bttn.service"
 
 import { MetaDetailComponent } from "../components/meta-detail.component"
 import { Meta } from "../meta"
