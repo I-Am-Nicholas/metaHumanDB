@@ -26,7 +26,7 @@
           <div id = "name" class = "front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
           <div id = "alias" class = "back" [class.show] = "toggle">{{clickedMeta.alias | uppercase}}</div>
           <div id = "weaponry" class = "front" [class.hide] = "toggle">
-            <!-- hide class for FF bug -->
+            <!-- hide class is for FF bug -->
             <ul>
               <p>WEAPONRY</p>
               <li *ngFor= "let eachLine of clickedMeta.weaponry">

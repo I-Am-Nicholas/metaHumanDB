@@ -28,6 +28,11 @@ export class MetaRatingComponent {
   public toggle: boolean;
   private subscription: Subscription;
 
+  /* The @Input decorator tells Angular that the following property is public and
+  available for binding to a parent component.
+  Without @Input, Angular refuses to bind to the property.*/
+  @Input() chosenMeta: Meta;
+
   constructor(
     private messageService: DisableAliasBttnService,
     private navService: NavResetService
@@ -63,8 +68,4 @@ export class MetaRatingComponent {
     this.messageService.relayMessage(false);
   }
 
-  /* The @Input decorator tells Angular that the following property is public and
-  available for binding to a parent component.
-  Without @Input, Angular refuses to bind to the property.*/
-  @Input() chosenMeta: Meta;
 }

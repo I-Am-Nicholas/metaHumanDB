@@ -7,7 +7,7 @@ import { Meta } from "../meta";
 @Injectable()
 export class MetaService {
 
-  private metalistUrl = "api/metalism";
+  private metalistUrl = "api/theMetasList";
 
 /*the metalistUrl variable is assigned the value returned by the web url. At present,
 this particular value is being instructed to look in the InMemoryDataService class for a
