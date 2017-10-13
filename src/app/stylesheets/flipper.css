@@ -41,9 +41,7 @@
 .show {
 	/*Only for FF bug*/
 	-moz-backface-visibility: unset;
-	-webkit-backface-visibility: unset;
-	backface-visibility: unset;
-}
+	}
 
 #front-image {
 	display: none;
