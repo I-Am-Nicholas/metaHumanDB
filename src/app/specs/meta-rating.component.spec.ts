@@ -103,6 +103,17 @@ describe("MetaRatingComponent", () => {
       });
     });
 
+
+    describe('Arrow', () => {
+
+      it("Profile button click should trigger a call to the Component's arrowFlip method", () => {
+        let spy = spyOn(comp, "arrowFlip")
+        click(profileButton);
+        expect(spy).toHaveBeenCalled();
+      });
+
+    });
+
   });
 
 
