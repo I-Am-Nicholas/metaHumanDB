@@ -1,9 +1,10 @@
 <div id="rating">
 
   <div id="profile-btn" class="bttn background"
-  (click)="toggle = !toggle; messageIn(); hidePanel()"
+  (click)="toggle = !toggle; messageIn(); hidePanel(); arrowFlip()"
   [class.red] = "toggle"
-  >PROFILE</div>
+  >PROFILE<span><i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+</span> </div>
 
   <div id="bar-chart">
     <div class="bars">

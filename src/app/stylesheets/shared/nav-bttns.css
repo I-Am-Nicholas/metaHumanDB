@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+#profile-btn {
+  height: 30px;
+  padding: 5px 0;
+}
+
 .bttn:active {
   top: -48px;
 }
