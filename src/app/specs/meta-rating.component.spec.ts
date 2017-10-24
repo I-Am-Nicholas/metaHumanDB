@@ -112,6 +112,11 @@ describe("MetaRatingComponent", () => {
         expect(spy).toHaveBeenCalled();
       });
 
+      it("arrow property should be false as default", () => {
+        comp.arrowFlip();
+        expect(comp.arrow).toBe(false);
+      });
+
     });
 
   });
