@@ -25,6 +25,7 @@ import { NavResetService } from "../services/nav-reset.service";
 export class MetaRatingComponent {
 
   public hide: boolean;
+  public arrow: boolean;
   public toggle: boolean;
   private subscription: Subscription;
 
@@ -61,6 +62,15 @@ export class MetaRatingComponent {
       setTimeout(() => {
         this.hide = false
       }, 500);
+    }
+  }
+
+  arrowFlip(): void {
+    if(this.toggle) {
+      this.arrow = true
+    }
+    else {
+      this.arrow = false
     }
   }
 
