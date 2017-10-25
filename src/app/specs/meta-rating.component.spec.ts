@@ -117,6 +117,12 @@ describe("MetaRatingComponent", () => {
         expect(comp.arrow).toBe(false);
       });
 
+      it("arrow property should be true on profile button click", () => {
+        click(profileButton);
+        comp.arrowFlip();
+        expect(comp.arrow).toBe(true);
+      });
+
     });
 
   });
