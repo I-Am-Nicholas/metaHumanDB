@@ -156,7 +156,9 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
-  **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window then 'webdriver-manager update'. Then 'protractor conf.js' again.**
+  **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window, then 'webdriver-manager update'.
+
+  Restart the the Selenium Server with 'webdriver-manager start', then over in the protractor window type 'protractor conf.js' at the prompt again.**
 
 
 &nbsp;
