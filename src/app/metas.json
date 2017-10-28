@@ -129,7 +129,7 @@
         "She is capable of more than this profile has space to list.",
         "To give you an idea, in one incarnation, she warped the reality of the entire planet.",
         "Wanda is easily one of the top three most powerful beings on the planet.",
-        "Having a specific power in a league of its own, her ability is not displayed on the bar chart. If it were it would be at 100%."
+        "These ratings cover both known and potential skills, hence Wanda gains 100% in the power category."
       ],
       "weaponry": [
         "Hex Power",
@@ -139,7 +139,7 @@
       ],
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
       "headshotsFront": "assets/headshotsFront/wanda.jpg",
-      "level": [50, 80, 50]
+      "level": [50, 60, 100]
     },
     {
       "id":8,
