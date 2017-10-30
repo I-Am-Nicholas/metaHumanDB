@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from "@angular/core/testin
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
+import { HoverFocusDirective } from "../directives/hoverfocus.directive";
 import { DisableAliasBttnService } from "../services/disable-alias-bttn.service";
 import { findStringInNode } from "../../testing/find-string-in-node";
 import { MetaRatingComponent } from "../components/meta-rating.component";
@@ -10,6 +11,7 @@ import { click } from "../../testing/clicker-left";
 let comp: MetaRatingComponent;
 let fixture: ComponentFixture<MetaRatingComponent>;
 let profileButton: DebugElement;
+let arrow: DebugElement;
 let HTMLnode: HTMLElement;
 let dabService: DisableAliasBttnService;
 let serviceSpy: jasmine.Spy;
@@ -21,9 +23,8 @@ describe("MetaRatingComponent", () => {
 
   beforeEach(async() => {
     TestBed.configureTestingModule({
-      declarations: [ MetaRatingComponent ],
-      providers: [ DisableAliasBttnService
-    ]
+      declarations: [ MetaRatingComponent, HoverFocusDirective ],
+      providers: [ DisableAliasBttnService ]
     });
   });
 
@@ -50,6 +51,7 @@ describe("MetaRatingComponent", () => {
     comp.chosenMeta = testMeta;
     rabSpy = spyOn(comp, "resetAliasBtn").and.callThrough();
     profileButton = fixture.debugElement.query(By.css("#profile-btn"));
+    arrow = fixture.debugElement.query(By.css("#profile-img"));
     HTMLnode = fixture.nativeElement;
     profileParent = [].slice.call(HTMLnode.querySelectorAll("#encloser"));
     fixture.detectChanges();
@@ -101,26 +103,36 @@ describe("MetaRatingComponent", () => {
         click(profileButton);
         expect(spy).toHaveBeenCalled();
       });
+
     });
 
 
     describe('Arrow', () => {
 
-      it("Profile button click should trigger a call to the Component's arrowFlip method", () => {
-        let spy = spyOn(comp, "arrowFlip")
-        click(profileButton);
-        expect(spy).toHaveBeenCalled();
-      });
+      let hideClass = document.querySelectorAll('#profile-img')
 
       it("arrow property should be false as default", () => {
-        comp.arrowFlip();
+        comp.arrowShow();
+        expect(comp.arrow).toBe(true);
+      });
+
+      it("arrow property should be true on arrowshow invoked twice", () => {
+        comp.arrowShow();
+        comp.arrowShow();
         expect(comp.arrow).toBe(false);
       });
 
-      it("arrow property should be true on profile button click", () => {
-        click(profileButton);
-        comp.arrowFlip();
-        expect(comp.arrow).toBe(true);
+      describe('Hide class', () => {
+
+        it('arrow property should have hide class as default', () => {
+          expect(findStringInNode(arrow.nativeElement, "class=\"hide\"")).toBe(true);
+        });
+
+        it('arrow property should have hide class', () => {
+          let hideClass = document.querySelectorAll('#profile-img')
+          expect(findStringInNode(hideClass[0], "class=\"hide\"")).toBe(true);
+        });
+
       });
 
     });

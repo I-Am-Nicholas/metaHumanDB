@@ -65,13 +65,8 @@ export class MetaRatingComponent {
     }
   }
 
-  arrowFlip(): void {
-    if(this.toggle) {
-      this.arrow = true
-    }
-    else {
-      this.arrow = false
-    }
+  arrowShow(): void {
+    this.arrow == true ? this.arrow = false : this.arrow = true;
   }
 
   resetAliasBtn(): void {
