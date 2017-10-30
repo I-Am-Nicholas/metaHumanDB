@@ -11,9 +11,20 @@
   cursor: pointer;
 }
 
-#profile-btn {
-  height: 30px;
-  padding: 5px 0;
+#profile-btn img{
+  position: relative;
+  margin-left: 10px;
+  top: 3px;
+}
+
+#profile-btn span{
+  position: relative;
+  margin: 0 auto;
+  top: -5px;
+}
+
+.arrowShow {
+  display: none;
 }
 
 .bttn:active {
@@ -35,4 +46,13 @@
 
 .hide {
   display: none;
+}
+
+.unhide {
+  display: inline;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s linear;
 }
