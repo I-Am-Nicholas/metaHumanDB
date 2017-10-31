@@ -1,15 +1,16 @@
 <div id="rating">
 
   <div id="profile-btn" class="bttn background"
-  (click)="toggle = !toggle; messageIn(); hidePanel();"
-  (mouseenter) = "arrowShow()"
-  (mouseleave) = "arrowShow()"
-  [class.red] = "toggle"
-    ><span>PROFILE<img id="profile-img"
-      [class.hide] = "!toggle"
-      [class.unhide] = "arrow"
-      [class.rotate] = "toggle"
-      src = "../../assets/arrow1.png"></span>
+    (click)="toggle = !toggle; messageIn(); hidePanel();"
+    (mouseenter) = "arrowShow()"
+    (mouseleave) = "arrowShow()"
+    [class.red] = "toggle"
+  ><span>PROFILE<img id="profile-img"
+    [class.hide] = "!toggle"
+    [class.unhide] = "arrow"
+    [class.rotateDown] = "!toggle"
+    [class.rotateUp] = "toggle"
+    src = "../../assets/arrow.png"></span>
   </div>
 
   <div id="bar-chart">
