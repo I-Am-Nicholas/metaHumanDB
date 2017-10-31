@@ -125,12 +125,13 @@ describe("MetaRatingComponent", () => {
       describe('Hide class', () => {
 
         it('arrow property should have hide class as default', () => {
-          expect(findStringInNode(arrow.nativeElement, "class=\"hide\"")).toBe(true);
+          expect(findStringInNode(arrow.nativeElement, "hide")).toBe(true);
         });
 
-        it('arrow property should have hide class', () => {
-          let hideClass = document.querySelectorAll('#profile-img')
-          expect(findStringInNode(hideClass[0], "class=\"hide\"")).toBe(true);
+        it('arrow property should not have hide class after profile button click', () => {
+          click(profileButton);
+          fixture.detectChanges()
+          expect(findStringInNode(arrow.nativeElement, "hide")).toBe(false);
         });
 
       });
