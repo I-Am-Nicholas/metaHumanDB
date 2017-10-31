@@ -109,8 +109,6 @@ describe("MetaRatingComponent", () => {
 
     describe('Arrow', () => {
 
-      let hideClass = document.querySelectorAll('#profile-img')
-
       it("arrow property should be false as default", () => {
         comp.arrowShow();
         expect(comp.arrow).toBe(true);

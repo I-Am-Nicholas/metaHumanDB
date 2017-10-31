@@ -23,18 +23,19 @@ let aliasClick = () => {//Fails when clickable, passes when not.
   let imageParentFront = element.all(by.className("front")).first();
   let imageParentBack = element(by.css(".back img"));
   let imageBack = element(by.className("showAlias"));
-  let miniIronMan = element(by.css("img"));
   let profileButton = element(by.id("profile-btn"));
   let bargroup = element(by.className("bar-group"));
   let bttnmask = element(by.className("bttn-mask"));
   let profile = element(by.id("profile-panel"));
   let detail = element(by.className("detail"));
-  let title = element(by.tagName("h1"));
   let aliasBtn = element(by.id("alias-btn"));
   let metas = element(by.className("metas"));
   let weaponry = element(by.id("weaponry"));
+  let miniIronMan = element(by.css("img"));
   let image = element(by.id("headshot"));
   let rating = element(by.id("rating"));
+  let arrow = element(by.id("profile-img"));
+  let title = element(by.tagName("h1"));
   let name = element(by.id("name"));
 
   /////PRE-CLICK////
@@ -158,6 +159,7 @@ let aliasClick = () => {//Fails when clickable, passes when not.
       profileButton.click();
       expect(aliasBtn.isPresent()).toBe(true);
       expect(aliasBtn.isDisplayed()).toBe(true);
+      expect(arrow.isDisplayed()).toBe(true);
       expect(profile.isPresent()).toBe(true);
       let b = browser.wait(() => {
         return profile.isDisplayed().then((disp) => {
