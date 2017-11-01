@@ -1,8 +1,8 @@
-#metasWrap-parent {
+  #metasWrap-parent {
   width: auto;
-}
+  }
 
- #metasWrap {
+  #metasWrap {
   border-top: 1px solid #21658c;
   border-bottom: 1px solid #21658c;
   position: relative;
@@ -10,9 +10,9 @@
   padding-bottom: 20px;
   width: 1200px;
   height: 480px;
- }
+  }
 
- .metas {
+  .metas {
    color: lightgray;
    margin: 10px 0 2em 0;
    list-style-type: none;
@@ -20,9 +20,9 @@
    width: 300px;
    float: left;
    border-radius: 6px;
- }
+  }
 
- li {
+  li {
   font-size: 1rem;
   z-index: 1000;
   text-align: center;
@@ -37,18 +37,18 @@
   border-radius: 4px;
   -webkit-transition: height all 250ms ease;
   transition: all 250ms ease;
- }
-
- li:focus {
-   outline:0;
- }
-
-  .red-highlight, .metas li.red:hover {
-    color: #8e0b0b;
   }
 
-  .metas li:hover {
-    color: #999;
+  li:focus {
+   outline:0;
+  }
+
+  li:hover {
+   color: #fff;
+  }
+
+  .red-highlight, .metas li.red:hover, .red-highlight:hover{
+    color: #8e0b0b;
   }
 
   .metas li:active {
@@ -60,7 +60,7 @@
     text-decoration: none;
   }
 
- .metas .text {
+  .metas .text {
     position: relative;
     top: -3px;
- }
+  }
