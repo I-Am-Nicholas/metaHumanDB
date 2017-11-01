@@ -14,7 +14,7 @@
 #profile-btn img{
   position: relative;
   margin-left: 10px;
-  top: 3px;
+  top: 1px;
 }
 
 #profile-btn span{
@@ -52,7 +52,12 @@
   display: inline;
 }
 
-.rotate {
+.rotateUp {
+  transform: rotate(0deg);
+  transition: transform 0.5s linear;
+}
+
+.rotateDown {
   transform: rotate(180deg);
   transition: transform 0.5s linear;
 }
