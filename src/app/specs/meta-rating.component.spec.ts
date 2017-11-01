@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from "@angular/core/testin
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
-import { HoverFocusDirective } from "../directives/hoverfocus.directive";
 import { DisableAliasBttnService } from "../services/disable-alias-bttn.service";
 import { findStringInNode } from "../../testing/find-string-in-node";
 import { MetaRatingComponent } from "../components/meta-rating.component";
@@ -23,7 +22,7 @@ describe("MetaRatingComponent", () => {
 
   beforeEach(async() => {
     TestBed.configureTestingModule({
-      declarations: [ MetaRatingComponent, HoverFocusDirective ],
+      declarations: [ MetaRatingComponent ],
       providers: [ DisableAliasBttnService ]
     });
   });
