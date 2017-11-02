@@ -50,7 +50,7 @@ describe("MetaRatingComponent", () => {
     comp.chosenMeta = testMeta;
     rabSpy = spyOn(comp, "resetAliasBtn").and.callThrough();
     profileButton = fixture.debugElement.query(By.css("#profile-btn"));
-    arrow = fixture.debugElement.query(By.css("#profile-img"));
+    arrow = fixture.debugElement.query(By.css("#arrow-img"));
     HTMLnode = fixture.nativeElement;
     profileParent = [].slice.call(HTMLnode.querySelectorAll("#encloser"));
     fixture.detectChanges();
@@ -121,17 +121,28 @@ describe("MetaRatingComponent", () => {
 
       describe('Hide class', () => {
 
-        it('arrow property should have hide class as default', () => {
+        it('arrow image should have hide class as default', () => {
           expect(findStringInNode(arrow.nativeElement, "hide")).toBe(true);
         });
 
-        it('arrow property should not have hide class after profile button click', () => {
+        it('arrow image should not have hide class after profile button click', () => {
           click(profileButton);
           fixture.detectChanges()
           expect(findStringInNode(arrow.nativeElement, "hide")).toBe(false);
         });
 
       });
+
+      describe('Rotate classes', () => {
+
+        it('should have rotateDown class as default', ()=> {
+          console.log(arrow.nativeElement)
+          expect(findStringInNode(arrow.nativeElement, "rotateDown")).toBe(true);
+        });
+
+      });
+
+
 
     });
 
