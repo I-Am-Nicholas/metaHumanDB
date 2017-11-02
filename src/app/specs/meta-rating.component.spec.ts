@@ -127,7 +127,7 @@ describe("MetaRatingComponent", () => {
 
         it('arrow image should not have hide class after profile button click', () => {
           click(profileButton);
-          fixture.detectChanges()
+          fixture.detectChanges();
           expect(findStringInNode(arrow.nativeElement, "hide")).toBe(false);
         });
 
@@ -136,13 +136,16 @@ describe("MetaRatingComponent", () => {
       describe('Rotate classes', () => {
 
         it('should have rotateDown class as default', ()=> {
-          console.log(arrow.nativeElement)
           expect(findStringInNode(arrow.nativeElement, "rotateDown")).toBe(true);
         });
 
+        it('should have rotateUp class on profile button click', ()=> {
+          click(profileButton);
+          fixture.detectChanges();
+          expect(findStringInNode(arrow.nativeElement, "rotateUp")).toBe(true);
+        });
+
       });
-
-
 
     });
 
