@@ -5,7 +5,7 @@
 
 ## TABLE OF CONTENTS
 
-- [SAMPLE](#sample)
+- [PREVIEW](#sample)
 - [OVERVIEW](#overview)
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
 - [TECHNOLOGIES](#technologies)
@@ -22,7 +22,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 &nbsp;
-## SAMPLE
+## PREVIEW
 
 ![untitled 2](https://user-images.githubusercontent.com/24227633/31327221-bc913b16-acc5-11e7-906b-3cc0efa2ad94.gif)
 
@@ -30,7 +30,7 @@
 &nbsp;
 ## OVERVIEW
 
-- an application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers, power levels.
+- An application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers and power levels.
 
 - Written in Angular 4.
 
