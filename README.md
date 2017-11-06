@@ -5,7 +5,7 @@
 
 ## TABLE OF CONTENTS
 
-- [SAMPLE](#sample)
+- [PREVIEW](#sample)
 - [OVERVIEW](#overview)
 - [LINK TO DEPLOYED APPLICATION](#link-to-deployed-application)
 - [TECHNOLOGIES](#technologies)
@@ -22,7 +22,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 &nbsp;
-## SAMPLE
+## PREVIEW
 
 ![untitled 2](https://user-images.githubusercontent.com/24227633/31327221-bc913b16-acc5-11e7-906b-3cc0efa2ad94.gif)
 
@@ -30,7 +30,7 @@
 &nbsp;
 ## OVERVIEW
 
-- an application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers, power levels.
+- An application to help you keep track of who's who in the world of super-powered individuals. Listing their aliases, powers and power levels.
 
 - Written in Angular 4.
 
@@ -92,11 +92,11 @@
 
 ### Cloning the repo:
 
-  - git clone https://github.com/marudine/superheroes.git
+  - git clone https://github.com/marudine/metaHumanDB.git
 
   - To ensure that all of your dependencies are equivalent to those of the app, from the directory you cloned into, type:
 
-  - npm update
+  - npm install
 
 
 ### Running the application:
@@ -156,10 +156,9 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
+
   **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window, then 'webdriver-manager update'.
-
   Restart the the Selenium Server with 'webdriver-manager start', then over in the protractor window type 'protractor conf.js' at the prompt again.
-
   On the rare occasion that this doesn't work, quitting and re-opening your console may also be necessary.**
 
 
