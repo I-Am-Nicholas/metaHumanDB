@@ -148,7 +148,7 @@
 
   - webdriver-manager start
 
-  Let that action complete (it should inform you on the last emitted line of the stack trace that the “Selenium Server is up and running”)
+  Let that action complete (it should inform you on the last line of the stack trace that the “Selenium Server is up and running”.)
 
   Then:
 
@@ -156,7 +156,10 @@
 
   These tests will also run in a dedicated window of your browser. Switch back to the command line window to see the rows of green passed test dots!
 
-  **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window, then 'webdriver-manager update'. Restart the the Selenium Server with 'webdriver-manager start', then over in the protractor window type 'protractor conf.js' at the prompt again.**
+
+  **NB The majority of problems you'll come across while running the Protractor End-to-End tests can be resolved by typing 'ctrl c' in the Webdriver window, then 'webdriver-manager update'.
+  Restart the the Selenium Server with 'webdriver-manager start', then over in the protractor window type 'protractor conf.js' at the prompt again.
+  On the rare occasion that this doesn't work, quitting and re-opening your console may also be necessary.**
 
 
 &nbsp;
