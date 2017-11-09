@@ -38,11 +38,23 @@
 	transform: rotateY(180deg);
 }
 
+
+@keyframes show {
+  to {
+    visibility: visible;
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .show {
 	/*Only for FF bug*/
 	-moz-backface-visibility: unset;
 	-webkit-backface-visibility: unset;
 	backface-visibility: unset;
+	animation: 0s linear 0.25s forwards show ;
 }
 
 #front-image {
