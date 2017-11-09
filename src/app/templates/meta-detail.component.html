@@ -23,8 +23,11 @@
         </div>
 
         <div id="info">
-          <div id = "name" class = "front" [class.hide] = "toggle">{{clickedMeta.name | uppercase}}</div>
-          <div id = "alias" class = "back" [class.show] = "toggle">{{clickedMeta.alias | uppercase}}</div>
+          <div id = "name" class = "front"
+          [class.show] = "!toggle"
+          [class.invisible] = "toggle">{{clickedMeta.name | uppercase}}</div>
+
+          <div id = "alias" class = "back invisible" [class.show] = "toggle">{{clickedMeta.alias | uppercase}}</div>
           <div id = "weaponry" class = "front" [class.hide] = "toggle">
             <!-- hide class is for FF bug -->
             <ul>

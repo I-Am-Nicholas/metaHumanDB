@@ -34,13 +34,25 @@
   top: -50px;
 }
 
-#name, #alias {
+#name {
   padding: 40px 0 0 35px;
   width: auto;
+  position: absolute;
+  z-index: 30;
+}
+
+#screen {
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  background-image: url('../../assets/circuitboardBG.jpg');
+  width: 525px;
+  margin: 0 0 0 35px;
 }
 
 #alias {
   position: absolute;
+  z-index: 10;
   top: 95px;
   width: 100%;
   margin: -75px 0 0 -40px;
@@ -49,6 +61,7 @@
 #weaponry {
   border-left: 1px solid #21658c;
   position: absolute;
+  z-index: 30;
   right: 0;
   top: 30px;
   width: auto;
