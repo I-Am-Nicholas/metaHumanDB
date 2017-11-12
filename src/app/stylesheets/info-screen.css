@@ -1,0 +1,10 @@
+#screen {
+  visibility: hidden;
+  border: 1px solid rebeccapurple;
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  background-image: url('../../assets/circuitboardBG.jpg');
+  width: 525px;
+  margin: 0 0 0 35px;
+}

@@ -14,20 +14,26 @@
 
       <div class = "flipper"[class.showAlias] = "toggle">
 
-      <div id = "front-div">
-        <img class = "front" [class.hide] = "toggle" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} image" >
-      </div>
+        <div id = "front-div">
+          <img class = "front" [class.hide] = "toggle" src = "{{clickedMeta.headshotsFront}}" alt = "{{clickedMeta.name}} image" >
+        </div>
 
         <div id="back-div" class = "back">
           <img src = "{{clickedMeta.headshotsBack}}" alt = "{{clickedMeta.alias}} image" >
         </div>
 
         <div id="info">
-          <div id = "name" class = "front"
-          [class.show] = "!toggle"
-          [class.invisible] = "toggle">{{clickedMeta.name | uppercase}}</div>
+          <!-- !toggle shows front, toggle shows back -->
+          <div id = "name" class = "front" [class.hide] = "toggle">
+            {{clickedMeta.name | uppercase}}
+          </div>
+        </div>
 
-          <div id = "alias" class = "back invisible" [class.show] = "toggle">{{clickedMeta.alias | uppercase}}</div>
+          <div id = "alias" class = "back invisible"
+            [class.show] = "toggle"
+            >{{clickedMeta.alias | uppercase}}
+          </div>
+
           <div id = "weaponry" class = "front" [class.hide] = "toggle">
             <!-- hide class is for FF bug -->
             <ul>
@@ -37,13 +43,12 @@
               </li>
             </ul>
           </div>
-        </div>
 
-      </div>
+      </div><!--flipper-->
 
-    </div>
+    </div><!--flip-container-->
 
-  </div>
+  </div><!--headshot-->
 
   <meta-rating [chosenMeta] = "clickedMeta"></meta-rating>
 

@@ -41,21 +41,13 @@
   z-index: 30;
 }
 
-#screen {
-  position: absolute;
-  z-index: 20;
-  height: 100%;
-  background-image: url('../../assets/circuitboardBG.jpg');
-  width: 525px;
-  margin: 0 0 0 35px;
-}
-
 #alias {
   position: absolute;
   z-index: 10;
-  top: 95px;
+  top: 400px;
   width: 100%;
   margin: -75px 0 0 -40px;
+  font-size: 1.5rem;
 }
 
 #weaponry {
@@ -63,7 +55,7 @@
   position: absolute;
   z-index: 30;
   right: 0;
-  top: 30px;
+  top: 310px;
   width: auto;
   height: 100px;
   font-size: 0.8rem;
