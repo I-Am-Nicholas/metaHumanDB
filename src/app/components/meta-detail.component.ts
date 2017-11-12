@@ -20,7 +20,8 @@ import { Meta } from '../meta'
   styleUrls: ['../stylesheets/meta-detail.component.css',
    '../stylesheets/shared/translucentBG.css',
    '../stylesheets/flipper.scss',
-   '../stylesheets/shared/nav-bttns.css'
+   '../stylesheets/shared/nav-bttns.css',
+   '../stylesheets/info-screen.css'
  ],
   templateUrl: '../templates/meta-detail.component.html'
 })
