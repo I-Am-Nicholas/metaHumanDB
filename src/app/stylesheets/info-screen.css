@@ -8,12 +8,12 @@
   margin: 0 0 0 35px;
 }
 
-.screen-bounce {
-  -webkit-animation: bounce 0.5s;
-  -moz-animation:    bounce 0.5s;
-  -moz-animation:    bounce 0.5s;
-  -o-animation:      bounce 0.5s;
-  animation:         bounce 0.5s;
+.screen-drop {
+  -webkit-animation: drop 0.2s;
+  -moz-animation:    drop 0.2s;
+  -moz-animation:    drop 0.2s;
+  -o-animation:      drop 0.2s;
+  animation:         drop 0.2s;
   animation-fill-mode: backwards;
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
@@ -21,7 +21,7 @@
   animation-delay: 0.5s;
 }
 
-@keyframes bounce {
+@keyframes drop {
   100% {
     height: 100%;
   }
