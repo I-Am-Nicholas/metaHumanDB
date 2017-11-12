@@ -17,8 +17,12 @@
     ],
     "headshotsBack": "assets/headshotsBack/tony.jpg",
     "headshotsFront": "assets/headshotsFront/tony.jpg",
-    "level": [100, 90, 70]
-  },
+    "level": [100, 90, 70],
+    "alt": {
+      "level": null
+    }
+
+    },
     {
       "id":2,
       "name":"Captain America",
@@ -36,7 +40,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/steve.jpg",
       "headshotsFront": "assets/headshotsFront/steve.jpg",
-      "level": [50, 100, 70]
+      "level": [50, 100, 70],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":3,
@@ -78,7 +86,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/peter.jpg",
       "headshotsFront": "assets/headshotsFront/peter.jpg",
-      "level": [80, 80, 80]
+      "level": [80, 80, 80],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":5,"name":"Thor",
@@ -99,7 +111,11 @@
 
       "headshotsBack": "assets/headshotsBack/thor.jpg",
       "headshotsFront": "assets/headshotsFront/thor.jpg",
-      "level": [50, 100, 95]
+      "level": [50, 100, 95],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":6,"name":"Black Panther",
@@ -118,7 +134,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
-      "level": [70, 100, 70]
+      "level": [70, 100, 70],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":7,"name":"Scarlet Witch",
@@ -139,7 +159,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/wanda.jpg",
       "headshotsFront": "assets/headshotsFront/wanda.jpg",
-      "level": [50, 60, 100]
+      "level": [50, 60, 100],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":8,
@@ -160,7 +184,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/clint.jpg",
       "headshotsFront": "assets/headshotsFront/clint.jpg",
-      "level": [50, 85, 50]
+      "level": [50, 85, 50],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":9,
@@ -181,7 +209,11 @@
       ],
       "headshotsBack": "assets/headshotsBack/natasha.jpg",
       "headshotsFront": "assets/headshotsFront/natasha.jpg",
-      "level": [50, 90, 50]
+      "level": [50, 90, 50],
+      "alt": {
+        "level": null
+      }
+
     },
     {
       "id":10,
@@ -200,7 +232,11 @@
 
       "headshotsBack": "assets/headshotsBack/vision.jpg",
       "headshotsFront": "assets/headshotsFront/vision.jpg",
-      "level": [100, 60, 75]
+      "level": [100, 60, 75],
+      "alt": {
+        "level": null
+      }
+
     }
   ]
 }
