@@ -22,27 +22,34 @@
           <img src = "{{clickedMeta.headshotsBack}}" alt = "{{clickedMeta.alias}} image" >
         </div>
 
+
         <div id="info">
-          <!-- !toggle shows front, toggle shows back -->
-          <div id = "name" class = "front" [class.hide] = "toggle">
-            {{clickedMeta.name | uppercase}}
-          </div>
-        </div>
+          <div id = "screen"
+          [class.screen-bounce] = "!toggle"
+          [class.invisible] = "toggle">
+            <!-- !toggle shows front, toggle shows back -->
+            <div id = "name" class = "front" [class.hide] = "toggle">
+              {{clickedMeta.name | uppercase}}
+            </div>
+
+            <div id = "weaponry" class = "front" [class.hide] = "toggle">
+              <!-- hide class is for FF bug -->
+              <ul>
+                <p>WEAPONRY</p>
+                <li *ngFor= "let eachLine of clickedMeta.weaponry">
+                  {{eachLine}}
+                </li>
+              </ul>
+            </div>
+
+          </div><!--screen-->
 
           <div id = "alias" class = "back invisible"
-            [class.show] = "toggle"
-            >{{clickedMeta.alias | uppercase}}
+            [class.show] = "toggle">
+            {{clickedMeta.alias | uppercase}}
           </div>
 
-          <div id = "weaponry" class = "front" [class.hide] = "toggle">
-            <!-- hide class is for FF bug -->
-            <ul>
-              <p>WEAPONRY</p>
-              <li *ngFor= "let eachLine of clickedMeta.weaponry">
-                {{eachLine}}
-              </li>
-            </ul>
-          </div>
+        </div><!--info-->
 
       </div><!--flipper-->
 
