@@ -28,7 +28,7 @@
 
 #info {
   position: relative;
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: 1.9rem;
   height: 120px;
   top: -50px;
@@ -42,11 +42,10 @@
 
 #alias {
   position: absolute;
-  z-index: 10000;
   top: 100px;
   width: 100%;
-  margin: -75px 0 0 -40px;
-  font-size: 1.5rem;
+  margin: -75px 0 0 -35px;
+  font-size: 2rem;
 }
 
 #weaponry {
