@@ -114,7 +114,7 @@
 
 ### Running the unit tests:
 
-![karma_unit_tests](https://user-images.githubusercontent.com/24227633/31466007-9f4533e6-aecd-11e7-819d-b8fb52c7b9b1.gif)
+![untitled 3](https://user-images.githubusercontent.com/24227633/32740877-4a77ebcc-c89c-11e7-9720-5610457bb3f8.gif)
 
 
   In a dedicated window of your command line tool (but from the same directory as where you typed ng serve --open ), type:
