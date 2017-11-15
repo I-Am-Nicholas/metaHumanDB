@@ -24,7 +24,7 @@
 &nbsp;
 ## PREVIEW
 
-![untitled 2](https://user-images.githubusercontent.com/24227633/31327221-bc913b16-acc5-11e7-906b-3cc0efa2ad94.gif)
+![untitled 4](https://user-images.githubusercontent.com/24227633/32865566-8ef3cf8a-ca5b-11e7-8536-de4efab50495.gif)
 
 
 &nbsp;
