@@ -64,7 +64,7 @@
       "level": [15, 50, 100],
 
       "alt": {
-        "level": [85, 30, 15]
+        "level": [90, 30, 15]
       }
 
     },
@@ -124,8 +124,8 @@
       "profile":[
         "Warrior. Scientist. Super-Hero. King.",
         "Crown protector and regent of Wakanda.",
-        "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Adamantium.",
-        "Tchalla is not only a highly trained warrior, but also holds a phd in Physics."
+        "Tchalla wears a suit crafted of the most valuable metal on Earth, one which absorbs the kinetic energy of any impact. Vibranium is even tougher than Wolverine's Adamantium.",
+        "Tchalla is not only a highly trained warrior, but also holds a phd in Physics, speaks numerous languages and invented an entirely new branch of science called Shadow Physics."
       ],
       "weaponry": [
         "Vibranium Claws",
@@ -134,7 +134,7 @@
       ],
       "headshotsBack": "assets/headshotsBack/tchalla.jpg",
       "headshotsFront": "assets/headshotsFront/tchalla.jpg",
-      "level": [70, 100, 70],
+      "level": [100, 100, 80],
       "alt": {
         "level": null
       }
