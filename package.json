@@ -36,7 +36,7 @@
     "codelyzer": "~3.0.1",
     "core-js": "^2.5.1",
     "es6-shim": "^0.35.3",
-    "express": "^4.16.1",
+    "express": "^4.17.3",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "^1.7.1",
